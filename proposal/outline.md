@@ -45,5 +45,8 @@ psmits@uchicago.edu, Committee on Evolutionary Biology, University of Chicago
         - terrestrial mammals
         - life history traits: diet, locomotor/life history category
         - correlation with d18O curve
+        - changes in community connectedness levels over time
+            - the four measures of Sidor2013
+            - locality coverage from Jervall2004
 
 - Conclusion
