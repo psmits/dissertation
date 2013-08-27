@@ -9,8 +9,24 @@ psmits@uchicago.edu, Committee on Evolutionary Biology, University of Chicago
 - Introduction
     - theoretical framework
         - evolutionary macroecology / macroevolution
-        - life history/natural history traits
+            - Kitchell1985,Hoffman1984,Carr1980,Allmon1994
         - species/hierarchical selection
+            - Jablonski2007,Jablonski2008,Jablonksi2000a,Jablonksi2008b,Jablonski2008c
+            - Gilinsky1987
+            - Rice1995
+            - Frank2012
+        - Red Queen
+        - life history/natural history traits
+            - Jablonski1983
+            - Sepkoski1991
+            - Kitchell1990,Kitchell1987a,Kitchell1991
+            - Marzluff1991
+            - Foote2006,Foote2013
+            - Foote2000,Foote2000a
+        - Price Equation
+            - Price1970,Price1972
+            - Rice2004
+            - Frank2012b
 
 - Chapter 1
     - differential survivorship in brachiopods
