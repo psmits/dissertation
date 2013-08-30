@@ -8,8 +8,22 @@ psmits@uchicago.edu, Committee on Evolutionary Biology, University of Chicago
 
 - Introduction
     - theoretical framework
+        - evolutionary paleoecoloyg: the evolutionary consequences of ecological
+          properties, roles, and strategies at the individual, population,
+          community, and species levels.
+            - linkage between a species' ecology and its macroevolutionary
+              history
+            - evolutionary paleoecology examines the interaction between object
+              and property, specifically the evolutionary consequences of
+              ecological properties
+            - Kitchell1985a
+            - this is pretty fundamental
         - evolutionary macroecology / macroevolution
-            - Kitchell1985,Hoffman1984,Carr1980,Allmon1994
+            - biology of extinction (speciation)
+                - why do some organisms go extinct and others don't?
+            - community structure
+                - what drives community similarity and divergence?
+            - Kitchell1985a,Hoffman1984,Carr1980,Allmon1994
         - species/hierarchical selection
             - Jablonski2007,Jablonski2008,Jablonksi2000a,Jablonksi2008b,Jablonski2008c
             - Gilinsky1987
@@ -17,6 +31,9 @@ psmits@uchicago.edu, Committee on Evolutionary Biology, University of Chicago
             - Frank2012
         - Red Queen
         - life history/natural history traits
+            - expected time to extinction as measure of "fitness"
+                - differential survivorship based on more "fit" traits 
+                - Cooper1984
             - Jablonski1983
             - Sepkoski1991
             - Kitchell1990,Kitchell1987a,Kitchell1991
@@ -36,6 +53,8 @@ psmits@uchicago.edu, Committee on Evolutionary Biology, University of Chicago
         - site occurence/range size information
         - survivorship analysis to look for what best explains differential
           extinction risk
+            - interval data
+            - what best models time-event?
         - relation to change from ice to hot during Permian
             - Clapham's community structure work
 
