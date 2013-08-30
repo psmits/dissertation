@@ -19,13 +19,18 @@ psmits@uchicago.edu, Committee on Evolutionary Biology, University of Chicago
             - Kitchell1985a
             - this is pretty fundamental
         - evolutionary macroecology / macroevolution
+            - effect macroevolution
+                - Kitchell1986,Vrba1983
             - biology of extinction (speciation)
                 - why do some organisms go extinct and others don't?
             - community structure
                 - what drives community similarity and divergence?
-            - Kitchell1985a,Hoffman1984,Carr1980,Allmon1994
+                - Kitchell1985a
+            - Hoffman1984,Carr1980,Allmon1994
         - species/hierarchical selection
-            - Jablonski2007,Jablonski2008,Jablonksi2000a,Jablonksi2008b,Jablonski2008c
+            - important: macroevolution != species selection
+                - Vrba1983
+            - Jablonski2007,Jablonski2008,Jablonksi2000b,Jablonksi2008b,Jablonski2008c
             - Gilinsky1987
             - Rice1995
             - Frank2012
@@ -34,6 +39,8 @@ psmits@uchicago.edu, Committee on Evolutionary Biology, University of Chicago
             - expected time to extinction as measure of "fitness"
                 - differential survivorship based on more "fit" traits 
                 - Cooper1984
+            - does ETE vary between groups based on life history traits?
+                - brachiopods
             - Jablonski1983
             - Sepkoski1991
             - Kitchell1990,Kitchell1987a,Kitchell1991
