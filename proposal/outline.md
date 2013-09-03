@@ -8,7 +8,7 @@ psmits@uchicago.edu, Committee on Evolutionary Biology, University of Chicago
 
 - Introduction
     - theoretical framework
-        - evolutionary paleoecoloyg: the evolutionary consequences of ecological
+        - evolutionary paleoecology: the evolutionary consequences of ecological
           properties, roles, and strategies at the individual, population,
           community, and species levels.
             - linkage between a species' ecology and its macroevolutionary
@@ -35,6 +35,11 @@ psmits@uchicago.edu, Committee on Evolutionary Biology, University of Chicago
             - Rice1995
             - Frank2012
         - Red Queen
+            - VanValen1973
+            - Quental2013,Alroy2000g
+            - VanValen1985
+            - Court Jester Barnosky2001a
+                - problems
         - life history/natural history traits
             - expected time to extinction as measure of "fitness"
                 - differential survivorship based on more "fit" traits 
@@ -77,6 +82,16 @@ psmits@uchicago.edu, Committee on Evolutionary Biology, University of Chicago
             - Clapham's community structure work
 
 - Chapter 3
+    - structure, dynamics, and rates of mammalian extinction patterns
+        - Cenozoic mammals
+        - taking into account
+            - genus/species ratio
+            - home range size
+            - phylogeny
+        - Quental2013,Liow2009,Liow2008
+        - don't cast in terms of lambda or mu, cast in terms of fitness
+            - survivroship curves
+            - Cooper1984 expected time to extinction
 
 
 - Chapter 4
