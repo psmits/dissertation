@@ -72,41 +72,42 @@ psmits@uchicago.edu, Committee on Evolutionary Biology, University of Chicago
                     - species selection != punctuated equilibrium
                         - Jablonski2008a
                 - Price Equation
+                    - \(\bar{w} \Delta \bar{z} = Cov(w, z) + E(w \Delta z)\)
+                    - or \(\Delta \bar{z} = \frac{Cov(w, z)}{\bar{w}} + \frac{E(w \Delta z)}{\bar{w}}\)
+                    - relationship between trait covariance and fitness
+                        - evolutionary change between two populations
+                        - by extension, selection
                     - Price1970,Price1972
                     - Rice2004,Rice2008
                     - Rice1995
                     - Frank2012,Frank2012b
             - what is the redicibility of a trait that is expressed at the
               organismal level but constant across all individuals?
-                - life history characters/traits
-                    - effect macroevolution?
-                - e.g. diet, locomotion, affixing strategy
-                - Jablonski1983,Jablonski2006a,Jablonski2008
-        - species/hierarchical selection
-            - Gilinsky1987
-            - Rice1995
-            - Frank2012
         - Red Queen
             - VanValen1973
             - Quental2013,Alroy2000g
             - VanValen1985
+            - Kitchell1991
             - Court Jester Barnosky2001a
                 - problems
         - life history/natural history traits
             - definition
+                - trait reducible expressed at the organismal level but that is
+                  constant across all individuals
+                    - e.g. diet, locomotion, affixing strategy
+                    - Jablonski1983,Jablonski2006a,Jablonski2008
                 - intersection of effect and species-selection
                 - evolutionary paleoecology sensu Kitchell1985a
             - expected time to extinction as measure of "fitness"
                 - differential survivorship based on more "fit" traits 
                 - Cooper1984
             - does ETE vary between groups based on life history traits?
+                - Kitchell1990,Marzluff1991
                 - brachiopods
-            - Jablonski1983
-            - Sepkoski1991
-            - Kitchell1990,Kitchell1987a,Kitchell1991
-            - Marzluff1991
-            - Foote2006,Foote2013
-            - Foote2000,Foote2000a
+                    - affixing strategy Alexander1977,Clapham2007
+                    - substrate Foote2006,Foote2013,Miller2001
+                - mammals
+                    - lambda/mu Liow2008,Liow2009
 
 - Chapter 1
     - differential survivorship in brachiopods
