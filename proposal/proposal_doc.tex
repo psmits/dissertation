@@ -1,12 +1,13 @@
 \documentclass[12pt,letterpaper]{article}
 \usepackage{amsmath, amsthm}
-\usepackage{parskip, graphicx, microtype}
+\usepackage{graphicx, microtype}
 \usepackage{caption, subcaption, multirow}
 \usepackage{morefloats, hyperref}
 \usepackage{rotating, longtable}
 \usepackage[sort&compress]{natbib}
 \usepackage{authblk}
 \usepackage{fullpage}
+\usepackage{parskip}
 
 \usepackage[]{lineno}
 
@@ -19,16 +20,83 @@
 \begin{document}
 \maketitle
 
+\linenumbers
+\modulolinenumbers[2]
+
 \section{Theoretical framework}
-Evolutionary paleoecology has been defined as the study of the effect of ecological characters expressed at any level on the macroevolutionary process \citep{Kitchell1985a}. While macroevolution is defined as the long term speciation (\(\lambda\)) and extinction (\(\mu\)) dynamics \citep{Jablonski2008a}, this does not remain the sole manner of discussing macroevolutionary dynamics \citep{Kitchell1985a,Kitchell1990}. Instead, macroevolution can be discussed in terms of the dynamics of differential fitness. Here fitness is defined as the expected time till extinction \citep{Cooper1984} which can be considered a universal statement of fitness.
+\subsection{Evolutionary paleoevology}
+Evolutionary paleoecology has been defined as the study of the effect of ecological characters expressed at any level on the macroevolutionary process \citep{Kitchell1985a}. While macroevolution is defined as the long term speciation (\(p\)) and extinction (\(q\)) dynamics \citep{Jablonski2008a}, this does not remain the sole manner of discussing macroevolutionary dynamics \citep{Kitchell1985a,Kitchell1990}. Instead, macroevolution can be discussed in terms of the dynamics of differential fitness. Here fitness is defined as the expected time till extinction \citep{Cooper1984} which can be considered a universal statement of fitness.
 
-Expected time till extinction is defined
+Expected time till extinction is defined for descrete time intervals as 
 \begin{equation}
-  E[t_{ext}] = \sum p t
-  \label{eq:ete}
+  E[t_{ext}] = \sum_{t = 0}^{\infty} p_{t} t
+  \label{eq:ete_d}
 \end{equation}
-where \(p\) is the probability that the subject of interest goes extinct and \(t\) is time \citep{Cooper1984}.
+where \(p\) is the probability that the subject of interest goes extinct and \(t\) is time \citep{Cooper1984}. For continuous time, expected time till extinction is defined 
+\begin{equation}
+  E[t_{ext}] = \int_{0}^{\infty} \phi(t) t \mathrm{d}t
+  \label{eq:ete_c}
+\end{equation}
+where \(\phi(t)\) is the probability density distribution for the time of extinction \citep{Cooper1984}.
 
+% more
+
+\subsection{Survival analysis}
+Survival analysis is the statistical field of representing and modeling time till event data, namely the time till failure of an object. For example, this might be the amount of time a part can experience a specific force before experiencing mechanical failure or the amount of time a person survives after contracting a specific disease. In a paleontological context, this can be considered the longevity of a particular taxon from it's first appearance date (FAD) till it's last appearance dat (LAD).
+
+The survival function (\(S(t)\)), which is a statement of the probability that an individual (i.e. species) will survive longer than some specific amount of time \(t\), is defined
+\begin{equation}
+  S(t) = P(T > t)
+  \label{eq:surv}
+\end{equation}
+where \(T\) is the survival time and is greater than, or equal to, 0.
+
+Related to \(S(t)\) is the hazard function \(h(t)\), which is defined as the instantaneous potential for failure given \(t\) amount of time. \(h(t)\) is defined 
+\begin{equation}
+  h(t) = \lim_{\Delta t \to \infty} \frac{P(t \le T < t + \Delta t | T \ge t)}{\Delta t}
+  \label{eq:haz}
+\end{equation}
+Effectively, this is the velocity or first derivative of \(S(t)\).
+
+The survival (Eq. \ref{eq:surv}) and hazard functions (Eq. \ref{eq:haz}) are directly related, with one being derived from the other. The general form of \(S(t)\) is
+\begin{equation}
+  S(t) = \exp\left[- \int_{0}^{t} h(u) \mathrm{d}u\right]
+  \label{eq:surv_gen}
+\end{equation}
+and the general form of \(h(t)\) being
+\begin{equation}
+  h(t) = -\left[\frac{\mathrm{d}S(t) / \mathrm{d}t}{S(t)}\right]
+  \label{eq:haz_gen}
+\end{equation}
+The relationship between the survival function 
+
+In the context of biology, \(\bar{S(t)}\) for some sample is the mean (expected) survival time or fitness \citep{Cooper1984}. Additionally, \(h(t)\) is the failure rate and can be interprested as the extinction rate. 
+% testing variable effect on hazards
+%   time constant
+%   time variable
+
+Because of this survival curves have had a long history of use in paleobiological studies \citep{Simpson1953,VanValen1973,Levinton1974,Raup1975,Raup1978,Foote1988,Kitchell1991,Foote2001}. The Law of Extinction, or Red Queen hypothesis, stems from analysis of survival curves \citep{VanValen1973}. In terms of modeling the hazard function of a survival curve, the Law of Extinction states that the hazard function is a special case of equation \ref{eq:haz_gen} and is defined 
+\begin{equation}
+  h(t) = \lambda
+  \label{eq:haz_const}
+\end{equation}
+where \(\lambda\) is some constant. Given the hazard function in equation \ref{eq:haz_const}, the survival function is easily defined 
+\begin{equation}
+  S(t) = \exp^{-\lambda t}
+  \label{eq:surv_const}
+\end{equation}
+
+This formulation means that extinction rate is (stochastically) constant over the entire duration of a taxon \citep{VanValen1973}. Other theoretical concepts for extinction rate are that younger taxa have a greater extinction rate than older taxa, or vice-versa. These alternative \(h(t)\) functions would be better fit but other, non-uniform, distributions.
+
+Assessing the linearity or nonlinearity of the hazard function for a given sample has been the focus of a lot of research \citep{Raup1975,Raup1978,Kitchell1991}.
+
+\subsection{Macroevolution}
+Macroevolution, as defined above, has broadly been classified into two categories: effect and species selection \citep{Jablonski2008a}. 
+
+Effect macroevolution where selection on a trait expressed at the organismal level effects long term patterns in \(p\) and \(q\) \citep{Vrba1983,Jablonski2008a}. Effect macroevolution is characterized by ``upward'' causation, because selection at lower levels (organism) effects the structure of the higher levels (genus and up) \citep{Jablonski2008a}. \citet{Jablonski2008a} defines these traits as ``aggregate traits'' which can be the entire distribution of a trait for a taxon or some summary statistic (e.g. mean) of a trait distribution. An example aggregate trait would be body size. % larval category?
+
+Species selection is where selection acts upon a trait that cannot be reduced to the organismal level \citep{Jablonski2007,Jablonski2008a}.
+It is important to note that macroevolution does not only mean species selection \citep{Vrba1983} though they have historically been conflated.
 
 \section{Effect of life history on survival in Permian brachiopods}
 

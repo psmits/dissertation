@@ -34,6 +34,8 @@ psmits@uchicago.edu, Committee on Evolutionary Biology, University of Chicago
                     - expected time till extinction
                     - Cooper1984
                     - how to define fitness in terms of lambda and mu?
+                        - mu is the hazard ratio (failure rate)
+                        - failure rate is defined as deaths per time
             - taxic evolutionary paleoecology Allmon 1994
                 - reconcile punc eq with evolutionary paleoecology
                     - see Gene's work for determining prevelance of this
