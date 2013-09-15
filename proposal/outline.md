@@ -41,13 +41,18 @@ psmits@uchicago.edu, Committee on Evolutionary Biology, University of Chicago
                 - upward causation
               - species selection
                 - downward causation
-              - what is the reducibility of a trait that is expressed at the
-                organismal level but constant across all individuals?
-                 - this seems to be the point at which there is major contention
-                   in the literature 
+              - reducibility of trait
+                 - what is important is the level of expression of the trait
+                    - this is a major contention with aggregate traits
+                       - what level is the mean of an organismal trait?
+                       - Jablonski2008
+                 - what is the reducibility of a trait that is expressed at the
+                   organismal level but constant across all individuals?
+                   - this seems to be the point at which there is major contention
+                     in the literature 
+                   - example of not understanding Grantham1995
           - caveats
              - macroevolution != species selection
-             - the level of expression is most important
        - Price Equation
           - relationship between trait covariance and fitness
              - evolutionary change between two populations
@@ -84,17 +89,28 @@ psmits@uchicago.edu, Committee on Evolutionary Biology, University of Chicago
                   - lambda/mu Liow2008,Liow2009
 
 - Chapter 1
-    - differential survivorship in brachiopods
-        - Australia
-        - Permian
-        - life history traits: substrate, affix, environment
-        - site occurence/range size information
-        - survivorship analysis to look for what best explains differential
-          extinction risk
-            - interval data
-            - what best models time-event?
-        - relation to change from ice to hot during Permian
-            - Clapham's community structure work
+   - differential survivorship in brachiopods
+      - data 
+          - brachiopods
+              - taxonomic information
+              - FAD LAD
+              - traits
+                  - affixing strategy
+                  - substrate
+                  - habitat
+          - Permian
+          - Australia
+      - differential survival/fitness between trait combinations
+          does trait combination matter more than lineage?
+      - survivorship analysis
+          - generic or specific level
+          - zero at start of Permian
+          - censor at P/T boundary 
+          - time dependent covariates 
+             - temperature (change from ice to hot during Permian)
+             - substrate avaliability
+             - habitat avaliability 
+      - relate to Clapham's community structure work
 
 - Chapter 2
     - Evolution of correlation of life history traits in brachiopods
@@ -121,13 +137,28 @@ psmits@uchicago.edu, Committee on Evolutionary Biology, University of Chicago
 
 
 - Chapter 4
-    - cosmopolitan and proviscialism dynamics of North American terrestrial
+    - cosmopolitan and provicialism dynamics of North American terrestrial
       mammals across the Cenozoic
-        - North America
-        - Cenozoic
-        - terrestrial mammals
-        - life history traits: diet, locomotor/life history category
-        - correlation with d18O curve
-        - changes in community connectedness levels over time
-            - the four measures of Sidor2013
-            - locality coverage from Jervall2004
+        - data
+            - terrestrial mammals
+                - taxonomic information
+                - formation occurence
+                - traits
+                    - diet category
+                    - locomotor strategy
+            - North America
+            - Cenozoic
+            - climate
+                - d18O curve
+        - how does site similarity change over the Cenozoic
+            - most common herbivores Jernvall2002
+            - locality coverage Jervall2004
+        - biogeographic network
+            - species--formation
+            - measures
+                - average number of endemics
+                - average number of localities per taxa
+                - code length
+                    - map equation
+               - biogeographic connectedness
+               - Sidor2013
