@@ -20,7 +20,7 @@ psmits@uchicago.edu, Committee on Evolutionary Biology, University of Chicago
                   fitness
                     - Kichell1990,Allmon1994
          - macroevolution
-             - long term patterns in species and extinction
+             - patterns of speciation and extinction over time
                  - the question is about how to determine the process behind the
                     pattern
                  - biology of extinction
