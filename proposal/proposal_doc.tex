@@ -8,12 +8,13 @@
 \usepackage{authblk}
 \usepackage{fullpage}
 \usepackage{parskip}
+\usepackage{attrib}
 
 \usepackage[]{lineno}
 
 \frenchspacing
 
-\title{Evolution of life history traits and evolutionary paleoecology}
+\title{Evolutionary paleoecology and the biology of extinction}
 \author[1]{Peter D Smits}
 \affil[1]{\footnotesize{\href{mailto:psmits@uchicago.edu}{psmits@uchicago.edu}, Committee on Evolutionary Biology, University of Chicago}}
 
@@ -23,9 +24,54 @@
 \linenumbers
 \modulolinenumbers[2]
 
+\small{
+\begin{quotation}
+  The ship wherein Theseus and the youth of Athens returned from Crete had thirty oars, and was preserved by the Athenians down even to the time of Demetrius Phalereus, for they took away the old planks as they decayed, putting in new and stronger timber in their place, in so much that this ship became a standing example among the philosophers, for the logical question of things that grow; one side holding that the ship remained the same, and the other contending that it was not the same.
+
+  \attrib{Plutarch, \textbf{Theseus}}
+\end{quotation}
+}
+
 \section{Theoretical framework}
-\subsection{Evolutionary paleoevology}
-Evolutionary paleoecology has been defined as the study of the effect of ecological characters expressed at any level on the macroevolutionary process \citep{Kitchell1985a}. While macroevolution is defined as the long term speciation (\(p\)) and extinction (\(q\)) dynamics \citep{Jablonski2008a}, this does not remain the sole manner of discussing macroevolutionary dynamics \citep{Kitchell1985a,Kitchell1990}. Instead, macroevolution can be discussed in terms of the dynamics of differential fitness. Here fitness is defined as the expected time till extinction \citep{Cooper1984} which can be considered a universal statement of fitness.
+\subsection{Semiotics in (paleo)biology}
+
+Paleobiology is the study of life over time and in particular the processes that generate the observed patterns in diversity and disparity and how these may have changed.  % look up in the foote book
+Intimately related to this is the concept of macroevolution. Macroevolution, \textit{sensu stricto}, is the pattern of speciation and extinction dynamics over time \citep{Jablonski2008a}. The study of macroevolution, thus, is the method by which the processes underlying these patterns are delineated. The term origination is frequently used in place of speciation because it is considered impossible to observe speciation in the fossil record and instead we only observe the sudden appearance of a new taxon \citep{Coyne2004}.
+
+Macroevolution, \textit{sensu lato}, is both phyletic and anagenetic evolutionary dynamics \citep{Foote2007b}. Phyletic means speciation/extinction dynamics and anagenetic means within lineage disparity dynamics. This concept has also been termed the tempo and mode of evolution \citep{Simpson1944}. This broader definition more closely links paleobiology and macroevolution.
+
+In contrast to macroevolution is microevolution \citep{Simpson1944,Foote2007b} which is defined strictly as change in allele frequency in a population from one generation to the next. A weaker definition is that microevolution is change below the species level \citep{Foote2007b} though there is no qualifier on what this change is defined as. It is important to note that changes in allele frequency affect phenotype frequency and expression.
+
+% why this definition isn't as useful
+%   conflation of two different patterns
+%   makes the word too broad
+%   this is macroevolution as metaphor
+
+Of concern with the broader definition of macroevolution is that this concept subsumes all aspects of anagenetic change. The difference between microevolution versus macrevolution is unclear.
+
+Interestingly, the link between macroevolution \textit{sensu lato} and Simpson's tempo and mode of evolution is that Simpson's statement assigns no hierarchical level to these patterns.
+
+The pervasiveness of the use of macroevolution \textit{sensu lato} then is because this usage is metaphoric and explicitly because it is not the actual definition of macroevolution.
+
+
+Evolutionary paleoecology is defined as the study of the effects of ecological traits and factors on differential rate dynamics, particularly rates of faunal turnover and diversification \citep{Kitchell1985a}.
+Ecological traits and factors are any and all traits expressed by a taxon, at any level, that are involved with biotic--biotic or biotic--abiotic interactions. These interactions are between the taxon and a factor, which as stated may be either biotic or abiotic.
+Diversification is the difference between origination and extinction, and is thus the net product of pattern of macroevolution.
+The study of evolutionary paleoecology is then the link between interactions and macroevolution. Namely, it is the study of the ecological processes that may or may not generate the patterns of macroevolution.
+\citet{Allmon1994} amends Kitchell's definition by stating that in order to correctly link ecological processes to macroevolution, one must focus on the specific traits and factors that affect the speciation process. Tacitly included in this is the study of the biology of extinction \citep{Kitchell1990}.
+
+
+\subsection{Fitness}
+
+Fitness is a nebulous and difficult to define concept in biology.
+
+Sometimes invoked as axiomatic
+
+A standard definition of fitness is reproductive success, or the number of offspring produced per generation. This is virtually impossible to measure in the fossil record.
+
+Most definitions apply only in certain situations
+
+\citet{Cooper1984} defined fundamental fitness as the expected time till extinction. \citet{Cooper1984} argued that all prior definitions scale up to the expected time till extinction.
 
 Expected time till extinction is defined for descrete time intervals as 
 \begin{equation}
@@ -38,6 +84,36 @@ where \(p\) is the probability that the subject of interest goes extinct and \(t
   \label{eq:ete_c}
 \end{equation}
 where \(\phi(t)\) is the probability density distribution for the time of extinction \citep{Cooper1984}.
+
+relationship between fitness and evolutionary success
+
+\citet{Palmer2012} divide evolutionary success into two components: \textit{k}-fitness and \textit{k}-survivability where \textit{k} is some number of generations of interest. This divide is important because, as stated by \citet{Palmer2012}, in short time spans the probability that a lineage will go extinct is very low which makes measuring \textit{k}-survivability (Eq. \ref{eq:ksuv}) impossible. \textit{K}-fitness (Eq. \ref{eq:kfit}) is then a useful alternative at these shorter time scales (\(k >= 1\) as opposed to \(k >>> 1\)).
+
+\textit{K}-fitness is defined as the predicted ``success'' of a lineage as the expected increase in number of members over \textit{k} generations. Effectively this is the ``standard'' definition of fitness extended to multiple generations. In contrast, \textit{k}-survivability measures the ``success'' of a lineage as the likelihood that it will survive for \textit{k} generations given that it as survived to generation \textit{t}.
+
+Mathematically this is all defined in \citet{Palmer2012} as follows. \(\pi[N(t) = n]\) is the probability that a lineage has \textit{n} members at generation \textit{t}. \(\bar{N}(t)\) is the expected number of members of a lineage at generation \textit{t}. Explicitly, this is \(\bar{N}(t) = \sum_{n} n \pi[N(t) = n]\). From this we can define \(W_{k}(t)\), or \textit{k}-fitness, which is the ratio of expected number of members of a lineage at generation \(t + k\) to the expected number at generation \textit{t}.
+
+\begin{equation}
+  W_{k}(t) = \frac{N (t + k)}{\bar{N} (t)}
+  \label{eq:kfit}
+\end{equation}
+
+We can then define \(S_{k}(t)\) or \textit{k}-survivability as
+
+\begin{equation}
+  S_{k}(t) = \pi[N(t + k) \neq 0 | N(t) \neq 0]
+  \label{eq:ksuv}
+\end{equation}
+
+As \citet{Palmer2012} state, selection on lineages is ultimately determined by extinction, which means that \(S_{k}(t)\) is the more fundamental measure of evolutionary success. This is consistent with \citep{Cooper1984}. 
+
+Survivability here is defined as time till extinction. This definition is consistent with the language of survival analysis which is the study of time till event data CITATION.
+
+Here, I adopt survivability as the ultimate measure of fitness or evolutionary success. Importantly, this approach links fitness and evolutionary success to evolutionary paleoecology and macroevolution in general.
+
+
+
+Not surprisingly, the study of survival data has a long history in paleobiology
 
 % more
 
@@ -90,10 +166,10 @@ This formulation means that extinction rate is (stochastically) constant over th
 
 Assessing the linearity or nonlinearity of the hazard function for a given sample has been the focus of a lot of research \citep{Raup1975,Raup1978,Kitchell1991}.
 
-\subsection{Macroevolution}
-Macroevolution, as defined above, has broadly been classified into two categories: effect and species selection \citep{Jablonski2008a}. 
+\subsection{Levels of selection}
+Processes underlying macroevolution have been broadly classified into two categories: effect and species selection \citep{Jablonski2008a}.
 
-Effect macroevolution where selection on a trait expressed at the organismal level effects long term patterns in \(p\) and \(q\) \citep{Vrba1983,Jablonski2008a}. Effect macroevolution is characterized by ``upward'' causation, because selection at lower levels (organism) effects the structure of the higher levels (genus and up) \citep{Jablonski2008a}. \citet{Jablonski2008a} defines these traits as ``aggregate traits'' which can be the entire distribution of a trait for a taxon or some summary statistic (e.g. mean) of a trait distribution. An example aggregate trait would be body size. % larval category?
+Effect macroevolution is where selection on a trait expressed at the organismal level effects long term patterns in \(p\) and \(q\) \citep{Vrba1983,Jablonski2008a}. Effect macroevolution is characterized by ``upward'' causation, because selection at lower levels (organism) effects the structure of the higher levels (genus and up) \citep{Jablonski2008a}. \citet{Jablonski2008a} defines these traits as ``aggregate traits'' which can be the entire distribution of a trait for a taxon or some summary statistic (e.g. mean) of a trait distribution. An example aggregate trait would be body size. % larval category?
 
 Species selection is where selection acts upon a trait that cannot be reduced to the organismal level \citep{Jablonski2007,Jablonski2008a}.
 It is important to note that macroevolution does not only mean species selection \citep{Vrba1983} though they have historically been conflated.
