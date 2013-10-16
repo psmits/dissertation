@@ -1,0 +1,227 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{amsmath, amsthm}
+\usepackage{graphicx, microtype}
+\usepackage{caption, subcaption, multirow}
+\usepackage{morefloats, hyperref}
+\usepackage{rotating, longtable}
+\usepackage[sort&compress]{natbib}
+\usepackage{authblk}
+\usepackage{fullpage}
+\usepackage{parskip}
+\usepackage{attrib}
+
+\usepackage[]{lineno}
+
+\frenchspacing
+
+\title{Evolutionary paleoecology and the biology of extinction}
+\author[1]{Peter D Smits}
+\affil[1]{\footnotesize{\href{mailto:psmits@uchicago.edu}{psmits@uchicago.edu}, Committee on Evolutionary Biology, University of Chicago}}
+
+\begin{document}
+\maketitle
+
+\linenumbers
+\modulolinenumbers[2]
+
+\small{
+\begin{quotation}
+  The ship wherein Theseus and the youth of Athens returned from Crete had thirty oars, and was preserved by the Athenians down even to the time of Demetrius Phalereus, for they took away the old planks as they decayed, putting in new and stronger timber in their place, in so much that this ship became a standing example among the philosophers, for the logical question of things that grow; one side holding that the ship remained the same, and the other contending that it was not the same.
+
+  \attrib{Plutarch, \textbf{Theseus}}
+\end{quotation}
+}
+
+\section{Theoretical framework}
+\subsection{Semiotics in (paleo)biology}
+
+Paleobiology is the study of life over time and in particular the processes that generate the observed patterns in diversity and disparity and how these may have changed.  % look up in the foote book
+Intimately related to this is the concept of macroevolution. Macroevolution, \textit{sensu stricto}, is the pattern of speciation and extinction dynamics over time \citep{Jablonski2008a}. The study of macroevolution, thus, is the method by which the processes underlying these patterns are delineated. The term origination is frequently used in place of speciation because it is considered impossible to observe speciation in the fossil record and instead we only observe the sudden appearance of a new taxon \citep{Coyne2004}.
+
+Macroevolution, \textit{sensu lato}, is both phyletic and anagenetic evolutionary dynamics \citep{Foote2007b}. Phyletic means speciation/extinction dynamics and anagenetic means within lineage disparity dynamics. This concept has also been termed the tempo and mode of evolution \citep{Simpson1944}. This broader definition more closely links paleobiology and macroevolution.
+
+In contrast to macroevolution is microevolution \citep{Simpson1944,Foote2007b} which is defined strictly as change in allele frequency in a population from one generation to the next. A weaker definition is that microevolution is change below the species level \citep{Foote2007b} though there is no qualifier on what this change is defined as. It is important to note that changes in allele frequency affect phenotype frequency and expression.
+
+% why this definition isn't as useful
+%   conflation of two different patterns
+%   makes the word too broad
+%   this is macroevolution as metaphor
+
+Of concern with the broader definition of macroevolution is that this concept subsumes all aspects of anagenetic change. The difference between microevolution versus macrevolution is unclear.
+
+Interestingly, the link between macroevolution \textit{sensu lato} and Simpson's tempo and mode of evolution is that Simpson's statement assigns no hierarchical level to these patterns.
+
+The pervasiveness of the use of macroevolution \textit{sensu lato} then is because this usage is metaphoric and explicitly because it is not the actual definition of macroevolution.
+
+
+Evolutionary paleoecology is defined as the study of the effects of ecological traits and factors on differential rate dynamics, particularly rates of faunal turnover and diversification \citep{Kitchell1985a}.
+Ecological traits and factors are any and all traits expressed by a taxon, at any level, that are involved with biotic--biotic or biotic--abiotic interactions. These interactions are between the taxon and a factor, which as stated may be either biotic or abiotic.
+Diversification is the difference between origination and extinction, and is thus the net product of pattern of macroevolution.
+The study of evolutionary paleoecology is then the link between interactions and macroevolution. Namely, it is the study of the ecological processes that may or may not generate the patterns of macroevolution.
+\citet{Allmon1994} amends Kitchell's definition by stating that in order to correctly link ecological processes to macroevolution, one must focus on the specific traits and factors that affect the speciation process. Tacitly included in this is the study of the biology of extinction \citep{Kitchell1990}.
+
+
+\subsection{Fitness}
+
+Fitness is a nebulous and difficult to define concept in biology.
+
+Sometimes invoked as axiomatic
+
+A standard definition of fitness is reproductive success, or the number of offspring produced per generation. This is virtually impossible to measure in the fossil record.
+
+Most definitions apply only in certain situations
+
+\citet{Cooper1984} defined fundamental fitness as the expected time till extinction. \citet{Cooper1984} argued that all prior definitions scale up to the expected time till extinction.
+
+Expected time till extinction is defined for descrete time intervals as 
+\begin{equation}
+  E[t_{ext}] = \sum_{t = 0}^{\infty} p_{t} t
+  \label{eq:ete_d}
+\end{equation}
+where \(p\) is the probability that the subject of interest goes extinct and \(t\) is time \citep{Cooper1984}. For continuous time, expected time till extinction is defined 
+\begin{equation}
+  E[t_{ext}] = \int_{0}^{\infty} \phi(t) t \mathrm{d}t
+  \label{eq:ete_c}
+\end{equation}
+where \(\phi(t)\) is the probability density distribution for the time of extinction \citep{Cooper1984}.
+
+relationship between fitness and evolutionary success
+
+\citet{Palmer2012} divide evolutionary success into two components: \textit{k}-fitness and \textit{k}-survivability where \textit{k} is some number of generations of interest. This divide is important because, as stated by \citet{Palmer2012}, in short time spans the probability that a lineage will go extinct is very low which makes measuring \textit{k}-survivability (Eq. \ref{eq:ksuv}) impossible. \textit{K}-fitness (Eq. \ref{eq:kfit}) is then a useful alternative at these shorter time scales (\(k >= 1\) as opposed to \(k >>> 1\)).
+
+\textit{K}-fitness is defined as the predicted ``success'' of a lineage as the expected increase in number of members over \textit{k} generations. Effectively this is the ``standard'' definition of fitness extended to multiple generations. In contrast, \textit{k}-survivability measures the ``success'' of a lineage as the likelihood that it will survive for \textit{k} generations given that it as survived to generation \textit{t}.
+
+Mathematically this is all defined in \citet{Palmer2012} as follows. \(\pi[N(t) = n]\) is the probability that a lineage has \textit{n} members at generation \textit{t}. \(\bar{N}(t)\) is the expected number of members of a lineage at generation \textit{t}. Explicitly, this is \(\bar{N}(t) = \sum_{n} n \pi[N(t) = n]\). From this we can define \(W_{k}(t)\), or \textit{k}-fitness, which is the ratio of expected number of members of a lineage at generation \(t + k\) to the expected number at generation \textit{t}.
+
+\begin{equation}
+  W_{k}(t) = \frac{N (t + k)}{\bar{N} (t)}
+  \label{eq:kfit}
+\end{equation}
+
+We can then define \(S_{k}(t)\) or \textit{k}-survivability as
+
+\begin{equation}
+  S_{k}(t) = \pi[N(t + k) \neq 0 | N(t) \neq 0]
+  \label{eq:ksuv}
+\end{equation}
+
+As \citet{Palmer2012} state, selection on lineages is ultimately determined by extinction, which means that \(S_{k}(t)\) is the more fundamental measure of evolutionary success. This is consistent with \citep{Cooper1984}. 
+
+Survivability here is defined as time till extinction. This definition is consistent with the language of survival analysis which is the study of time till event data CITATION.
+
+Here, I adopt survivability as the ultimate measure of fitness or evolutionary success. Importantly, this approach links fitness and evolutionary success to evolutionary paleoecology and macroevolution in general.
+
+
+
+Not surprisingly, the study of survival data has a long history in paleobiology
+
+% more
+
+\subsection{Survival analysis}
+Survival analysis is the statistical field of representing and modeling time till event data, namely the time till failure of an object. For example, this might be the amount of time a part can experience a specific force before experiencing mechanical failure or the amount of time a person survives after contracting a specific disease. In a paleontological context, this can be considered the longevity of a particular taxon from it's first appearance date (FAD) till it's last appearance dat (LAD).
+
+The survival function (\(S(t)\)), which is a statement of the probability that an individual (i.e. species) will survive longer than some specific amount of time \(t\), is defined
+\begin{equation}
+  S(t) = P(T > t)
+  \label{eq:surv}
+\end{equation}
+where \(T\) is the survival time and is greater than, or equal to, 0.
+
+Related to \(S(t)\) is the hazard function \(h(t)\), which is defined as the instantaneous potential for failure given \(t\) amount of time. \(h(t)\) is defined 
+\begin{equation}
+  h(t) = \lim_{\Delta t \to \infty} \frac{P(t \le T < t + \Delta t | T \ge t)}{\Delta t}
+  \label{eq:haz}
+\end{equation}
+Effectively, this is the velocity or first derivative of \(S(t)\).
+
+The survival (Eq. \ref{eq:surv}) and hazard functions (Eq. \ref{eq:haz}) are directly related, with one being derived from the other. The general form of \(S(t)\) is
+\begin{equation}
+  S(t) = \exp\left[- \int_{0}^{t} h(u) \mathrm{d}u\right]
+  \label{eq:surv_gen}
+\end{equation}
+and the general form of \(h(t)\) being
+\begin{equation}
+  h(t) = -\left[\frac{\mathrm{d}S(t) / \mathrm{d}t}{S(t)}\right]
+  \label{eq:haz_gen}
+\end{equation}
+The relationship between the survival function 
+
+In the context of biology, \(\bar{S(t)}\) for some sample is the mean (expected) survival time or fitness \citep{Cooper1984}. Additionally, \(h(t)\) is the failure rate and can be interprested as the extinction rate. 
+% testing variable effect on hazards
+%   time constant
+%   time variable
+
+Because of this survival curves have had a long history of use in paleobiological studies \citep{Simpson1953,VanValen1973,Levinton1974,Raup1975,Raup1978,Foote1988,Kitchell1991,Foote2001}. The Law of Extinction stems from analysis of survival curves \citep{VanValen1973}. In terms of modeling the hazard function of a survival curve, the Law of Extinction states that the hazard function is a special case of equation \ref{eq:haz_gen} and is defined 
+\begin{equation}
+  h(t) = \lambda
+  \label{eq:haz_const}
+\end{equation}
+where \(\lambda\) is some constant. Given the hazard function in equation \ref{eq:haz_const}, the survival function is easily defined 
+\begin{equation}
+  S(t) = \exp^{-\lambda t}
+  \label{eq:surv_const}
+\end{equation}
+
+This formulation means that extinction rate is (stochastically) constant over the entire duration of a taxon \citep{VanValen1973}. For further discussion, see below. Other theoretical concepts for extinction rate are that younger taxa have a greater extinction rate than older taxa, or vice-versa. These alternative \(h(t)\) functions would be better fit but other, non-uniform, distributions.
+
+Assessing the linearity or nonlinearity of the hazard function for a given sample has been the focus of a lot of research \citep{Raup1975,Raup1978,Kitchell1991}.
+
+\subsection{Levels of selection}
+Processes underlying macroevolution have been broadly classified into two categories: effect and species selection \citep{Jablonski2008a}.
+
+Effect macroevolution is where selection on a trait expressed at the organismal level effects long term patterns in \(p\) and \(q\) \citep{Vrba1983,Jablonski2008a}. Effect macroevolution is characterized by ``upward'' causation, because selection at lower levels (organism) effects the structure of the higher levels (genus and up) \citep{Jablonski2008a}. \citet{Jablonski2008a} defines these traits as ``aggregate traits'' which can be the entire distribution of a trait for a taxon or some summary statistic (e.g. mean) of a trait distribution. An example aggregate trait would be body size. % larval category?
+
+Species selection is where selection acts upon a trait that cannot be reduced to the organismal level \citep{Jablonski2007,Jablonski2008a}.
+It is important to note that macroevolution does not only mean species selection \citep{Vrba1983} though they have historically been conflated.
+
+\subsection{Law of Extinction}
+The Law of Extinction is defined above (Eq. \ref{eq:haz_const} and \ref{eq:surv_const})
+
+\citet{Raup1975} emphasized the importance of the Law of Extinction, what he called Van Valen's Law, because it represented the first step towards a general theory statement in paleobiology of how to interpret the fossil record that wasn't taxon specific nor just an enumeration of events.
+
+
+
+\section{Cosmopolitan versus endemic dynamics in Cenozoic terrestrial mammals}
+
+% outline
+Question(s): How to ecological traits affect cosmopolitan--endemic dynamics? Does climate change (temperature) affect cosmopolitan--endemic dynamics? Which best explains the observed cosmopolitan--endemic patterns?
+
+Data: Mammalian occurrence information from North America, Europe, and South America. North American and European data was collected from the Paleobiological Database. South American data is preliminary based upon the collections housed at the Field Museum.
+
+Analysis: Taxon-locality biogeography networks \citep{Sidor2013,Vilhena2013}. Biogeographic network summary statistics \citep{Sidor2013}.
+
+How does this relate to the central theme of my dissertation? When discussing the effect of biotic--biotic interactions in the context of evolutionary paleoecology, it is important to understand which biotic interactors may have been possible.
+
+Multiple approaches to doing this. Ordination ALL THE CITATIONS. Food web analysis \citep{Angielczyk2005,Roopnarine2010,Roopnarine2007,Roopnarine2006,Mitchell2012}. Biogeographic networks \citep{Sidor2013,Vilhena2013}.
+
+In addition to this, it is important to understand how biotic--abiotic interactions may influence regional or continental patterns of cosmopolitan and endemic taxa.
+
+Fundamental to this study is the concept of the adaptive zone, which is definde is the set of all biotic--biotic and biotic--abiotic interactions than an organism experiences over time \citep{Simpson1944,Liow2011a,VanValen1973,Valen1985}. 
+
+In effect, I attempt to estimate biome size, structure, and connectedness. By investing both coarse trophic levels and method of dispersal
+
+stability and connectedness
+
+
+
+\section{Extinction selectivity in Cenozoic mammals}
+\citep{Quental2013,Liow2009,Liow2008}
+
+
+\section{Effect of life history on survival in Permian brachiopods}
+
+How life history characters effect the macroevolutionary processes of different groups is extremely fundamental to the study of evolutionary paleoecology.
+
+Brachiopods are a relatively ecologically homogenous group that represented a major portion of the later Paleozoic marine community. Here, I focus on three particular ecological traits which define and differentiate most brachiopod taxa: substrate affinity, stabilization strategy, and habitat preference. Each of these three traits are expressed at the organism level and are logically fundamental to the survival of an organism and species. Because of uneven geographic preservation and potential taxonomic concerns, for this study I analyzed the brachiopod record of Australia during the Permian. This specific region and time period is well studied and represents a rather continuous geographic sample with consistent taxonomy \citep{Clapham2008a,Clapham2012,Clapham2007}.
+
+Using expected time till extinction as the definition of fitness \citep{Cooper1984}, I investigate survival differences between different life history trait combinations. This analysis shares many similarities with taxonomic survivorship analysis \citep{VanValen1973,VanValen1979} and cohort survivorship analysis \citep{Raup1978}. Survivorship analysis is the analysis and modeling of time till event data CITATION. While modeling this time till event data, time-constant and time-varying are used to determine the effect of these variables on survivorship CITATION. Additionally, the comparison of different categories can be used to determine if these categories have similar or different survivorship trajectories CITATION.
+
+Historically, one of the principle questions addressed via paleontological survivorship analysis was of the shape of the survivorship curve. Particularity, the emphasis was on determining if the survivorship curve was linear or not \citep{VanValen1973,Raup1975,Sepkoski1975,Pearson1992,Kitchell1991}. Effectively, the question was whether the hazard function (Eq. \ref{eq:haz} and \ref{eq:haz_gen}) of the survivorship curve was best modeled as a constant (Eq. \ref{eq:haz_const}) or not.
+
+Here, instead I focus on how the survivorship and hazard functions of might vary between different life history trait combinations. Additionally, using a approach inspired by cohort suvivorship analysis \citep{Raup1975} I will investigate how fitness changes over the Permian as climate and habitat structure and availability changed over time CITATIONS.
+
+
+\bibliographystyle{abbrvnat}
+\bibliography{proposal}
+
+\end{document}
