@@ -2,44 +2,44 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: proposal_doc.aux
 The style file: abbrvnat.bst
 Database file #1: proposal.bib
-You've used 28 entries,
+You've used 42 entries,
             2773 wiz_defined-function locations,
-            841 strings with 10556 characters,
-and the built_in function-call counts, 13607 in all, are:
-= -- 1305
-> -- 687
-< -- 24
-+ -- 237
-- -- 209
-* -- 1149
-:= -- 2132
-add.period$ -- 127
-call.type$ -- 28
-change.case$ -- 151
-chr.to.int$ -- 28
-cite$ -- 56
-duplicate$ -- 588
-empty$ -- 1099
-format.name$ -- 255
-if$ -- 2832
+            939 strings with 13344 characters,
+and the built_in function-call counts, 20297 in all, are:
+= -- 1945
+> -- 1025
+< -- 32
++ -- 353
+- -- 311
+* -- 1728
+:= -- 3170
+add.period$ -- 183
+call.type$ -- 42
+change.case$ -- 226
+chr.to.int$ -- 42
+cite$ -- 84
+duplicate$ -- 874
+empty$ -- 1652
+format.name$ -- 377
+if$ -- 4216
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 31
-newline$ -- 190
-num.names$ -- 114
-pop$ -- 238
+missing$ -- 46
+newline$ -- 274
+num.names$ -- 170
+pop$ -- 357
 preamble$ -- 1
-purify$ -- 125
+purify$ -- 187
 quote$ -- 0
-skip$ -- 430
+skip$ -- 632
 stack$ -- 0
-substring$ -- 622
-swap$ -- 61
+substring$ -- 975
+swap$ -- 80
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 293
+type$ -- 442
 warning$ -- 0
-while$ -- 133
+while$ -- 201
 width$ -- 0
-write$ -- 458
+write$ -- 668
