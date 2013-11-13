@@ -33,7 +33,7 @@
 
     \textit{Committee} \\
     Dr. Michael J. Foote (co-advisor) \\
-    Dr. Kenneth D. Angielczky (co-advisor) \\
+    Dr. Kenneth D. Angielczyk (co-advisor) \\
     Dr. Richard H. Ree \\
     Dr. P. David Polly
   \end{center}
@@ -64,7 +64,6 @@ It is under this framework that I purpose to study how ecological traits associa
 % definition
 % metaphor
 % metonymy
-
 Extinction, when not during periods of mass extinction, is widely considered non-random with respect to biology \citep{Jablonski1986}. Additionally, times of ``background extinction'' represent the vast majority of geological time compared to periods of ``mass extinction.'' The exact definition and distinction between periods of background and mass extinction is based on the relative intensity of extinction at a particular time versus times preceding and following. Simply put, the major indicator of a mass extinction is an event that is across taxonomic categories and the biotic interactors before and after the event are dramatically different \citet{Jablonski1986,Jablonski2005,Kitchell1986,Kitchell1991}.
 
 Paleobiology is the study of life over time and the processes that generate the observed patterns in diversity and disparity. Intimately related to paleobiology is the concept of macroevolution which is here defined as the pattern of speciation and extinction over time \citep{Jablonski2008a}. The study of macroevolution, thus, is the estimation of the processes underlying these observed patterns. The term origination is frequently used in place of speciation because it is considered impossible to observe speciation in the fossil record and instead we only observe the sudden appearance or origination of a new taxon \citep{Coyne2004}. Additionally, origination includes both speciation and migration because, depending on both the spatial scale and quality of the fossil record, it may be impossible to distinguish between the two.
@@ -118,10 +117,7 @@ Taxonomic occurrence data will be collected through a combination of the Paleobi
 \textit{Questions:} How do ecological characters, such as dietary category and locomotor category, affect survivorship in mammals? Is the hazard (instantaneous extinction rate) in adaptive zones constant with respect to taxon age, or does instantaneous extinction rate change with taxon age? Is any single trait the best predictor of survivorship, or do multiple traits together predict survivorship better?
 
 \textit{Background and Predictions:} 
-
 In mammals, three of the arguably most important ecological traits are dietary category, locomotor category, and body size CITATIONS. Additionally, each of these traits are important in determining the emergent species level property of range size. 
-
-%While diet and locomotor categories are known to evolve in context amongst terrestrial mammals, they are not the same trait and thus it is very possible that there is not necessarily any direct causal connection between the evolution of these traits. However, it may be quite possible that there is a correlation between them. This is similar, also, with correlations between either of these traits and body size.
 
 As discussed above, as the Cenozoic progressed on all Continents there was a shift from closed habitat to more open habitat. In the intermediate, one would expect some degree of patchiness in the landscape. Expectedly, there would be a increase followed by a decrease in both speciation rate and extinction rate, with the peak being during the intermediate period.
 
@@ -129,25 +125,24 @@ According to \citet{Price2012}, herbivores and carnivores should have a greater 
 
 Depending on the continent, body size has been demonstrated to play either some or no roll in extinction selectivity during the Neogene \citep{Tomiya2013,Liow2008,Liow2009}. By expanding to include a third continent, South America, I hope to elucidate how differences in taxonomic diversity at a continental level might affect body size mediated extinction risk. Additionally, I will be using alternative methods to better understand the dynamics governing trait based extinction probability.
 
-
 Given \citep{Jernvall2002}, it might be expected that the pattern for all mammals will be most similar to the pattern from (common) herbivores. However, I am unsure if this is as reasonable prediction for survivorship as opposed to biogeographic connectedness.
-
-
 
 \textit{Proposed research:}
 To investigate the effect of ecological traits and climate change on survivorship, I plan to analyze differential survivorship and compare models of hazard in order to best understand what are the most important factors in estimating survival probability.
 
-Survivorship analysis is the analysis of time-till-event data. In a paleontological context this means the time from origination till extinction. Time of origination is measured as the first appearance date (FAD) and time of extinction is measured as the last appearance date (LAD). The following time-independent covariates will be modeled as predictors of survival: dietary category, locomotor category, body size. The climate proxy \(\delta O^{18}\) oxygen curve from \citet{Zachos2008} will be modeled as an ancillary time-dependent covariate.
+Survivorship analysis is the analysis of time-till-event data. In a paleontological context this means the time from origination till extinction. Time of origination is measured as the first appearance date (FAD) and time of extinction is measured as the last appearance date (LAD). The following time-independent covariates will be modeled as predictors of survival: dietary category, locomotor category, body size. The climate proxy \(\delta O^{18}\) oxygen curve from \citet{Zachos2008} will be modeled as an ancillary time-dependent covariate. Additionally, constant versus accelerating, decelerating, or time variant extinction rate will be analyzed by comparing the fit of using multiple probability distributions to model survivorship.
 
-There are four basic probability distributions used to model survival: exponential, Weibull, lognormal, and log logistic CITATIONS. The Law of Constant extinction states that the shape of a survival curve is linear on a semi-log scale for any taxon in a particular adaptive zone, meaning that extinction rate is constant with respect to time \citep{VanValen1973}. This means that survival should be best modeled using the exponential distribution because has a single parameter, meaning that the logarithm of survival is constant with respect to time.
+%There are several commonly used probability distributions for modeling survivorship data CITATION. The Law of Constant extinction states that the shape of a survival curve is linear on a semi-log scale for any taxon in a particular adaptive zone, meaning that extinction rate is constant with respect to time \citep{VanValen1973}. This means that survival should be best modeled using the exponential distribution because has a single parameter, meaning that the logarithm of survival is constant with respect to time. Other probability distributions, such as the Weibull distribution, are used to better model accelerating, decelerating, or otherwise time varying extinction rate CITATION.
 
-ADD IN MODELS. NEED TO READ MORE SURVIVAL BOOK.
+%ADD IN MODELS. NEED TO READ MORE SURVIVAL BOOK.
 
 While many analyses of extinction risk and survivorship are done using generic level data \citep{Tomiya2013,Liow2008,Harnik2013}, there is a known biasing effect in survivorship analysis of paleontological data where the hazard function describing the survivorship curve is biased away uniformity \citep{Raup1975,Sepkoski1975} which can cause potentially false results in relation to the Van Valen's Law of Constant Extinction \citep{VanValen1973}. There are also important concerns regarding anagenetic lineages, hierarchical selection, extant taxa or taxa that did not go extinct in the time frame of interest \citep{Raup1975,VanValen1979,Simpson2006,Raup1991a} PROBABLY MORE. Interestingly, the effect of incomplete sampling on estimation of survivorship curves appears rather minimal and uniform \citep{Sepkoski1975}. However, the problems involving extant taxa and taxa that did not go extinct have mostly been dealt with following advances of how to describe right-censored survivorship data and estimate the likelihood of various parametric models of hazard and survivorship CITATION TEXTBOOK. 
 
-Simulation study to analyze effect of varying sampling probability and/or anagenesis rate on estimating various models of survivorship using \texttt{paleotree} \citep{Bapst2012a}. Principally, I am interested in the effect of these paleontological realities on estimation of the hazard function of the survivorship data and in particular departures from a constant, or exponential, hazard function. Alternatives are, for example, models of accelerating or decelerating extinction rate. I intend to revise the previously analyzed effect of sampling on estimation survivorhip in this new context \citep{Sepkoski1975}.
+Thus, in order to asses potential specific versus generic effects I will analyze both specific and generic level survivorship. \citet{Foote1988} devised an approach based on the work of \citet{Raup1985} for determining specific level origination and extinction rates from generic level data. Using this approach, or a variant there of, I will measure the deviance between extinction rate estimated from the specific survivorship and the specific level extinction rates estimated from the analysis of the generic survivorship data. This is similar to previous work comparing generic and specific level rates \citet{Simpson2006} but instead of estimating the best model of hierarchical diversification, I hope to illuminate potential discrepancies caused analysis of only generic level data which are in turn poorly modeled or difficult to explain \citep{Liow2008,Tomiya2013,Simpson2006}.
 
-Do not use generic data? Or figure out a correction factor? Do both generic and specific level analysis and then use \citep{Foote1988} to get deviance/concordance and see what potential biasing effect might be occurring?
+The data necessary to complete this study will be the same as collected above for analysis of dynamics of mammalian biogeographic connectedness.
+
+In addition to the above study of mammalian survivorship, I also propose a simulation study to analyze effect of varying sampling probability and/or anagenesis rate on estimating various models of survivorship using \texttt{paleotree} \citep{Bapst2012a}. Principally, I am interested in the effect of these paleontological realities on estimation of the hazard function of the survivorship data and in particular departures from a constant, or exponential, hazard function. Alternatives are, for example, models of accelerating or decelerating extinction rate. I intend to revise the previously analyzed effect of sampling on estimation survivorship in this new context \citep{Sepkoski1975}.
 
 
 \section{Extinction risk related to traits affecting habitat selection in Permian brachiopods}
@@ -155,7 +150,7 @@ Do not use generic data? Or figure out a correction factor? Do both generic and 
 \textit{Questions:} How do traits directly related habitat selection and range size relate to extinction risk? Are certain traits more explanatory of extinction risk than others? Does changing environmental and substrate availability affect trait-based extinction risk?
 
 \textit{Background and Predictions:}
-Affixing strat: pedicle, reclining, cementing. Pedicles are associated with shallow, on-shore environments while reclining on associated with deep, off-shore environments. Note, global Permian pattern is rather heterogeneous in terms of relative abundance between the three affixing strategies CLAPHAM. According to \citet{Alexander1977}, endemic unattached/reclining taxa have longer durations than all other affixing strategies of other endemic taxa. on the other hand, cosmopolitan pedunculate and cementing taxa have longer durations than unattached/reclining taxa. in terms of regional scales, it will be necessary to correct for relative abundance to actally measure survivability/fitness.
+Affixing strat: pedicle, reclining, cementing. Pedicles are associated with shallow, on-shore environments while reclining on associated with deep, off-shore environments. Note, global Permian pattern is rather heterogeneous in terms of relative abundance between the three affixing strategies CLAPHAM. According to \citet{Alexander1977}, endemic unattached/reclining taxa have longer durations than all other affixing strategies of other endemic taxa. On the other hand, cosmopolitan pedunculate and cementing taxa have longer durations than unattached/reclining taxa. In terms of regional scales, it will be necessary to correct for relative abundance to actually measure survivability/fitness.
 
 Substrate: carbonate, clastic, mixed. Overall decline in carbonates relative to clastics, decreased fitness for carbonate lovers relative to clastic lovers. Best to be mixed? Brachiopods are mixed slash switchers CARL AND MELANIE'S UNPUBLISHED WORK.
 
@@ -163,12 +158,15 @@ Habitat: on-shore vs off-shore / epicontinental vs oceanic. How possible is this
 
 During the Permian there was a shift from an ``ice house'' world to a ``hot house world'' CITATIONS which could be expected to have some major effects on brachiopod survivorship. In particular, taxa in modern Australia would be of particular interest because of the proximity of Australia to the south pole during the Permian and the repeated glacial activity in the region CITATIONS. According to \citet{Olszewski2004}, sea-level and climate change do not wholly explain the ecological dynamics experienced by brachiopods in the Permian of Texas. The prediction then is that the best model of brachiopod survivorship will have to have some biotic component such as affixing strategy or substrate preference. If climate or environmental information, such as habitat preference, is a predictor in the best model of survivorship is less clear cut and necessary to determine empirically.
 
-
 \textit{Proposed research:}
+I propose to use a survival analysis approach similar to the one previously described to estimate the differential survivorship of brachiopods leading up to the Permo-Triassic boundary. I restric the analysis to Australiasia because it represents a relatively continually sampled and well worked area that preserves the majority of the entire Permian CITATIONS. In this case, the time-independent covariates are substrate preference, affixing strategy, and habitat preference. Climate and abiotic environment will be modeled as either an ancillary heavyside function or a time-varying covariate depending on the quality of the Permian isotope record. Additionally, as in the mammalian survivorship analysis described above, brachiopod survivorship will be modeled using multiple probability distributions for constant, accelerating, decelerating, or time-varying extinction rate.
+
+From the parameter estimates of the best model of survivorship it is possible to compare the hazard ratios and estimate the relative fitness of different ecological characters.
+
+Permian brachiopod occurrence information is available via the PBDB and is primarily based on the work of Matthew Clapham \citep{Clapham2006,Clapham2008a,Clapham2007a,Clapham2012,Clapham2007}.
 
 
-
-%\section{Importance}
+\section{Intellectual merit}
 
 
 
@@ -178,45 +176,31 @@ During the Permian there was a shift from an ``ice house'' world to a ``hot hous
 Spring/Summer 2014
 \begin{itemize}
   \item Evolution Meeting: brachiopods
-  %\item cosmo prov
-  %\item survivor
 \end{itemize}
 
 Fall 2014/Winter 2015
 \begin{itemize}
-  \item GSA: simulation
-  %\item cosmo prov
-  %\item survivor
-  %\item mammal risk
+  \item GSA: survivorship simulation
 \end{itemize}
 
 Spring/Summer 2015
 \begin{itemize}
   \item Evolution Meeting: mammals
-  %\item survivor
-  %\item mammal risk
-  %\item review 1
 \end{itemize}
 
 Fall 2015/Winter 2016
 \begin{itemize}
   \item SVP or GSA
-  %\item mammal risk
-  %\item review 1
-  %\item review 2
 \end{itemize}
 
 Spring/Summer 2016
 \begin{itemize}
   \item Evolution Meeting
-  %\item review 1
-  %\item review 2
 \end{itemize}
 
 Fall 2016/Winter 2017
 \begin{itemize}
   \item SVP or GSA
-  %\item review 2
 \end{itemize}
 
 Spring/Summer 2017
