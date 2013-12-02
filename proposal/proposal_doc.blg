@@ -3,45 +3,45 @@ The top-level auxiliary file: proposal_doc.aux
 The style file: abbrvnat.bst
 Database file #1: proposal.bib
 Warning--there's a number but no volume in Harnik2013
-You've used 103 entries,
+You've used 102 entries,
             2773 wiz_defined-function locations,
-            1411 strings with 27130 characters,
-and the built_in function-call counts, 49217 in all, are:
-= -- 4812
-> -- 2382
+            1404 strings with 27111 characters,
+and the built_in function-call counts, 48709 in all, are:
+= -- 4761
+> -- 2352
 < -- 76
-+ -- 824
-- -- 719
-* -- 4240
-:= -- 7693
-add.period$ -- 473
-call.type$ -- 103
-change.case$ -- 544
-chr.to.int$ -- 101
-cite$ -- 207
-duplicate$ -- 2105
-empty$ -- 4019
-format.name$ -- 884
-if$ -- 10211
++ -- 814
+- -- 710
+* -- 4192
+:= -- 7611
+add.period$ -- 467
+call.type$ -- 102
+change.case$ -- 538
+chr.to.int$ -- 100
+cite$ -- 205
+duplicate$ -- 2084
+empty$ -- 3983
+format.name$ -- 874
+if$ -- 10107
 int.to.chr$ -- 3
 int.to.str$ -- 1
-missing$ -- 107
-newline$ -- 686
-num.names$ -- 414
-pop$ -- 796
+missing$ -- 106
+newline$ -- 678
+num.names$ -- 410
+pop$ -- 789
 preamble$ -- 1
-purify$ -- 445
+purify$ -- 440
 quote$ -- 0
-skip$ -- 1497
+skip$ -- 1483
 stack$ -- 0
-substring$ -- 2415
-swap$ -- 177
+substring$ -- 2400
+swap$ -- 175
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1108
+type$ -- 1097
 warning$ -- 1
-while$ -- 496
+while$ -- 491
 width$ -- 0
-write$ -- 1675
+write$ -- 1656
 (There was 1 warning)
