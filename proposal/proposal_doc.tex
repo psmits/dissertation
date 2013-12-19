@@ -132,13 +132,23 @@ Taxonomic occurrence data will be collected through a combination of the Paleobi
 
 
 \textit{Preliminary results}
+I have calculated, at least provisionally, the community connectedness patterns of both North America and Europe based on PBDB data (Fig. \ref{fig:mam_tot}). Additionally, the community connectedness patterns for the dietary and locomotor categories have also been calculated for North America and Europe (not illustrated). Both regions have qualitatively very different patterns of community connectedness, primarily in the early Cenozoic.
+
 \begin{figure}[ht]
   \begin{center}
     \includegraphics[height = 0.4\textheight, keepaspectratio = true]{figure/gen_bin}
   \end{center}
-  \caption{Biogeographic network summary statistics for mammalian communities in North America and Europe. The summary statistics are, clockwise from top right: average relative occupancy (avgcooc), biogeographic connectedness (bc), average relative number of endemics (end), code length (code).} 
+  \caption{Biogeographic network summary statistics for mammalian communities in North America (dashed line) and Europe (solid line). The summary statistics are, clockwise from top left: average relative occupancy (avgcoc), biogeographic connectedness (bc), average relative number of endemics (end), code length (code). Blue lines are generalized additive model smooths and are presented to illustrate the over all pattern of the two regions.} 
   \label{fig:mam_tot}
 \end{figure}
+
+While average relative occupancy remains relatively stationary and constant for North America, there is a qualitative decrease in average relative occupancy in Europe until approximately the start of the Neogene (approximately 23 My).
+
+Biogeographic connectedness of North American mammalian communities qualitatively decreases over the early Cenozoic until approximately the start of the Neogene. In Europe there is a qualitative rise in biogeographic connectedness in the first few million years of the Cenozoic, but afterwards remains relatively constant and stationary.
+
+In Europe, there is a over all qualitative decrease in average relative number of endemic taxa. North America, in contrast, has a qualitatively constant average relative number of endemics over the Cenozoic with a slight decrease in the Neogene.
+
+The code length of European biogeographic networks increases qualitatively over the entire Cenozoic, while code length of North American networks remains relatively constant until the Neogene when there is a qualitative increase.
 
 
 \section{Ecology, survivorship, and fitness in Cenozoic mammals}
@@ -200,13 +210,37 @@ Permian brachiopod occurrence information is available via the PBDB and is prima
 
 
 \textit{Preliminary results}
-%\begin{figure}[ht]
+Preliminary analysis of brachiopod survivorship has been on differential survival based on either substrate affinity and habitat preference. Both of these traits were assigned using the approach of \citet{Simpson2009} where trait value is determined as the posterior probability of the occurrence ratio in comparison to the all occurrences during the duration of that taxon. The posterior probability of assignment is calculated
+\begin{equation}
+  P(H_{1}|E) = \frac{P(E|H_{1})P(H_{1})}{P(E|H_{1})P(H_{1}) + P(E|H_{2})P(H_{2})}
+  %\label{eq:aff}
+\end{equation}
+where \(P(H_{1})\) and \(P(H_{2})\) are prior probabilities of assignment while \(P(E|H_{1})\) and \(P(E|H_{2})\) are the conditional, binomial probabilities of assignment. 
+
+For substrate affinity \(P(H_{1}) = P(H_{2}) = 0.5\) and if \(P(H_{1}|E) > \frac{2}{3}\) than the taxon was considered of carbonate affinity and if \(P(H_{1}|E) < \frac{1}{3}\). Otherwise, the taxon was considered to have no or mixed affinity. In the case of habitat affinity, the posterior probability for each habitat (inshore, offshore, none) was calculated with \(P(H_{1}) = \frac{1}{3}\) and \(P(H_{2}) = \frac{2}{3}\) and the preference with maximum of the three posterior probabilities was the assignment.
+
+Preliminary analysis of generic survival involved the fitting of multiple parametric survival models with both exponential and Weibull hazard functions. The best fit model based on comparison of AICc scores CITATION was the model with substrate affinity as the sole predictor and a Weibull hazard function and is illustrated below (Fig. \ref{subfig:aff_surv}). While this model is the current best model of survivorship, the model with both substrate affinity and environmental preference as additive effects and a Weibull hazard function is almost as good a model of survival. Additionally, as illustrated by the difference between the nonparametric Kaplan-Meier survival curves and the predictions of the parametric model of survival is great at many points (Fig. \ref{subfig:aff_surv}) and this there is room for improvement in model specification. This is similar for the results of the model with habitat preference as the sole predictor and a Weibull hazard function (Fig. \ref{subfig:env_surv}).
+
+\begin{figure}[ht]
 %  \begin{center}
-%    \includegraphics{<+file+>}
+    \begin{subfigure}[b]{0.5\textwidth}
+      \caption{}
+      \includegraphics[height = 0.4\textheight, keepaspectratio = true]{figure/aff}
+      \label{subfig:aff_surv}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.5\textwidth}
+      \caption{}
+      \includegraphics[height = 0.4\textheight, keepaspectratio = true]{figure/env}
+      \label{subfig:env_surv}
+    \end{subfigure}
 %  \end{center}
-%  \caption{Survivorship curves of Australasian Permian brachiopod genera.}
-%  \label{fig:brach_surv}
-%\end{figure}
+    \caption{Survivorship curves of Australasian Permian brachiopod genera based on substrate affinity (\subref{subfig:aff_surv}) and habitat preference (\subref{subfig:env_surv}). The three stepwise functions are nonparametric Kaplan-Meier survival curves for each of the three substrate affinities. The three smooth lines are the predicted survivorship probabilities for taxon of the given age from the parametric model of generic survivorship and illustrated standard errors of the prediction.}
+  \label{fig:brach_surv}
+\end{figure}
+
+% that whole young taxa versus old taxa and where the models are bad slash the behaviors of the different groups
+% hockey stick and those implications
+
 
 \section{Summary of proposed research}
 % Fundamental questions in evolution and paleobiology. 
