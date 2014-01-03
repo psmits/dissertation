@@ -6,9 +6,14 @@
 
 \frenchspacing
 
-\title{Evolutionary paleoecology and the biology of extinction}
-\author{Peter D Smits}
-\institute{Committee on Evolutionary Biology, University of Chicago}
+\usetheme{default}
+\usecolortheme{whale}
+
+\setbeamercolor{block title alerted}{fg=white,bg=darkgray}
+\setbeamercolor{block body alerted}{fg=black,bg=lightgray}
+
+\setbeamercolor{block title}{fg=white,bg=gray}
+\setbeamercolor{block body}{fg=black,bg=lightgray}
 
 \AtBeginSection[]
 {
@@ -17,6 +22,10 @@
   \end{frame}
 }
 
+
+\title{Evolutionary paleoecology and\\ the biology of extinction}
+\author{Peter D Smits}
+\institute{Committee on Evolutionary Biology, University of Chicago}
 
 \begin{document}
 
@@ -39,22 +48,64 @@
     \attrib{Kitchell 1985 Paleobiology}
   \end{quotation}
 
-  % allmon says focus on traits and factors that may affect speciation
-  % tacit inclusion of extinction
+  % Allmon says focus on traits and factors that may affect speciation
+  % Tacit inclusion of extinction
 \end{frame}
 
 \begin{frame}
   \frametitle{Emergent properties}
 
-  \begin{block}{\alert{Species level}}
-    trait that cannot be reduced to organismal level. 
+  \begin{block}{Species level}
+    Trait that cannot be reduced to organismal level
     
-    product of one or more traits/factors.
+    Product of one or more traits/factors
   \end{block}
+
+  % Diagram from grantham's paper? Or a DJ paper?
+\end{frame}
+
+\begin{frame}
+  \frametitle{Range size}
+  % effect on extinction
+  Large range size means lower origination and extinction rates than small range size.
+
+  Range size is emergent
+
+  % DJ pictures?
 \end{frame}
 
 \begin{frame}
   \frametitle{Survival}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{block}{Survival function}
+        \begin{equation}
+        S(t) = P(T > t)
+        \label{eq:surv}
+      \end{equation}
+    \end{block}
+
+    directly describes survival
+    \end{column}
+    \begin{column}{0.5\textwidth} 
+      % figure of idealized survival curve
+      % figure of Kaplan--Meier survival curve
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Hazard}
+  \begin{block}{Hazard function}
+    \begin{equation}
+      h(t) = \lim_{\Delta t \to 0} \frac{P(t \leq T < t + \Delta t | T \geq t)}{\Delta t}
+      \label{eq:haz}
+    \end{equation}
+  \end{block}
+
+  % example hazard functions
+  %   exponential, Weibull x2, lognormal
 \end{frame}
 
 \begin{frame}
@@ -62,9 +113,16 @@
 
   Van Valen 1973 ``Red Queen'' paper.
 
-  \begin{block}{}
-    survival probability/extinction is taxon--age independent.
-  \end{block}
+  \begin{alertblock}{Definition}
+      Survival probability and extinction risk is taxon--age independent.
+  \end{alertblock}
+
+  translation: hazard is constant with respect to time (\alert{exponential})
+
+  \begin{equation}
+    h(t) = \lambda \iff S(t) = \exp^{-\lambda t}
+    \label{eq:constant}
+  \end{equation}
 
   % figure from the Liow Red Queen review
 \end{frame}
@@ -83,6 +141,23 @@
 
 \begin{frame}
   \frametitle{Series of questions}
+  \begin{itemize}
+    \item generic level survival in brachiopods %and mammals
+      \begin{itemize}
+        \item effect of ecological traits (emergence)
+        \item distribution of survival
+      \end{itemize}
+    \item specific level survival in mammals
+      \begin{itemize}
+        \item generic versus specific survival
+        \item anagenesis/species:genus simulation
+        \item distribution of survival
+      \end{itemize}
+    \item community connectedness in mammals
+      \begin{itemize}
+        \item global versus regional versus local scale processes
+      \end{itemize}
+  \end{itemize}
 \end{frame}
 
 
@@ -92,17 +167,52 @@
   \frametitle{Ecological traits}
   \begin{itemize}
     \item substrate affinity
+      \begin{itemize}
+        \item physical, chemical
+        \item availability
+      \end{itemize}
     \item habitat preference
+      \begin{itemize}
+        \item energetics
+        \item availability
+      \end{itemize}
     \item affixing strategy
+      \begin{itemize}
+        \item energetics
+        \item optimality
+      \end{itemize}
   \end{itemize}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Methodology}
-   
-  Survival: time till event
+  \frametitle{Substrate affinity}
+  % image
+\end{frame}
 
-  FAD -- LAD
+\begin{frame}
+  \frametitle{Habitat preference}
+  % image
+\end{frame}
+
+\begin{frame}
+  \frametitle{Affixing strategy}
+  % image
+\end{frame}
+
+\begin{frame}
+  \frametitle{Assigning substrate and habitat}
+
+  \begin{block}{Probability of assignment}
+    \begin{equation}
+      P(H_{1}|E) = \frac{P(E|H_{1})P(H_{1})}{P(E|H_{1})P(H_{1}) + P(E|H_{2})P(H_{2})}
+      \label{eq:aff}
+    \end{equation}
+    \attrib{Simpson and Harnik 2009 Paleobiology}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Models}
 \end{frame}
 
 \begin{frame}
@@ -116,24 +226,112 @@
   \frametitle{Ecological traits}
   \begin{itemize}
     \item dietary category
+      \begin{itemize}
+        \item energetics
+        \item availability
+      \end{itemize}
     \item locomotor category
+      \begin{itemize}
+        \item availability
+        \item dispersal
+      \end{itemize}
     \item body size
+      \begin{itemize}
+        \item energetics
+        \item home range size
+      \end{itemize}
   \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Expectations}
 \end{frame}
 
 
 \section{Community connectedness in Cenozoic mammals}
 
 \begin{frame}
-  \frametitle{Ecological traits}
+  \frametitle{Community connectedness}
+  % figures from Sidor et al 2013
 \end{frame}
 
 \begin{frame}
-  \frametitle{Expectations}
+  \frametitle{Average relative number of endemics}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{equation}
+        E = \frac{\sum_{i = 1}^{L} \frac{u_{i}}{n_{i}}}{L}
+        \label{eq:end}
+      \end{equation}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      % pictures
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Average relative occupancy per taxon}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{equation}
+        Occ = \frac{\sum_{i = 1}^{N} \frac{l_{i}}{L}}{N}
+        \label{eq:occ}
+      \end{equation}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      % pictures
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Biogeographic connectedness}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{equation}
+        BC = \frac{O - N}{LN - N}
+        \label{eq:bc}
+      \end{equation}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      % pictures from Sidor et al. 2013
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Code length}
+
+  % illustrate
+  % map equation
+\end{frame}
+
+\begin{frame}
+  \frametitle{Global versus regional versus local scale processes}
+\end{frame}
+
+\begin{frame}
+  \frametitle{General expectations: dietary category}
+\end{frame}
+
+\begin{frame}
+  \frametitle{General expectations: locomotor category}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Community connectedness of North America}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Community connectedness of Europe}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Community connectedness of South America}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Models}
 \end{frame}
 
 \begin{frame}
