@@ -1,5 +1,4 @@
-\documentclass{beamer}
-\usepackage{amsmath,amsthm}
+\documentclass{beamer} \usepackage{amsmath,amsthm}
 \usepackage{graphicx,microtype,parskip}
 \usepackage{caption,subcaption,multirow}
 \usepackage{attrib}
@@ -8,6 +7,8 @@
 
 \usetheme{default}
 \usecolortheme{whale}
+
+\setbeamercolor{title}{fg=blue,bg=white}
 
 \setbeamercolor{block title alerted}{fg=white,bg=darkgray}
 \setbeamercolor{block body alerted}{fg=black,bg=lightgray}
@@ -41,19 +42,42 @@
 \section{Introduction and theory}
 
 \begin{frame}
+  \frametitle{Framework}
+
+  \begin{alertblock}{Questions}
+    \begin{itemize}
+      \item Why do certain taxa go extinct while others do not?
+      \item How is emergence ``formed?'' When should it be invoked?
+      \item Is extinction risk taxon--age independent?
+      \item When should we expect global, regional, or local processes to dominate?
+    \end{itemize}
+  \end{alertblock}
+  
+\end{frame}
+
+\begin{frame}
   \frametitle{Evolutionary paleoecology}
   \begin{quotation}
     \dots the consequences of distinct ecological factors on differential rate dynamics, particularly rates of faunal turnover and diversification.
 
-    \attrib{Kitchell 1985 Paleobiology}
+    \tiny{\attrib{Kitchell 1985 Paleobiology}}
   \end{quotation}
 
-  % Allmon says focus on traits and factors that may affect speciation
-  % Tacit inclusion of extinction
+  \vspace{1.3cm}
+
+  \begin{center}
+    ecological interactions \(\rightarrow\) macroevolution
+  \end{center}
 \end{frame}
 
 \begin{frame}
   \frametitle{Emergent properties}
+
+  \begin{center}
+    \includegraphics[height=0.4\textheight, width=\textwidth, keepaspectratio=true]{figure/grantham}
+
+    \tiny{\attrib{Grantham 1995 Ann. Rev. Ecol. Syst.}}
+  \end{center}
 
   \begin{block}{Species level}
     Trait that cannot be reduced to organismal level
@@ -61,7 +85,6 @@
     Product of one or more traits/factors
   \end{block}
 
-  % Diagram from grantham's paper? Or a DJ paper?
 \end{frame}
 
 \begin{frame}
@@ -75,33 +98,39 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Survival}
+  \frametitle{Probability of survival}
 
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \begin{block}{Survival function}
-        \begin{equation}
-        S(t) = P(T > t)
-        \label{eq:surv}
-      \end{equation}
+        \[
+          S(t) = P(T > t)
+        \]
+
+        \begin{itemize}
+          \item \(T\): survival time (\(\geq 0\))
+          \item \(t\): specified time 
+        \end{itemize}
     \end{block}
 
-    directly describes survival
     \end{column}
     \begin{column}{0.5\textwidth} 
-      % figure of idealized survival curve
-      % figure of Kaplan--Meier survival curve
+      \includegraphics[height = 0.4\textheight, width = \textwidth, keepaspectratio = true]{figure/ideal}
+
+      \includegraphics[height = 0.4\textheight, width = \textwidth, keepaspectratio = true]{figure/prac}
+
+      \tiny{\attrib{Kleinbaum and Klein 2012}}
     \end{column}
   \end{columns}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Hazard}
-  \begin{block}{Hazard function}
-    \begin{equation}
+  \frametitle{Instantaneous potential of failure (extinction)}
+
+  \begin{block}{Hazard function \(\equiv\) conditional failure rate}
+    \[
       h(t) = \lim_{\Delta t \to 0} \frac{P(t \leq T < t + \Delta t | T \geq t)}{\Delta t}
-      \label{eq:haz}
-    \end{equation}
+    \]
   \end{block}
 
   % example hazard functions
@@ -109,38 +138,66 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{Van Valen's observation of survival}
+
+  \begin{center}
+    \includegraphics[height = 0.7\textheight, keepaspectratio = true]{figure/liow}
+
+    \tiny{\attrib{Liow et al. 2011 TREE}}
+  \end{center}
+\end{frame}
+
+\begin{frame}
   \frametitle{Law of Constant Extinction}
 
-  Van Valen 1973 ``Red Queen'' paper.
-
   \begin{alertblock}{Definition}
-      Survival probability and extinction risk is taxon--age independent.
+      Extinction risk in a given adaptive zone is taxon--age independent.
+
+      \tiny{\attrib{Van Valen 1973 Evol. Theory}}
   \end{alertblock}
 
   translation: hazard is constant with respect to time (\alert{exponential})
 
-  \begin{equation}
+  \[
     h(t) = \lambda \iff S(t) = \exp^{-\lambda t}
-    \label{eq:constant}
-  \end{equation}
+  \]
 
-  % figure from the Liow Red Queen review
 \end{frame}
 
 \begin{frame}
   \frametitle{Brachiopods and mammals: a comparison}
 
-  Permian versus Cenozoic
-
-  marine versus terrestrial
-
-  warming verus cooling
-
-  single region versus multiple regions 
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{block}{brachiopods}
+        \begin{itemize}
+          \item Permian (\(\sim 47\) My)
+          \item marine
+          \item Australasia
+          \item global warming
+          \item sessile
+        \end{itemize}
+        % tattoo
+      \end{block}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{block}{mammals}
+        \begin{itemize}
+          \item Cenozoic (\(\sim 65\) My)
+          \item terrestrial
+          \item North America, Europe, South America
+          \item global cooling
+          \item motile
+        \end{itemize}
+        % annyong
+      \end{block}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Series of questions}
+  \frametitle{Series of related questions}
+
   \begin{itemize}
     \item generic level survival in brachiopods %and mammals
       \begin{itemize}
@@ -164,7 +221,8 @@
 \section{Brachiopods, environmental preference, and extinction}
 
 \begin{frame}
-  \frametitle{Ecological traits}
+  \frametitle{Traits relating to environment and range size}
+
   \begin{itemize}
     \item substrate affinity
       \begin{itemize}
@@ -186,33 +244,74 @@
 
 \begin{frame}
   \frametitle{Substrate affinity}
-  % image
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item carbonates, clastics, mixed
+        \item lithology/deposition environment
+        \item Pharenozoic decrease in carbonates:clastics
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      % images of predictions and evidence
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
   \frametitle{Habitat preference}
-  % image
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item on-shore, off-shore, none
+        \item sea-level and energetics
+        \item Pharenozoic decrease in on-shore:off-shore
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      % image of habitat differences
+      % predictions
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
   \frametitle{Affixing strategy}
-  % image
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item pedunculate, reclining, cementing
+        \item pedunculate:on-shore, reclining:off-shore
+        \item environmental energetics
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      % image examples
+      % predictions
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
   \frametitle{Assigning substrate and habitat}
 
   \begin{block}{Probability of assignment}
-    \begin{equation}
+    \[
       P(H_{1}|E) = \frac{P(E|H_{1})P(H_{1})}{P(E|H_{1})P(H_{1}) + P(E|H_{2})P(H_{2})}
-      \label{eq:aff}
-    \end{equation}
-    \attrib{Simpson and Harnik 2009 Paleobiology}
+    \]
+    \tiny{\attrib{Simpson and Harnik 2009 Paleobiology}}
   \end{block}
 \end{frame}
 
 \begin{frame}
   \frametitle{Models}
+  % exponential, Weibull, lognormal
+  % time--independent: alone, additive, interactive
+  % ancillary time--dependent or Heaviside function
+  % data source: PBDB (h/t Clapham)
 \end{frame}
 
 \begin{frame}
@@ -224,6 +323,7 @@
 
 \begin{frame}
   \frametitle{Ecological traits}
+
   \begin{itemize}
     \item dietary category
       \begin{itemize}
@@ -243,11 +343,49 @@
   \end{itemize}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Predictions: dietary category}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Predictions: locomotor category}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Predictions: body size}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Methodology}
+  % genus versus species
+  % exponential, Weibull, lognormal
+  % time--independent: alone, additive, interactive
+  % ancillary time--dependent: Zachos curve
+  % Paleogene versus Neogene
+  % data source: PBDB, NOW, museums (FMNH, AMNH), published compliations
+  %   h/t Alroy
+\end{frame}
+
+\begin{frame}
+  \frametitle{Biases to survival: a simulation study}
+  % sampling
+  % (cryptic) anagenesis
+  % species:genus bias survivorship at generic level
+  %
+  % simulate phylogeny -> duration -> survival model
+  %   phylogeny is time-homogeneous birth-death model
+  %   bias away from exponential survival
+  %
+  % demonstrate using a diagram
+\end{frame}
 
 \section{Community connectedness in Cenozoic mammals}
 
 \begin{frame}
   \frametitle{Community connectedness}
+  \begin{definition}
+    The degree to which localities are composed of endemic versus cosmopolitan taxa, and how similar this ratio is across localities.
+  \end{definition}
   % figures from Sidor et al 2013
 \end{frame}
 
@@ -256,10 +394,16 @@
 
   \begin{columns}
     \begin{column}{0.5\textwidth}
-      \begin{equation}
+      \[
         E = \frac{\sum_{i = 1}^{L} \frac{u_{i}}{n_{i}}}{L}
-        \label{eq:end}
-      \end{equation}
+      \]
+
+      \begin{itemize}
+        \item \(L\): number of localities
+        \item \(u\): number of taxa unique to a locality
+        \item \(n\): number of taxa at a locality
+        \item \(0 \leq E \leq 1\)
+      \end{itemize}
     \end{column}
     \begin{column}{0.5\textwidth}
       % pictures
@@ -272,10 +416,16 @@
 
   \begin{columns}
     \begin{column}{0.5\textwidth}
-      \begin{equation}
+      \[
         Occ = \frac{\sum_{i = 1}^{N} \frac{l_{i}}{L}}{N}
-        \label{eq:occ}
-      \end{equation}
+      \]
+
+      \begin{itemize}
+        \item \(N\): total number of taxa
+        \item \(l\): number of localities a taxon occurs at
+        \item \(L\): number of localities
+        \item \(0 \leq Occ \leq 1\)
+      \end{itemize}
     \end{column}
     \begin{column}{0.5\textwidth}
       % pictures
@@ -288,20 +438,29 @@
 
   \begin{columns}
     \begin{column}{0.5\textwidth}
-      \begin{equation}
+      \[
         BC = \frac{O - N}{LN - N}
-        \label{eq:bc}
-      \end{equation}
+      \]
+
+      \begin{itemize}
+        \item \(O\): number of occurrences
+        \item \(N\): total number of taxa
+        \item \(L\): number of localities
+        \item \(0 \leq BC \leq 1\)
+      \end{itemize}
     \end{column}
     \begin{column}{0.5\textwidth}
-      % pictures from Sidor et al. 2013
+      \begin{center}
+        \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/bc}
+
+        \tiny{\attrib{Sidor et al. 2013 PNAS}}
+      \end{center}
     \end{column}
   \end{columns}
 \end{frame}
 
 \begin{frame}
   \frametitle{Code length}
-
   % illustrate
   % map equation
 \end{frame}
@@ -311,11 +470,15 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{General expectations: dietary category}
+  \frametitle{Global predictions}
 \end{frame}
 
 \begin{frame}
-  \frametitle{General expectations: locomotor category}
+  \frametitle{Expectations: dietary category}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Expectations: locomotor category}
 \end{frame}
 
 \begin{frame}
@@ -331,12 +494,38 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Models}
+  \frametitle{Methodology}
+
+  \begin{itemize}
+    \item biogeographic network
+      \begin{itemize}
+        \item taxa: species
+        \item locality: 2x2 equal--area map projection grid
+      \end{itemize}
+    \item 2 My intervals
+    \item PBDB, NOW, museum (FMNH, AMNH), compilations
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{Preliminary results}
 \end{frame}
+
+
+% summary
+\begin{frame}
+  \frametitle{Summary of proposed research}
+
+  \begin{alertblock}{Questions}
+    \begin{itemize}
+      \item Why do certain taxa go extinct while others do not?
+      \item How is emergence ``formed?'' When should it be invoked?
+      \item Is extinction risk taxon--age independent?
+      \item When should we expect global, regional, or local processes to dominate?
+    \end{itemize}
+  \end{alertblock}
+\end{frame}
+
 
 
 % end
@@ -354,21 +543,18 @@
           \end{itemize}
         \item Discussion
           \begin{itemize}
-            \item David Bapst
-            \item Megan Boatright
-            \item Colin Kyle
-            \item Darcy Ross
-            \item Elizabeth Sander
-            \item Graeme Lloyd, Carl Simpson, Graham Slater
+            \item David Bapst, Megan Boatright, Ben Frable, Colin Kyle, Darcy Ross, Liz Sander
+            \item John Alroy, Graeme Lloyd, Carl Simpson, Graham Slater
           \end{itemize}
       \end{itemize}
     \end{column}
     \begin{column}{0.5\textwidth}
       \includegraphics[height = 0.25\textheight, keepaspectratio = true]{figure/chicago} \\
-      \includegraphics[height = 0.25\textheight, width = \textwidth, keepaspectratio = true]{figure/field} \\
+      \includegraphics[height = 0.25\textheight, width = 0.5\textwidth, keepaspectratio = true]{figure/field} \\
     \end{column}
   \end{columns}
 \end{frame}
+
 
 %\begin{frame}
 %  \frametitle{Theseus' ship}
