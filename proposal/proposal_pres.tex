@@ -203,19 +203,20 @@
   \begin{itemize}
     \item generic level survival in brachiopods %and mammals
       \begin{itemize}
-        \item effect of ecological traits (emergence)
-        \item distribution of survival
+        \item ecological traits re. environmental pref. (emergence)
+        \item survival distribution
       \end{itemize}
     \item specific level survival in mammals
       \begin{itemize}
+        \item ecological traits re. range size (emergence)
         \item generic versus specific survival
         \item anagenesis/species:genus simulation
-        \item distribution of survival
+        \item survival distribution
       \end{itemize}
     \item community connectedness in mammals
       \begin{itemize}
         \item global versus regional versus local scale processes
-        \item blocking on ecology
+        \item ecological traits (trophic/locomotion)
       \end{itemize}
   \end{itemize}
 \end{frame}
@@ -250,7 +251,15 @@
 
   \begin{columns}
     \begin{column}{0.5\textwidth}
-      % images of predictions and evidence
+      \begin{center}
+        \includegraphics[height = 0.4\textheight, keepaspectratio = true]{figure/miller}
+          
+        \tiny{\attrib{Miller and Connoly 2001 \textit{Paleobio.}}}
+
+        \includegraphics[height = 0.4\textheight, keepaspectratio = true]{figure/foote}
+          
+        \tiny{\attrib{Foote 2006 \textit{Paleobio.}}}
+      \end{center}
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{itemize}
@@ -318,10 +327,13 @@
 
 \begin{frame}
   \frametitle{Models}
-  % exponential, Weibull, lognormal
-  % time--independent: alone, additive, interactive
-  % ancillary time--dependent or Heaviside function
   % data source: PBDB (h/t Clapham)
+  % substrate following Foote 2006 \textit{Paleobio.}
+  % habitat following Kiesling et al. 2007 \textit{Proc. B}
+  % traits: time--independent covariates
+  % climate: ancillary time--dependent or Heaviside function
+  % additive, interactive
+  % exponential, Weibull, lognormal
 \end{frame}
 
 \begin{frame}
@@ -357,25 +369,75 @@
   \frametitle{Predictions: dietary category}
   \begin{columns}
     \begin{column}{0.5\textwidth}
-      \includegraphics[height=0.4\textheight, width=\textwidth, keepaspectratio=true]{figure/dietdiv}
+      \includegraphics[height=0.8\textheight, width=\textwidth, keepaspectratio=true]{figure/dietdiv}
+
+      \tiny{\attrib{Price \textit{et al.} 2012 \textit{PNAS}}}
+      % probably want an additional image
     \end{column}
     \begin{column}{0.5\textwidth}
-      % relationship to trophic level
-      %   herbivores most stable, longest duration
-      %   carnivores least stable, shortest duration
-      % Price et al. higher diversification in carnivores and herbivores than omnivores
-      %   increase in origination with respect to extinction
-      %   decrease in extinction with respect to origination
+      \begin{itemize}
+        \item trophic hierarchy \\(stability \(\to\) duration)
+          \begin{itemize}
+            \item herb: most stable, longest duration
+            \item carni: least stable, shortest duration
+            \item omni: avg. stability, avg. duration
+          \end{itemize}
+        \item \(\uparrow\) diversification
+          \begin{itemize}
+            \item \(\uparrow\) origination; \(\simeq\) extinction
+            \item \(\simeq\) origination; \(\downarrow\) extinction
+          \end{itemize}
+      \end{itemize}
     \end{column}
   \end{columns}
 \end{frame}
 
 \begin{frame}
   \frametitle{Predictions: locomotor category}
+  
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      % image from a Janis paper?
+      % look in Blois2009 for ideas
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Paleogene \(\to\) Neogene
+          \begin{itemize}
+            \item open \(\to\) closed environment
+          \end{itemize}
+      \end{itemize}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
   \frametitle{Predictions: body size}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[height=0.4\textheight, width=\textwidth, keepaspectratio=true]{figure/liowmam}
+
+      \tiny{\attrib{Liow \textit{et al.} 2008 \textit{PNAS}}}
+
+      \includegraphics[height=0.4\textheight, width=\textwidth, keepaspectratio=true]{figure/susumu}
+
+      \tiny{\attrib{Tomiya 2013 \textit{Am. Nat.}}}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item \(\uparrow\) body size, \(\uparrow\) energy req, \\\(\uparrow\) range size, \(\downarrow\) extinction
+        \item Europe
+          \begin{itemize}
+            \item lrg body size: \(\uparrow\) extinction
+          \end{itemize}
+        \item North America
+          \begin{itemize}
+            \item body size: \(\simeq\) extinction
+          \end{itemize}
+      \end{itemize}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -389,18 +451,33 @@
   %   h/t Alroy
 \end{frame}
 
-\begin{frame}
+
+\begin{frame} % consider cutting this or moving to ``Appendix''
   \frametitle{Biases to survival: a simulation study}
-  % sampling
-  % (cryptic) anagenesis
-  % species:genus bias survivorship at generic level
-  %
-  % simulate phylogeny -> duration -> survival model
-  %   phylogeny is time-homogeneous birth-death model
-  %   bias away from exponential survival
-  %
-  % demonstrate using a diagram
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      %image of a bunch of random trees?
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item bias away from \(h(t) = \lambda\)
+          \begin{itemize}
+            \item species:genus
+            \item anagenesis/cryptic speciation
+          \end{itemize}
+        \item time-homogeneous birth-death model
+          \begin{itemize}
+            \item common phylogenetic model
+            \item constant \(p\), \(b\)
+            \item expected \(S(t) = \exp^{-\lambda t}\)
+            \item vary (cryptic) anagenesis
+          \end{itemize}
+      \end{itemize}
+    \end{column}
+  \end{columns}
 \end{frame}
+
 
 \section{Community connectedness in Cenozoic mammals}
 
@@ -409,7 +486,26 @@
   \begin{definition}
     The degree to which localities are composed of endemic versus cosmopolitan taxa, and how similar this ratio is across localities.
   \end{definition}
-  % figures from Sidor et al 2013
+  % figures from Sidor et al 2013?
+\end{frame}
+
+\begin{frame}
+  \frametitle{Biogeographic networks}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/vilhena}
+
+      \tiny{\attrib{Vilhena \textit{et al.} 2013 \textit{Sci. Reports}}}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item taxa: species
+        \item locality: 2x2 equal--area map projection grid
+        \item 2 My intervals
+        \item PBDB, NOW, \\museum collections, compilations
+      \end{itemize}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -593,28 +689,7 @@
   \frametitle{Community connectedness of South America}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Methodology}
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/vilhena}
-
-      \tiny{\attrib{Vilhena \textit{et al.} 2013 \textit{Sci. Reports}}}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \begin{itemize}
-        \item biogeographic network
-          \begin{itemize}
-            \item taxa: species
-            \item locality: 2x2 equal--area map projection grid
-          \end{itemize}
-        \item 2 My intervals
-        \item PBDB, NOW, \\museum collections, compilations
-      \end{itemize}
-    \end{column}
-  \end{columns}
-
-\end{frame}
+% include phylogenetic similarity in ``Appendix''?
 
 \begin{frame}
   \frametitle{Preliminary results}
