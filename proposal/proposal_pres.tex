@@ -226,27 +226,27 @@
 
 \section{Brachiopods, environmental preference, and extinction}
 
-\begin{frame}
-  \frametitle{Traits relating to environment and range size}
-
-  \begin{itemize}
-    \item substrate affinity
-      \begin{itemize}
-        \item physical, chemical
-        \item availability
-      \end{itemize}
-    \item habitat preference
-      \begin{itemize}
-        \item energetics
-        \item availability
-      \end{itemize}
-    \item affixing strategy
-      \begin{itemize}
-        \item energetics
-        \item optimality
-      \end{itemize}
-  \end{itemize}
-\end{frame}
+%\begin{frame}
+%  \frametitle{Traits relating to environment and range size}
+%
+%  \begin{itemize}
+%    \item substrate affinity
+%      \begin{itemize}
+%        \item physical, chemical
+%        \item availability
+%      \end{itemize}
+%    \item habitat preference
+%      \begin{itemize}
+%        \item energetics
+%        \item availability
+%      \end{itemize}
+%    \item affixing strategy
+%      \begin{itemize}
+%        \item energetics
+%        \item optimality
+%      \end{itemize}
+%  \end{itemize}
+%\end{frame}
 
 \begin{frame}
   \frametitle{Substrate affinity}
@@ -268,6 +268,10 @@
         \item carbonates, clastics, mixed
         \item lithology/deposition environment
         \item Pharenozoic decrease in carbonates:clastics
+        \item predictions
+          \begin{itemize}
+            \item clastics \(>\) carbonates
+          \end{itemize}
       \end{itemize}
     \end{column}
   \end{columns}
@@ -278,14 +282,23 @@
 
   \begin{columns}
     \begin{column}{0.5\textwidth}
-      % image of habitat differences
-      % predictions
+      \begin{center}
+        \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/onoff}
+
+        \tiny{\attrib{Jablonski \textit{et al.} 1983 \textit{Science}}}
+      \end{center}
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{itemize}
+        \item classically invoked re. diversification of higher taxa
+          \begin{itemize}
+            \item onshore \(\to\) offshore
+          \end{itemize}
         \item on-shore, off-shore, none
-        \item sea-level and energetics
-        \item Pharenozoic decrease in on-shore:off-shore
+          \begin{itemize}
+            \item above/below \\storm wave base
+          \end{itemize}
+%        \item Pharenozoic decrease in on-shore:off-shore
       \end{itemize}
     \end{column}
   \end{columns}
@@ -296,14 +309,20 @@
 
   \begin{columns}
     \begin{column}{0.5\textwidth}
-      % image examples
-      % predictions
+      \begin{center}
+        \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/affix}
+
+        \tiny{\attrib{Alexander 1977 \textit{Paleo\(^3\)}}}
+      \end{center}
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{itemize}
         \item pedunculate, reclining, cementing
+          \begin{itemize}
+            \item endemics duration: \\reclining \(>\) others
+            \item cosmopolitan duration: \\ped./cement \(>\) others
+          \end{itemize}
         \item pedunculate:on-shore, reclining:off-shore
-        \item environmental energetics
       \end{itemize}
     \end{column}
   \end{columns}
@@ -328,14 +347,26 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Models}
-  % data source: PBDB (h/t Clapham)
-  % substrate following Foote 2006 \textit{Paleobio.}
-  % habitat following Kiesling et al. 2007 \textit{Proc. B}
-  % traits: time--independent covariates
-  % climate: ancillary time--dependent or Heaviside function
-  % additive, interactive
-  % exponential, Weibull, lognormal
+  \frametitle{Analysis}
+
+  \begin{itemize}
+    \item data: genus FAD--LAD
+      \begin{itemize}
+        \item Australiasia
+        \item all taxa occurring in and ranging into/out of Permian
+        \item PBDB (h/t Clapham)
+      \end{itemize}
+    \item traits: time-indep. covariate
+      \begin{itemize}
+        \item substrate following Foote 2006 \textit{Paleobio.}
+        \item habitat following Kiessling \textit{et al.} 2007 \textit{Paleo\(^3\)}
+      \end{itemize}
+    \item climate: time-dep. covariate
+      \begin{itemize}
+        \item continuous or Heaviside step function
+      \end{itemize}
+    \item distributions of survival: \(\exp(\lambda)\), \(Weibull(\lambda, k)\), \textit{etc.}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -363,27 +394,27 @@
 
 \section{Ecology and survival in Cenozoic mammals}
 
-\begin{frame}
-  \frametitle{Ecological traits}
-
-  \begin{itemize}
-    \item dietary category
-      \begin{itemize}
-        \item energetics
-        \item availability
-      \end{itemize}
-    \item locomotor category
-      \begin{itemize}
-        \item availability
-        \item dispersal
-      \end{itemize}
-    \item body size
-      \begin{itemize}
-        \item energetics
-        \item home range size
-      \end{itemize}
-  \end{itemize}
-\end{frame}
+%\begin{frame}
+%  \frametitle{Ecological traits}
+%
+%  \begin{itemize}
+%    \item dietary category
+%      \begin{itemize}
+%        \item energetics
+%        \item availability
+%      \end{itemize}
+%    \item locomotor category
+%      \begin{itemize}
+%        \item availability
+%        \item dispersal
+%      \end{itemize}
+%    \item body size
+%      \begin{itemize}
+%        \item energetics
+%        \item home range size
+%      \end{itemize}
+%  \end{itemize}
+%\end{frame}
 
 \begin{frame}
   \frametitle{Predictions: dietary category}
@@ -398,9 +429,9 @@
       \begin{itemize}
         \item trophic hierarchy \\(stability \(\to\) duration)
           \begin{itemize}
-            \item herb: most stable, longest duration
-            \item carni: least stable, shortest duration
-            \item omni: avg. stability, avg. duration
+            \item herb: most stable, \\longest duration
+            \item carni: least stable, \\shortest duration
+            \item omni: avg. stability, \\avg. duration
           \end{itemize}
         \item \(\uparrow\) diversification
           \begin{itemize}
@@ -425,6 +456,9 @@
         \item Paleogene \(\to\) Neogene
           \begin{itemize}
             \item open \(\to\) closed environment
+            \item arboreal: \\Paleogene \(>\) Neogene
+            \item ground dwelling: \\Paleogene \(<\) Neogene
+            \item scansorial: \\Paleogene \(\approx\) Neogene
           \end{itemize}
       \end{itemize}
     \end{column}
@@ -461,14 +495,23 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Methodology}
-  % genus versus species
-  % exponential, Weibull, lognormal
-  % time--independent: alone, additive, interactive
-  % ancillary time--dependent: Zachos curve
-  % Paleogene versus Neogene
-  % data source: PBDB, NOW, museum collections, published compliations
-  %   h/t Alroy
+  \frametitle{Analysis}
+
+  \begin{itemize}
+    \item data: genus and species FAD--LAD
+      \begin{itemize}
+        \item NA: PBDB (h/t Alroy)
+        \item Europe: PBDB, NOW
+        \item SA: collections, compilations
+      \end{itemize}
+    \item traits: time-indep. covariates
+    \item climate: time-dep. covariate
+      \begin{itemize}
+        \item continuous \(\delta O^{18}\) isotope \\Zachos \textit{et al.} 2008 \textit{Nature}
+      \end{itemize}
+    \item Paleogene versus Neogene
+    \item distributions of survival: \(\exp(\lambda)\), \(Weibull(\lambda, k)\), \textit{etc.}
+  \end{itemize}
 \end{frame}
 
 

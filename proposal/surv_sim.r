@@ -33,7 +33,7 @@ wei.haz <- function(time, lambda, p) {
 }
 
 
-# lognormal survival
+# log-logistic survival
 # S(t) = \frac{1}{1 + lambda t^{p}}
 # h(t) = \frac{lambda p t^{p - 1}}{1 + lambda t^{p}}
 lgn.surv <- function(time, lambda, p) {
@@ -68,10 +68,10 @@ haz.mod <- melt(haz.mod)
 haz.mod$Var1 <- rep(xx, 5)
 haz.mod$Var2 <- as.character(haz.mod$Var2)
 haz.mod$Var2[haz.mod$Var2 == 'eh'] <- 'Exponential'
-haz.mod$Var2[haz.mod$Var2 == 'whi'] <- 'Weibull increasing'
-haz.mod$Var2[haz.mod$Var2 == 'whd'] <- 'Weibull decreasing'
-haz.mod$Var2[haz.mod$Var2 == 'lhi'] <- 'Lognormal increasing'
-haz.mod$Var2[haz.mod$Var2 == 'lhd'] <- 'Lognormal decreasing'
+haz.mod$Var2[haz.mod$Var2 == 'whi'] <- 'Weibull: shape > 1'
+haz.mod$Var2[haz.mod$Var2 == 'whd'] <- 'Weibull: shape < 1'
+haz.mod$Var2[haz.mod$Var2 == 'lhi'] <- 'Log-logistic: shape > 1'
+haz.mod$Var2[haz.mod$Var2 == 'lhd'] <- 'Log-logistic: shape < 1'
 
 ghaz <- ggplot(haz.mod, aes(x = Var1, y = value)) + geom_line()
 ghaz <- ghaz + labs(x = 't', y = 'h(t)')
