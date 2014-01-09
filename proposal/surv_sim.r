@@ -75,11 +75,11 @@ haz.mod$Var2[haz.mod$Var2 == 'lhd'] <- 'Log-logistic: shape < 1'
 
 ghaz <- ggplot(haz.mod, aes(x = Var1, y = value)) + geom_line()
 ghaz <- ghaz + labs(x = 't', y = 'h(t)')
-ghaz <- ghaz + theme(axis.title.y = element_text(angle = 0, size = 16),
-                     axis.title.x = element_text(size = 16),
+ghaz <- ghaz + theme(axis.title.y = element_text(angle = 0, size = 18),
+                     axis.title.x = element_text(size = 18),
                      axis.text.y = element_blank(),
                      axis.ticks.y = element_blank(),
                      panel.grid = element_blank())
 ghaz <- ghaz + facet_grid(. ~ Var2)
 
-ggsave(filename = './figure/hazard.png', plot = ghaz, width = 10, height = 4)
+ggsave(filename = 'figure/hazard.png', plot = ghaz, width = 10, height = 4)
