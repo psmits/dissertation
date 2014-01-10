@@ -82,10 +82,8 @@
     \tiny{\attrib{Grantham 1995 \textit{Ann. Rev. Ecol. Syst.}}}
   \end{center}
 
-  \begin{block}{Species level}
-    Trait that cannot be reduced to organismal level
-    
-    Product of one or more traits/factors
+  \begin{block}{Criteria}
+    Trait that cannot be reduced to lower level (e.g. organismal)
   \end{block}
 
 \end{frame}
@@ -182,7 +180,6 @@
           \item Australasia
           \item global warming
         \end{itemize}
-        % tattoo
       \end{block}
 
       \begin{center}
@@ -198,7 +195,6 @@
           \item North America, Europe, South America
           \item global cooling
         \end{itemize}
-        % annyong
       \end{block}
 
       \begin{center}
@@ -226,6 +222,7 @@
       \item Cenozoic mammal community connectedness %\\(global versus regional versus local)
         \begin{itemize}
           \item global versus regional versus local
+          \item trait based?
         \end{itemize}
     \end{itemize}
   \end{block}
@@ -385,36 +382,19 @@
 
 \section{Ecology and survival in Cenozoic mammals}
 
-%\begin{frame}
-%  \frametitle{Ecological traits}
-%
-%  \begin{itemize}
-%    \item dietary category
-%      \begin{itemize}
-%        \item energetics
-%        \item availability
-%      \end{itemize}
-%    \item locomotor category
-%      \begin{itemize}
-%        \item availability
-%        \item dispersal
-%      \end{itemize}
-%    \item body size
-%      \begin{itemize}
-%        \item energetics
-%        \item home range size
-%      \end{itemize}
-%  \end{itemize}
-%\end{frame}
-
 \begin{frame}
   \frametitle{Predictions: dietary category}
   \begin{columns}
     \begin{column}{0.5\textwidth}
-      \includegraphics[height=0.8\textheight, width=\textwidth, keepaspectratio=true]{figure/dietdiv}
+      \begin{center}
+        \includegraphics[height=0.4\textheight, width=\textwidth, keepaspectratio=true]{figure/dietdiv}
 
-      \tiny{\attrib{Price \textit{et al.} 2012 \textit{PNAS}}}
-      % probably want an additional image
+        \tiny{\attrib{Price \textit{et al.} 2012 \textit{PNAS}}}
+
+        \includegraphics[height=0.4\textheight,width=\textwidth,keepaspectratio=true]{figure/jernvall}
+
+        \tiny{\attrib{Jernvall and Fortelius 2004 \textit{Am. Nat.}}}
+      \end{center}
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{itemize}
@@ -439,14 +419,18 @@
   
   \begin{columns}
     \begin{column}{0.5\textwidth}
-      % image from a Janis paper?
-      % look in Blois2009 for ideas
+      \includegraphics[height=0.8\textheight, width=\textwidth, keepaspectratio=true]{figure/scherler}
+
+      \tiny{\attrib{Scherler \textit{et al.} 2013 \textit{Swiss. J. Geosci.}}}
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{itemize}
         \item Paleogene \(\to\) Neogene
           \begin{itemize}
             \item open \(\to\) closed environment
+          \end{itemize}
+        \item predictions
+          \begin{itemize}
             \item arboreal: \\Paleogene \(>\) Neogene
             \item ground dwelling: \\Paleogene \(<\) Neogene
             \item scansorial: \\Paleogene \(\approx\) Neogene
@@ -506,30 +490,6 @@
 \end{frame}
 
 
-\begin{frame} % consider cutting this or moving to ``Appendix''
-  \frametitle{Biases to survival: a simulation study}
-
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      %image of a bunch of random trees?
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \begin{itemize}
-        \item time-homogeneous birth-death model
-          \begin{itemize}
-            \item common model
-            \item constant \(p\), \(b\)
-            \item expected \(S(t) = \exp^{-\lambda t}\)
-          \end{itemize}
-        \item bias away from \(h(t) = \lambda\)
-          \begin{itemize}
-            \item species:genus
-            \item anagenesis/cryptic speciation
-          \end{itemize}
-      \end{itemize}
-    \end{column}
-  \end{columns}
-\end{frame}
 
 
 \section{Community connectedness in Cenozoic mammals}
@@ -566,7 +526,16 @@
 
   \begin{columns}
     \begin{column}{0.5\textwidth}
-      % pictures
+      \begin{center}
+        \includegraphics[height = 0.5\textheight, width = \textwidth, keepaspectratio = true]{figure/sim_graph}
+
+        \begin{align*}
+          u &= \{1, 2, 1\}\\
+          n &= \{6, 5, 6\}\\
+          L &= 3\\
+          E &\approx 0.24
+        \end{align*}
+      \end{center}
     \end{column}
     \begin{column}{0.5\textwidth}
       \[
@@ -588,7 +557,16 @@
 
   \begin{columns}
     \begin{column}{0.5\textwidth}
-      % pictures
+      \begin{center}
+        \includegraphics[height = 0.5\textheight, width = \textwidth, keepaspectratio = true]{figure/sim_graph}
+
+        \begin{align*}
+          l &= \{1, 2, 3, 1, 1, 2, 3, 3, 1\}\\
+          L &= 3\\
+          N &= 9\\
+          Occ &\approx 0.63 
+        \end{align*}
+      \end{center}
     \end{column}
     \begin{column}{0.5\textwidth}
       \[
@@ -850,6 +828,40 @@
 
 \appendix
 \section{Further concerns}
+\begin{frame} % consider cutting this or moving to ``Appendix''
+  \frametitle{Biases to survival: a simulation study}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \includegraphics[height = 0.4\textheight, width = \textwidth, keepaspectratio = true]{figure/raup}
+          
+        \tiny{\attrib{Raup 1975 \textit{Paleobio.}}}
+
+        \includegraphics[height = 0.4\textheight, width = \textwidth, keepaspectratio = true]{figure/sepkoski}
+          
+        \tiny{\attrib{Sepkoski 1975 \textit{Paleobio.}}}
+      \end{center}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item bias away from \(h(t) = \lambda\)?
+          \begin{itemize}
+            \item censoring
+            \item sampling/stratigraphy
+            \item species vs genus
+            \item anagenesis/cryptic speciation
+          \end{itemize}
+        \item use time-homogeneous birth-death model
+          \begin{itemize}
+            \item constant \(p\), \(b\)
+            \item expected \(S(t) = \exp^{-\lambda t}\)
+            \item vary anagenesis/sampling
+          \end{itemize}
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
 
 \begin{frame}
   \frametitle{Phylogeneic similarity of communities}
