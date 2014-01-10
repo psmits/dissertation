@@ -1,4 +1,5 @@
-\documentclass{beamer} \usepackage{amsmath,amsthm}
+\documentclass{beamer} 
+\usepackage{amsmath,amsthm}
 \usepackage{graphicx,microtype,parskip}
 \usepackage{caption,subcaption,multirow}
 \usepackage{attrib}
@@ -183,6 +184,10 @@
         \end{itemize}
         % tattoo
       \end{block}
+
+      \begin{center}
+        \includegraphics[height = 0.4\textheight, keepaspectratio = true]{figure/tattoo}
+      \end{center}
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{block}{mammals}
@@ -195,58 +200,39 @@
         \end{itemize}
         % annyong
       \end{block}
+
+      \begin{center}
+       \includegraphics[height = 0.4\textheight, keepaspectratio = true]{figure/annyong}
+      \end{center}
     \end{column}
   \end{columns}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Series of related questions}
+  \frametitle{Proposed studies}
 
-  \begin{itemize}
-    \item generic level survival in brachiopods %and mammals
-      \begin{itemize}
-        \item ecological traits re. environmental pref. (emergence)
-        \item survival distribution
-      \end{itemize}
-    \item specific level survival in mammals
-      \begin{itemize}
-        \item ecological traits re. range size (emergence)
-        \item generic versus specific survival
-        \item anagenesis/species:genus simulation
-        \item survival distribution
-      \end{itemize}
-    \item community connectedness in mammals
-      \begin{itemize}
-        \item global versus regional versus local scale processes
-        \item ecological traits (trophic/locomotion)
-      \end{itemize}
-  \end{itemize}
+  \begin{block}{Chapters}
+    \begin{itemize}
+      \item Permian brachiopod trait based survival %\\(environmental preference)
+        \begin{itemize}
+          \item generic level 
+          \item necessity of emergence?
+        \end{itemize}
+      \item Cenozoic mammal trait based survival %\\(range size)
+        \begin{itemize}
+          \item generic, specific level 
+          \item necessity of emergence?
+        \end{itemize}
+      \item Cenozoic mammal community connectedness %\\(global versus regional versus local)
+        \begin{itemize}
+          \item global versus regional versus local
+        \end{itemize}
+    \end{itemize}
+  \end{block}
 \end{frame}
 
 
 \section{Brachiopods, environmental preference, and extinction}
-
-%\begin{frame}
-%  \frametitle{Traits relating to environment and range size}
-%
-%  \begin{itemize}
-%    \item substrate affinity
-%      \begin{itemize}
-%        \item physical, chemical
-%        \item availability
-%      \end{itemize}
-%    \item habitat preference
-%      \begin{itemize}
-%        \item energetics
-%        \item availability
-%      \end{itemize}
-%    \item affixing strategy
-%      \begin{itemize}
-%        \item energetics
-%        \item optimality
-%      \end{itemize}
-%  \end{itemize}
-%\end{frame}
 
 \begin{frame}
   \frametitle{Substrate affinity}
@@ -266,11 +252,14 @@
     \begin{column}{0.5\textwidth}
       \begin{itemize}
         \item carbonates, clastics, mixed
-        \item lithology/deposition environment
-        \item Pharenozoic decrease in carbonates:clastics
-        \item predictions
           \begin{itemize}
-            \item clastics \(>\) carbonates
+            \item physio-chemical 
+            \item availability
+            \item weak proxy for larval dispersal?
+          \end{itemize}
+        \item Pharenozoic decrease carbonates:clastics
+          \begin{itemize}
+            \item predicted longevity: \\clastics \(>\) carbonates
           \end{itemize}
       \end{itemize}
     \end{column}
@@ -290,13 +279,14 @@
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{itemize}
-        \item classically invoked re. diversification of higher taxa
-          \begin{itemize}
-            \item onshore \(\to\) offshore
-          \end{itemize}
         \item on-shore, off-shore, none
           \begin{itemize}
             \item above/below \\storm wave base
+            \item energetics, availability
+          \end{itemize}
+        \item classically invoked re. diversification of higher taxa
+          \begin{itemize}
+            \item onshore \(\to\) offshore
           \end{itemize}
 %        \item Pharenozoic decrease in on-shore:off-shore
       \end{itemize}
@@ -317,6 +307,7 @@
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{itemize}
+        \item environmental energetics \\and material (mud)
         \item pedunculate, reclining, cementing
           \begin{itemize}
             \item endemics duration: \\reclining \(>\) others
@@ -353,7 +344,7 @@
     \item data: genus FAD--LAD
       \begin{itemize}
         \item Australiasia
-        \item all taxa occurring in and ranging into/out of Permian
+        \item taxa occurring in and ranging into/out of Permian
         \item PBDB (h/t Clapham)
       \end{itemize}
     \item traits: time-indep. covariate
@@ -363,9 +354,9 @@
       \end{itemize}
     \item climate: time-dep. covariate
       \begin{itemize}
-        \item continuous or Heaviside step function
+        \item continuous or step function
       \end{itemize}
-    \item distributions of survival: \(\exp(\lambda)\), \(Weibull(\lambda, k)\), \textit{etc.}
+    \item survival distributions: \(\exp(\lambda)\), \(Weibull(\lambda, k)\), \textit{etc.}
   \end{itemize}
 \end{frame}
 
@@ -498,7 +489,7 @@
   \frametitle{Analysis}
 
   \begin{itemize}
-    \item data: genus and species FAD--LAD
+    \item data: genus, species FAD--LAD
       \begin{itemize}
         \item NA: PBDB (h/t Alroy)
         \item Europe: PBDB, NOW
@@ -507,10 +498,10 @@
     \item traits: time-indep. covariates
     \item climate: time-dep. covariate
       \begin{itemize}
-        \item continuous \(\delta O^{18}\) isotope \\Zachos \textit{et al.} 2008 \textit{Nature}
+        \item continuous \(\delta O^{18}\) isotope (Zachos \textit{et al.} 2008 \textit{Nature})
       \end{itemize}
     \item Paleogene versus Neogene
-    \item distributions of survival: \(\exp(\lambda)\), \(Weibull(\lambda, k)\), \textit{etc.}
+    \item survival distributions: \(\exp(\lambda)\), \(Weibull(\lambda, k)\), \textit{etc.}
   \end{itemize}
 \end{frame}
 
@@ -524,17 +515,16 @@
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{itemize}
+        \item time-homogeneous birth-death model
+          \begin{itemize}
+            \item common model
+            \item constant \(p\), \(b\)
+            \item expected \(S(t) = \exp^{-\lambda t}\)
+          \end{itemize}
         \item bias away from \(h(t) = \lambda\)
           \begin{itemize}
             \item species:genus
             \item anagenesis/cryptic speciation
-          \end{itemize}
-        \item time-homogeneous birth-death model
-          \begin{itemize}
-            \item common phylogenetic model
-            \item constant \(p\), \(b\)
-            \item expected \(S(t) = \exp^{-\lambda t}\)
-            \item vary (cryptic) anagenesis
           \end{itemize}
       \end{itemize}
     \end{column}
@@ -683,7 +673,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Expectations: locomotor category}
+  \frametitle{Global expectations: locomotor category}
 
   \begin{columns}
     \begin{column}{0.6\textwidth}
@@ -713,7 +703,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Expectations: dietary category}
+  \frametitle{Global expectations: dietary category}
 
   \begin{columns}
     \begin{column}{0.6\textwidth}
@@ -741,15 +731,25 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Community connectedness of North America}
-\end{frame}
+  \frametitle{Regional predictions}
 
-\begin{frame}
-  \frametitle{Community connectedness of Europe}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Community connectedness of South America}
+  \begin{itemize}
+    \item North America
+      \begin{itemize}
+        \item similar to global predictions
+        \item major lit. questions re. effects climate change
+      \end{itemize}
+    \item Europe
+      \begin{itemize}
+        \item stable trophic diversity
+        \item abundant herbivores drive patterns
+      \end{itemize}
+    \item South America
+      \begin{itemize}
+        \item high provincialism
+        \item early expansion of ground dwelling taxa
+      \end{itemize}
+  \end{itemize}
 \end{frame}
 
 % include phylogenetic similarity in ``Appendix''?
@@ -840,20 +840,42 @@
       \end{itemize}
     \end{column}
     \begin{column}{0.5\textwidth}
-      \includegraphics[height = 0.25\textheight, keepaspectratio = true]{figure/chicago} \\
-      \includegraphics[height = 0.25\textheight, width = 0.5\textwidth, keepaspectratio = true]{figure/field} \\
+      \includegraphics[height = 0.3\textheight, keepaspectratio = true]{figure/chicago} \\
+      \includegraphics[height = 0.3\textheight, width = 0.5\textwidth, keepaspectratio = true]{figure/field} \\
     \end{column}
   \end{columns}
 \end{frame}
 
 
-%\begin{frame}
-%  \frametitle{Theseus' ship}
-%  \begin{quotation}
-%    The ship wherein Theseus and the youth of Athens returned from Crete had thirty oars, and was preserved by the Athenians down even to the time of Demetrius Phalereus, for they took away the old planks as they decayed, putting in new and stronger timber in their place, in so much that this ship became a standing example among the philosophers, for the logical question of things that grow; one side holding that the ship remained the same, and the other contending that it was not the same.
 
-%    \attrib{Plutarch, \textbf{Theseus}}
-%  \end{quotation}
-%\end{frame}
+\appendix
+\section{Further concerns}
+
+\begin{frame}
+  \frametitle{Phylogeneic similarity of communities}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/webb}
+
+      \tiny{\attrib{Webb \textit{et al.} 2002 \textit{Ann. Rev. Ecol. Syst.}}}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item informal phylogeny \\(taxonomy tree)
+          \begin{itemize}
+            \item PBDB, EoL, etc.
+            \item unit branch length
+          \end{itemize}
+        \item measures
+          \begin{itemize}
+            \item mean pairwise--locality patristic distance
+            \item mean locality phylogenetic species variability (Helmus \textit{et al.} 2007 \textit{Am. Nat})
+          \end{itemize}
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
 
 \end{document}
