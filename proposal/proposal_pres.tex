@@ -27,11 +27,26 @@
 }
 
 
-\title{Evolutionary paleoecology and\\ the biology of extinction}
+\title{Evolutionary paleoecology and \\the biology of extinction}
 \author{Peter D Smits}
 \institute{Committee on Evolutionary Biology, University of Chicago}
 
 \begin{document}
+
+%\begin{frame}
+%  \begin{quotation}
+%    O species, stunned by your terror of chill death, why fear the Styx, why
+%    fear the ghosts and empty names, the stuff of poets, the spectres of a
+%    phantom world? [\dots] Everything changes, nothing dies: the spirit
+%    wanders, arriving here or there, and occupying whatever body it pleases,
+%    passing from a wild beast into a human being, from our body into a
+%    beast, but is never destroyed. As pliable wax, stamped with new designs,
+%    is no longer what it was; does not keep the same form; but is still one
+%    and the same.
+%    
+%    \attrib{Ovid, \underline{Metamorphoses}, book XV: 143-–175}
+%  \end{quotation}
+%\end{frame}
 
 \begin{frame}
   \maketitle
@@ -40,7 +55,6 @@
 \begin{frame}
   \tableofcontents
 \end{frame}
-
 
 \section{Introduction and theory}
 
@@ -69,7 +83,11 @@
   \vspace{1.3cm}
 
   \begin{center}
-    environmental interactions \(\rightarrow\) macroevolution
+    \begin{tabular}{@{}l@{}}environmental\\interactions\end{tabular} 
+    \hspace{1cm}
+    \(\rightarrow\) 
+    \hspace{1.5cm}
+    \begin{tabular}{@{}l@{}}speciation\\extinction\end{tabular}
   \end{center}
 \end{frame}
 
@@ -252,7 +270,7 @@
           \begin{itemize}
             \item physio-chemical 
             \item availability
-            \item weak proxy for larval dispersal?
+            \item weak proxy for \\larval dispersal?
           \end{itemize}
         \item Pharenozoic decrease carbonates:clastics
           \begin{itemize}
@@ -499,7 +517,6 @@
   \begin{definition}
     The degree to which localities are composed of endemic versus cosmopolitan taxa, and how similar this ratio is across localities.
   \end{definition}
-  % figures from Sidor et al 2013?
 \end{frame}
 
 \begin{frame}
@@ -612,13 +629,59 @@
 \begin{frame}
   \frametitle{Code length}
   \begin{center}
-    \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/map}
+    \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/map1}
 
     \tiny{\attrib{Rosvall and Bergstrom 2008 \textit{PNAS}}}
   \end{center}
-
-  % break up by each section so it is easier to explain?
 \end{frame}
+
+\begin{frame}
+  \frametitle{Code length}
+  \begin{center}
+    \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/map2}
+
+    \tiny{\attrib{Rosvall and Bergstrom 2008 \textit{PNAS}}}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Code length}
+  \begin{center}
+    \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/map3}
+
+    \tiny{\attrib{Rosvall and Bergstrom 2008 \textit{PNAS}}}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Code length}
+  \begin{center}
+    \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/map4}
+
+    \tiny{\attrib{Rosvall and Bergstrom 2008 \textit{PNAS}}}
+
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Compressing a network}
+
+  \begin{block}{Map equation \attrib{Rosvall and Bargstrom 2008 \textit{PNAS}}}
+    \begin{align*}
+      L(\textbf{M}) &= q_{\curvearrowright}H(\mathcal{Q}) + \sum^{m}_{i = 1} p^{i}_{\circlearrowright}H(\mathcal{P}^{i})
+    \end{align*}
+
+    \begin{itemize}
+      \item \(\textbf{M}\): module partion of \textit{n} nodes in \textit{m} partitions
+      \item \(L(\textbf{M})\): code length of network
+      \item \(q_{\curvearrowright}\): P(random walk switches modules)
+      \item \(H(\mathcal{Q})\): entropy module codewords
+      \item \(H(\mathcal{P}^{i})\): entropy within--module
+      \item \(p^{i}_{\circlearrowright}\): rate of within--module use
+    \end{itemize}
+  \end{block}
+\end{frame}
+
 
 \begin{frame}
   \frametitle{Global versus regional versus local scale processes}
@@ -730,8 +793,6 @@
   \end{itemize}
 \end{frame}
 
-% include phylogenetic similarity in ``Appendix''?
-
 \begin{frame}
   \frametitle{Preliminary results: NA, Eur}
 
@@ -797,7 +858,6 @@
 \end{frame}
 
 
-% end
 \begin{frame}
   \frametitle{Acknowledgements}
   \begin{columns}
@@ -828,8 +888,9 @@
 
 \appendix
 \section{Further concerns}
-\begin{frame} % consider cutting this or moving to ``Appendix''
-  \frametitle{Biases to survival: a simulation study}
+
+\begin{frame}
+  \frametitle{Theseus' ship: biases to analyzing survival}
 
   \begin{columns}
     \begin{column}{0.5\textwidth}
