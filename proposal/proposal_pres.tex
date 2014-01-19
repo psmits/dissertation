@@ -101,9 +101,8 @@
   \end{center}
 
   \begin{block}{Criteria}
-    Trait that cannot be reduced to lower level (e.g. organismal)
+    Cannot be reduced to lower level (e.g. organismal)
   \end{block}
-
 \end{frame}
 
 \begin{frame}
@@ -186,7 +185,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Brachiopods and mammals: a comparison}
+  \frametitle{Study systems}
 
   \begin{columns}
     \begin{column}{0.5\textwidth}
@@ -240,7 +239,7 @@
       \item Cenozoic mammal community connectedness %\\(global versus regional versus local)
         \begin{itemize}
           \item global versus regional versus local
-          \item trait based?
+          \item differences across traits?
         \end{itemize}
     \end{itemize}
   \end{block}
@@ -304,6 +303,7 @@
             \item onshore \(\to\) offshore
           \end{itemize}
 %        \item Pharenozoic decrease in on-shore:off-shore
+%        review in the foote book for better information
       \end{itemize}
     \end{column}
   \end{columns}
@@ -344,8 +344,9 @@
     \end{align*}
 
     \begin{itemize}
-      \item \(n\): total \# of occ
-      \item \(k\): \# (e.g.) carbonate occ
+      \item \(p\): proportion of all collections (e.g) carbonate
+      \item \(n\): total \# taxon occurrences
+      \item \(k\): of \(n\), \# (e.g.) carbonate occurrences
     \end{itemize}
 
     \tiny{\attrib{Simpson and Harnik 2009 \textit{Paleobiology}}}
@@ -355,24 +356,31 @@
 \begin{frame}
   \frametitle{Analysis}
 
-  \begin{itemize}
-    \item data: genus FAD--LAD
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/australia}
+
+        \tiny{\attrib{Clapham and James 2008 \textit{Palaios}}}
+      \end{center}
+    \end{column}
+    \begin{column}{0.5\textwidth}
       \begin{itemize}
-        \item Australiasia
-        \item taxa occurring in and ranging into/out of Permian
-        \item PBDB (h/t Clapham)
+        \item genus FAD--LAD
+          \begin{itemize}
+            \item occurring in, ranging into/out of Permian
+            \item interval censoring
+          \end{itemize}
+        \item time-independent traits
+          \begin{itemize}
+            \item substrate following Foote 2006 \textit{Paleobio.}
+            \item habitat following Kiessling \textit{et al.} 2007 \textit{Paleo\(^3\)}
+          \end{itemize}
+        \item time-dependent climate 
+        \item survival distributions: \(\exp(\lambda)\), \(Weibull(\lambda, k)\), \textit{etc.}
       \end{itemize}
-    \item traits: time-indep. covariate
-      \begin{itemize}
-        \item substrate following Foote 2006 \textit{Paleobio.}
-        \item habitat following Kiessling \textit{et al.} 2007 \textit{Paleo\(^3\)}
-      \end{itemize}
-    \item climate: time-dep. covariate
-      \begin{itemize}
-        \item continuous or step function
-      \end{itemize}
-    \item survival distributions: \(\exp(\lambda)\), \(Weibull(\lambda, k)\), \textit{etc.}
-  \end{itemize}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -401,7 +409,7 @@
 \section{Mammal survival}
 
 \begin{frame}
-  \frametitle{Predictions: dietary category}
+  \frametitle{Dietary category}
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \begin{center}
@@ -433,7 +441,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Predictions: locomotor category}
+  \frametitle{Locomotor category}
   
   \begin{columns}
     \begin{column}{0.5\textwidth}
@@ -459,7 +467,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Predictions: body size}
+  \frametitle{Body size}
 
   \begin{columns}
     \begin{column}{0.5\textwidth}
@@ -684,7 +692,7 @@
 
 
 \begin{frame}
-  \frametitle{Global versus regional versus local scale processes}
+  \frametitle{Global versus regional versus local scale}
 
   \begin{columns}
     \begin{column}{0.55\textwidth}
@@ -772,7 +780,8 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Regional predictions}
+  \frametitle{Regional variation} 
+  % this is the weakest slide in the entire presentation
 
   \begin{itemize}
     \item North America
@@ -842,7 +851,7 @@
     \begin{itemize}
       \item Why do certain taxa go extinct while others do not?
       \item How is emergence ``formed?'' When should it be invoked?
-      \item Is extinction risk taxon--age independent?
+      \item Is extinction rate taxon--age independent?
       \item When should we expect global, regional, or local processes to dominate?
     \end{itemize}
   \end{alertblock}
