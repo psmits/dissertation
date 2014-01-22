@@ -1,10 +1,3 @@
-\documentclass[12pt,letterpaper]{article}
-
-\usepackage{amsmath, amsthm}
-\usepackage{graphicx}
-\usepackage{microtype, parskip}
-\usepackage{caption, subcaption, multirow, morefloats, rotating, longtable}
-\usepackage{hyperref}
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage{authblk, attrib, fullpage}
 \usepackage{lineno}
@@ -99,18 +92,18 @@ Preliminary model fitting with both exponential and Weibull distributions and ei
 
 \begin{figure}[ht]
 %  \begin{center}
-    \begin{subfigure}[b]{0.5\textwidth}
-      \caption{}
-      \includegraphics[height = 0.4\textheight, keepaspectratio = true]{figure/aff}
-      \label{subfig:aff_surv}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.5\textwidth}
-      \caption{}
-      \includegraphics[height = 0.4\textheight, keepaspectratio = true]{figure/hab}
-      \label{subfig:env_surv}
-    \end{subfigure}
+  \begin{subfigure}[b]{0.5\textwidth}
+    \caption{}
+    \includegraphics[height = 0.4\textheight, keepaspectratio = true]{figure/aff}
+    \label{subfig:aff_surv}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.5\textwidth}
+    \caption{}
+    \includegraphics[height = 0.4\textheight, keepaspectratio = true]{figure/hab}
+    \label{subfig:env_surv}
+  \end{subfigure}
 %  \end{center}
-    \caption{Survivorship curves of Australasian Permian brachiopod genera based on substrate affinity (\subref{subfig:aff_surv}) and habitat preference (\subref{subfig:env_surv}). The three stepwise functions are nonparametric Kaplan--Meier survival curves for each of the three substrate affinities. The three smooth lines are the predicted survivorship probabilities for taxon of the given age from the parametric model of generic survivorship.}% and illustrated standard errors of the prediction.}
+  \caption{Survivorship curves of Australasian Permian brachiopod genera based on substrate affinity (\subref{subfig:aff_surv}) and habitat preference (\subref{subfig:env_surv}). The three stepwise functions are nonparametric Kaplan--Meier survival curves for each of the three substrate affinities. The three smooth lines are the predicted survivorship probabilities for taxon of the given age from the parametric model of generic survivorship.}% and illustrated standard errors of the prediction.}
   \label{fig:brach_surv}
 \end{figure}
 
@@ -135,13 +128,13 @@ Dietary categories limit abundance because of the availability of resources in a
 
 Locomotor category describes the motility of a taxon and the plausibility of occurrence. For example, an obligate arboreal taxon can only occur in locations with a minimum of tree cover and can most likely only disperse to other environments with suitable tree cover. Dispersal ability is considered important in determining the extent of a taxon's geographic range \citep{Birand2012,Jablonski2006a,Gaston2009} and thus any trait that limits dispersal ability would most likely also limit the range size of that organism and increase extinction risk. During the Cenozoic, between the Paleogene--Neogene, there was a shift from a predominately closed environment to a predominately open environment \citep{Janis1993a,Blois2009,Rose2006}. It is expected then that arboreal taxa during the Paleogene will have a greater expected duration than Neogene taxa, and the opposite will be true for ground dwelling taxa. In comparison, taxon duration of scansorial taxa is expected to remain relatively similar between the two time periods because it represents a mixed environmental preference that may be viable in either closed or open environments. If locomotor category is not included in the best model of survival this may mean that it is either a poor descriptor of potential dispersal ability or range size or that other factors, both measured or unmeasured, may be of greater importance.
 
-Similar to dietary category, body size has an associated energetic cost in order to maintain homeostasis, which in turn necessitates a sufficient supply of prey items. Because of this, it is expected that larger organisms have higher energetic costs and thus a greater range size in order to obtain necessary resources \citep{Damuth1979,Brown1987,Damuth1979,Lyons2010}. It is then expected that, because taxa with larger range sizes have been found to have lower extinction rates, that species with higher average body sizes will have a lower extinction rate than taxa with smaller body sizes. However, the relationship between body size and extinction rate at the generic level has been found to vary between continents \citep{Tomiya2013,Liow2008}. By expanding to include a third continent, South America, and analyzing specific level data I hope to elucidate how differences in taxonomic diversity at a continental level might affect body size mediated extinction rate. If body size is found to be unimportant for modeling survival, as in the generic level analysis of \citet{Tomiya2013}, this means that other biotic or abiotic factors may dominate. This may also mean that individual level home range size does not scale into increased species level range size, and there is therefore no correlated decrease in extinction rate.
+Similar to dietary category, body size has an associated energetic cost in order to maintain homeostasis, which in turn necessitates a sufficient supply of prey items. Because of this, it is expected that larger organisms have higher energetic costs and thus a greater range size in order to obtain necessary resources \citep{Damuth1979,Brown1987,Damuth1979,Lyons2010}. It is then expected that, because taxa with larger range sizes have been found to have lower extinction rates, that species with higher average body sizes will have a lower extinction rate than taxa with smaller body sizes. However, the relationship between body size and extinction rate at the generic level has been found to vary between continents \citep{Tomiya2013,Liow2008}. By expanding to include a third continent, South America, and analyzing specific level data I hope to elucidate how differences in taxonomic diversity at a continental level might affect body size mediated extinction rate. If body size is found to be unimportant for modeling survival, as in the generic level analysis of \citet{Tomiya2013}, this means that other biotic or abiotic factors may dominate. This may also mean that individual level home range size does not scale into increased species level range size, and there is therefore no correlated decrease in extinction rate. % inc bs, inc extinction: Stanley 73, Clauset and Erwin 08, McShea 94, Johnson 02, etc.
 
 The interaction of body size, locomotor category, and dietary category is also extremely important. For example, a small bodied arboreal taxon of any trophic category during the heavily forested and warm time of the Paleogene would be expected at once to have both a small body size determined range, a large potential geographic range determined by locomotion, as well as an increased availability of resources. Together this would mean that relative survival would be expected to be less than, greater than, and greater than average respectively. Determining which factors dominate during the Paleogene, as well as other parts of the Cenozoic, must be done empirically.
 
 
 \textit{Proposed research:}
-  To analyze differential mammalian survival, I propose a survival analysis approach similar to that described above for Permian brachiopods. Because dietary category and locomotor category are constant at the species level, they will be modeled as time-independent covariates of survival. While a taxon's average body size may evolve over time, the resolution of the mammal fossil record does not permit observing of this for all Cenozoic taxa. Instead, following previous work, body size will be considered constant with respect to time and will also be modeled as time-independent covariate. The climate proxy \(\delta O^{18}\) oxygen curve \citep{Zachos2008} will be modeled as an ancillary time-dependent covariate. Also, as described above for Permian brachiopods, constant versus age dependent extinction rate will be tested by comparing the fit of survival to various probability distributions. Additionally, the effect of stratification based on the Paleogene/Neogene divide will be assessed in order to determine if the time periods had distinct patterns of survival.
+To analyze differential mammalian survival, I propose a survival analysis approach similar to that described above for Permian brachiopods. Because dietary category and locomotor category are constant at the species level, they will be modeled as time-independent covariates of survival. While a taxon's average body size may evolve over time, the resolution of the mammal fossil record does not permit observing of this for all Cenozoic taxa. Instead, following previous work, body size will be considered constant with respect to time and will also be modeled as time-independent covariate. The climate proxy \(\delta O^{18}\) oxygen curve \citep{Zachos2008} will be modeled as an ancillary time-dependent covariate. Also, as described above for Permian brachiopods, constant versus age dependent extinction rate will be tested by comparing the fit of survival to various probability distributions. Additionally, the effect of stratification based on the Paleogene/Neogene divide will be assessed in order to determine if the time periods had distinct patterns of survival.
 
 While many analyses of survivorship, such as the one described above for Permian brachiopods, are done using generic data \citep{Tomiya2013,Liow2008,Harnik2013}, there are potential biases in accurately modeling specific level processes using generic level data \citep{Raup1975,Sepkoski1975,Simpson2006,Raup1991a,VanValen1979}. Anagenesis, hierarchical selection, and taxa that did not go extinct in the time frame of interest may all bias models of survival \citep{Raup1975,VanValen1979,Simpson2006,Raup1991a}. Interestingly, the effect of incomplete sampling on estimation of survivorship curves appears rather minimal and uniform \citep{Sepkoski1975}. The problems involving taxa that did not go extinct have mostly been dealt with following advances in modeling right-censored and interval data \citep{Kleinbaum2005}.
 
@@ -180,15 +173,15 @@ Using an approach proposed by \citet{Sidor2013} and \citet{Vilhena2013}, I will 
 
 Community connectedness will be measured using the four summary statistics described above. \(E\) is defined as 
 \(
-  E = \frac{\sum_{i = 1}^{L} \frac{u_{i}}{n_{i}}}{L}
+E = \frac{\sum_{i = 1}^{L} \frac{u_{i}}{n_{i}}}{L}
 \)
 where \(L\) is as the number of localities, \(u\) is the number of taxa unique to a locality, and \(n\) is the number of taxa present at a locality. This is a measure of how unique localities are on average. \(Occ\) is the number of localities a taxon is, on average, found at and is defined
 \(
-  Occ = \frac{\sum_{i = 1}^{N} \frac{l_{i}}{L}}{N}
+Occ = \frac{\sum_{i = 1}^{N} \frac{l_{i}}{L}}{N}
 \)
 where \(N\) is as the number of taxa present in the biogeographic network and \(l\) is the number of localities a taxon occurred in. \(BC\) is a measurement of the shared taxa between localities and is defined 
 \(
-  BC = \frac{O - N}{LN - N}
+BC = \frac{O - N}{LN - N}
 \)
 where \(O\) is the total number of taxonomic occurrences. \(BC\) ranges from 0 to 1, with 0 meaning that each locality completely disconnected from all other localities and 1 indicating that all taxa are presents at all localities. 
 

@@ -64,12 +64,14 @@
   \begin{alertblock}{Questions}
     \begin{itemize}
       \item Why do certain taxa go extinct while others do not?
+        \begin{itemize}
+          \item Is extinction risk taxon--age independent?
+        \end{itemize}
       \item How is emergence ``formed?'' When should it be invoked?
-      \item Is extinction risk taxon--age independent?
-      \item When should we expect global, regional, or local processes to dominate?
+      \item When should global, regional, or local processes \\expected to dominate?
     \end{itemize}
   \end{alertblock}
-  
+
 \end{frame}
 
 \begin{frame}
@@ -83,10 +85,10 @@
   \vspace{1.3cm}
 
   \begin{center}
-    \begin{tabular}{@{}l@{}}environmental\\interactions\end{tabular} 
-    \hspace{1cm}
+    \begin{tabular}{@{}l@{}}adaptive zone\end{tabular} 
+    \hspace{0.75cm}
     \(\rightarrow\) 
-    \hspace{1.5cm}
+    \hspace{1cm}
     \begin{tabular}{@{}l@{}}speciation\\extinction\end{tabular}
   \end{center}
 \end{frame}
@@ -98,16 +100,19 @@
     \includegraphics[height=0.4\textheight, width=\textwidth, keepaspectratio=true]{figure/grantham}
 
     \tiny{\attrib{Grantham 1995 \textit{Ann. Rev. Ecol. Syst.}}}
+
   \end{center}
 
-  \begin{block}{Criteria}
-    Cannot be reduced to lower level (e.g. organismal)
-  \end{block}
+  \vspace{0.5cm}
+
+  \begin{center}
+    \alert{Criteria:} cannot be reduced to lower level (e.g. organismal)
+  \end{center}
 \end{frame}
 
 \begin{frame}
   \frametitle{Range size}
-  
+
   \begin{center}
     \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/range}
 
@@ -169,9 +174,9 @@
   \frametitle{Law of Constant Extinction}
 
   \begin{alertblock}{Definition}
-      Extinction rate, in a given adaptive zone, is taxon--age independent.
+    Extinction rate, in a given adaptive zone, is taxon--age independent.
 
-      \tiny{\attrib{Van Valen 1973 \textit{Evol. Theory}}}
+    \tiny{\attrib{Van Valen 1973 \textit{Evol. Theory}}}
   \end{alertblock}
 
   \begin{center}
@@ -215,7 +220,7 @@
       \end{block}
 
       \begin{center}
-       \includegraphics[height = 0.4\textheight, keepaspectratio = true]{figure/annyong}
+        \includegraphics[height = 0.4\textheight, keepaspectratio = true]{figure/annyong}
       \end{center}
     \end{column}
   \end{columns}
@@ -224,25 +229,23 @@
 \begin{frame}
   \frametitle{Proposed studies}
 
-  \begin{block}{Chapters}
-    \begin{itemize}
-      \item Permian brachiopod trait based survival %\\(environmental preference)
-        \begin{itemize}
-          \item generic level 
-          \item necessity of emergence?
-        \end{itemize}
-      \item Cenozoic mammal trait based survival %\\(range size)
-        \begin{itemize}
-          \item generic, specific level 
-          \item necessity of emergence?
-        \end{itemize}
-      \item Cenozoic mammal community connectedness %\\(global versus regional versus local)
-        \begin{itemize}
-          \item global versus regional versus local
-          \item differences across traits?
-        \end{itemize}
-    \end{itemize}
-  \end{block}
+  \begin{itemize}
+    \item Permian brachiopod trait based survival %\\(environmental preference)
+      \begin{itemize}
+        \item generic level 
+        \item necessity of emergence?
+      \end{itemize}
+    \item Cenozoic mammal trait based survival %\\(range size)
+      \begin{itemize}
+        \item generic, specific level 
+        \item necessity of emergence?
+      \end{itemize}
+    \item Cenozoic mammal community connectedness %\\(global versus regional versus local)
+      \begin{itemize}
+        \item global versus regional versus local
+        \item differences across traits?
+      \end{itemize}
+  \end{itemize}
 \end{frame}
 
 
@@ -255,11 +258,11 @@
     \begin{column}{0.5\textwidth}
       \begin{center}
         \includegraphics[height = 0.4\textheight, keepaspectratio = true]{figure/miller}
-          
+
         \tiny{\attrib{Miller and Connoly 2001 \textit{Paleobio.}}}
 
         \includegraphics[height = 0.4\textheight, keepaspectratio = true]{figure/foote}
-          
+
         \tiny{\attrib{Foote 2006 \textit{Paleobio.}}}
       \end{center}
     \end{column}
@@ -442,7 +445,7 @@
 
 \begin{frame}
   \frametitle{Locomotor category}
-  
+
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \includegraphics[height=0.8\textheight, width=\textwidth, keepaspectratio=true]{figure/scherler}
@@ -482,6 +485,7 @@
     \begin{column}{0.5\textwidth}
       \begin{itemize}
         \item \(\uparrow\) body size, \(\uparrow\) energy req, \\\(\uparrow\) range size, \(\downarrow\) extinction
+        \item \textbf{or} \(\uparrow\) body size, \(\uparrow\) extinction 
         \item Europe
           \begin{itemize}
             \item lrg body size genera: \\\(\uparrow\) extinction
@@ -674,18 +678,18 @@
 \begin{frame}
   \frametitle{Compressing a network}
 
-  \begin{block}{Map equation \attrib{Rosvall and Bargstrom 2008 \textit{PNAS}}}
+  \begin{block}{Map equation \tiny{\attrib{Rosvall and Bargstrom 2008 \textit{PNAS}}}}
     \begin{align*}
       L(\textbf{M}) &= q_{\curvearrowright}H(\mathcal{Q}) + \sum^{m}_{i = 1} p^{i}_{\circlearrowright}H(\mathcal{P}^{i})
     \end{align*}
 
     \begin{itemize}
       \item \(\textbf{M}\): module partion of \textit{n} nodes in \textit{m} partitions
-      \item \(L(\textbf{M})\): code length of network
-      \item \(q_{\curvearrowright}\): P(random walk switches modules)
+      \item \(L(\textbf{M})\): network code length 
+      \item \(q_{\curvearrowright}\): P(walk switches modules)
       \item \(H(\mathcal{Q})\): entropy module codewords
       \item \(H(\mathcal{P}^{i})\): entropy within--module
-      \item \(p^{i}_{\circlearrowright}\): rate of within--module use
+      \item \(p^{i}_{\circlearrowright}\): rate within--module use
     \end{itemize}
   \end{block}
 \end{frame}
@@ -787,16 +791,14 @@
     \item North America
       \begin{itemize}
         \item similar to global predictions
-        \item major lit. questions re. effects climate change
       \end{itemize}
     \item Europe
       \begin{itemize}
         \item stable trophic diversity
-        \item abundant herbivores drive patterns
       \end{itemize}
     \item South America
       \begin{itemize}
-        \item high provincialism
+        \item high provincialism (North/South)
         \item early expansion of ground dwelling taxa
       \end{itemize}
   \end{itemize}
@@ -850,9 +852,11 @@
   \begin{alertblock}{Questions}
     \begin{itemize}
       \item Why do certain taxa go extinct while others do not?
+        \begin{itemize}
+          \item Is extinction rate taxon--age independent?
+        \end{itemize}
       \item How is emergence ``formed?'' When should it be invoked?
-      \item Is extinction rate taxon--age independent?
-      \item When should we expect global, regional, or local processes to dominate?
+      \item When should global, regional, or local processes \\expected to dominate?
     \end{itemize}
   \end{alertblock}
 \end{frame}
@@ -909,11 +913,11 @@
     \begin{column}{0.5\textwidth}
       \begin{center}
         \includegraphics[height = 0.4\textheight, width = \textwidth, keepaspectratio = true]{figure/raup}
-          
+
         \tiny{\attrib{Raup 1975 \textit{Paleobio.}}}
 
         \includegraphics[height = 0.4\textheight, width = \textwidth, keepaspectratio = true]{figure/sepkoski}
-          
+
         \tiny{\attrib{Sepkoski 1975 \textit{Paleobio.}}}
       \end{center}
     \end{column}
