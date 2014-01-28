@@ -86,7 +86,7 @@
 
   \begin{center}
     \begin{tabular}{@{}l@{}}adaptive zone\end{tabular} 
-    \hspace{0.75cm}
+    \hspace{0.5cm}
     \(\rightarrow\) 
     \hspace{1cm}
     \begin{tabular}{@{}l@{}}speciation\\extinction\end{tabular}
@@ -252,6 +252,22 @@
 \section{Brachiopod survival}
 
 \begin{frame}
+  \frametitle{Brachiopods, environmental preference, and extinction}
+
+  \begin{block}{Questions}
+    \begin{itemize}
+      \item Are traits related to environmental preference correlated with survival?
+      \item Which trait(s) best model extinction? One or more?
+      \item Is global climate change important to extinction?
+    \end{itemize}
+  \end{block}
+
+  \begin{center}
+    Australasian, Permian brachiopods
+  \end{center}
+\end{frame}
+
+\begin{frame}
   \frametitle{Substrate affinity}
 
   \begin{columns}
@@ -357,6 +373,15 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{Permian climate}
+  \begin{center}
+    \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/glacial}
+
+    \tiny{\attrib{Birgenheier \textit{et al.} 2010 \textit{Paleo\(^3\)}}}
+  \end{center}
+\end{frame}
+
+\begin{frame}
   \frametitle{Analysis}
 
   \begin{columns}
@@ -410,6 +435,19 @@
 
 
 \section{Mammal survival}
+
+\begin{frame}
+  \frametitle{Ecology and survival in Cenozoic mammals}
+
+  \begin{block}{Questions}
+    \begin{itemize}
+      \item How do traits related to range size relate to survival?
+      \item Which trait(s) best model survival? One or more?
+      \item Is climatic change important for modeling survival?
+    \end{itemize}
+  \end{block}
+  
+\end{frame}
 
 \begin{frame}
   \frametitle{Dietary category}
@@ -520,9 +558,20 @@
 \end{frame}
 
 
-
-
 \section{Mammal community connectedness}
+
+\begin{frame}
+  \frametitle{Community connectedness in Cenozoic mammals}
+
+  \begin{block}{Questions}
+    \begin{itemize}
+      \item How does the ratio between endemic and cosmopolitan taxa change over time?
+      \item Is there a single global pattern or does each regions have a different patterns?
+      \item Do these patterns differ between ecological categories?
+      \item Is global climate change an important predictor of these patterns?
+    \end{itemize}
+  \end{block}
+\end{frame}
 
 \begin{frame}
   \frametitle{Community connectedness}
@@ -906,8 +955,9 @@
 \appendix
 \section{Further concerns}
 
+
 \begin{frame}
-  \frametitle{Theseus' ship: biases to analyzing survival}
+  \frametitle{Theseus' ship: simulations and survival}
 
   \begin{columns}
     \begin{column}{0.5\textwidth}
@@ -923,18 +973,19 @@
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{itemize}
-        \item bias away from \(h(t) = \lambda\)?
+        \item heterogeneous preservation
           \begin{itemize}
-            \item censoring
-            \item sampling/stratigraphy
-            \item species vs genus
-            \item anagenesis/cryptic speciation
+            \item \(P(\phi | A) \neq P(\phi | B)\)
           \end{itemize}
-        \item use time-homogeneous birth-death model
+        \item cryptic speciation/anagenesis
+          \begin{itemize}
+            \item longer duration than expected
+            \item proxy generic level?
+          \end{itemize}
+        \item time-homogeneous birth-death model
           \begin{itemize}
             \item constant \(p\), \(b\)
             \item expected \(S(t) = \exp^{-\lambda t}\)
-            \item vary anagenesis/sampling
           \end{itemize}
       \end{itemize}
     \end{column}
@@ -959,7 +1010,7 @@
           \end{itemize}
         \item measures
           \begin{itemize}
-            \item mean pairwise--locality patristic distance
+            \item relative mean pairwise distance between taxa at locality
             \item mean locality phylogenetic species variability (Helmus \textit{et al.} 2007 \textit{Am. Nat})
           \end{itemize}
       \end{itemize}
