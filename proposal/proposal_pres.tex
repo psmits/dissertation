@@ -33,20 +33,20 @@
 
 \begin{document}
 
-%\begin{frame}
-%  \begin{quotation}
-%    O species, stunned by your terror of chill death, why fear the Styx, why
-%    fear the ghosts and empty names, the stuff of poets, the spectres of a
-%    phantom world? [\dots] Everything changes, nothing dies: the spirit
-%    wanders, arriving here or there, and occupying whatever body it pleases,
-%    passing from a wild beast into a human being, from our body into a
-%    beast, but is never destroyed. As pliable wax, stamped with new designs,
-%    is no longer what it was; does not keep the same form; but is still one
-%    and the same.
-%    
-%    \attrib{Ovid, \underline{Metamorphoses}, book XV: 143-–175}
-%  \end{quotation}
-%\end{frame}
+\begin{frame}
+  \begin{quotation}
+    O species, stunned by your terror of chill death, why fear the Styx, why
+    fear the ghosts and empty names, the stuff of poets, the spectres of a
+    phantom world? [\dots] Everything changes, nothing dies: the spirit
+    wanders, arriving here or there, and occupying whatever body it pleases,
+    passing from a wild beast into a human being, from our body into a
+    beast, but is never destroyed. As pliable wax, stamped with new designs,
+    is no longer what it was; does not keep the same form; but is still one
+    and the same.
+    
+    \attrib{Ovid, \underline{Metamorphoses}, book XV: 143-–175}
+  \end{quotation}
+\end{frame}
 
 \begin{frame}
   \maketitle
@@ -59,19 +59,21 @@
 \section{Theory}
 
 \begin{frame}
-  \frametitle{Framework}
+  \frametitle{Extinction}
 
-  \begin{alertblock}{Questions}
-    \begin{itemize}
-      \item Why do certain taxa go extinct while others do not?
-        \begin{itemize}
-          \item Is extinction risk taxon--age independent?
-        \end{itemize}
-      \item How is emergence ``formed?'' When should it be invoked?
-      \item When should global, regional, or local processes \\expected to dominate?
-    \end{itemize}
+  \begin{quotation}
+    All species that have ever lived are, to a first approximation, dead.
+
+    \tiny{\attrib{Raup 1986 \underline{The Nemesis Affair}}}
+  \end{quotation}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Foundation}
+
+  \begin{alertblock}{Question}
+    Why do certain taxa go extinct while others do not?
   \end{alertblock}
-
 \end{frame}
 
 \begin{frame}
@@ -94,30 +96,24 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Emergent properties}
+  \frametitle{Van Valen's observation}
 
   \begin{center}
-    \includegraphics[height=0.4\textheight, width=\textwidth, keepaspectratio=true]{figure/grantham}
+    \includegraphics[height = 0.7\textheight, keepaspectratio = true]{figure/liow}
 
-    \tiny{\attrib{Grantham 1995 \textit{Ann. Rev. Ecol. Syst.}}}
-
-  \end{center}
-
-  \vspace{0.5cm}
-
-  \begin{center}
-    \alert{Criteria:} cannot be reduced to lower level (e.g. organismal)
+    \tiny{\attrib{Liow et al. 2011 \textit{TREE}}}
   \end{center}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Range size}
+  \frametitle{Law of Constant Extinction}
 
-  \begin{center}
-    \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/range}
+  \begin{alertblock}{Definition}
+    Extinction rate, in a given adaptive zone, is taxon--age independent.
 
-    \tiny{\attrib{Jablonski 1987 \textit{Science}}}
-  \end{center}
+    \tiny{\attrib{Van Valen 1973 \textit{Evol. Theory}}}
+  \end{alertblock}
+
 \end{frame}
 
 \begin{frame}
@@ -161,32 +157,39 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Van Valen's observation}
+  \frametitle{Formalization of Van Valen}
+
+  \begin{block}{Law of Constant Extinction}
+    Hazard is constant with respect to time (\alert{exponential survival}).
+  \end{block}
 
   \begin{center}
-    \includegraphics[height = 0.7\textheight, keepaspectratio = true]{figure/liow}
-
-    \tiny{\attrib{Liow et al. 2011 \textit{TREE}}}
+    \[
+      h(t) = \lambda \iff S(t) = \exp^{-\lambda t}
+    \]
   \end{center}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Law of Constant Extinction}
+  \frametitle{Framework for study}
 
-  \begin{alertblock}{Definition}
-    Extinction rate, in a given adaptive zone, is taxon--age independent.
-
-    \tiny{\attrib{Van Valen 1973 \textit{Evol. Theory}}}
-  \end{alertblock}
-
-  \begin{center}
-    translation: hazard is constant with respect to time \\(\alert{exponential survival})
-  \end{center}
-
-  \[
-    h(t) = \lambda \iff S(t) = \exp^{-\lambda t}
-  \]
-
+  \begin{block}{Setup}
+    \begin{itemize}
+      \item background extinction
+        \begin{itemize}
+          \item non-random with respect to biology
+        \end{itemize}
+      \item traits related to habitat selection and range size
+        \begin{itemize}
+          \item ``bound'' adaptive zone
+        \end{itemize}
+      \item model non-organism mediated environmental change
+        \begin{itemize}
+          \item which/what processes dominate: global, regional, local
+          \item how does this change over time?
+        \end{itemize}
+    \end{itemize}
+  \end{block}
 \end{frame}
 
 \begin{frame}
@@ -954,7 +957,6 @@
 
 \appendix
 \section{Further concerns}
-
 
 \begin{frame}
   \frametitle{Theseus' ship: simulations and survival}
