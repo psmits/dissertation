@@ -5,43 +5,43 @@ Database file #1: proposal.bib
 Warning--there's a number but no volume in Harnik2013
 You've used 118 entries,
             2773 wiz_defined-function locations,
-            1523 strings with 30730 characters,
-and the built_in function-call counts, 57133 in all, are:
-= -- 5583
-> -- 2788
+            1525 strings with 30802 characters,
+and the built_in function-call counts, 57485 in all, are:
+= -- 5633
+> -- 2797
 < -- 87
-+ -- 962
-- -- 842
-* -- 4935
-:= -- 8914
-add.period$ -- 544
++ -- 965
+- -- 845
+* -- 4947
+:= -- 8942
+add.period$ -- 547
 call.type$ -- 118
-change.case$ -- 628
+change.case$ -- 629
 chr.to.int$ -- 116
 cite$ -- 237
-duplicate$ -- 2436
-empty$ -- 4652
-format.name$ -- 1028
-if$ -- 11871
+duplicate$ -- 2468
+empty$ -- 4663
+format.name$ -- 1029
+if$ -- 11971
 int.to.chr$ -- 3
 int.to.str$ -- 1
 missing$ -- 122
-newline$ -- 785
+newline$ -- 788
 num.names$ -- 478
-pop$ -- 924
+pop$ -- 926
 preamble$ -- 1
-purify$ -- 514
+purify$ -- 515
 quote$ -- 0
-skip$ -- 1737
+skip$ -- 1779
 stack$ -- 0
-substring$ -- 2836
-swap$ -- 218
-text.length$ -- 4
+substring$ -- 2848
+swap$ -- 250
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 1273
 warning$ -- 1
 while$ -- 573
 width$ -- 0
-write$ -- 1922
+write$ -- 1928
 (There was 1 warning)
