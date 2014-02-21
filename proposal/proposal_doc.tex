@@ -265,15 +265,18 @@ Further refinements to these models include modeling survival using other distri
 Given the repeated major glacial activity during the Permian, how stable was community connectedness in Permian brachiopods? Are patterns of community connectedness different for taxa favoring different environments?
 
 \subsubsection{Hypotheses and predictions} \label{sec:braccompred}
-% substrate
+During the Permian, the east coast of the Australian continent faced towards the massive Panthalassic Ocean. Because of this, the establishment of populations was most likely limited to within the local area because the amount of distance required to establish else was most likely too great. This would also have made individuals which settled across the ocean would have been almost instantly genetically isolated and not increase community connectedness, \textit{per se}. Because of this, it is expected that community connectedness in Australian Permian brachiopods would be fairly high at any given time and that changes, specifically decreases in connectedness, would be expected during the four glacial periods \citep{Fielding2008a,Fielding2008}.
 
-% habitat
+Dispersal ability of modern brachiopods appears to be most limited by availability and proximity of substrate types \citep{Richardson1997,Richardson1997a}. The Permian of Australia is dominated by widespread clastic beds compared to relatively few and rare carbonate beds. The expectation is that the distribution of taxa with a carbonate preference will be extremely patchy with a high \(E\) (Eq. \ref{eq:e}), low \(Occ\) (Eq. \ref{eq:occ}), low \(BC\) (Eq. \ref{eq:bc}), and low code length \citep{Rosvall2008,Sidor2013} compared to the distribution of clastic preferring taxa. However, if community connectedness is approximately equal between carbonate and clastic preferring taxa this would could be caused by two different scenarios. If community similarity is high or low between all localities this could be caused by approximately equal dispersal ability in both groups, high and low respectively.
 
-% affixing strategy
+Habitat would be expected to influence community structure if there is an uneven distribution of available habitats in space and time. Rarity of preferred habitat would be expected to lead to high \(E\), low \(Occ\), low \(BC\), and low code length compared to an abundance of preferred habitat. Because of the four major glaciation events during the Permian of Australia, it is expected that the availability of on-shore habitats would be highly variable. It is then expected that during periods of glacial activity community connectedness of on-shore would be extremely low because of rarity of environments in comparison to both periods of non-glacial activity and off-shore habitats at all times. If habitat preference has no effect on community connectedness this may mean that the dispersal ability of on-shore taxa is very high and able to maintain gene flow between potentially isolated habitats.
 
+It is expected that affixing strategy alone will have minimal effect on community connectedness unless affixing strategy is highly correlated with substrate and/or habitat preference. If community connectedness is different between affixing strategies
 
 \subsubsection{Proposed research} \label{sec:braccommeth}
-Following the biogeographic network approach described above (Section \ref{sec:bionet}), I will construct biogeographic networks between brachiopod genera and localities defined as 2x2 latitude--longitude grid cells from an equal-area map projection.
+Following the biogeographic network approach described above (Section \ref{sec:bionet}), I will construct biogeographic networks between brachiopod genera and localities defined as 2x2 latitude--longitude grid cells from an equal-area map projection. Biogeographic networks were constructed for the entire Permian using 2 My bins. In addition to community wide networks, seperate networks will be constructed for taxa within ecological categories. This facilitates comparison of community connectedness patterns during the Permian both within and between categories as well as with the community wide pattern. The data necessary to complete this study is the same as for the above analysis of brachiopod survival (Section \ref{sec:bracsurv}). Importantly, sampling will be restricted to the east coast of Australia because this represents a continuous coast line that faced the Panthalassic Ocean during the Permian.
+
+The next step is to compare patterns of community connectedness both within and between regions in order to understand if global, regional, or local scale processes dominate. Additionally, comparisons will be done between the different dietary and locomotor categories both within and between regions to determine which scale processes may be affecting either trait. The approach and methodology to accomplish these analyses is currently under development. Additionally, the possibility of integrating locality--locality distance or some other measure of topology will be explored, especially how this relates to code length and provinciality in general.
 
 \subsubsection{Preliminary results} \label{sec:braccomres}
 
@@ -325,6 +328,35 @@ As with the brachiopods (Section \ref{sec:bracsurvmeth}), there is no obvious si
 In order to account for environmental shifts, two different time-dependent covariates will be used. \(\delta O^{18}\) isotope information for the whole Cenozoic \citep{Zachos2008} will be as a global climate proxy. Additionally, the Paleogene--Neogene divide which may reflect global environmental shift, both biotic and abiotic, will me modeled as a time-dependent step-function.
 
 \subsubsection{Preliminary results}
+Preliminary analysis was performed solely on mammal occurrence data from North America and Souther America during the Cenozoic from the PBDB. Nonparametric Kaplan-Meier survival cuvres were estimated for both dietary and locomotor categories (Fig. \ref{fig:mam_surv_curv}). 
+
+\begin{figure}[ht]
+  \begin{center}
+    \begin{subfigure}[b]{0.4\textwidth}
+      \caption{}
+      \includegraphics[width = \textwidth, keepaspectratio = true]{figure/km_nad}
+      \label{subfig:km_nad}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\textwidth}
+      \caption{}
+      \includegraphics[width = \textwidth, keepaspectratio = true]{figure/km_nal}
+      \label{subfig:km_nal}
+    \end{subfigure}
+
+    \begin{subfigure}[b]{0.4\textwidth}
+      \caption{}
+      \includegraphics[width = \textwidth, keepaspectratio = true]{figure/km_erd}
+      \label{subfig:km_erd}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\textwidth}
+      \caption{}
+      \includegraphics[width = \textwidth, keepaspectratio = true]{figure/km_erl}
+      \label{subfig:km_erl}
+    \end{subfigure}
+  \end{center}
+  \caption{Nonparametric Kaplan-Meier survival curves for North American and European mammals based on dietary category (\subref{subfig:km_nad} and \subref{subfig:km_erd} respectively, and locomotor category (\subref{subfig:km_nal} and \subref{subfig:km_erl} respectively). The vertical axes are on a natural log scale.}
+  \label{fig:mam_surv_curv}
+\end{figure}
 
 
 \subsection{Community connectedness: global, regional, local} \label{sec:mamcom}
@@ -354,11 +386,11 @@ The degree of phylogenetic similarity between taxa at a locality may play an imp
 
 For each locality, an informal phylogeny will be constructed based solely on available taxonomic information such as order, family, and genus assignments with each of these levels being a completely unresolved polytomy. Using this informal phylogeny, a number of measures of phylogenetic similarity can be estimated. For example the relative mean pairwise distance between all taxa at a locality \citep{Webb2002} or the related phylogenetic species variability of a single locality \citet{Helmus2007a}. These values calculated for all localities can then be used as a partial correlates or covariates when modeling changes in community connectedness.
 
-The next step is to compare patterns of community connectedness both within and between regions in order to understand if global, regional, or local scale processes dominate. Additionally, comparisons will be done between the different dietary and locomotor categories both within and between regions to determine which scale processes may be affecting either trait. The approach and methodology to accomplish these analyses is currently under development. Additionally, the possibility of integrating locality--locality distance or some other measure of topology will be explored, especially how this relates to code length and provinciality in general.
+As with the Permian brachiopods (Section \ref{sec:braccom}), patterns of community connectedness will be compared both within and between ecological categories. Additionally, the correspondence of changes in environmental conditions and community connectedness will also be analysed. The approach and methodology to accomplish these analyses is currently under development. Additionally, the possibility of integrating locality--locality distance or some other measure of topology will be explored, especially how this relates to code length and provinciality in general.
 
 
 \subsubsection{Preliminary results} \label{mamcomres}
-Preliminary analysis was done using only the occurrence information of both North American and European fossil mammals avaliable in the PBDB. Both regions have qualitatively different patterns of community connectedness, primarily during the Paleogene (Fig. \ref{fig:mam_con}). Almost all four of the summary statistics are extremely volatile over the Cenozoic, especially for Europe. However, some interesting qualitative patterns are present.
+Preliminary analysis was done using only the occurrence information of both North American and European fossil mammals available in the PBDB. Both regions have qualitatively different patterns of community connectedness, primarily during the Paleogene (Fig. \ref{fig:mam_con}). Almost all four of the summary statistics are extremely volatile over the Cenozoic, especially for Europe. However, some interesting qualitative patterns are present.
 
 \begin{figure}[ht]
   \begin{center}
