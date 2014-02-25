@@ -207,7 +207,7 @@ Because survival models are fit in a maximum likelihood framework \citep{Kleinba
 \subsubsection{Preliminary results} \label{sec:bracsurvres}
 The preliminary results presented here are based entirely on the data present in the PBDB. Observations were either right or left censored following the procedure described above (Section \ref{sec:bracsurvmeth}). Uncertainty of duration was not taken into account via interval censoring. Substrate and habitat preference were the only covariates of survival and were classified coarsely following \citet{Foote2006} and \citet{Kiessling2007} respectively. Model formulations with each covariate alone, additively together, or interacting were used. Only two different survival distributions were considered in this initial analysis: exponential and Weibull. In total, 11 models were fit and compared (Table \ref{tab:bracmod}). 
 
-The best model of survival had substrate preference as the sole predictor of survival, which followed a Weibull distribution with increasing risk of failure with age (Table \ref{tab:bracmod}). This model was closely followed by the second best model of survival which had both substrate and habitat preference as additive predictors of survival, also following a Weibull ditribution with \(k > 1\). The difference between the AICc best model and the second best model was small (\(\Delta\) AIC \(\approx 2.9\)), meaning that both models can be considered adequate. 
+The best model of survival had substrate preference as the sole predictor of survival, which followed a Weibull distribution with increasing risk of failure with age (Table \ref{tab:bracmod}). This model was closely followed by the second best model of survival which had both substrate and habitat preference as additive predictors of survival, also following a Weibull ditribution with \(k > 1\). The difference between the AICc best model and the second best model was small (\(\Delta\) AIC \(\approx 1.3\)), meaning that both models can be considered adequate. 
 
 % model comparison table
 \begin{table}[ht]
@@ -216,16 +216,17 @@ The best model of survival had substrate preference as the sole predictor of sur
     \hline
     formula & distribution & shape & df & AICc & weight \\ 
     \hline
-    \~{} aff & weibull & 1.90 & 4 & 901.4070 & 0.70 \\ 
-    \~{} aff + hab & weibull & 1.92 & 6 & 903.2009 & 0.28 \\ 
-    \~{} aff * hab & weibull & 1.94 & 10 & 908.7618 & 0.02 \\ 
-    \~{} 1 & weibull & 1.75 & 2 & 927.7123 & 0.00 \\ 
-    \~{} hab & weibull & 1.76 & 4 & 930.2127 & 0.00 \\ 
-    \~{} aff & exponential &  & 3 & 958.7530 & 0.00 \\ 
-    \~{} aff + hab & exponential &  & 5 & 962.0907 & 0.00 \\ 
-    \~{} aff * hab & exponential &  & 9 & 969.2772 & 0.00 \\ 
-    \~{} 1 & exponential &  & 1 & 969.4894 & 0.00 \\ 
-    \~{} hab & exponential &  & 3 & 972.7203 & 0.00 \\ 
+    \~{} aff & weibull & 1.85 & 4 & 941.6757 & 0.65 \\ 
+    \~{} aff + hab & weibull & 1.87 & 6 & 942.9977 & 0.34 \\ 
+    \~{} aff * hab & weibull & 1.89 & 10 & 949.0816 & 0.02 \\ 
+    \~{} 1 & weibull & 1.74 & 2 & 960.2550 & 0.00 \\ 
+    \~{} hab & weibull & 1.75 & 4 & 963.3091 & 0.00 \\ 
+    \~{} aff & exponential &  & 3 & 993.1724 & 0.00 \\ 
+    \~{} aff + hab & exponential &  & 5 & 996.4089 & 0.00 \\ 
+    \~{} 1 & exponential &  & 1 & 1000.2592 & 0.00 \\ 
+    \~{} aff * hab & exponential &  & 9 & 1003.7639 & 0.00 \\ 
+    \~{} hab & exponential &  & 3 & 1003.9227 & 0.00 \\ 
+    \hline
   \end{tabular}
   \caption[Brachiopod survival models]{Model selection table for the preliminary parametetric models of brachiopod survival. As in Table \ref{tab:brac_surv_mod}, a formulation of \~{} 1 is a model with only an intercept and no covariates. The * symbol corresponds to covariate interaction. \(w\) are Akaike weights \citep{Burnham2002a}.}
   \label{tab:bracmod}
@@ -251,11 +252,11 @@ The AICc best model is illustrated below (Fig. \ref{subfig:aff_surv}) as well as
   \label{fig:brach_surv}
 \end{figure}
 
-The shape parameter (\(k\)) of the AICc best model (Fig. \ref{subfig:aff_surv}) is estimated to be approximately 1.9 (Table \ref{tab:bracmod}). As described above (Section \ref{sec:surv}), values of \(k\) greater than 1 indicate that failure (extinction) risk accelerates with taxon age, which may mean that the Law of Constant Extinction does not hold when modeling generic level extinction in brachiopods.
+The shape parameter (\(k\)) of the AICc best model (Fig. \ref{subfig:aff_surv}) is estimated to be approximately 1.85 (Table \ref{tab:bracmod}). As described above (Section \ref{sec:surv}), values of \(k\) greater than 1 indicate that failure (extinction) risk accelerates with taxon age, which may mean that the Law of Constant Extinction does not hold when modeling generic level extinction in brachiopods.
 
 For brachiopod survival based on substrate affinity (Fig. \ref{subfig:aff_surv}), survival was greater for both carbonate and clastic affinities and lowest for taxa with mixed affinity. Visual inspection of the estimated survival functions compared to the nonparametric Kaplan--Meier curves indicates that they were adequate fits to the data. 
 
-The model with habitat preference being the sole predictor of survival following a Weibull distribution was a poor estimate, with an approximate \(\Delta\)AICc of 33 between this model and the AICc best model. There is a great degree of deviance between the nonparametric Kaplan--Meier curves and model predictions (Fig. \ref{subfig:env_surv}). Additionally, this model is not significantly different from the model with only an intercept (\(\chi^{2} = 2.41\), \(df = 2\), \(p = 0.3\)). This means, preliminarily, that habitat preference alone makes no difference in generic level survival.
+The model with habitat preference being the sole predictor of survival following a Weibull distribution was a poor estimate, with an approximate \(\Delta\)AICc of 22 between this model and the AICc best model. There is a great degree of deviance between the nonparametric Kaplan--Meier curves and model predictions (Fig. \ref{subfig:env_surv}). Additionally, this model is not significantly different from the model with only an intercept (\(\chi^{2} = 1.14\), \(df = 2\), \(p = 0.57\)). This means, preliminarily, that habitat preference alone makes no difference in generic level survival.
 
 Further refinements to these models include modeling survival using other distributions of survival such as a log-normal distribution. Additionally the inclusion of affixing strategy and climate as predictors will increase the understanding of the biology underlying brachiopod generic survival. Additionally, the effects of sampling and uncertain durations will explored in simulations described below in the context of generic versus specific survival.
 
