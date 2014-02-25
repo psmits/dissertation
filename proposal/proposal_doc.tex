@@ -59,7 +59,7 @@ It is expectated that for the majority of geological time, extinction is non-ran
 Organismal traits relating to environmental preference are good candidates for estimating differences in extinction risk. Organismal traits have been shown to be related to differential extinction \citep{Foote2013,Liow2007b,Baumiller1993,Nurnberg2013a}, especially the relationship between adaptation to variable environments and increased species longevity. A simple expectation is that taxa with preference for rare environments will be more at risk than taxa with abundant environments based on purely stochastic grounds. As environments change in availability, a taxon's instantaneous risk of extinction would then be expected change in concert. Taxa are also expected to be adapting to their environment, possibly increasing or decreasing their environmental tolerance and thus changing their instantaneous extinction risk. Related to environmental preference is species-level geographic range size. Species with larger geographic ranges tend to have lower extinction rates than species with smaller geographic ranges \citep{Jablonski1986,Harnik2013,Nurnberg2013a,Jablonski2003,Roy2009c}. However, how range size is ``formed'' is different between clades \citep{Jablonski1987} and thus remains a black box for most taxa. Thus, the utility of focusing on organismal traits related to environmental preference is that the black box can be ``opened.''
 
 In addition to understanding patterns of survival, how community composition changes over time is extremely important for understanding how trophic structure changes or is maintained over time. Additionally, community connectedness is important for understanding the degree to which global, regional, or local scale processes are important for shaping environmental interactions, biotic--biotic and biotic--abiotic. In addition to total community connectedness, the dynamics of taxa within various ecological categories are important for understanding whether different adaptive zones may be differently affected by global, regional, or local scale processes. The Law of Constant extinction is theorized to hold during periods of environmental stability and is thus considered extremely difficult/impossible to test \citep{Liow2011a}. However, if environmental shifts are incorporated into the analysis of survival distributions, it may be possible to actually test the relationship between taxon age and extinction risk in the context of their adaptive zone and environment. Additionally, this may allow for illumination of what actual processes underly extinction during the majority of geologic time. 
- 
+
 It is under this framework that I propose to study how ecological traits associated with environmental preference have affected differential survival and cosmopolitan-endemism dynamics. I will be studying two distantly related and biotically different groups: Permian brachiopods and Cenozoic mammals. Both of these groups are considered to have very good fossil records able to reflect massive long term evolutionary patterns \citep{Mark1977}. These two time periods were chosen because they represent periods of approximately the same length (47 My and 65 My) and of climatic change, global warming and global cooling respectively. Also, these two groups are a marine and terrestrial system respectively and the traits associated with environmental preference and range size (described below) are fundamentally very different. Both patterns of survival (Section \ref{sec:surv}) and community connectedness (Section \ref{sec:bionet}) will be measured for both of these groups. The differences between these two groups in terms of life-habit and environmental preference, along with global climatic context, provides a fantastic scenario to understand how long-term, large-scale processes away from mass extinctions proceed.
 
 
@@ -214,19 +214,18 @@ The best model of survival had substrate preference as the sole predictor of sur
   \centering
   \begin{tabular}{llrrrr}
     \hline
-    formulation & distribution & \(k\) & df & AICc & \(w\) \\ 
+    formula & distribution & shape & df & AICc & weight \\ 
     \hline
-    \~{} substrate & Weibull & 1.91 & 4 & 1003.4543 & 0.81 \\ 
-    \~{} substrate + habitat & Weibull & 1.92 & 6 & 1006.3618 & 0.19 \\ 
-    \~{} substrate * habitat & Weibull & 1.94 & 10 & 1013.3003 & 0.01 \\ 
-    \~{} 1 & Weibull & 1.76 & 2 & 1034.4234 & 0.00 \\ 
-    \~{} habitat & Weibull & 1.76 & 4 & 1036.2236 & 0.00 \\ 
-    \~{} substrate & exponential &  & 3 & 1071.9199 & 0.00 \\ 
-    \~{} substrate + habitat & exponential &  & 5 & 1075.6211 & 0.00 \\ 
-    \~{} 1 & exponential &  & 1 & 1083.8734 & 0.00 \\ 
-    \~{} substrate * habitat & exponential &  & 9 & 1084.0485 & 0.00 \\ 
-    \~{} habitat & exponential &  & 3 & 1086.7439 & 0.00 \\ 
-    \hline
+    \~{} aff & weibull & 1.90 & 4 & 901.4070 & 0.70 \\ 
+    \~{} aff + hab & weibull & 1.92 & 6 & 903.2009 & 0.28 \\ 
+    \~{} aff * hab & weibull & 1.94 & 10 & 908.7618 & 0.02 \\ 
+    \~{} 1 & weibull & 1.75 & 2 & 927.7123 & 0.00 \\ 
+    \~{} hab & weibull & 1.76 & 4 & 930.2127 & 0.00 \\ 
+    \~{} aff & exponential &  & 3 & 958.7530 & 0.00 \\ 
+    \~{} aff + hab & exponential &  & 5 & 962.0907 & 0.00 \\ 
+    \~{} aff * hab & exponential &  & 9 & 969.2772 & 0.00 \\ 
+    \~{} 1 & exponential &  & 1 & 969.4894 & 0.00 \\ 
+    \~{} hab & exponential &  & 3 & 972.7203 & 0.00 \\ 
   \end{tabular}
   \caption[Brachiopod survival models]{Model selection table for the preliminary parametetric models of brachiopod survival. As in Table \ref{tab:brac_surv_mod}, a formulation of \~{} 1 is a model with only an intercept and no covariates. The * symbol corresponds to covariate interaction. \(w\) are Akaike weights \citep{Burnham2002a}.}
   \label{tab:bracmod}
