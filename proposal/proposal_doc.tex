@@ -274,13 +274,19 @@ Trait assignment will follow the procedure outlined for analysis of brachiopod s
 The next step is to compare patterns of community connectedness both within and between regions in order to understand if global, regional, or local scale processes dominate. Additionally, comparisons will be done between the different ecological traits both within and between regions to determine which scale processes may be dominate. The approach and methodology to accomplish these analyses is currently under development. Additionally, the possibility of integrating locality--locality distance or some other measure of topology will be explored, especially how this relates to code length and provinciality in general.
 
 \subsubsection{Preliminary results} \label{sec:braccomres}
+Preliminary results are based soley on the brachiopod occurrence information in the PBDB. Preliminary networks were constructed with taxa being defined as genera and locatlies defined from sa 2x2 latitude-longitude grid from an equal area map projection. All localities were restricted to those occurring in basins not present in the state of Western Australia. Networks were also constructed for taxa divided by substrate and habitat preferences. No initial comparisons with the Permian glacial record have been made. These results are based on the lithological and paleoenvironmental data present in the PBDB which will be improved as discussed above (Section \ref{sec:braccommeth}).
+
 \begin{figure}[ht]
   \begin{center}
     \includegraphics[width = \textwidth, keepaspectratio = true]{figure/east_cast}
   \end{center}
-  \caption[Biogeographic statistics for brachiopods]{Biogeographic network summary statistics for the East coast of Australia during the Permian.}
+  \caption[Community connectedness statistics for Australaian brachiopods]{Summary statistics of community connectedness for all brachiopods occurring on the East coast of Australia during the Permian. The summary statistics are, clockwise from top left: biogeographic connectedness (BC), code length, average relative locality occupancy per taxon (Occ), and average relative number of endemic taxa per locality (E).} 
   \label{fig:brac_net}
 \end{figure}
+
+The summary statistics for community connectedness for all brachiopods show a qualitatively random pattern (Fig. \ref{fig:brac_net}) with no observable trends. Three of four summary statistics fluctuate continually (\(E\), \(Occ\), code length) while \(BC\) is qualitatively stationary throughout the Permian. Importantly, this pattern is effectively the same as that seen in clastic preferring taxa (Fig. \ref{subfig:sub_net}). These preliminary results are also demonstrate the predicted rarity of carbonate preferring taxa (Fig. \ref{subfig:sub_net})
+
+Additionally, taxa with both in-shore and no habitat preference have approximately identical patterns that are also qualitatively random in contrast to the qualitatively stable off-shore preferring taxa (Fig. \ref{subfig:hab_net}). 
 
 \begin{figure}[ht]
   \begin{center}
@@ -295,9 +301,11 @@ The next step is to compare patterns of community connectedness both within and 
       \label{subfig:hab_net}
     \end{subfigure}
   \end{center}
-  \caption[Trait based brachiopod biogeographic summary statistics]{Traits}
+  \caption[Trait based brachiopod community connectedness summary statistics]{Community connectedness statistics for brachiopods separated by substrate (\subref{subfig:sub_net}) and habitat (\subref{subfig:hab_net}) preference. The summary statistics are, clockwise from top left: biogeographic connectedness (BC), code length, average relative locality occupancy per taxon (Occ), and average relative number of endemic taxa per locality (E).} 
   \label{fig:trait_net}
 \end{figure}
+
+Because these results are based on only preliminary substrate and habitat assignments, there is still major room for improvement. Additionally, patterns have not been explored for taxa based on affixing strategy, which may or may not follow the same pattern as substrate (Fig. \ref{subfig:sub_net}). There are many further analyses to accomplish. Most importantly, comparisons both within and between the different ecological traits as well as with the timing of the four glacial periods are necessary in order to better understand what environmental factors may affect brachiopod occurrence, and in term survival (Section \ref{sec:bracsurv}). 
 
 \clearpage
 
