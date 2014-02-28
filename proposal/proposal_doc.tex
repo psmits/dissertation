@@ -230,6 +230,7 @@ The best model of survival had substrate preference as the sole predictor of sur
 The AICc best model is illustrated below (Fig. \ref{subfig:aff_surv}) as well as the model with habitat as the sole predictor of survival (Fig. \ref{subfig:env_surv})
 
 % make this a 2 x 2, with the KM on top and the parametrics below
+% make sure to include the confidence intervals of the curves
 \begin{figure}[ht]
   \begin{subfigure}[b]{0.5\textwidth}
     \caption{}
@@ -354,6 +355,9 @@ In order to account for environmental shifts, two different time-dependent covar
 \subsubsection{Preliminary results}
 Preliminary results are based solely on Cenozoic mammal occurrence data from North America and Europe from the PBDB. Nonparametric Kaplan-Meier survival cuvres were estimated for both dietary and locomotor categories (Fig. \ref{fig:mam_surv_curv}). These are shown on a log-linear scale for more direct visual comparison with linearity \citep{VanValen1973,VanValen1979}.
 
+The North American species-level survival curves, both based on dietary (Fig. \ref{subfig:km_nad}) and locomotor categories (Fig. \ref{subfig:km_nal}), are semi-log linear as expected under the Law of Constant Extinction \citep{VanValen1973}. All dietary categories have approximately equivalent patterns of survival while ground dwelling taxa have a qualitatively higher probability of long duration. In comparison, the species-level survival curves for European mammals, both dietary (Fig. \ref{subfig:km_erd}) and locomotor categories (Fig. \ref{subfig:km_erl}), are qualitatively not semi-log linear which is not consistent with the Law of Constant Extinction. While diet qualitatively appears to have little effect on European mammal survival, locomotor category differentiates arboreal taxa from both ground dwelling and scansorial taxa.
+
+% make sure to include the confidence intervals on these curves
 \begin{figure}[ht]
   \begin{center}
     \begin{subfigure}[b]{0.4\textwidth}
@@ -378,9 +382,11 @@ Preliminary results are based solely on Cenozoic mammal occurrence data from Nor
       \label{subfig:km_erl}
     \end{subfigure}
   \end{center}
-  \caption{Nonparametric Kaplan-Meier survival curves for North American and European mammals based on dietary category (\subref{subfig:km_nad} and \subref{subfig:km_erd} respectively, and locomotor category (\subref{subfig:km_nal} and \subref{subfig:km_erl} respectively). The vertical axes are on a natural log scale.}
+  \caption{Nonparametric Kaplan-Meier species-level survival curves for North American and European mammals based on dietary category (\subref{subfig:km_nad} and \subref{subfig:km_erd} respectively, and locomotor category (\subref{subfig:km_nal} and \subref{subfig:km_erl} respectively). The vertical axes are on a natural log scale.}
   \label{fig:mam_surv_curv}
 \end{figure}
+
+These results are extremely preliminary and based solely on qualitative patterns present in the nonparametric K-M survival curves. Additionally, survival based on body-size was not estimated. Also, no comparison has been made with the different climatic histories of both Continents. By including all three time-independent covariates in a parametric modelling of survival framework it should be possible to better understand the underlying process behind survival. The inclusion of a third continent, South America, will also greatly improve the overall understanding of how extinction in mammals proceeds and how this may differ across environments.
 
 
 \subsection{Community connectedness: global, regional, local} \label{sec:mamcom}
@@ -412,7 +418,7 @@ As with the Permian brachiopods (Section \ref{sec:braccom}), patterns of communi
 
 
 \subsubsection{Preliminary results} \label{mamcomres}
-Preliminary analysis was done using only the occurrence information of both North American and European fossil mammals available in the PBDB. Both regions have qualitatively different patterns of community connectedness, primarily during the Paleogene (Fig. \ref{fig:mam_con}). Almost all four of the summary statistics are extremely volatile over the Cenozoic, especially for Europe. However, some interesting qualitative patterns are present.
+Preliminary analysis was done using only the occurrence information of both North American and European fossil mammals available in the PBDB. Both regions have qualitatively different patterns of community connectedness, primarily during the Paleogene (Fig. \ref{fig:mam_con}). Almost all four of the summary statistics are extremely volatile over the Cenozoic, especially for Europe. However, some interesting qualitative patterns are present. Importantly, the network summary statistics will be calculated only with reference to the localities at which arboreal taxa occur, and not all possible localities occurring at a specific time.
 
 \begin{figure}[ht]
   \begin{center}
@@ -447,7 +453,13 @@ The code length of European biogeographic networks increases qualitatively over 
   \label{fig:diet_con}
 \end{figure}
 
-Biogeographic networks of taxa of similar dietary category
+When taxa are separated by dietary categories, the amount of noise associated with each statistic increases greatly (Fig. \ref{fig:diet_con}). In North America, \(BC\), while variable, appears to qualitatively demonstrate no net change. Carnivores and herbivores to qualitatively become less volatile during the Neogene compared to the Paleogene (Fig. \ref{subfig:diet_con_na}). \(BC\) for Europe is also very volatile, though impossible to measure for dietary categories individually for much of the Paleogene (Fig. \ref{subfig:diet_con_er}).
+
+Code length for North American qualitatively shows a stationary pattern with an up-tick in the Recent and a major drop at approximately 50-55 My (Fig. \ref{subfig:diet_con_na}). Additionally, herbivore and carnivore patterns appear qualitatively similar. In comparison, the European record for code length shows a qualitatively slight increase over the entire Cenozoic (Fig. \ref{subfig:diet_con_er}). Also, the patterns of herbivore and carnivores appear qualitatively less similar than for North America. For both Europe and North America, herbivores have the over all highest code length. In North America, carnivores arguably have the second highest code length. In all other cases, the ranks are qualitatively ambiguous.
+
+\(E\) for North American appears to qualitatively have two categories (Fig. \ref{subfig:diet_con_na}). Herbivore and carnivore patterns are qualitatively stationary and low during the Neogene, while the omnivore and insectivore pattens are qualitatively more variable and higher during the Neogene. In comparison, all four categories of European mammals demonstrate a slight decrease during the Cenozoic (Fig. \ref{subfig:diet_con_er}).
+
+For North America, \(Occ\) are qualitatively stationary throughout the Cenozoic with one spike in carnivore \(Occ\) at approximately 50-55 My (Fig. \ref{subfig:diet_con_na}). In contrast, European values are highly volatile throughout the Paleogene and then less volatile during the Neogene (Fig. \ref{subfig:diet_con_er}).
 
 \begin{figure}[ht]
   \begin{center}
@@ -466,7 +478,15 @@ Biogeographic networks of taxa of similar dietary category
   \label{fig:loco_con}
 \end{figure}
 
-Biogeographic networks of taxa of similar locomotor category
+When taxa are separated by locomotor category, there is qualitatively less noise then is the case for by dietary category (Fig. \ref{fig:loco_con}). \(BC\) for North America has qualitative differences between each of the three categories (Fig. \ref{subfig:loco_con_na}). Arboreal taxa can only be measured for \(BC\) predominately during the Paleogene where there is no qualitative pattern beyond high variance. Scansorial taxa have a qualitative decline in volatility and was stationary during the Neogene. European values of \(BC\) were generally more volatile and very difficult to measure during the Paleogene because of the paucity of geographically spaced localities (Fig. \ref{subfig:loco_con_er}). Qualitatively, values of \(BC\) for scansorial taxa are more volatile than for ground dwelling taxa. 
+
+For North American values of code length, there are a few clear qualitative patterns (Fig. \ref{subfig:loco_con_na}). Ground dwelling taxa have generally the highest code length values, followed by scansorial and arboreal taxa. Interestingly, all three of these categories have almost identical code length values until approximately 50 My. Following this, arboreal taxa have a qualitative decrease in code length, while scansorial taxa are qualitatively stationary with a slight decrease, and ground dwelling taxa have a slight increase though are mostly stationary. European code length values show a general increase during the entire Cenozoic, though this is mostly confined to scansorial and ground dwelling taxa (Fig. \ref{subfig:loco_con_er}).
+
+The \(E\) series for North America demonstrates qualitatively distinct patterns for the three locomotor categories (Fig. \ref{subfig:loco_con_na}). \(E\) increases dramatically for arboreal taxa, has a moderate increase for scansorial taxa, and is qualitatively stationary for ground dwelling taxa during the Cenozoic. In comparison for Europe, values of \(E\) are generally high throughout the entire Cenozoic and vary with much greater volatility (Fig. \ref{subfig:loco_con_er}. Qualitatively there is a decrease in \(E\) for ground dwelling and scansorial taxa during the Neogene.
+
+Values of \(Occ\) for both North America and Europe show respectively qualitatively similar patterns to patterns of \(E\), though are less volatile. \(Occ\) increases in North American arboreal taxa at approximately 40 My years ago while both scansorial and ground dwelling taxa are qualitatively stationary (Fig. \ref{subfig:loco_con_na}). The pattern of \(Occ\) for scansorial taxa appears to qualitatively be a more exaggerated version of the pattern for ground dwelling taxa. All three appear correlated during the earliest Cenozoic. As with \(E\), European patterns of \(Occ\) are volatile, particularity during the early Cenozoic (Fig. \ref{subfig:loco_con_er}). At approximately 40 My, patterns of \(Occ\) become less volatile and qualitatively decrease for ground dwelling and scansorial taxa. In comparison, \(Occ\) values for arboreal taxa become qualitatively much higher during the late Cenozoic with a massive decrease near the Recent.
+
+These analyses will be greatly improved by varying locality ``size'', comparison with South American patterns, comparison of major orders, and other ideas stated above (Section \ref{sec:mamcommeth}). Additionally, quantitatively analysis of these patterns and what correlations might exist, especially in a phylogenetic context, are necessary in order to better understand what processes might dominate and when.
 
 \clearpage
 
