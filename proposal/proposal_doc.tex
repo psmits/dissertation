@@ -234,6 +234,17 @@ The AICc best model is illustrated below (Fig. \ref{subfig:aff_surv}) as well as
 \begin{figure}[ht]
   \begin{subfigure}[b]{0.5\textwidth}
     \caption{}
+    \includegraphics[height = 0.4\textheight, width = \textwidth, keepaspectratio = true]{figure/km_aff}
+    \label{subfig:aff_km}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.5\textwidth}
+    \caption{}
+    \includegraphics[height = 0.4\textheight, width = \textwidth, keepaspectratio = true]{figure/km_hab}
+    \label{subfig:env_km}
+  \end{subfigure}
+
+  \begin{subfigure}[b]{0.5\textwidth}
+    \caption{}
     \includegraphics[height = 0.4\textheight, width = \textwidth, keepaspectratio = true]{figure/aff}
     \label{subfig:aff_surv}
   \end{subfigure}
@@ -242,15 +253,15 @@ The AICc best model is illustrated below (Fig. \ref{subfig:aff_surv}) as well as
     \includegraphics[height = 0.4\textheight, width = \textwidth, keepaspectratio = true]{figure/hab}
     \label{subfig:env_surv}
   \end{subfigure}
-  \caption[Brachiopod survival curves]{Survivorship curves of Australian Permian brachiopod genera based on substrate affinity (\subref{subfig:aff_surv}) and habitat preference (\subref{subfig:env_surv}). The stepwise functions are nonparametric Kaplan--Meier survival curves for each of the three substrate affinities. The three smooth lines are the predicted survivorship probabilities for taxon of the given age from parametric survival models.}% and illustrated standard errors of the prediction.}
+  \caption[Brachiopod survival curves]{Survivorship curves of Australian Permian brachiopod genera based on substrate affinity and habitat preference. The stepwise functions are nonparametric Kaplan--Meier survival curves for both substrate affinity (\subref{subfig:aff_km}) and habitat preference (\subref{subfig:env_km}). K-M curves are illustrated with 95\% confidence intervals. The predicted survival curves based on the best parametric models with substrate (\subref{subfig:aff_surv}) and habitat (\subref{subfig:env_surv}) as predictors. The parametric curves are illustrated with the standard errors of prediction.} 
   \label{fig:brach_surv}
 \end{figure}
 
 The shape parameter (\(k\)) of the AICc best model (Fig. \ref{subfig:aff_surv}) is estimated to be approximately 1.85 (Table \ref{tab:bracmod}). As described above (Section \ref{sec:surv}), values of \(k\) greater than 1 indicate that failure (extinction) risk accelerates with taxon age, which may mean that the Law of Constant Extinction does not hold when modeling generic level extinction in brachiopods.
 
-For brachiopod survival based on substrate affinity (Fig. \ref{subfig:aff_surv}), survival was greater for both carbonate and clastic affinities and lowest for taxa with mixed affinity. Visual inspection of the estimated survival functions compared to the nonparametric Kaplan--Meier curves indicates that they are adequate fits to the data. 
+For brachiopod survival based on substrate affinity (Fig. \ref{subfig:aff_surv}), survival was greater for both carbonate and clastic affinities and lowest for taxa with mixed affinity. Visual inspection of the estimated survival functions compared to the nonparametric Kaplan--Meier curves indicates that they are adequate fits to the data (Fig. \ref{subfig:aff_km}). 
 
-The model with habitat preference being the sole predictor of survival following a Weibull distribution was a poor estimate, with an approximate \(\Delta\)AICc of 22 between this model and the AICc best model. There is a great degree of deviance between the nonparametric Kaplan--Meier curves and model predictions (Fig. \ref{subfig:env_surv}). Additionally, this model is not significantly different from the model with only an intercept (\(\chi^{2} = 1.14\), \(df = 2\), \(p = 0.57\)). This means, preliminarily, that habitat preference alone makes no difference in generic level survival.
+The model with habitat preference being the sole predictor of survival following a Weibull distribution was a poor estimate, with an approximate \(\Delta\)AICc of 22 between this model and the AICc best model. There is a great degree of deviance between the nonparametric Kaplan--Meier curves and model predictions (Fig. \ref{subfig:env_km}). Additionally, this model is not significantly different from the model with only an intercept (\(\chi^{2} = 1.14\), \(df = 2\), \(p = 0.57\)). This means, preliminarily, that habitat preference alone makes no difference in generic level survival.
 
 Further refinements to these models include modeling survival using other distributions of survival such as a log-normal distribution. Additionally the inclusion of affixing strategy and climate as predictors will increase the understanding of the biology underlying brachiopod generic survival. 
 
@@ -355,7 +366,7 @@ In order to account for environmental shifts, two different time-dependent covar
 \subsubsection{Preliminary results}
 Preliminary results are based solely on Cenozoic mammal occurrence data from North America and Europe from the PBDB. Nonparametric Kaplan-Meier survival cuvres were estimated for both dietary and locomotor categories (Fig. \ref{fig:mam_surv_curv}). These are shown on a log-linear scale for more direct visual comparison with linearity \citep{VanValen1973,VanValen1979}.
 
-The North American species-level survival curves, both based on dietary (Fig. \ref{subfig:km_nad}) and locomotor categories (Fig. \ref{subfig:km_nal}), are semi-log linear as expected under the Law of Constant Extinction \citep{VanValen1973}. All dietary categories have approximately equivalent patterns of survival while ground dwelling taxa have a qualitatively higher probability of long duration. In comparison, the species-level survival curves for European mammals, both dietary (Fig. \ref{subfig:km_erd}) and locomotor categories (Fig. \ref{subfig:km_erl}), are qualitatively not semi-log linear which is not consistent with the Law of Constant Extinction. While diet qualitatively appears to have little effect on European mammal survival, locomotor category differentiates arboreal taxa from both ground dwelling and scansorial taxa.
+The North American species-level survival curves, both based on dietary (Fig. \ref{subfig:km_nad}) and locomotor categories (Fig. \ref{subfig:km_nal}), are semi-log linear as expected under the Law of Constant Extinction \citep{VanValen1973}. All dietary categories have approximately equivalent patterns of survival while ground dwelling taxa have a qualitatively higher probability of long duration. In comparison, the species-level survival curves for European mammals, both dietary (Fig. \ref{subfig:km_erd}) and locomotor categories (Fig. \ref{subfig:km_erl}), are qualitatively not semi-log linear which is not consistent with the Law of Constant Extinction. Diet qualitatively appears to have little effect on European mammal survival, while locomotor category appears to differentiate arboreal taxa from both ground dwelling and scansorial taxa.
 
 % make sure to include the confidence intervals on these curves
 \begin{figure}[ht]
@@ -382,11 +393,11 @@ The North American species-level survival curves, both based on dietary (Fig. \r
       \label{subfig:km_erl}
     \end{subfigure}
   \end{center}
-  \caption{Nonparametric Kaplan-Meier species-level survival curves for North American and European mammals based on dietary category (\subref{subfig:km_nad} and \subref{subfig:km_erd} respectively, and locomotor category (\subref{subfig:km_nal} and \subref{subfig:km_erl} respectively). The vertical axes are on a natural log scale.}
+  \caption{Nonparametric Kaplan-Meier species-level survival curves for North American and European mammals based on dietary category (\subref{subfig:km_nad} and \subref{subfig:km_erd} respectively, and locomotor category (\subref{subfig:km_nal} and \subref{subfig:km_erl} respectively). K-M curves are illustrated with 95\% confidence intervals. The vertical axes are on a natural log scale.}
   \label{fig:mam_surv_curv}
 \end{figure}
 
-These results are extremely preliminary and based solely on qualitative patterns present in the nonparametric K-M survival curves. Additionally, survival based on body-size was not estimated. Also, no comparison has been made with the different climatic histories of both Continents. By including all three time-independent covariates in a parametric modelling of survival framework it should be possible to better understand the underlying process behind survival. The inclusion of a third continent, South America, will also greatly improve the overall understanding of how extinction in mammals proceeds and how this may differ across environments.
+These results are extremely preliminary and based solely on qualitative patterns present in the nonparametric K-M survival curves and without reference to estimated median survival times. Additionally, possible differences in survival based on body-size were not estimated. Also, no comparison has been made with the different climatic histories of both Continents. By including all three time-independent covariates in a parametric modelling of survival framework it should be possible to better understand the underlying process behind survival. The inclusion of a third continent, South America, will also greatly improve the overall understanding of how extinction in mammals proceeds and how this may differ across environments.
 
 
 \subsection{Community connectedness: global, regional, local} \label{sec:mamcom}
