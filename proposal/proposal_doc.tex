@@ -3,7 +3,8 @@
 \usepackage{amsmath, amsthm}
 \usepackage{graphicx}
 \usepackage{microtype, parskip}
-\usepackage{caption, subcaption, multirow, morefloats, rotating, longtable}
+\usepackage{caption, subcaption, multirow, morefloats}
+\usepackage{rotating, longtable}
 \usepackage{hyperref}
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage[nottoc,numbib]{tocbibind}
@@ -148,7 +149,7 @@ An important consideration is that taxonomic survival might not be linked to sin
 \subsubsection{Proposed research} \label{sec:bracsurvmeth}
 In order to investigate which traits best model survival and how, I propose a survival analysis approach (Section \ref{sec:surv}). I choose to restrict this analysis to Australia because it represents a relatively continually sampled and well worked area that preserves the majority of the entire Permian \citep{Fielding2008,Birgenheier2010,Clapham2012,Clapham2008a,Waterhouse1987,Archbold1995}. The traits described above (Section \ref{sec:bracback}) will be used as predictors of survival. The distribution of survival durations will be modeled using a variety of different distributions which are tied to different hypotheses of extinction risk (Section \ref{sec:surv}).
 
-Permian brachiopod occurrence information is available via the Paleobiology Database (PBDB; \url{http://fossilworks.org}) and is primarily sourced from the work of Clapham \citep{Clapham2006,Clapham2008a,Clapham2007a,Clapham2012,Clapham2007} and \citet{Waterhouse1987}. While lithological and paleoenvironmental information is available for some occurrences through the PBDB, this information is frequently missing or too coarse. Lithological information and paleoenvironmental reconstructions will be heavily supplemented using the extensive geological unit information from Geosciences Australia (\url{http://www.ga.gov.au/}) as well as the literature on the stratigraphy of Australian Permian basins \citep{Fielding2008a,Fielding2008,Fielding2006,Fielding2010,Birgenheier2010,Waterhouse1987,Waterhouse2013,Frank2008,Jones2006,Percival2012}.
+Permian brachiopod occurrence information is available via the Paleobiology Database (PBDB; \url{http://fossilworks.org}) and is primarily sourced from the work of Clapham \citep{Clapham2006,Clapham2008a,Clapham2007a,Clapham2012,Clapham2007} and \citet{Waterhouse1987}. While lithological and paleoenvironmental information is available for some occurrences through the PBDB, this information is frequently missing or too coarse. Lithological information and paleoenvironmental reconstructions will be heavily supplemented using the extensive geological unit information from Geosciences Australia (\url{http://www.ga.gov.au/}) as well as the literature on the stratigraphy of Australian Permian basins \citep{Fielding2008a,Fielding2008,Fielding2006,Fielding2010,Birgenheier2010,Waterhouse1987,Waterhouse2013,Frank2008,Jones2006,Percival2012}. For example improvements to the initial PBDB assignments, see Appendix \ref{sec:env_app}.
 
 Duration will be measured as the difference between FAD and LAD. If a taxon originates prior to the Permian or goes extinct within 5 million years of the Permo-Triassic (P/T) boundary or after the P/T it will be censored. The possibility of accounting for the affect of sampling on decreasing observed durations versus true durations may be done through interval censoring (Section \ref{sec:surv}). For example, a range of LAD values between the observed and that estimated via unbiased point estimation \citep{Strauss1989,Alvarez1983a} can be used. The unbiased point estimation of true extinction time is calculated using
 \begin{equation}
@@ -556,9 +557,42 @@ Spring/Summer 2017
 \end{itemize}
 
 
-
 \clearpage
 \bibliographystyle{abbrvnat}
 \bibliography{proposal}
+
+
+\clearpage
+
+
+\appendix
+
+\section{Permian lithology and paleoenvironment} \label{sec:env_app}
+Lithological and paleoenvironmental assignments avaliable in the PBDB can be poorly resolved or missing in the case of environment. Because these assignments are critical in the proposed study of brachiopod survival and distribution (Section \ref{sec:brac}), it is necessary to improve these values with more precise information avaliable in the paleontological and geological literature. Below is a set of representative PBDB assignments and my improvements which focused primarily on paleoenvironment (Table \ref{tab:paleoenv}). These assignments are very preliminary and based only on a few key papers and associated maps \citep{Percival2012,Fielding2006,Hawley1995}. There are a total of 5737 Permian Australian brachiopod occurrences in the PBDB, from both Eastern and Western Australia. Within is, there are 4711 occurrences that are not from Western Australia. The geological units listed in Table \ref{tab:paleoenv}, which are from Eastern Australia, account for 289 of these occurrences which is about 5\% of the total samples or 6\% of the east Australian samples.
+
+\begin{sidewaystable}[ht]\footnotesize
+  \centering
+  \begin{tabular}{l l l l l l l}
+    \hline
+    geological unit & PBDB lithology 1 & PBDB paleoenvironment & my lithology 1 & my lithology 2 & my paleoenvironment 1 & my paleoenvironment 2 \\ 
+    \hline
+    Mulbring & sandstone & marine indet & siltstone & sandstone & marine shelf &  \\ 
+    Muree & siltstone & coastal indet & sandstone & conglomerate & alluvial fan & fan delta \\ 
+    Branxton & siliciclastic & coastal indet & conglomerate & sandstone & fan delta & delta plain \\ 
+    Farley & siliciclastic & marine indet & siltstone & sandstone & delta plain & delta front \\ 
+    Rutherford & siliciclastic & coastal indet & siltstone & mudstone & delta front & marine shelf \\ 
+    Allandale & siliciclastic & coastal indet & conglomerate & sandstone & sublittoral strand & marine shelf \\ 
+    Lochinvar & limestone & marine indet & basalt & siltstone & sublittoral strand & marine shelf \\ 
+    Snapper Point & sandstone & shoreface & sandstone & conglomerate & fluvial coastal & nearshore marine \\ 
+    Berry & sandstone & marine indet & siltstone & shale & offshore marine &  \\ 
+    Nowra & sandstone & coastal indet & sandstone &  & nearshore marine & coastal \\ 
+    Wandrawandian & siltstone & offshore & siltstone & sandstone & offshore marine &  \\ 
+    Wasp Head & sandstone & shoreface &  &  & alluvial valley fill & nearshore marine \\ 
+    \hline
+  \end{tabular}
+  \caption[Improvements to PBDB geological information]{Australian geological units included in the study of brachiopod survival and distribution (Section \ref{sec:brac}). Both PBDB assignments and those sourced from the literature are included. Improvements are obvious, especially in regards to paleoenvironmental reconstruction.}
+  \label{tab:paleoenv}
+\end{sidewaystable}
+
 
 \end{document}
