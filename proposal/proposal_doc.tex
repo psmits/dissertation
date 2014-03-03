@@ -202,7 +202,7 @@ Because survival models are fit in a maximum likelihood framework \citep{Kleinba
 
 
 \subsubsection{Preliminary results} \label{sec:bracsurvres}
-The preliminary results presented here are based entirely on the data present in the PBDB. Observations were censored following the procedure described above (Section \ref{sec:bracsurvmeth}). Uncertainty of duration was not taken into account via interval censoring. Substrate and habitat preference were the only covariates of survival and were classified coarsely following \citet{Foote2006} and \citet{Kiessling2007} respectively. Model formulations with each covariate alone, additively together, or interacting were used. Only two different survival distributions were considered in this initial analysis: exponential and Weibull. In total, 11 models were fit and compared (Table \ref{tab:bracmod}). 
+The preliminary results presented here are based entirely on the data present in the PBDB without modificaiton (Appendix \ref{sec:env_app}). Observations were censored following the procedure described above (Section \ref{sec:bracsurvmeth}). Uncertainty of duration was not taken into account via interval censoring. Substrate and habitat preference were the only covariates of survival and were classified coarsely following \citet{Foote2006} and \citet{Kiessling2007} respectively. Model formulations with each covariate alone, additively together, or interacting were used. Only two different survival distributions were considered in this initial analysis: exponential and Weibull. In total, 11 models were fit and compared (Table \ref{tab:bracmod}). 
 
 The best model of survival had substrate preference as the sole predictor of survival, which followed a Weibull distribution with increasing risk of failure with age (Table \ref{tab:bracmod}). This model was closely followed by the second best model of survival which had both substrate and habitat preference as additive predictors of survival, also following a Weibull ditribution with \(k > 1\). The difference between the AICc best model and the second best model was small (\(\Delta\) AIC \(\approx 1.3\)), meaning that both models can be considered almost equivalent. 
 
@@ -318,7 +318,7 @@ Additionally, taxa with both in-shore and no habitat preference have approximate
   \label{fig:trait_net}
 \end{figure}
 
-Because these results are based on only preliminary substrate and habitat assignments, there is still major room for improvement. Additionally, patterns have not been explored for taxa based on affixing strategy, which may or may not follow the same pattern as substrate (Fig. \ref{subfig:sub_net}). There are many further analyses to accomplish. Most importantly, comparisons both within and between the different ecological traits as well as with the timing of the four glacial periods are necessary in order to better understand what environmental factors may affect brachiopod occurrence, and in term survival (Section \ref{sec:bracsurv}). 
+Because these results are based on only preliminary substrate and habitat assignments, there is still major room for improvement. Additionally, patterns have not been explored for taxa based on affixing strategy, which may or may not follow the same pattern as substrate (Fig. \ref{subfig:sub_net}). There are many further analyses to accomplish. Most importantly, comparisons both within and between the different ecological traits as well as with the timing of the four glacial periods are necessary in order to better understand what environmental factors may affect brachiopod occurrence, and in term survival (Section \ref{sec:bracsurv}). Additionally, given the difficulty in measuring the four network summary statistics alternative methods for summarizing network and taxon distributions will be explored.
 
 \clearpage
 
@@ -568,37 +568,15 @@ Spring/Summer 2017
 \appendix
 
 \section{Permian lithology and paleoenvironment} \label{sec:env_app}
-Lithological and paleoenvironmental assignments avaliable in the PBDB can be poorly resolved or missing in the case of environment. Because these assignments are critical in the proposed study of brachiopod survival and distribution (Section \ref{sec:brac}), it is necessary to improve these values with more precise information avaliable in the paleontological and geological literature.
+Lithological and paleoenvironmental assignments avaliable in the PBDB can be poorly resolved or missing in the case of environment. Because these assignments are critical in the proposed study of brachiopod survival and distribution (Section \ref{sec:brac}), it is necessary to improve these values with more precise information avaliable in the paleontological and geological literature. Currently, none of these improved assignments have been included in any of the above analyses (Section \ref{sec:brac}).
 
 The geological unit reference guide on from Geosciences Australia (\url{http:/www.ga.goc.au/}), the lithological information for many of the brachiopod occurrences can be improved and made more precise (Table \ref{tab:form_lith}). The lithological assignments below are based on the order with which rock types are named in the lithological description of a geological unit. These were extracted automatically using a very simple algorithm. While more than two rock types may be listed for a geological unit, only the first two are reported below. These formations represent 3533 of 5737 (61\%) total occurrences across all of Australia.
 
-Below is a set of representative PBDB assignments and my improvements, focused primarily on paleoenvironmental reconstruction (Table \ref{tab:paleoenv}). These assignments are very preliminary and based only on a few key papers and associated maps \citep{Percival2012,Fielding2006,Hawley1995}. There are a total of 5737 Permian Australian brachiopod occurrences in the PBDB, from both Eastern and Western Australia. Within is, there are 4711 occurrences that are not from Western Australia. The geological units listed in Table \ref{tab:paleoenv}, which are from Eastern Australia, account for 289 of these occurrences which is about 5\% of the total samples or 6\% of the east Australian samples.
+\include{form_tab}  %tab:form_lith
 
-\include{form_lith}  %tab:form_lith
+Below is a set of representative PBDB assignments and my improvements, focused primarily on paleoenvironmental reconstruction (Table \ref{tab:paleoenv}). These assignments are very preliminary and based only on a few key papers and associated maps \citep{Percival2012,Fielding2006,Hawley1995,Fielding1993,Othman2002,Othman2003}. There are a total of 5737 Permian Australian brachiopod occurrences in the PBDB, from both eastern and Western Australia. Within is, there are 4711 occurrences that are not from Western Australia. The geological units listed in Table \ref{tab:paleoenv}, which are from Eastern Australia, account for 1897 of these occurrences which is about 33\% of the total samples or 40\% of the east Australian samples.
 
-\begin{sidewaystable}[ht]\footnotesize
-  \centering
-  \begin{tabular}{l l l l l l l}
-    \hline
-    geological unit & PBDB lithology 1 & PBDB paleoenvironment & my lithology 1 & my lithology 2 & my paleoenvironment 1 & my paleoenvironment 2 \\ 
-    \hline
-    Mulbring & sandstone & marine indet & siltstone & sandstone & marine shelf &  \\ 
-    Muree & siltstone & coastal indet & sandstone & conglomerate & alluvial fan & fan delta \\ 
-    Branxton & siliciclastic & coastal indet & conglomerate & sandstone & fan delta & delta plain \\ 
-    Farley & siliciclastic & marine indet & siltstone & sandstone & delta plain & delta front \\ 
-    Rutherford & siliciclastic & coastal indet & siltstone & mudstone & delta front & marine shelf \\ 
-    Allandale & siliciclastic & coastal indet & conglomerate & sandstone & sublittoral strand & marine shelf \\ 
-    Lochinvar & limestone & marine indet & basalt & siltstone & sublittoral strand & marine shelf \\ 
-    Snapper Point & sandstone & shoreface & sandstone & conglomerate & fluvial coastal & nearshore marine \\ 
-    Berry & sandstone & marine indet & siltstone & shale & offshore marine &  \\ 
-    Nowra & sandstone & coastal indet & sandstone &  & nearshore marine & coastal \\ 
-    Wandrawandian & siltstone & offshore & siltstone & sandstone & offshore marine &  \\ 
-    Wasp Head & sandstone & shoreface &  &  & alluvial valley fill & nearshore marine \\ 
-    \hline
-  \end{tabular}
-  \caption[Improvements to PBDB geological information]{Australian geological units included in the study of brachiopod survival and distribution (Section \ref{sec:brac}). Both PBDB assignments and those sourced from the literature are included. Improvements are obvious, especially in regards to paleoenvironmental reconstruction.}
-  \label{tab:paleoenv}
-\end{sidewaystable}
+\include{paleoenv_tab} %tab:paleoenv
 
 
 \end{document}
