@@ -2,48 +2,48 @@ This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
 The top-level auxiliary file: proposal_doc.aux
 The style file: abbrvnat.bst
 A level-1 auxiliary file: form_tab.aux
-A level-1 auxiliary file: paleoenv_tab.aux
+A level-1 auxiliary file: paleoenv.aux
 Database file #1: proposal.bib
 Warning--there's a number but no volume in Harnik2013
-You've used 140 entries,
+You've used 141 entries,
             2773 wiz_defined-function locations,
-            1691 strings with 36010 characters,
-and the built_in function-call counts, 67605 in all, are:
-= -- 6625
-> -- 3292
-< -- 100
-+ -- 1135
-- -- 992
-* -- 5819
-:= -- 10531
-add.period$ -- 645
-call.type$ -- 140
-change.case$ -- 742
-chr.to.int$ -- 137
-cite$ -- 281
-duplicate$ -- 2908
-empty$ -- 5485
-format.name$ -- 1212
-if$ -- 14065
+            1701 strings with 36194 characters,
+and the built_in function-call counts, 67990 in all, are:
+= -- 6664
+> -- 3302
+< -- 101
++ -- 1139
+- -- 995
+* -- 5850
+:= -- 10594
+add.period$ -- 651
+call.type$ -- 141
+change.case$ -- 746
+chr.to.int$ -- 138
+cite$ -- 283
+duplicate$ -- 2928
+empty$ -- 5521
+format.name$ -- 1216
+if$ -- 14146
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 145
-newline$ -- 930
-num.names$ -- 566
-pop$ -- 1095
+missing$ -- 146
+newline$ -- 938
+num.names$ -- 570
+pop$ -- 1099
 preamble$ -- 1
-purify$ -- 608
+purify$ -- 611
 quote$ -- 0
-skip$ -- 2089
+skip$ -- 2101
 stack$ -- 0
-substring$ -- 3316
-swap$ -- 281
+substring$ -- 3327
+swap$ -- 283
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1500
+type$ -- 1511
 warning$ -- 1
-while$ -- 675
+while$ -- 679
 width$ -- 0
-write$ -- 2279
+write$ -- 2298
 (There was 1 warning)
