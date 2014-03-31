@@ -5,45 +5,45 @@ A level-1 auxiliary file: form_tab.aux
 A level-1 auxiliary file: paleoenv.aux
 Database file #1: proposal.bib
 Warning--there's a number but no volume in Harnik2013
-You've used 141 entries,
+You've used 144 entries,
             2773 wiz_defined-function locations,
-            1701 strings with 36194 characters,
-and the built_in function-call counts, 67990 in all, are:
-= -- 6664
-> -- 3302
-< -- 101
-+ -- 1139
-- -- 995
-* -- 5850
-:= -- 10594
-add.period$ -- 651
-call.type$ -- 141
-change.case$ -- 746
-chr.to.int$ -- 138
-cite$ -- 283
-duplicate$ -- 2928
-empty$ -- 5521
-format.name$ -- 1216
-if$ -- 14146
+            1722 strings with 36911 characters,
+and the built_in function-call counts, 69438 in all, are:
+= -- 6811
+> -- 3363
+< -- 103
++ -- 1160
+- -- 1013
+* -- 5979
+:= -- 10817
+add.period$ -- 666
+call.type$ -- 144
+change.case$ -- 761
+chr.to.int$ -- 141
+cite$ -- 289
+duplicate$ -- 2989
+empty$ -- 5643
+format.name$ -- 1239
+if$ -- 14448
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 146
-newline$ -- 938
-num.names$ -- 570
-pop$ -- 1099
+missing$ -- 149
+newline$ -- 959
+num.names$ -- 582
+pop$ -- 1118
 preamble$ -- 1
-purify$ -- 611
+purify$ -- 623
 quote$ -- 0
-skip$ -- 2101
+skip$ -- 2143
 stack$ -- 0
-substring$ -- 3327
-swap$ -- 283
+substring$ -- 3411
+swap$ -- 288
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1511
+type$ -- 1544
 warning$ -- 1
-while$ -- 679
+while$ -- 694
 width$ -- 0
-write$ -- 2298
+write$ -- 2349
 (There was 1 warning)
