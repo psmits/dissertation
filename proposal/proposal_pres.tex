@@ -84,16 +84,14 @@
 
     \tiny{\attrib{Kitchell 1985 \textit{Paleobiology}}}
   \end{quotation}
+\end{frame}
 
-  \vspace{1.3cm}
-
-  \begin{center}
-    \begin{tabular}{@{}l@{}}adaptive zone\end{tabular} 
-    \hspace{0.5cm}
-    \(\rightarrow\) 
-    \hspace{1cm}
-    \begin{tabular}{@{}l@{}}speciation\\extinction\end{tabular}
-  \end{center}
+\begin{frame}
+  \frametitle{In context of this study}
+  
+  \begin{block}{Rephrased}
+    How does a taxon's \alert{adaptive zone} affect \alert{extinction risk?}
+  \end{block}
 \end{frame}
 
 \begin{frame}
@@ -132,7 +130,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Taxa}
+  \frametitle{Systems}
 
   \begin{columns}
     \begin{column}{0.5\textwidth}
@@ -174,19 +172,21 @@
   \begin{itemize}
     \item Australian Permian brachiopods
       \begin{itemize}
-        \item traits: substrate, habitat, affixing strategy
-        \item trait based survival 
+        \item survival patterns
         \item community connectedness (not shown)
+        \item traits: substrate, habitat, affixing strategy
       \end{itemize}
     \item Cenozoic mammals
       \begin{itemize}
-        \item traits: dietary and locomotor categories, body size
-        \item trait based survival
+        \item survival patterns (not shown; come to Evolution2014)
         \item community connectedness
+        \item traits: dietary and locomotor categories, body size
       \end{itemize}
   \end{itemize}
 \end{frame}
 
+
+\section{Survival}
 
 \begin{frame}
   \frametitle{Probability of survival}
@@ -235,12 +235,303 @@
     Hazard is constant with respect to time (\alert{exponential survival}).
   \end{block}
 
+    \begin{align*}
+      h(t) &= \lambda \iff S(t) = \exp^{-\lambda t}
+    \end{align*}
+\end{frame}
+
+% empirical
+\begin{frame}
+  \frametitle{Brachiopods, environmental preference, and extinction}
+
+  \begin{block}{Questions}
+    \begin{itemize}
+      \item Do traits related to environmental preference have different distributions of taxonomic duration? 
+        \begin{itemize}
+          \item Is survival best modeled by a single trait or multiple? 
+          \item How do other factors, such as climate, affect these patterns? 
+        \end{itemize}
+      \item Is extinction taxon-age independent or dependent?
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Substrate affinity}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \includegraphics[height = 0.4\textheight, keepaspectratio = true]{figure/miller}
+
+        \tiny{\attrib{Miller and Connoly 2001 \textit{Paleobio.}}}
+
+        \includegraphics[height = 0.4\textheight, keepaspectratio = true]{figure/foote}
+
+        \tiny{\attrib{Foote 2006 \textit{Paleobio.}}}
+      \end{center}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item depositional setting
+          \begin{itemize}
+            \item carbonates, clastics
+            \item availability
+          \end{itemize}
+        \item Pharenozoic decrease carbonates:clastics
+          \begin{itemize}
+            \item predicted longevity: \\clastics \(>\) carbonates
+          \end{itemize}
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Habitat preference}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/onoff}
+
+        \tiny{\attrib{Jablonski \textit{et al.} 1983 \textit{Science}}}
+      \end{center}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item storm wave base
+          \begin{itemize}
+            \item on-shore, off-shore, none
+            \item availability
+            \item stability
+          \end{itemize}
+        \item offshore \(>\) onshore
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Affixing strategy}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \includegraphics[height = 0.7\textheight, width = \textwidth, keepaspectratio = true]{figure/methods}
+
+        \tiny{\attrib{Johansen 1989 \textit{Paleo\(^3\)}}}
+      \end{center}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item energetics, material (mud)
+        \item pedunculate, reclining, cementing
+          \begin{itemize}
+            \item endemics: \\reclining \(>\) others
+            \item cosmopolitan: \\ped./cement \(>\) others
+          \end{itemize}
+        \item pedunculate:on-shore, reclining:off-shore
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Permian climate}
   \begin{center}
-    \[
-      h(t) = \lambda \iff S(t) = \exp^{-\lambda t}
-    \]
+    \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/glacial}
+
+    \tiny{\attrib{Birgenheier \textit{et al.} 2010 \textit{Paleo\(^3\)}}}
   \end{center}
 \end{frame}
+
+\begin{frame}
+  \frametitle{Assigning substrate and habitat}
+
+  \begin{block}{Probability of assignment}
+    \begin{align*}
+      P(H_{1}|E) &= \frac{P(E|H_{1})P(H_{1})}{P(E|H_{1})P(H_{1}) + P(E|H_{2})P(H_{2})} \\
+      P(E|H) &= \binom{n}{k} p^{k}(1 - p)^{n - k}
+    \end{align*}
+
+    \begin{itemize}
+      \item \(p\): proportion of all collections (e.g) carbonate
+      \item \(n\): total \# taxon occurrences
+      \item \(k\): of \(n\), \# (e.g.) carbonate occurrences
+    \end{itemize}
+
+    \tiny{\attrib{Simpson and Harnik 2009 \textit{Paleobiology}}}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Analysis}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/australia}
+
+        \tiny{\attrib{Clapham and James 2008 \textit{Palaios}}}
+      \end{center}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item genus FAD--LAD
+        \item time-independent traits
+          \begin{itemize}
+            \item preliminary substrate following Foote 2006 \textit{Paleobio.}
+            \item preliminary habitat following Kiessling \textit{et al.} 2007 \textit{Paleo\(^3\)}
+          \end{itemize}
+        \item time-dependent climate 
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Preliminary results: model comparison}
+
+  \input{model_tabs.tex}
+\end{frame}
+
+\begin{frame}
+  \frametitle{K-M curve substrate}
+  \begin{center}
+    \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/km_aff}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Estimated survival curve substrate}
+  \begin{center}
+    \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/aff}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{K-M curve habitat}
+  \begin{center}
+    \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/km_hab}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Estimated survival curve habitat}
+  \begin{center}
+    \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/hab}
+  \end{center}
+\end{frame}
+
+
+%\begin{frame}
+%  \frametitle{Ecology and survival in Cenozoic mammals}
+%
+%  \begin{block}{Questions}
+%    \begin{itemize}
+%      \item How do traits related to range size relate to survival?
+%      \item Which trait(s) best model survival? One or more?
+%      \item Is climatic change important for modeling survival?
+%      \item Are patterns of survival different between genera and species?
+%    \end{itemize}
+%  \end{block}
+%
+%\end{frame}
+%
+%\begin{frame}
+%  \frametitle{Dietary category}
+%  \begin{columns}
+%    \begin{column}{0.5\textwidth}
+%      \begin{center}
+%        \includegraphics[height=0.4\textheight, width=\textwidth, keepaspectratio=true]{figure/dietdiv}
+%
+%        \tiny{\attrib{Price \textit{et al.} 2012 \textit{PNAS}}}
+%
+%        \includegraphics[height=0.4\textheight,width=\textwidth,keepaspectratio=true]{figure/jernvall}
+%
+%        \tiny{\attrib{Jernvall and Fortelius 2004 \textit{Am. Nat.}}}
+%      \end{center}
+%    \end{column}
+%    \begin{column}{0.5\textwidth}
+%      \begin{itemize}
+%        \item trophic hierarchy \\(stability \(\to\) duration)
+%          \begin{itemize}
+%            \item herb: most stable, \\longest duration
+%            \item carni: least stable, \\shortest duration
+%            \item omni: avg. stability, \\avg. duration
+%          \end{itemize}
+%      \end{itemize}
+%    \end{column}
+%  \end{columns}
+%\end{frame}
+%
+%\begin{frame}
+%  \frametitle{Locomotor category}
+%
+%  \begin{columns}
+%    \begin{column}{0.5\textwidth}
+%      \includegraphics[height=0.8\textheight, width=\textwidth, keepaspectratio=true]{figure/scherler}
+%
+%      \tiny{\attrib{Scherler \textit{et al.} 2013 \textit{Swiss. J. Geosci.}}}
+%    \end{column}
+%    \begin{column}{0.5\textwidth}
+%      \begin{itemize}
+%        \item Paleogene \(\to\) Neogene
+%          \begin{itemize}
+%            \item open \(\to\) closed environment
+%          \end{itemize}
+%        \item predictions
+%          \begin{itemize}
+%            \item arboreal: \\Paleogene \(>\) Neogene
+%            \item ground dwelling: \\Paleogene \(<\) Neogene
+%            \item scansorial: \\Paleogene \(\approx\) Neogene
+%          \end{itemize}
+%      \end{itemize}
+%    \end{column}
+%  \end{columns}
+%\end{frame}
+%
+%\begin{frame}
+%  \frametitle{Body size}
+%
+%  \begin{columns}
+%    \begin{column}{0.5\textwidth}
+%      \includegraphics[height=0.4\textheight, width=\textwidth, keepaspectratio=true]{figure/liowmam}
+%
+%      \tiny{\attrib{Liow \textit{et al.} 2008 \textit{PNAS}}}
+%
+%      \includegraphics[height=0.4\textheight, width=\textwidth, keepaspectratio=true]{figure/susumu}
+%
+%      \tiny{\attrib{Tomiya 2013 \textit{Am. Nat.}}}
+%    \end{column}
+%    \begin{column}{0.5\textwidth}
+%      \begin{itemize}
+%        \item \(\uparrow\) body size, \(\uparrow\) energy req, \\\(\uparrow\) range size, \(\downarrow\) extinction
+%        \item \(\uparrow\) body size, \(\downarrow\) rep. rate, \\\(\uparrow\) extinction 
+%      \end{itemize}
+%    \end{column}
+%  \end{columns}
+%\end{frame}
+%
+%\begin{frame}
+%  \frametitle{Analysis}
+%
+%  \begin{itemize}
+%    \item data: genus, species FAD--LAD
+%      \begin{itemize}
+%        \item NA: PBDB
+%        \item Europe: PBDB, NOW
+%        \item SA: collections, compilations
+%      \end{itemize}
+%    \item traits: time-indep. covariates
+%    \item climate: time-dep. covariate
+%    \item Paleogene versus Neogene
+%  \end{itemize}
+%\end{frame}
+
+
+\section{Communities}
 
 \begin{frame}
   \frametitle{Community connectedness}
@@ -413,294 +704,18 @@
   \end{columns}
 \end{frame}
 
-
-\section{Brachiopods}
-
-\begin{frame}
-  \frametitle{Brachiopods, environmental preference, and extinction}
-
-  \begin{block}{Questions}
-    \begin{itemize}
-      \item Are traits related to environmental preference correlated with survival?
-      \item Which trait(s) best model extinction? One or more?
-      \item Is global climate important to extinction?
-    \end{itemize}
-  \end{block}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Substrate affinity}
-
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \begin{center}
-        \includegraphics[height = 0.4\textheight, keepaspectratio = true]{figure/miller}
-
-        \tiny{\attrib{Miller and Connoly 2001 \textit{Paleobio.}}}
-
-        \includegraphics[height = 0.4\textheight, keepaspectratio = true]{figure/foote}
-
-        \tiny{\attrib{Foote 2006 \textit{Paleobio.}}}
-      \end{center}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \begin{itemize}
-        \item carbonates, clastics, mixed
-          \begin{itemize}
-            \item physio-chemical 
-            \item availability
-          \end{itemize}
-        \item Pharenozoic decrease carbonates:clastics
-          \begin{itemize}
-            \item predicted longevity: \\clastics \(>\) carbonates
-          \end{itemize}
-      \end{itemize}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Habitat preference}
-
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \begin{center}
-        \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/onoff}
-
-        \tiny{\attrib{Jablonski \textit{et al.} 1983 \textit{Science}}}
-      \end{center}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \begin{itemize}
-        \item on-shore, off-shore, none
-          \begin{itemize}
-            \item above/below \\storm wave base
-            \item energetics, availability
-          \end{itemize}
-        \item offshore \(>\) onshore
-      \end{itemize}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Affixing strategy}
-
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \begin{center}
-        \includegraphics[height = 0.7\textheight, width = \textwidth, keepaspectratio = true]{figure/methods}
-
-        \tiny{\attrib{Johansen 1989 \textit{Paleo\(^3\)}}}
-      \end{center}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \begin{itemize}
-        \item environmental energetics \\and material (mud)
-        \item pedunculate, reclining, cementing
-          \begin{itemize}
-            \item endemics duration: \\reclining \(>\) others
-            \item cosmopolitan duration: \\ped./cement \(>\) others
-          \end{itemize}
-        \item pedunculate:on-shore, reclining:off-shore
-      \end{itemize}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Permian climate}
-  \begin{center}
-    \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/glacial}
-
-    \tiny{\attrib{Birgenheier \textit{et al.} 2010 \textit{Paleo\(^3\)}}}
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Assigning substrate and habitat}
-
-  \begin{block}{Probability of assignment}
-    \begin{align*}
-      P(H_{1}|E) &= \frac{P(E|H_{1})P(H_{1})}{P(E|H_{1})P(H_{1}) + P(E|H_{2})P(H_{2})} \\
-      P(E|H) &= \binom{n}{k} p^{k}(1 - p)^{n - k}
-    \end{align*}
-
-    \begin{itemize}
-      \item \(p\): proportion of all collections (e.g) carbonate
-      \item \(n\): total \# taxon occurrences
-      \item \(k\): of \(n\), \# (e.g.) carbonate occurrences
-    \end{itemize}
-
-    \tiny{\attrib{Simpson and Harnik 2009 \textit{Paleobiology}}}
-  \end{block}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Analysis}
-
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \begin{center}
-        \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/australia}
-
-        \tiny{\attrib{Clapham and James 2008 \textit{Palaios}}}
-      \end{center}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \begin{itemize}
-        \item genus FAD--LAD
-        \item time-independent traits
-          \begin{itemize}
-            \item preliminary substrate following Foote 2006 \textit{Paleobio.}
-            \item preliminary habitat following Kiessling \textit{et al.} 2007 \textit{Paleo\(^3\)}
-          \end{itemize}
-        \item time-dependent climate 
-      \end{itemize}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}
-  \frametitle{K-M curve substrate}
-  \begin{center}
-    \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/km_aff}
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \frametitle{K-M curve habitat}
-  \begin{center}
-    \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/km_hab}
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Preliminary results: model comparison}
-
-  \input{model_tabs.tex}
-\end{frame}
-
-
-\section{Mammals}
-
-\begin{frame}
-  \frametitle{Ecology and survival in Cenozoic mammals}
-
-  \begin{block}{Questions}
-    \begin{itemize}
-      \item How do traits related to range size relate to survival?
-      \item Which trait(s) best model survival? One or more?
-      \item Is climatic change important for modeling survival?
-      \item Are patterns of survival different between genera and species?
-    \end{itemize}
-  \end{block}
-
-\end{frame}
-
-\begin{frame}
-  \frametitle{Dietary category}
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \begin{center}
-        \includegraphics[height=0.4\textheight, width=\textwidth, keepaspectratio=true]{figure/dietdiv}
-
-        \tiny{\attrib{Price \textit{et al.} 2012 \textit{PNAS}}}
-
-        \includegraphics[height=0.4\textheight,width=\textwidth,keepaspectratio=true]{figure/jernvall}
-
-        \tiny{\attrib{Jernvall and Fortelius 2004 \textit{Am. Nat.}}}
-      \end{center}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \begin{itemize}
-        \item trophic hierarchy \\(stability \(\to\) duration)
-          \begin{itemize}
-            \item herb: most stable, \\longest duration
-            \item carni: least stable, \\shortest duration
-            \item omni: avg. stability, \\avg. duration
-          \end{itemize}
-      \end{itemize}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Locomotor category}
-
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \includegraphics[height=0.8\textheight, width=\textwidth, keepaspectratio=true]{figure/scherler}
-
-      \tiny{\attrib{Scherler \textit{et al.} 2013 \textit{Swiss. J. Geosci.}}}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \begin{itemize}
-        \item Paleogene \(\to\) Neogene
-          \begin{itemize}
-            \item open \(\to\) closed environment
-          \end{itemize}
-        \item predictions
-          \begin{itemize}
-            \item arboreal: \\Paleogene \(>\) Neogene
-            \item ground dwelling: \\Paleogene \(<\) Neogene
-            \item scansorial: \\Paleogene \(\approx\) Neogene
-          \end{itemize}
-      \end{itemize}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Body size}
-
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \includegraphics[height=0.4\textheight, width=\textwidth, keepaspectratio=true]{figure/liowmam}
-
-      \tiny{\attrib{Liow \textit{et al.} 2008 \textit{PNAS}}}
-
-      \includegraphics[height=0.4\textheight, width=\textwidth, keepaspectratio=true]{figure/susumu}
-
-      \tiny{\attrib{Tomiya 2013 \textit{Am. Nat.}}}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \begin{itemize}
-        \item \(\uparrow\) body size, \(\uparrow\) energy req, \\\(\uparrow\) range size, \(\downarrow\) extinction
-        \item \(\uparrow\) body size, \(\downarrow\) rep. rate, \\\(\uparrow\) extinction 
-      \end{itemize}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Analysis}
-
-  \begin{itemize}
-    \item data: genus, species FAD--LAD
-      \begin{itemize}
-        \item NA: PBDB
-        \item Europe: PBDB, NOW
-        \item SA: collections, compilations
-      \end{itemize}
-    \item traits: time-indep. covariates
-    \item climate: time-dep. covariate
-    \item Paleogene versus Neogene
-  \end{itemize}
-\end{frame}
-
-
-%\section{Mammal community connectedness}
-
+% empirical
 \begin{frame}
   \frametitle{Community connectedness in Cenozoic mammals}
 
   \begin{block}{Questions}
     \begin{itemize}
-      \item How does the ratio between endemic and cosmopolitan taxa change over time?
-      \item Is there a single global pattern or does each regions have a different patterns?
-      \item Do these patterns differ between ecological categories?
-      \item Is global climate change an important predictor of these patterns?
+      \item How does the ratio of cosmopolitan to endemic taxa, per locality, change over time? 
+        \begin{itemize}
+          \item Is this pattern different between taxa exhibiting different traits? 
+          \item How does this pattern very in relation to phylogenetic similarity? 
+        \end{itemize}
+      \item When would we expect global, regional, and/or local processes to most strongly shape taxonomic patterns?
     \end{itemize}
   \end{block}
 \end{frame}
@@ -728,7 +743,7 @@
           \end{itemize}
         \item scansorial
           \begin{itemize}
-            \item constant \(\lor\) random
+            \item constant/random
           \end{itemize}
       \end{itemize}
     \end{column}
@@ -748,7 +763,7 @@
       \begin{itemize}
         \item herbivore
           \begin{itemize}
-            \item most like all taxa
+            \item most like combined
           \end{itemize}
         \item carnivore
           \begin{itemize}
@@ -832,7 +847,7 @@
   \vspace{1cm}
 
   \begin{center}
-    Measure, analyze, model changing environment.
+    Measure, analyze, model changing environmental context.
   \end{center}
 \end{frame}
 
@@ -852,9 +867,6 @@
     \alert{How} do they matter?
   \end{center}
 \end{frame}
-
-% need quotation to close the talk
-
 
 \begin{frame}
   \frametitle{Acknowledgements}
@@ -888,26 +900,7 @@
 \section{Further concerns}
 
 \begin{frame}
-  \frametitle{Compressing a network}
-
-  \begin{block}{Map equation \tiny{\attrib{Rosvall and Bargstrom 2008 \textit{PNAS}}}}
-    \begin{align*}
-      L(\textbf{M}) &= q_{\curvearrowright}H(\mathcal{Q}) + \sum^{m}_{i = 1} p^{i}_{\circlearrowright}H(\mathcal{P}^{i})
-    \end{align*}
-
-    \begin{itemize}
-      \item \(\textbf{M}\): module partion of \textit{n} nodes in \textit{m} partitions
-      \item \(L(\textbf{M})\): network code length 
-      \item \(q_{\curvearrowright}\): P(walk switches modules)
-      \item \(H(\mathcal{Q})\): entropy module codewords
-      \item \(H(\mathcal{P}^{i})\): entropy within--module
-      \item \(p^{i}_{\circlearrowright}\): rate within--module use
-    \end{itemize}
-  \end{block}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Effect of differential preservation on comparisons of survival}
+  \frametitle{Differential preservation and survival}
 
   \begin{columns}
     \begin{column}{0.5\textwidth}
@@ -947,12 +940,31 @@
         \item informal time scaled phylogeny \\(taxonomy tree)
         \item measures
           \begin{itemize}
-            \item relative mean pairwise distance between taxa at locality
-            \item mean locality phylogenetic species variability (Helmus \textit{et al.} 2007 \textit{Am. Nat})
+            \item pairwise patristic distance 
+            \item phylogenetic species variability (Helmus \textit{et al.} 2007 \textit{Am. Nat})
           \end{itemize}
       \end{itemize}
     \end{column}
   \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Compressing a network}
+
+  \begin{block}{Map equation \tiny{\attrib{Rosvall and Bargstrom 2008 \textit{PNAS}}}}
+    \begin{align*}
+      L(\textbf{M}) &= q_{\curvearrowright}H(\mathcal{Q}) + \sum^{m}_{i = 1} p^{i}_{\circlearrowright}H(\mathcal{P}^{i})
+    \end{align*}
+
+    \begin{itemize}
+      \item \(\textbf{M}\): module partion of \textit{n} nodes in \textit{m} partitions
+      \item \(L(\textbf{M})\): network code length 
+      \item \(q_{\curvearrowright}\): P(walk switches modules)
+      \item \(H(\mathcal{Q})\): entropy module codewords
+      \item \(H(\mathcal{P}^{i})\): entropy within--module
+      \item \(p^{i}_{\circlearrowright}\): rate within--module use
+    \end{itemize}
+  \end{block}
 \end{frame}
 
 
