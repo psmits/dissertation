@@ -88,7 +88,7 @@
 
 \begin{frame}
   \frametitle{In context of this study}
-  
+
   \begin{block}{Rephrased}
     How does a taxon's \alert{adaptive zone} affect \alert{extinction risk?}
   \end{block}
@@ -193,10 +193,10 @@
 
   \begin{definition}
     Analysis of time till event data. 
-    
-    Time is duration or age. 
-    
-    Event is an occurrence of interest.
+
+    Time is taxon duration or age. 
+
+    Event is an occurrence of interest (extinction).
   \end{definition}
 
 \end{frame}
@@ -248,9 +248,9 @@
     Hazard is constant with respect to time (\alert{exponential survival}).
   \end{block}
 
-    \begin{align*}
-      h(t) &= \lambda \iff S(t) = \exp^{-\lambda t}
-    \end{align*}
+  \begin{align*}
+    h(t) &= \lambda \iff S(t) = \exp^{-\lambda t}
+  \end{align*}
 \end{frame}
 
 % empirical
@@ -273,7 +273,7 @@
   \frametitle{Substrate affinity}
 
   \begin{columns}
-    \begin{column}{0.5\textwidth}
+    \begin{column}{0.6\textwidth}
       \begin{center}
         \includegraphics[height = 0.4\textheight, keepaspectratio = true]{figure/miller}
 
@@ -284,7 +284,7 @@
         \tiny{\attrib{Foote 2006 \textit{Paleobio.}}}
       \end{center}
     \end{column}
-    \begin{column}{0.5\textwidth}
+    \begin{column}{0.4\textwidth}
       \begin{itemize}
         \item depositional setting
           \begin{itemize}
@@ -382,20 +382,20 @@
   \frametitle{Analysis}
 
   \begin{columns}
-    \begin{column}{0.5\textwidth}
+    \begin{column}{0.6\textwidth}
       \begin{center}
         \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/australia}
 
         \tiny{\attrib{Clapham and James 2008 \textit{Palaios}}}
       \end{center}
     \end{column}
-    \begin{column}{0.5\textwidth}
+    \begin{column}{0.4\textwidth}
       \begin{itemize}
         \item genus FAD--LAD
         \item time-independent traits
           \begin{itemize}
-            \item preliminary substrate following Foote 2006 \textit{Paleobio.}
-            \item preliminary habitat following Kiessling \textit{et al.} 2007 \textit{Paleo\(^3\)}
+            \item prelim substrate following Foote 2006 \textit{Paleobio.}
+            \item prelim habitat following Kiessling \textit{et al.} 2007 \textit{Paleo\(^3\)}
           \end{itemize}
         \item time-dependent climate 
       \end{itemize}
@@ -566,7 +566,7 @@
   \frametitle{Average relative number of endemics}
 
   \begin{columns}
-    \begin{column}{0.5\textwidth}
+    \begin{column}{0.6\textwidth}
       \begin{center}
         \includegraphics[height = 0.5\textheight, width = \textwidth, keepaspectratio = true]{figure/sim_graph}
 
@@ -578,7 +578,7 @@
         \end{align*}
       \end{center}
     \end{column}
-    \begin{column}{0.5\textwidth}
+    \begin{column}{0.4\textwidth}
       \[
         E = \frac{\sum_{i = 1}^{L} \frac{u_{i}}{n_{i}}}{L}
       \]
@@ -597,7 +597,7 @@
   \frametitle{Average relative occupancy per taxon}
 
   \begin{columns}
-    \begin{column}{0.5\textwidth}
+    \begin{column}{0.6\textwidth}
       \begin{center}
         \includegraphics[height = 0.5\textheight, width = \textwidth, keepaspectratio = true]{figure/sim_graph}
 
@@ -609,7 +609,7 @@
         \end{align*}
       \end{center}
     \end{column}
-    \begin{column}{0.5\textwidth}
+    \begin{column}{0.4\textwidth}
       \[
         Occ = \frac{\sum_{i = 1}^{N} \frac{l_{i}}{L}}{N}
       \]
@@ -628,14 +628,14 @@
   \frametitle{Biogeographic connectedness}
 
   \begin{columns}
-    \begin{column}{0.5\textwidth}
+    \begin{column}{0.6\textwidth}
       \begin{center}
         \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/bc}
 
         \tiny{\attrib{Sidor et al. 2013 \textit{PNAS}}}
       \end{center}
     \end{column}
-    \begin{column}{0.5\textwidth}
+    \begin{column}{0.4\textwidth}
       \[
         BC = \frac{O - N}{LN - N}
       \]
@@ -864,7 +864,6 @@
   \end{center}
 \end{frame}
 
-
 \begin{frame}
   \frametitle{Ask the following\dots}
 
@@ -922,21 +921,31 @@
 
         \tiny{\attrib{Raup 1975 \textit{Paleobio.}}}
 
-        \includegraphics[height = 0.4\textheight, width = \textwidth, keepaspectratio = true]{figure/sepkoski}
-
-        \tiny{\attrib{Sepkoski 1975 \textit{Paleobio.}}}
       \end{center}
     \end{column}
     \begin{column}{0.5\textwidth}
-      two groups in four scenarios
-      \begin{itemize}
-        \item \(=\) birth, death; \\\(=\)preservation
-        \item \(=\) birth, death; \\\(!=\)preservation
-        \item \(!=\) birth, death; \\\(=\) preservation
-        \item \(!=\) birth, death; \\\(!=\)preservation
-      \end{itemize}
+      \includegraphics[height = 0.4\textheight, width = \textwidth, keepaspectratio = true]{figure/sepkoski}
+
+      \tiny{\attrib{Sepkoski 1975 \textit{Paleobio.}}}
+
     \end{column}
   \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Models}
+
+  Sampling: Poisson process (\(\phi\))
+
+  Diversification: birth-death (\(\lambda, \mu\))
+
+  \begin{enumerate}
+    \item \(=\) birth, death; \(=\)preservation
+    \item \(=\) birth, death; \(!=\)preservation
+    \item \(!=\) birth, death; \(=\) preservation
+    \item \(!=\) birth, death; \(!=\)preservation
+  \end{enumerate}
+
 \end{frame}
 
 \begin{frame}
