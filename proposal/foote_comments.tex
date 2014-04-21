@@ -4,22 +4,75 @@
 
 \begin{document}
 
-What you mean by evolutionary ecology (opening paragraph) is fine for your purposes, but if you turn this into a DDIG proposal you will want to be less restrictive.
+\textit{What you mean by evolutionary ecology (opening paragraph) is fine for your purposes, but if you turn this into a DDIG proposal you will want to be less restrictive.}
 
-This is highly debatable.  What is the evidence that most extinction is biologically selective?
+In the context of this paper I am definining evolutionary paleoecology, which is specialized form of evolutionary ecology. Additionally, it is used as a semantic tool for shifting the Van Valen definition of the Law of Constant Extinction into a more testable framework. However, you are right in the desire for a broader or more inclusive definition for a grant application.
 
-What do you think about equating FAD with origin and LAD with extinction?  (Oh, I see you get back to this later.)
 
-Why model with Weibull, in which the parameters don't have an obvious biological interpretation, instead of with a birth-death model, in which genus survivorship emerges from species-level branching and extinction rates?
+\textit{This is highly debatable.  What is the evidence that most extinction is biologically selective?}
 
-Explain how you will use the simulation results to assess whether an observed difference in survival is believable.  Don't you need an empirical estimate of sampling rates?
+The difference between biologically selective and not is if the extinction was random with respect to traits. Evidence of biological selectivity would be from cross species work, where species that all share the same trait(s) have a greater extinction risk than species that do not. A simple example of this would be Baumiller's work on crinoids, where filter size was demonstrated to related to very different patterns of survival with specialists having shorter durations than generalists. This is a systematic difference in extinction risk detectable from differences in traits.
 
-Actually, the level of distortion depends not only on the sampling/preservation rate but also on the true extinction rate.  So two groups with equal sampling and different extinction rates will, I think, be distorted differently.
+There are many clade specific studies which demonstrate similar results to Baumiller's that certain traits are correlated with survival or extinction and that this correlation is greater than random and there is a process based explanation for the difference. 
 
-You will want to explore other schemes for assigning affinities.
+Additionally, I hope to draw some parallels between the processes governing biologically selective extinction and those governing ecological speciation. If speciation can be the product of ecological selective forces, then so can extinction. It can be argued that extinction is the ultimate product of selection without necessary adaptation, where by a species possessing some trait faces positive selection and fails to persist/adapt, the latter which has a high random component. Regardless of the (semi-)random aspect of adaptation, the resulting extinction event is non-random with respect to biology.
 
-I am still concerned that you are not looking directly at the possible proximal causes of survival.  For example, you will test whether substrate affinity correlates with survival, the rationale being that genera that prefer more widespread substrates should be favored.  But if that is the causal link, don't you need to test directly whether those genera are more widespread?
+In a long term scenario, such as species extinction, higher selection on species sharing a particular trait relative to some other trait would result in the first species having relatively shorter taxonomic durations than the second species. This follows because, even in a stochastic model of extinction, the species experiencing higher selection has a greater chance of going extinct per unit time than a species experiencing a lower degree of selection.
 
-I'm still not sure I see what's at stake with the community connectedness work---what the intellectual tension is that motivates it.  But we can talk about that.  For the DDIG, you really should be less jargony about this and present everything in terms that area easily interpreted biologically.   For example, don't say ``Mammals increase in code length from time 1 to time 2,'' but instead, ``Provinciality increases from time 1 to time 2.''
+
+\textit{What do you think about equating FAD with origin and LAD with extinction?  (Oh, I see you get back to this later.)}
+
+
+\textit{Why model with Weibull, in which the parameters don't have an obvious biological interpretation, instead of with a birth-death model, in which genus survivorship emerges from species-level branching and extinction rates?}
+
+Survival is a pure-death process, which is modeled as a ``decay''-type process. The simplest pure-death process is where survival times follow an (negative) exponential distribution with the scale/rate value having some value greater than 0. The scale parameter of the Weibull distribution has the exact same interpretation as the scale/rate parameter of the (negative) exponential distribution. 
+
+The shape parameter of the Weibull distribution describes how failure is proportional to time, namely to the power of the scale parameter plus 1. In the case of shape = 1, the Weibull distribution reduces to a parameterization of the (negative) exponential distribution. The parameterization of the Weibull distribution affects the direct interpretation, but simple algebra can simplify this.
+
+A pure-death process, like a pure-birth process, is a special case of a birth-death process where one of the parameters is equal to 0. Because, in this case, I am interested in distributions of durations and not the wait time between originations, I feel it is appropriate to generalize a pure-death process. It is possible, importantly, to model the sampling process in a Bayesian framework and I have plans to expand upon my initial modeling efforts into a hierarchical Bayesian framework which takes sampling into account more explicitly.
+
+In this way the Weibull distribution is actually biologically interpretable, and is a frequently used distribution in neontological studies of survival.
+
+In the case of generic level extinction, the reason I use just a pure-death process as opposed to a birth-death process is to make the results more comparable to those of Van Valen and other, more recent, work motivated by the Law of Constant Extinction. Also, a birth-death process without allowing for age-dependent extinction or origination prevents the fundamental question of this project to be accomplished. I know of a few formulations that allow this, but I have not explored them in detail and their utility in this case, though it should be possible to estimate using that formulation of the model and compare the fit to the data versus the simple survival model.
+
+
+\textit{Explain how you will use the simulation results to assess whether an observed difference in survival is believable.  Don't you need an empirical estimate of sampling rates?}
+
+The simulation results represent a bestiary of possible scenarios under which two lineages can be both going extinct and being preserved. Importantly, I want to explore scenarios with very different parameter combinations which result in the same over all pattern. An example would be two very different diversification scenarios that, after preservation, have an identical distribution of durations.
+
+Additionally, these simulations allow for testing the effect of different interval censoring schemes on recovering the ``true'' diversification pattern. If anything, this is a fantastic opportunity to test the ``effectiveness'' of the various methods ``true'' FAD-LAD values.
+
+
+\textit{Actually, the level of distortion depends not only on the sampling/preservation rate but also on the true extinction rate.  So two groups with equal sampling and different extinction rates will, I think, be distorted differently.}
+
+Yes, that makes sense. I want to characterize that difference, or at least determine an over all effect. I suspect that survival patterns after preservation will have, measured as difference in means, greater variance than the perfect record.
+
+
+\textit{You will want to explore other schemes for assigning affinities.}
+
+Yes. It may even be possible, for example, to not have to infer a categorical affinity but instead use the prior probability of the affinity as the actual data. Or it may be possible to, in a Bayesian framework, infer the affinity as a part of the model and have that factor into the final inference as opposed to inferring it on the side and not allowing the uncertainty to propagate.
+
+
+\textit{I am still concerned that you are not looking directly at the possible proximal causes of survival.  For example, you will test whether substrate affinity correlates with survival, the rationale being that genera that prefer more widespread substrates should be favored.  But if that is the causal link, don't you need to test directly whether those genera are more widespread?}
+
+The reason I'm looking at these specific traits has to do with drawing parallels between biologically selective extinction and ecological speciation, as discussed above. I am interested to see if there is a signature of trait-based selection on survival. This approach allows a discussion of adaptation and establishment within adaptive zones, potentially testing questions of incumbency with regards to extinction risk.
+
+In general, this is a more process based approach than a purely pattern based one.
+
+The hypotheses presented in the proposal link what might be the adaptive advantage or disadvantage of certain traits given the environmental settings. Because it is known that these organisms existed in these settings, the species adaptive zone must overlap with the set of available biotic and abiotic interactors. However, the set of all interactors may change over time which creates the scenario where the species either goes extinct or, though evolution, changes the necessary set of interactors to maintain survival. The traits were selected because, in addition to being measurable, they represent ``constant'' traits that are hypothesized to govern the necessary set of interactors for a species/genus. Thus, if the environment fluctuates over time in a manner that these interactors are lost it is expected then that the species (in terms of taxonomic identity/morpho type/fossil) will go extinct. If a particular trait requires a combination of interactors that is rare, highly transient, complex, high cost, or some thing similar it is expected that a species/genus with that trait will have a shorter duration than a species/genus possessing an alternate trait which requires a more common, simpler, lower cost, or potentially more constant set of interactors. The link with range size is because of extent of suitable environmental conditions, but is from a biological stand point as opposed to a more stochastic perspective. 
+
+Currently, though, I am not explaining myself well enough and will endeavor to figure out a better phrasing and make this clearer.
+
+
+\textit{I'm still not sure I see what's at stake with the community connectedness work---what the intellectual tension is that motivates it.  But we can talk about that.  For the DDIG, you really should be less jargony about this and present everything in terms that area easily interpreted biologically.   For example, don't say ``Mammals increase in code length from time 1 to time 2,'' but instead, ``Provinciality increases from time 1 to time 2.''}
+
+Currently I am not explaining myself well enough. The goals of the community connectedness work is two fold. First is inference about the relative importance of spatial scale on evolutionary and ecological processes, while the second is estimating biome complexity and change over long periods of time. 
+
+A major question, especially in Cenozoic mammal taxonomic diversity, is the effect of spatial and temporal scales on inference about evolutionary and ecological processes. By demonstrating how the relative importance of different scale processes has changed over time, I hope to begin closing the gap between various inferences about processes shaping, for example, mammalian diversification patterns. 
+
+Additionally, this work can help with the interpretation of the survival patterns. For example if community level selective pressures or assemblages are not relatively spatially even, then we might expect poor interpretation of survival patterns within clades.
+
+Yes, I will improve my explanations and actually include interpretations of my results.
+
 
 \end{document}
