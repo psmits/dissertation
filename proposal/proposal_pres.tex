@@ -78,6 +78,22 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{Modes of extinction}
+
+  \hspace{\stretch{0.4}} Field of Bullets 
+  \hspace{\stretch{0.5}} \textbf{:} 
+  \hspace{\stretch{0.5}} Wanton 
+  \hspace{\stretch{0.5}} \textbf{:} 
+  \hspace{\stretch{0.5}} Fair Game 
+  \hspace{\stretch{1}}
+
+  \bigskip
+
+  \tiny{\attrib{Raup 1991 \textit{Extinction: Bad Genes or Bad Luck?}}}
+
+\end{frame}
+
+\begin{frame}
   \frametitle{Evolutionary paleoecology}
   \begin{quotation}
     \dots the consequences of distinct ecological factors on differential rate dynamics, particularly rates of faunal turnover and diversification.
@@ -90,8 +106,42 @@
   \frametitle{In context of this study}
 
   \begin{block}{Rephrased}
-    How does a taxon's \alert{adaptive zone} affect \alert{extinction risk?}
+    How does a taxon's \alert{adaptive zone} affect its \alert{extinction risk?}
   \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Adaptive zones}
+
+  \begin{center}
+    \includegraphics[height = 0.7\textheight, keepaspectratio = true]{figure/simpson}
+
+    \tiny{\attrib{Simpson 1944 \textit{Tempo and Mode}}}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Simpson's terms}
+
+  \begin{definition}
+    \textbf{Adaptive zone:} The set of all interactions, biotic and abiotic, that a individual/taxon is adapted to or experiences.
+
+    \textbf{Environment:} The set of all possible interactions, both biotic and abiotic.
+  \end{definition}
+
+  \tiny{\attrib{Simpson 1944 \textit{Tempo and Mode}, Simpson 1953 \textit{Major Features}}}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{``Critical'' interactions}
+
+  Traits and factors which govern the necessary set of interactors for a given adaptive zone.
+
+  \begin{itemize}
+    \item environmental preference
+    \item trophic interactions
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -108,25 +158,39 @@
   \frametitle{Law of Constant Extinction}
 
   \begin{alertblock}{Definition}
-    Extinction rate, in a given adaptive zone, is taxon--age independent.
-
-    \tiny{\attrib{Van Valen 1973 \textit{Evol. Theory}}}
+    Extinction risk, in a given adaptive zone, is taxon--age independent.
   \end{alertblock}
+
+  \tiny{\attrib{Van Valen 1973 \textit{Evol. Theory}}}
+
 \end{frame}
 
 \begin{frame}
   \frametitle{Approach}
 
-  \begin{block}{Framework and setup}
-    \begin{itemize}
-      \item background extinction
-      \item traits related to environmental preference 
-        \begin{itemize}
-          \item ``bound'' adaptive zone
-        \end{itemize}
-      \item when/which/what processes dominate: \\global, regional, local 
-    \end{itemize}
+  \begin{block}{Concerns}
+    Temporal and spatial variation in environments (\alert{selective pressure}).
   \end{block}
+
+  \vspace{1cm}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      Survival
+      \begin{itemize}
+        \item traits and durations 
+        \item extinction mode
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      Communities
+      \begin{itemize}
+        \item \(\alpha, \beta\) diversity
+        \item provinciality and distinctiveness
+      \end{itemize}
+    \end{column}
+  \end{columns}
+
 \end{frame}
 
 \begin{frame}
@@ -169,91 +233,39 @@
 \begin{frame}
   \frametitle{Proposed studies}
 
-  \begin{itemize}
-    \item Australian Permian brachiopods
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      Australian Permian brachiopods
       \begin{itemize}
         \item survival patterns
         \item community connectedness (not shown)
         \item traits: substrate, habitat, affixing strategy
       \end{itemize}
-    \item Cenozoic mammals
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      Cenozoic mammals
       \begin{itemize}
         \item survival patterns (not shown; come to Evolution2014)
         \item community connectedness
         \item traits: dietary and locomotor categories, body size
       \end{itemize}
-  \end{itemize}
+    \end{column}
+  \end{columns}
+
 \end{frame}
 
 
 \section{Survival}
 
 \begin{frame}
-  \frametitle{Survival analysis framework}
+  \frametitle{Survival}
 
   \begin{definition}
-    Analysis of time till event data. 
-
-    Time is taxon duration or age. 
-
-    Event is an occurrence of interest (extinction).
+    Time from origination to extintion of a taxon (age).
   \end{definition}
 
 \end{frame}
 
-\begin{frame}
-  \frametitle{Probability of survival}
-
-  \begin{columns}
-    \begin{column}{0.5\textwidth} 
-      \includegraphics[height = 0.4\textheight, width = \textwidth, keepaspectratio = true]{figure/ideal}
-
-      \includegraphics[height = 0.4\textheight, width = \textwidth, keepaspectratio = true]{figure/prac}
-
-      \tiny{\attrib{Kleinbaum and Klein 2012}}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \begin{block}{Survival function}
-        \[
-          S(t) = Pr(T > t)
-        \]
-
-        \begin{itemize}
-          \item \(T\): survival time \(\geq 0\) (duration)
-          \item \(t\): specified time 
-        \end{itemize}
-      \end{block}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Instantaneous potential of failure (extinction)}
-
-  \begin{block}{Hazard function \(\equiv\) conditional failure rate}
-    \[
-      h(t) = \lim_{\Delta t \to 0} \frac{P(t \leq T < t + \Delta t | T \geq t)}{\Delta t}
-    \]
-  \end{block}
-
-  \begin{center}
-    \includegraphics[height = 0.5\textheight, width = \textwidth, keepaspectratio = true]{figure/hazard}
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Formalization of Van Valen}
-
-  \begin{block}{Law of Constant Extinction}
-    Hazard is constant with respect to time (\alert{exponential survival}).
-  \end{block}
-
-  \begin{align*}
-    h(t) &= \lambda \iff S(t) = \exp^{-\lambda t}
-  \end{align*}
-\end{frame}
-
-% empirical
 \begin{frame}
   \frametitle{Brachiopods, environmental preference, and extinction}
 
@@ -267,6 +279,60 @@
       \item Is extinction taxon-age independent or dependent?
     \end{itemize}
   \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Probability of survival}
+  \includegraphics[height = 0.4\textheight, width = \textwidth, keepaspectratio = true]{figure/ideal}
+  \includegraphics[height = 0.4\textheight, width = \textwidth, keepaspectratio = true]{figure/prac}
+
+  \tiny{\attrib{Kleinbaum and Klein 2012}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Extinction function}
+
+  \begin{center}
+    \includegraphics[width = \textwidth, keepaspectratio = true]{figure/hazard}
+  \end{center}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Formalization of Van Valen}
+
+  \begin{block}{Law of Constant Extinction}
+    \begin{center}
+      \begin{tabular}{@{}l@{}}\(T \sim Exp(\lambda)\)\end{tabular}
+      \hspace{1.5cm}
+      \begin{tabular}{@{}l@{}}\(T\): survival time\\\(\lambda\): extinction rate\end{tabular}
+    \end{center}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Affixing strategy}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \includegraphics[height = 0.7\textheight, width = \textwidth, keepaspectratio = true]{figure/methods}
+
+        \tiny{\attrib{Johansen 1989 \textit{Paleo\(^3\)}}}
+      \end{center}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item energetics, material (mud)
+        \item pedunculate, reclining, cementing
+          \begin{itemize}
+            \item endemics: \\reclining \(>\) others
+            \item cosmopolitan: \\ped./cement \(>\) others
+          \end{itemize}
+        \item pedunculate:on-shore, reclining:off-shore
+      \end{itemize}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -326,31 +392,6 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Affixing strategy}
-
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \begin{center}
-        \includegraphics[height = 0.7\textheight, width = \textwidth, keepaspectratio = true]{figure/methods}
-
-        \tiny{\attrib{Johansen 1989 \textit{Paleo\(^3\)}}}
-      \end{center}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \begin{itemize}
-        \item energetics, material (mud)
-        \item pedunculate, reclining, cementing
-          \begin{itemize}
-            \item endemics: \\reclining \(>\) others
-            \item cosmopolitan: \\ped./cement \(>\) others
-          \end{itemize}
-        \item pedunculate:on-shore, reclining:off-shore
-      \end{itemize}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}
   \frametitle{Permian climate}
   \begin{center}
     \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/glacial}
@@ -373,53 +414,24 @@
       \item \(n\): total \# taxon occurrences
       \item \(k\): of \(n\), \# (e.g.) carbonate occurrences
     \end{itemize}
-
-    \tiny{\attrib{Simpson and Harnik 2009 \textit{Paleobiology}}}
   \end{block}
+  
+  \tiny{\attrib{Simpson and Harnik 2009 \textit{Paleobiology}}}
 \end{frame}
 
 \begin{frame}
   \frametitle{Analysis}
+  \begin{center}
+    \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/australia}
 
-  \begin{columns}
-    \begin{column}{0.6\textwidth}
-      \begin{center}
-        \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/australia}
-
-        \tiny{\attrib{Clapham and James 2008 \textit{Palaios}}}
-      \end{center}
-    \end{column}
-    \begin{column}{0.4\textwidth}
-      \begin{itemize}
-        \item genus FAD--LAD
-        \item time-independent traits
-          \begin{itemize}
-            \item prelim substrate following Foote 2006 \textit{Paleobio.}
-            \item prelim habitat following Kiessling \textit{et al.} 2007 \textit{Paleo\(^3\)}
-          \end{itemize}
-        \item time-dependent climate 
-      \end{itemize}
-    \end{column}
-  \end{columns}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Preliminary results: model comparison}
-
-  \input{model_tabs.tex}
+    \tiny{\attrib{Clapham and James 2008 \textit{Palaios}}}
+  \end{center}
 \end{frame}
 
 \begin{frame}
   \frametitle{K-M curve substrate}
   \begin{center}
     \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/km_aff}
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Estimated survival curve substrate}
-  \begin{center}
-    \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/aff}
   \end{center}
 \end{frame}
 
@@ -431,9 +443,22 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{Preliminary results: model comparison}
+
+  \input{model_tabs.tex}
+\end{frame}
+
+\begin{frame}
   \frametitle{Estimated survival curve habitat}
   \begin{center}
     \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/hab}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Estimated survival curve substrate}
+  \begin{center}
+    \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/aff}
   \end{center}
 \end{frame}
 
@@ -549,21 +574,47 @@
 \begin{frame}
   \frametitle{Community connectedness}
   \begin{definition}
-    The degree to which localities are composed of endemic versus cosmopolitan taxa, and how similar this ratio is across localities.
+    The relationship between \(\alpha\), \(\beta\) diversity and provinciality.
   \end{definition}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Biogeographic networks}
-  \begin{center}
-    \includegraphics[height = 0.6\textheight, width = \textwidth, keepaspectratio = true]{figure/vilhena}  % need higher resolution picture
+  \frametitle{Community connectedness in Cenozoic mammals}
 
-    \tiny{\attrib{Vilhena \textit{et al.} 2013 \textit{Sci. Reports}}}
-  \end{center}
+  \begin{block}{Questions}
+    \begin{itemize}
+      \item How does the ratio of cosmopolitan to endemic taxa, per locality, change over time? 
+        \begin{itemize}
+          \item Is this pattern different between taxa exhibiting different traits? 
+          \item How does this pattern vary in relation to phylogenetic similarity? 
+        \end{itemize}
+      \item When would we expect global, regional, and/or local processes to most strongly shape taxonomic patterns?
+    \end{itemize}
+  \end{block}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Average relative number of endemics}
+  \frametitle{Uniformity and distinctiveness}
+  
+  high \(\alpha\), high distinctiveness, difference in selective pressures
+  
+  \vspace{1cm}
+
+  high \(\beta\), high uniformity, similarity in selective pressures
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{Biogeographic networks}
+
+  \begin{center}
+    \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/sim_graph}
+  \end{center}
+
+\end{frame}
+
+\begin{frame}
+  \frametitle{\(\alpha\) diversity}
 
   \begin{columns}
     \begin{column}{0.6\textwidth}
@@ -594,7 +645,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Average relative occupancy per taxon}
+  \frametitle{\(\beta\) diversity}
 
   \begin{columns}
     \begin{column}{0.6\textwidth}
@@ -625,7 +676,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Biogeographic connectedness}
+  \frametitle{Uniformity}
 
   \begin{columns}
     \begin{column}{0.6\textwidth}
@@ -650,6 +701,7 @@
   \end{columns}
 \end{frame}
 
+% really need to explain this better
 \begin{frame}
   \frametitle{Code length}
   \begin{center}
@@ -718,21 +770,6 @@
 \end{frame}
 
 % empirical
-\begin{frame}
-  \frametitle{Community connectedness in Cenozoic mammals}
-
-  \begin{block}{Questions}
-    \begin{itemize}
-      \item How does the ratio of cosmopolitan to endemic taxa, per locality, change over time? 
-        \begin{itemize}
-          \item Is this pattern different between taxa exhibiting different traits? 
-          \item How does this pattern very in relation to phylogenetic similarity? 
-        \end{itemize}
-      \item When would we expect global, regional, and/or local processes to most strongly shape taxonomic patterns?
-    \end{itemize}
-  \end{block}
-\end{frame}
-
 \begin{frame}
   \frametitle{Global expectations: locomotor category}
 
