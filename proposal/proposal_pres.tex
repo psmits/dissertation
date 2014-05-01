@@ -157,8 +157,8 @@
 \begin{frame}
   \frametitle{Approach}
 
-  \begin{block}{Concerns}
-    Model extinction in context of adaptive zone (\alert{selective pressure}).
+  \begin{block}{Analytical challenge}
+    Model extinction in context of adaptive zone (\alert{selective pressures}).
   \end{block}
 
   \vspace{1cm}
@@ -167,7 +167,7 @@
     \begin{column}{0.5\textwidth}
       Survival
       \begin{itemize}
-        \item traits, factors duration
+        \item traits, factors and duration
         \item extinction mode
       \end{itemize}
     \end{column}
@@ -302,7 +302,7 @@
     \begin{center}
       \begin{tabular}{@{}l@{}}\(T \sim Exp(\lambda)\)\end{tabular}
       \hspace{1.5cm}
-      \begin{tabular}{@{}l@{}}\(T\): survival time\\\(\lambda\): extinction rate\end{tabular}
+      \begin{tabular}{@{}l@{}}\(T\): survival time\\\(\lambda\): expected number of \\extinctions per unit time\end{tabular}
     \end{center}
   \end{block}
 \end{frame}
@@ -388,11 +388,21 @@
 
 \begin{frame}
   \frametitle{Analysis}
-  \begin{center}
-    \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/australia}
+  \begin{columns}
+    \begin{column}{0.6\textwidth}
+      \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/australia}
 
-    \tiny{\attrib{Clapham and James 2008 \textit{Palaios}}}
-  \end{center}
+      \tiny{\attrib{Clapham and James 2008 \textit{Palaios}}}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \begin{itemize}
+        \item age \(\sim\) Exponential or Weibull 
+        \item \(\lambda \propto\) interactions, \\\(k\) constant
+        \item range in/out taxa right censored
+        \item habitat, substrate unedited from PBDB \\(this analysis)
+      \end{itemize}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -528,9 +538,9 @@
       \]
 
       \begin{itemize}
-        \item \(L\): number of localities
-        \item \(u\): number of taxa unique to a locality
-        \item \(n\): number of taxa at a locality
+        \item \(L\): number of localities (biomes)
+        \item \(u\): number of taxa unique to a locality (biome)
+        \item \(n\): number of taxa at a locality (biome)
         \item \(0 \leq E \leq 1\)
       \end{itemize}
     \end{column}
@@ -560,8 +570,8 @@
 
       \begin{itemize}
         \item \(N\): total number of taxa
-        \item \(l\): number of localities a taxon occurs at
-        \item \(L\): number of localities
+        \item \(l\): number of localities (biomes) a taxon occurs at
+        \item \(L\): number of localities (biomes)
         \item \(0 \leq Occ \leq 1\)
       \end{itemize}
     \end{column}
