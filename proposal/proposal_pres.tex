@@ -538,9 +538,9 @@
       \]
 
       \begin{itemize}
-        \item \(L\): number of localities (biomes)
-        \item \(u\): number of taxa unique to a locality (biome)
-        \item \(n\): number of taxa at a locality (biome)
+        \item \(L\): number of localities (module)
+        \item \(u\): number of taxa unique to a locality (module)
+        \item \(n\): number of taxa at a locality (module)
         \item \(0 \leq E \leq 1\)
       \end{itemize}
     \end{column}
@@ -570,8 +570,8 @@
 
       \begin{itemize}
         \item \(N\): total number of taxa
-        \item \(l\): number of localities (biomes) a taxon occurs at
-        \item \(L\): number of localities (biomes)
+        \item \(l\): number of localities (module) a taxon occurs at
+        \item \(L\): number of localities (module)
         \item \(0 \leq Occ \leq 1\)
       \end{itemize}
     \end{column}
@@ -617,6 +617,15 @@
   \frametitle{Code length}
   \begin{center}
     \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/map1}
+
+    \tiny{\attrib{Rosvall and Bergstrom 2008 \textit{PNAS}}}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Code length}
+  \begin{center}
+    \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/map2}
 
     \tiny{\attrib{Rosvall and Bergstrom 2008 \textit{PNAS}}}
   \end{center}
@@ -709,34 +718,18 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Preliminary results: locomotor category NA}
+  \frametitle{Preliminary results: locomotor category}
 
   \begin{center}
-    \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/na_lf}
+    \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/comp_loco}
   \end{center}
 \end{frame}
 
 \begin{frame}
-  \frametitle{preliminary results: locomotor category Eur}
+  \frametitle{Preliminary results: dietary category}
 
   \begin{center}
-    \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/er_lf}
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Preliminary results: dietary category NA}
-
-  \begin{center}
-    \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/na_dt}
-  \end{center}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Preliminary results: dietary category Eur}
-
-  \begin{center}
-    \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/er_dt}
+    \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/comp_diet}
   \end{center}
 \end{frame}
 
@@ -831,6 +824,49 @@
 \section{Further concerns}
 
 \begin{frame}
+  \frametitle{Age distributions}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      Exponential
+
+      \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/exponential}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      Weibull
+
+      \includegraphics[height = 0.8\textheight, width = \textwidth, keepaspectratio = true]{figure/weibull}
+    \end{column}
+  \end{columns}
+  
+  \tiny{\attrib{\url{http://www.wikimedia.org/}}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Algebra of age distributions}
+
+  % weibull
+  \begingroup
+    \addtolength{\jot}{1em}
+    \begin{align*}
+      f(x; \lambda_{Weibull}, k) &= 
+      \begin{cases}
+        \frac{k}{\lambda} \frac{x}{\lambda}^{k - 1} \exp^{-(x / \lambda)^{k}} & x \geq 0 \\
+        0 & x < 0
+      \end{cases} \\
+      f(x; \lambda_{\exp}) &= 
+      \begin{cases}
+        \lambda \exp^{- \lambda x} & x \geq 0 \\
+        0 & x < 0
+      \end{cases} \\
+      \lambda_{Weibull} &= \frac{1}{\lambda_{\exp}} \\
+      f(x; \lambda_{Weibull}, k = 1) &= f(x; \lambda_{\exp}) 
+    \end{align*}
+  \endgroup
+
+\end{frame}
+
+\begin{frame}
   \frametitle{Differential preservation and survival}
 
   \begin{columns}
@@ -896,20 +932,29 @@
 \begin{frame}
   \frametitle{Compressing a network}
 
-  \begin{block}{Map equation \tiny{\attrib{Rosvall and Bargstrom 2008 \textit{PNAS}}}}
+  \begin{block}{Map equation \tiny{\attrib{Rosvall and Bergstrom 2008 \textit{PNAS}}}}
     \begin{align*}
       L(\textbf{M}) &= q_{\curvearrowright}H(\mathcal{Q}) + \sum^{m}_{i = 1} p^{i}_{\circlearrowright}H(\mathcal{P}^{i})
     \end{align*}
 
     \begin{itemize}
       \item \(\textbf{M}\): module partion of \textit{n} nodes in \textit{m} partitions
-      \item \(L(\textbf{M})\): network code length 
+      \item \(L(\textbf{M})\): theoretical minimum descriptive length of a single step
       \item \(q_{\curvearrowright}\): P(walk switches modules)
-      \item \(H(\mathcal{Q})\): entropy module codewords
-      \item \(H(\mathcal{P}^{i})\): entropy within--module
-      \item \(p^{i}_{\circlearrowright}\): rate within--module use
+      \item \(H(\mathcal{Q})\): entropy of module codewords
+      \item \(H(\mathcal{P}^{i})\): entropy within--module movements
+      \item \(p^{i}_{\circlearrowright}\): fraction of within--module use in module \(i\)
     \end{itemize}
   \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Two-level compression}
+  \begin{center}
+    \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/code_expand}
+
+    \tiny{\attrib{Rosvall and Bergstrom 2009 \textit{Euro. Phys. J. Spec. Topics.}}}
+  \end{center}
 \end{frame}
 
 
