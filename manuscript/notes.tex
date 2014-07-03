@@ -1,0 +1,52 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage{amsmath, amsthm}
+\usepackage{graphicx}
+\usepackage{microtype, parskip}
+\usepackage{caption, subcaption, multirow, morefloats}
+\usepackage{rotating, longtable}
+\usepackage{hyperref}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage{authblk, attrib, fullpage}
+\usepackage{lineno}
+
+\frenchspacing
+
+\begin{document}
+
+Extended title: Evolutionary Paleoecology and the (biology,) tempo, and mode of extinction.
+Short title: Evolutionary Paleoecology and the biology of extinction.
+
+
+Genera gamble. Different ways of increasing or decreasing the odds of winning for the gambler (the genus). This is my opinion piece. Working title: Genera, gambling and transmissability.
+
+Species-genus conflict for trait of interest. If there is an increase in genus duration but no effect on the species, this means high speciation. This is the perfect means of determining if, specifically, speciation or extinction is ``diving'' diversity. Can be done straight with a survfit.coxph if I don't want to use phylogeny. Can't get h(t), but can easily compare effects (models). This can also be done with frailty component using phylogey though I'd have to write my own Cox code if I do that. This allows me to do my species-genus conflict. This would be the mode of extinction. Working title: Species, genera, and the transmissability of traits. 
+
+If these are obviously not straight, this means that the tempo of extinction does not follow the Law of Constant extinction, which is explored below.
+
+I can then move into the tempo of extinction when talking about exponential vs weibull; extinction as a (hazard) function and not a point estimate. Bayesian analysis with CAR pior on frailty using phylogeny. Highlight continential differences and with combined analysis. This would demonstrate the possible importance of spatial effect/environment \textit{sensu} Simpson. Working title: The Law of Constant Extinction and the tempo of extinction.
+
+Importance of posterior predictive and general model adequacy. Poor model adequacy in either or both would indicate more is going on. Potentially both tempo and mode are important. Then do combind bayesian parametric analysis using heirarchical modeling for the mammals with a individual CAR prior on frailty using phylogeny and hierarichically by genus using that level traits and by continent at the same time. This would point out paraclade emergence, transmissability, and spatial effects, while also handeling the tempo of extinction. This would be the full biology and extinction piece.
+
+My (tentative and overly lofty) goal is to get all of the above coded within the next year. Then I can spend 2 years writing each of the 3 papers (mode, tempo, combined) for mammals alone, while preparing the brachiopods for the fully generic level analysis and writing the gamler's opinion piece.
+
+
+
+Then I can put it together with biogeographic units when discussing how these properties are changing the odds over time. This allows for interaction with external environment and the traits of interest. This means does occupancy or connectedness or the central tendency/max of and/or variation in importance (of locality) affect duration? The habitat of important localities. Important species would mean they are both cosmopolitan and/or are at important localities. Is it better to be at ``important'' places or many places? Or both?
+
+
+Are ``important'' taxa at ``important'' places? Cor[taxon PageRank, central tendency of occupied locality/BU PageRank]
+
+Cor[BU occupancy of Taxon, Mean PageRank of localities (weighted by BU?)]. This means, are more cosmopolitan taxa appearing at more ``important'' sites or is it random?
+
+Determine PageRank of each taxon using the full bipartite network. This is the measure of if the taxon is at important localities and/or many of them. 
+
+Determine the PageRank for the localities from full network and then divide them into BUs. This is the distribution of importance of location for each BU.
+
+(Average) PageRank of a BU?
+
+
+
+
+\end{document}
