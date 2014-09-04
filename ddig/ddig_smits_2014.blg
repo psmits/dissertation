@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: ddig_smits_2014.aux
+The style file: plain.bst
+A level-1 auxiliary file: summary.aux
+A level-1 auxiliary file: biosketch.aux
+A level-1 auxiliary file: facilities.aux
+A level-1 auxiliary file: data.aux
+Database file #1: cv.bib
+You've used 4 entries,
+            2118 wiz_defined-function locations,
+            531 strings with 5063 characters,
+and the built_in function-call counts, 1621 in all, are:
+= -- 143
+> -- 122
+< -- 0
++ -- 48
+- -- 44
+* -- 145
+:= -- 296
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 34
+chr.to.int$ -- 0
+cite$ -- 4
+duplicate$ -- 43
+empty$ -- 93
+format.name$ -- 44
+if$ -- 308
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 4
+newline$ -- 23
+num.names$ -- 8
+pop$ -- 28
+preamble$ -- 1
+purify$ -- 30
+quote$ -- 0
+skip$ -- 29
+stack$ -- 0
+substring$ -- 72
+swap$ -- 4
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 16
+warning$ -- 0
+while$ -- 12
+width$ -- 5
+write$ -- 45
