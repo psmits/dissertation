@@ -1,50 +1,61 @@
 This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: ddig_smits_2014.aux
-The style file: plain.bst
+The style file: plainnat.bst
 A level-1 auxiliary file: summary.aux
+A level-1 auxiliary file: proposal.aux
 A level-1 auxiliary file: biosketch.aux
+Illegal, another \bibdata command---line 2 of file biosketch.aux
+ : \bibdata
+ :         {cv}
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: facilities.aux
 A level-1 auxiliary file: data.aux
-Database file #1: cv.bib
-You've used 4 entries,
-            2118 wiz_defined-function locations,
-            531 strings with 5063 characters,
-and the built_in function-call counts, 1621 in all, are:
-= -- 143
-> -- 122
-< -- 0
-+ -- 48
-- -- 44
-* -- 145
-:= -- 296
-add.period$ -- 12
-call.type$ -- 4
-change.case$ -- 34
-chr.to.int$ -- 0
-cite$ -- 4
-duplicate$ -- 43
-empty$ -- 93
-format.name$ -- 44
-if$ -- 308
-int.to.chr$ -- 0
-int.to.str$ -- 4
-missing$ -- 4
-newline$ -- 23
-num.names$ -- 8
-pop$ -- 28
+Database file #1: proposal.bib
+Warning--I didn't find a database entry for "Wilson2012"
+Warning--I didn't find a database entry for "Davalos2014"
+Warning--I didn't find a database entry for "Walmsley2013"
+Warning--I didn't find a database entry for "Smits2012b"
+Warning--there's a number but no volume in Harnik2013
+You've used 61 entries,
+            2773 wiz_defined-function locations,
+            1101 strings with 17851 characters,
+and the built_in function-call counts, 28915 in all, are:
+= -- 2846
+> -- 1338
+< -- 44
++ -- 467
+- -- 405
+* -- 2454
+:= -- 4506
+add.period$ -- 285
+call.type$ -- 61
+change.case$ -- 314
+chr.to.int$ -- 60
+cite$ -- 123
+duplicate$ -- 1275
+empty$ -- 2372
+format.name$ -- 490
+if$ -- 6021
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 63
+newline$ -- 415
+num.names$ -- 244
+pop$ -- 461
 preamble$ -- 1
-purify$ -- 30
+purify$ -- 257
 quote$ -- 0
-skip$ -- 29
+skip$ -- 909
 stack$ -- 0
-substring$ -- 72
-swap$ -- 4
-text.length$ -- 0
+substring$ -- 1411
+swap$ -- 139
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 16
-warning$ -- 0
-while$ -- 12
-width$ -- 5
-write$ -- 45
+type$ -- 656
+warning$ -- 1
+while$ -- 289
+width$ -- 0
+write$ -- 1003
+(There was 1 error message)
