@@ -1,48 +1,48 @@
 This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: proposal.aux
-The style file: plainnat.bst
+The style file: abbrvnat.bst
 Database file #1: proposal.bib
 Warning--there's a number but no volume in Harnik2013
-You've used 66 entries,
+You've used 82 entries,
             2773 wiz_defined-function locations,
-            1116 strings with 18340 characters,
-and the built_in function-call counts, 31379 in all, are:
-= -- 3054
-> -- 1495
-< -- 48
-+ -- 520
-- -- 453
-* -- 2653
-:= -- 4889
-add.period$ -- 300
-call.type$ -- 66
-change.case$ -- 342
-chr.to.int$ -- 65
-cite$ -- 133
-duplicate$ -- 1390
-empty$ -- 2571
-format.name$ -- 545
-if$ -- 6539
+            1241 strings with 22090 characters,
+and the built_in function-call counts, 39716 in all, are:
+= -- 3852
+> -- 1994
+< -- 55
++ -- 689
+- -- 606
+* -- 3428
+:= -- 6213
+add.period$ -- 378
+call.type$ -- 82
+change.case$ -- 440
+chr.to.int$ -- 81
+cite$ -- 165
+duplicate$ -- 1714
+empty$ -- 3184
+format.name$ -- 720
+if$ -- 8244
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 72
-newline$ -- 439
-num.names$ -- 266
-pop$ -- 532
+missing$ -- 87
+newline$ -- 549
+num.names$ -- 330
+pop$ -- 671
 preamble$ -- 1
-purify$ -- 282
+purify$ -- 365
 quote$ -- 0
-skip$ -- 994
+skip$ -- 1232
 stack$ -- 0
-substring$ -- 1500
-swap$ -- 152
+substring$ -- 1860
+swap$ -- 179
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 691
+type$ -- 867
 warning$ -- 1
-while$ -- 310
+while$ -- 385
 width$ -- 0
-write$ -- 1070
+write$ -- 1338
 (There was 1 warning)

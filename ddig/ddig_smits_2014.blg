@@ -11,51 +11,52 @@ Illegal, another \bibdata command---line 2 of file biosketch.aux
 I'm skipping whatever remains of this command
 A level-1 auxiliary file: facilities.aux
 A level-1 auxiliary file: data.aux
+A level-1 auxiliary file: improvement.aux
 Database file #1: proposal.bib
 Warning--I didn't find a database entry for "Wilson2012"
 Warning--I didn't find a database entry for "Davalos2014"
 Warning--I didn't find a database entry for "Walmsley2013"
 Warning--I didn't find a database entry for "Smits2012b"
 Warning--there's a number but no volume in Harnik2013
-You've used 61 entries,
+You've used 77 entries,
             2773 wiz_defined-function locations,
-            1101 strings with 17851 characters,
-and the built_in function-call counts, 28915 in all, are:
-= -- 2846
-> -- 1338
-< -- 44
-+ -- 467
-- -- 405
-* -- 2454
-:= -- 4506
-add.period$ -- 285
-call.type$ -- 61
-change.case$ -- 314
-chr.to.int$ -- 60
-cite$ -- 123
-duplicate$ -- 1275
-empty$ -- 2372
-format.name$ -- 490
-if$ -- 6021
+            1215 strings with 21520 characters,
+and the built_in function-call counts, 37420 in all, are:
+= -- 3621
+> -- 1902
+< -- 51
++ -- 657
+- -- 579
+* -- 3234
+:= -- 5861
+add.period$ -- 356
+call.type$ -- 77
+change.case$ -- 416
+chr.to.int$ -- 76
+cite$ -- 155
+duplicate$ -- 1613
+empty$ -- 2984
+format.name$ -- 684
+if$ -- 7764
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 63
-newline$ -- 415
-num.names$ -- 244
-pop$ -- 461
+missing$ -- 82
+newline$ -- 517
+num.names$ -- 310
+pop$ -- 638
 preamble$ -- 1
-purify$ -- 257
+purify$ -- 346
 quote$ -- 0
-skip$ -- 909
+skip$ -- 1162
 stack$ -- 0
-substring$ -- 1411
-swap$ -- 139
-text.length$ -- 2
+substring$ -- 1725
+swap$ -- 171
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 656
+type$ -- 812
 warning$ -- 1
-while$ -- 289
+while$ -- 360
 width$ -- 0
-write$ -- 1003
+write$ -- 1259
 (There was 1 error message)
