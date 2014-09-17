@@ -7,8 +7,12 @@
 \usepackage[numbers,sort&compress]{natbib}
 \usepackage{docmute}
 \usepackage{lineno}
+\usepackage[font=small]{caption}
+\usepackage{subcaption, wrapfig}
 
 \frenchspacing
+
+\captionsetup[subfigure]{position = top, labelfont = bf, textfont = normalfont, singlelinecheck = off, justification = raggedright}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagestyle{plain}                                                      %%
@@ -81,13 +85,20 @@ This strategy allows for taxon occurrences to be analyzed whole-sale without use
 
 In the context of this study, taxa are defined as species and spatial units are from a uniform latitude-longitude grid. Because of the high spatio-temporal resolution of the mammalian fossil record for North America and Europe \citep{Alroy2009,Marcot2014,Fortelius2002,Jernvall2004}, temporal units are 2 million year (My) bins and spatial units are from a 2x2 grid.
 
-The four measures of community structure used here are relative number of taxa unique to a locality, relative taxon provincial occupancy, relative number of taxa per province, and total network code length. Code length is an information theoretic measure of how most efficiently to divide a network into modules and acts here as a measure of total spatial similarity \citep{Rosvall2008,Rosvall2009a}. Biogeographic networks for taxa in the dietary and locomotor categories described above will be similarly analyzed.
+The four measures of community structure used here are relative number of taxa unique to a locality, relative taxon provincial occupancy, biogeographic connectedness which is similar to biome eveneness \citep{Sidor2013}, and total network code length. Code length is an information theoretic measure of how most efficiently to divide a network into modules and acts here as a measure of total spatial similarity \citep{Rosvall2008,Rosvall2009a}. Biogeographic networks for taxa in the dietary and locomotor categories described above will be similarly analyzed.
 
 In addition to these four measures of community structure, I will measure phylogenetic similarity of the taxa at a locality. Phylogeny may play an important role in community structuring where closely related taxa may be ``repulsed'' due to competitive exclusion or ``clumped'' because of environmental filtering \citep{Webb2002}. While it is infeasible to infer an explicit phylogenetic hypothesis for all observed mammal species on all continents, all taxa have some degree of hierarchical information. By combining multiple large scale extinct mammal phylogenies with taxonomic information, an informal phylogeny can be constructed. From there, measures of phylogenetic similarity such as the phylogenetic species variability \citep{Helmus2007a} can be estimated for every locality. 
 
-Preliminary results are restricted to North America and Europe using fossil occurrence information downloaded from both the PBDB and the Neogene Old World Database (NOW; \url{http://www.helsink.fi/science/now/}). Dietary and locomotor assignments for each species were taken from the PBDB and the NOW. Comparisons of locality phylogenetic similarly have yet to be analyzed. These results are primarily exploratory. 
+Preliminary results are restricted to North America and Europe using fossil occurrence information downloaded from both the PBDB and the Neogene Old World Database (NOW; \url{http://www.helsink.fi/science/now/}). Dietary and locomotor assignments for each species were taken from the PBDB and the NOW. Comparisons of locality phylogenetic similarly have yet to be analyzed. These results are primarily exploratory. Because of the great volume of results, presented here are species-level dietary category summaries (Fig.~\ref{fig:com}).
 
-\uppercase{graphs and explanation of graphs go here}
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width = \textwidth, height = 0.4\textheight, keepaspectratio = true]{figure/diets}
+  \caption{Biogeographic network summary statistics for North American (right) and European (left) species-level occurrence information. From top to bottom, these summaries are biogeographic connectedness (BC), code length, relative number of taxa unique to a locality (E), and the relative taxon provincial occupancy (Occ). Measures are separated based on dietary category. Missing values are due to poor sampling in that bin.}
+  \label{fig:com}
+\end{figure}
+
+Preliminary results show that mammal biome similarity is generally volatile through out the Cenozoic (Fig. \ref{fig:com}). Relative taxon provincial occupancy is relatively constant for most of the Cenozoic with a few spikes during periods of poor spatial sampling. Code length, a measure of the number and uniqeness of biomes, shows increasing separation between dietary categories during the Cenozoic. Both biogeographic connectedness and the relative number of taxa unique to a locality fluctuate the most though it appears to be mostly random movement around a constant mean.
 
 Future analysis of these network measures will be done as a hierarchical Bayesian time series model where, for each continent, the different ecological combinations are exchangeable samples from a common underlying continent-specific mammalian distributional pattern. Because only two continents are currently sampled, stable estimates of an additional hierarchical level where continents are drawn from a common underlying global mammal distributional pattern is not possible \citep{Gelman2013d}. The inclusion of a third continent, South America, would allow for potentially stable estimates of a underlying common global mammal distributional pattern. %This is discussed further below.
 
@@ -102,9 +113,27 @@ The current analyses are restricted to North America and Europe fossil occurrenc
 
 Preliminary analyses were performed solely within a maximum likelihood and multi-model inference framework. Duration information was fit to either an exponential or Weibull distribution which are both common distributions for waiting times. The exponential distribution is a special case of the Weibull distribution where the scale (acceleration-deceleration) parameter \(k\) is set to 1. This means that the exponential distribution corresponds to age-independent extinction or the Law of Constant Extinction \citep{VanValen1973} while the Wiebull distribution allows for age-dependence. Dietary and locomotor categories were broken up into \(r - 1\) binary predictor variables, where \(r\) is the number of unique states for both traits, for a total of five binary predictors. A constant term was also estimated which corresponds to the remaining dietary and locomotor states. For North America the final biological predictor was natural log of body mass. Body size has not yet been included in the analysis of the European record that data collection effort is not yet been completed. As is common practice, the \(k\) parameter of the Weibull distribution was estimated as a single constant \citep{Kleinbaum2005}.
 
-In addition to species traits, measures of climate and geographic range were also included as continuous predictors of duration. Climate was proxied via mean \(\delta O^{18}\) isotope value as calculated from \citet{Zachos2008} over the duration of the species. Mean provincial occupancy over the duration of the species was calculated using the network theoretic approach described above.
+%\begin{wrapfigure}{r}{0.5\textwidth}
+\begin{figure}[ht]
+  \centering
+  \begin{subfigure}[b]{0.48\textwidth}
+    \caption{}
+    \includegraphics[width = \textwidth, keepaspectratio = true]{figure/para_diet}
+    \label{subfig:diet}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.48\textwidth}
+    \caption{}
+    \includegraphics[width = \textwidth, keepaspectratio = true]{figure/para_move}
+    \label{subfig:loco}
+  \end{subfigure}
+  \caption{Survival curves for mammal species based on dietary (\subref{subfig:diet}) and locomotor category (\subref{subfig:loco}) for North America and Europe. North American curves are from an exponential model while European survival curves are from a Weibull model. Distribution choice is based on model selection results. This curve is an estimate that a species will survive till time \(T\) having survived until time \(t\).}
+  \label{fig:surv}
+%\end{wrapfigure}
+\end{figure}
 
-\uppercase{graphs and explanation of graphs go here}
+Because of the volume of preliminary results, presented here are survival functions based on dietary and locomotor category for both North American and European species (Fig.~\ref{fig:surv}). There are pronounced differences between the survival patterns of these two continents. North American species show little variation in extinction risk based on diet with carnivore taxa being on average the longest lived while in Europe the differences are more striking with omnivorous taxa followed by insectivorous being the longest lived on average (Fig.~\ref{subfig:diet}). For both North America and Europe, locomotor category appears to have more effect upon extinction risk with North American ground dwelling taxa and European arboreal taxa being the longest lived on average for their respective continents (Fig.~\ref{subfig:loco}).
+
+In future analyses, measures of climate and geographic range wll also included as continuous predictors of duration. Climate will be proxied via mean \(\delta O^{18}\) isotope value as calculated from \citet{Zachos2008} over the duration of the species. Mean provincial occupancy over the duration of the species will be calculated using the network theoretic approach described above.
 
 Future modeling work will be done in a purely Bayesian framework in order to 1) better quantify the uncertainty with which estimates are made, 2) combine the analysis of the different continents in a hierarchical framework in order to estimate a common underlying distribution of survival times, 3) incorporate phylogenetic distance into a prior on a frailty coefficient \citep{Banerjee2003a,Ibrahim2001} to account for potential phylogenetic autocorrelation in species durations, and 4) to move on a continuous model expansion framework as opposed to a discrete model choice one \citep{Gelman2013d}. All of these changes will dramatically improve the interpretability and meaning of the results. Importantly, estimates under goal 2 would not be possible without the inclusion the inclusion of a third continent, South America. 
 
