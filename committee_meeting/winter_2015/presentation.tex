@@ -51,7 +51,7 @@
 
   \begin{itemize}
     \item AMNH: tooth measures for all notoungulate specimens identified to species level
-    \item DDIG: travel to Argentina; collaboration with Rick Madden
+    \item DDIG: applied; travel to Argentina; collaboration with Rick Madden
   \end{itemize}
 \end{frame}
 
@@ -64,6 +64,32 @@
 \section{Mammals}
 \begin{frame}
   \frametitle{North American survival}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item species duration as measure of survival
+        \item traits
+          \begin{itemize}
+            \item organismal: diet, locomotor categories
+            \item species: body size, bioprovince occupancy
+          \end{itemize}
+        \item origination cohort
+        \item phylogeny primarily based on taxonomy
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item duration defined as number of 2My bins from FAD to LAD, inclusive
+        \item fully Bayesian hierarchical model
+        \item censoring approach
+          \begin{itemize}
+            \item if still extant, right censored
+            \item if not extant and duration of only 1 bin, left censored
+          \end{itemize}
+        \item continuous traits rescaled following Gelman 2009 \textit{Stats. Med.} by 2 \(\ast\) sd.
+      \end{itemize}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -132,11 +158,33 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{Phylogenetic heritability \textit{sensu} Lynch '91}
+\end{frame}
+
+\begin{frame}
   \frametitle{Hazard curvature}
   \begin{center}
     \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/haz_est}
   \end{center}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Meaning and interpretation}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item comparable probabilistic statements of trait, temporal, and historical effects
+        \item increasing cohort survival risk over Cenozoic
+        \item \(h(t)\) not constant over \(t\), increases
+        \item model fits. no systematic biases in residuals. noisy.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item 
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
 
 \end{document}
