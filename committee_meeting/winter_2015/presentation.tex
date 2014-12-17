@@ -58,10 +58,32 @@
 
 \section{Brachiopods}
 \begin{frame}
-  \frametitle{Survival model development}
+  \frametitle{Current brachipod survival model}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Target and developing survival model}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Point/counting process of fossils in the record}
+
+  (overdispersed) Poisson model of occurrence
+
+  Hierarchical genera in groups from Foote and Miller
+
+  Count of fossil occurrences per bin per genus for duration of observed geneus
+
+  How to model?
+
+\end{frame}
+
+
 \section{Mammals}
+\begin{frame}
+Death and Taxa: biological, temporal, and historical effects on mammal species duration
+\end{frame}
+
 \begin{frame}
   \frametitle{North American survival}
   \begin{columns}
@@ -86,7 +108,6 @@
             \item if still extant, right censored
             \item if not extant and duration of only 1 bin, left censored
           \end{itemize}
-        \item continuous traits rescaled following Gelman 2009 \textit{Stats. Med.} by 2 \(\ast\) sd.
       \end{itemize}
     \end{column}
   \end{columns}
@@ -157,6 +178,8 @@
   \end{center}
 \end{frame}
 
+% something about the partial pooling, see Gelman and Hill 04
+
 \begin{frame}
   \frametitle{Phylogenetic heritability \textit{sensu} Lynch '91}
 \end{frame}
@@ -169,19 +192,24 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Meaning and interpretation}
+  \frametitle{Meaning}
   \begin{columns}
     \begin{column}{0.5\textwidth}
+      Results
       \begin{itemize}
         \item comparable probabilistic statements of trait, temporal, and historical effects
         \item increasing cohort survival risk over Cenozoic
         \item \(h(t)\) not constant over \(t\), increases
-        \item model fits. no systematic biases in residuals. noisy.
+        \item model fits; no systematic biases in residuals, though noisy.
       \end{itemize}
     \end{column}
     \begin{column}{0.5\textwidth}
+      Interpretation
       \begin{itemize}
-        \item 
+        \item older lineages out-competed by younger (Wagner and Estabrook '14 \textit{PNAS})
+        \item increasing extinction with group age (Quental and Marshall '13 \textit{Science})
+        \item background extinction and the blurring of Raup's modes of extinction
+        \item relative effect of each covariate, levels of selection(?)
       \end{itemize}
     \end{column}
   \end{columns}
