@@ -121,6 +121,30 @@ Death and Taxa: biological, temporal, and historical effects on mammal species d
 \end{frame}
 
 \begin{frame}
+  \frametitle{Censored observations}
+
+  % visual/diagram slide?
+  
+  Right censored if not yet extinct
+
+  ccdf (1 - cdf) at observed duration given model
+  \begin{equation}
+    \mathrm{Pr}[T > T_{i}] = \int_{T_{i}}^{\infty} \mathrm{Weibull}(T_{i} | \alpha, \sigma) dy = 1 - F(T_{i} | \alpha, \sigma)
+    \label{eq:right_cen}
+  \end{equation}
+  
+
+  Left censored if both extinct and only one stage
+
+  cdf at obserged duration given model
+  \begin{equation}
+    \mathrm{Pr}[T < T_{i}] = \int_{-\infty}^{T_{i}} \mathrm{Weibull}(T_{i} | \alpha, \sigma) dy = F(T_{i} | \alpha, \sigma)
+    \label{eq:left_cen}
+  \end{equation}
+
+\end{frame}
+
+\begin{frame}
   \frametitle{Posterior predictive checks: S(t)}
   \begin{center}
     \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/survival_function}
@@ -214,5 +238,36 @@ Death and Taxa: biological, temporal, and historical effects on mammal species d
     \end{column}
   \end{columns}
 \end{frame}
+
+
+\begin{frame}
+  A model of biological, spatial, and phylogenic effects on Cenozoic mammal co-occurrence
+\end{frame}
+
+\begin{frame}
+  \frametitle{Biogeographic network}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Species adjacency}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Random graphs}
+
+  Erdos-Renyi graph \(G(n, p)\)
+
+  Poisson distributed degree
+\end{frame}
+
+\begin{frame}
+  \frametitle{Model diagram}
+  \begin{center}
+    \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/mammal_degree_model}
+  \end{center}
+\end{frame}
+
+% Do I want to try and show some results?
+
 
 \end{document}
