@@ -121,10 +121,14 @@ Death and Taxa: biological, temporal, and historical effects on mammal species d
 \end{frame}
 
 \begin{frame}
-  \frametitle{Censored observations}
+  \frametitle{Censoring}
+  \begin{center}
+    \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/censoring_diagram}
+  \end{center}
+\end{frame}
 
-  % visual/diagram slide?
-  
+\begin{frame}
+  \frametitle{Probability with censoring}
   Right censored if not yet extinct
 
   ccdf (1 - cdf) at observed duration given model
@@ -136,7 +140,7 @@ Death and Taxa: biological, temporal, and historical effects on mammal species d
 
   Left censored if both extinct and only one stage
 
-  cdf at obserged duration given model
+  cdf at observed duration given model
   \begin{equation}
     \mathrm{Pr}[T < T_{i}] = \int_{-\infty}^{T_{i}} \mathrm{Weibull}(T_{i} | \alpha, \sigma) dy = F(T_{i} | \alpha, \sigma)
     \label{eq:left_cen}
@@ -203,9 +207,19 @@ Death and Taxa: biological, temporal, and historical effects on mammal species d
 \end{frame}
 
 % something about the partial pooling, see Gelman and Hill 04
+\begin{frame}
+  \frametitle{Partial pooling: cohort}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Phylogenetic effect}
+\end{frame}
 
 \begin{frame}
   \frametitle{Phylogenetic heritability \textit{sensu} Lynch '91}
+
+  \footnotesize{note: actually just a special case of partial pooling.}
 \end{frame}
 
 \begin{frame}
@@ -222,9 +236,9 @@ Death and Taxa: biological, temporal, and historical effects on mammal species d
       Results
       \begin{itemize}
         \item comparable probabilistic statements of trait, temporal, and historical effects
-        \item increasing cohort survival risk over Cenozoic
-        \item \(h(t)\) not constant over \(t\), increases
-        \item model fits; no systematic biases in residuals, though noisy.
+        \item decreasing cohort survival risk over Cenozoic
+        \item \(h(t)\) not constant over \(t\), increases slowly
+        \item model generally fits; no systematic biases in residuals
       \end{itemize}
     \end{column}
     \begin{column}{0.5\textwidth}
@@ -253,11 +267,11 @@ Death and Taxa: biological, temporal, and historical effects on mammal species d
 \end{frame}
 
 \begin{frame}
-  \frametitle{Random graphs}
+  \frametitle{Erdos-Renyi graph \(G(n, p)\)}
+  \begin{center}
+    \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/rng_graphs}
+  \end{center}
 
-  Erdos-Renyi graph \(G(n, p)\)
-
-  Poisson distributed degree
 \end{frame}
 
 \begin{frame}
