@@ -81,7 +81,7 @@
 
 \section{Mammals}
 \begin{frame}
-Death and Taxa: biological, temporal, and historical effects on mammal species duration
+  Death and Taxa: biological, temporal, and historical effects on mammal species duration
 \end{frame}
 
 \begin{frame}
@@ -136,7 +136,7 @@ Death and Taxa: biological, temporal, and historical effects on mammal species d
     \mathrm{Pr}[T > T_{i}] = \int_{T_{i}}^{\infty} \mathrm{Weibull}(T_{i} | \alpha, \sigma) dy = 1 - F(T_{i} | \alpha, \sigma)
     \label{eq:right_cen}
   \end{equation}
-  
+
 
   Left censored if both extinct and only one stage
 
@@ -163,19 +163,10 @@ Death and Taxa: biological, temporal, and historical effects on mammal species d
 \end{frame}
 
 \begin{frame}
-  \frametitle{Posterior predictive checks: residuals and mean}
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \begin{center}
-        \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/res_sum_plot}
-      \end{center}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \begin{center}
-        \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/quant_ppc}
-      \end{center}
-    \end{column}
-  \end{columns}
+  \frametitle{Posterior predictive checks: point checks}
+  \begin{center}
+    \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/quant_ppc}
+  \end{center}
 \end{frame}
 
 \begin{frame}
@@ -208,18 +199,21 @@ Death and Taxa: biological, temporal, and historical effects on mammal species d
 
 % something about the partial pooling, see Gelman and Hill 04
 \begin{frame}
-  \frametitle{Partial pooling: cohort}
-\end{frame}
-
-
-\begin{frame}
-  \frametitle{Phylogenetic effect}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Phylogenetic heritability \textit{sensu} Lynch '91}
-
-  \footnotesize{note: actually just a special case of partial pooling.}
+  \frametitle{Interclass correlation}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/variance_est}
+      \end{center}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item ICC example: \(\mathrm{ICC}_{p} = \frac{\sigma_{p}^{2}}{\sigma_{p}^{2} + \sigma_{c}^{2} + \sigma_{y}^{2}}\)
+        \item \(\sigma_{y}^{2} = var(\text{deviance residuals})\)
+        \item phylogenetic heritability is just a special case of ICC.
+      \end{itemize}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -260,10 +254,25 @@ Death and Taxa: biological, temporal, and historical effects on mammal species d
 
 \begin{frame}
   \frametitle{Biogeographic network}
+
+  Define a bipartite network between species and their occurrences on a equal area grid.
+
 \end{frame}
 
 \begin{frame}
   \frametitle{Species adjacency}
+
+  One mode. Species now connected to species they co-occurred with.
+
+  For every species, count degree.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Autoregressive model}
+
+  Adjacency is also a symmetric n by n matrix, A, with ones on the off-diagonals if the species co-occur.
+
+  CAR prior. Estimate spatial correlation (p) and hierarchical variance variance (sigmasq) as a multivariate normal effect with mean vector all 0 and covariance matrix = sigmasq * (I - p * A)
 \end{frame}
 
 \begin{frame}
@@ -271,13 +280,24 @@ Death and Taxa: biological, temporal, and historical effects on mammal species d
   \begin{center}
     \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/rng_graphs}
   \end{center}
+\end{frame}
 
+\begin{frame}
+  \frametitle{Overdispersion model}
+
+  \begin{block}{Negative Binomial}
+    \begin{align*}
+      \mathrm{NegBinom}(y | \alpha, \beta) &= {y + \alpha -1 \choose \alpha - 1} \left(\frac{\beta}{\beta + 1}\right)^{2} \left(\frac{1}{\beta + 1}\right)^{y} \\
+      \mathrm{reparameterized} \\
+      \mathrm{NegBinom}(y | \mu, \phi) &= {y + \phi -1 \choose y} \left(\frac{\mu}{\mu + \phi}\right)^{y} \left(\frac{\phi}{\mu + \phi}\right)^{\phi}
+    \end{align*}
+  \end{block}
 \end{frame}
 
 \begin{frame}
   \frametitle{Model diagram}
   \begin{center}
-    \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/mammal_degree_model}
+    \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/mammal_deg_over_model}
   \end{center}
 \end{frame}
 
