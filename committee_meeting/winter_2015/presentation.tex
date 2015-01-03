@@ -156,7 +156,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Posterior predictive checks: stnd. residuals}
+  \frametitle{Posterior predictive checks: deviance residuals}
   \begin{center}
     \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/residual_plot}
   \end{center}
@@ -197,9 +197,8 @@
   \end{center}
 \end{frame}
 
-% something about the partial pooling, see Gelman and Hill 04
 \begin{frame}
-  \frametitle{Interclass correlation}
+  \frametitle{Variance partion coefficient}
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \begin{center}
@@ -208,9 +207,8 @@
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{itemize}
-        \item ICC example: \(\mathrm{ICC}_{p} = \frac{\sigma_{p}^{2}}{\sigma_{p}^{2} + \sigma_{c}^{2} + \sigma_{y}^{2}}\)
-        \item \(\sigma_{y}^{2} = var(\text{deviance residuals})\)
-        \item phylogenetic heritability is just a special case of ICC.
+        \item Because GLMM, VPC approximated via simulation modified from Goldstein \textit{et al.} '02 \textit{Understanding Statistics}
+        \item phylogenetic heritability, \textit{sensu} Lynch '91 \textit{Am. Nat.}, is a special case of VPC.
       \end{itemize}
     \end{column}
   \end{columns}
@@ -229,19 +227,29 @@
     \begin{column}{0.5\textwidth}
       Results
       \begin{itemize}
+        \item model generally fits; no systematic biases in residuals
         \item comparable probabilistic statements of trait, temporal, and historical effects
+          \begin{itemize}
+            \item individual level is major source of variance
+            \item phylogenetic effect \(>\) cohort
+          \end{itemize}
         \item decreasing cohort survival risk over Cenozoic
         \item \(h(t)\) not constant over \(t\), increases slowly
-        \item model generally fits; no systematic biases in residuals
       \end{itemize}
     \end{column}
     \begin{column}{0.5\textwidth}
       Interpretation
       \begin{itemize}
         \item older lineages out-competed by younger (Wagner and Estabrook '14 \textit{PNAS})
+          \begin{itemize}
+            \item hard to pin to any organismal traits, but weak phylogenetic heritability
+          \end{itemize}
         \item increasing extinction with group age (Quental and Marshall '13 \textit{Science})
-        \item background extinction and the blurring of Raup's modes of extinction
-        \item relative effect of each covariate, levels of selection(?)
+          \begin{itemize}
+            \item temporally non-constant selective pressures
+          \end{itemize}
+        \item background extinction; no single mode of extinction
+        \item relative effect of universality of covariate, levels of selection(?)
       \end{itemize}
     \end{column}
   \end{columns}
