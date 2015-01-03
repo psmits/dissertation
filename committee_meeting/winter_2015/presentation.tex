@@ -128,23 +128,21 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Probability with censoring}
-  Right censored if not yet extinct
+  \frametitle{Modeling censored observations}
+  \begin{definition}
+    \(S(t | \alpha, \sigma) = \exp\left(-\left(\frac{t}{\sigma}\right)^{\alpha}\right)\)
+  \end{definition}
 
-  ccdf (1 - cdf) at observed duration given model
-  \begin{equation}
-    \mathrm{Pr}[T > T_{i}] = \int_{T_{i}}^{\infty} \mathrm{Weibull}(T_{i} | \alpha, \sigma) dy = 1 - F(T_{i} | \alpha, \sigma)
-    \label{eq:right_cen}
-  \end{equation}
+  Right censored evaluated at \(S(t)\), left at \(1 - S(t)\). 
+  
+  Equivalent to ccdf and cdf respectively.
+\end{frame}
 
-
-  Left censored if both extinct and only one stage
-
-  cdf at observed duration given model
-  \begin{equation}
-    \mathrm{Pr}[T < T_{i}] = \int_{-\infty}^{T_{i}} \mathrm{Weibull}(T_{i} | \alpha, \sigma) dy = F(T_{i} | \alpha, \sigma)
-    \label{eq:left_cen}
-  \end{equation}
+\begin{frame}
+  \frametitle{Modeling censored observations}
+  \begin{block}{Likelihood}
+    \(L \propto \prod_{i \in C} \mathrm{Weibull}(y_{i} | \alpha, \sigma) \prod_{j \in R} S(y_j | \alpha, \sigma) \prod_{k \in L} \left(1 - S(y_{k} | \alpha, \sigma)\right)\)
+  \end{block}
 
 \end{frame}
 
@@ -245,9 +243,6 @@
             \item hard to pin to any organismal traits, but weak phylogenetic heritability
           \end{itemize}
         \item increasing extinction with group age (Quental and Marshall '13 \textit{Science})
-          \begin{itemize}
-            \item temporally non-constant selective pressures
-          \end{itemize}
         \item background extinction; no single mode of extinction
         \item relative effect of universality of covariate, levels of selection(?)
       \end{itemize}
