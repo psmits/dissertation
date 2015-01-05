@@ -59,22 +59,31 @@
 \section{Brachiopods}
 \begin{frame}
   \frametitle{Current brachipod survival model}
+  \begin{center}
+    \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/brac_surv_mod}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Current results\dots}
+  \begin{center}
+    \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/brac_dur_post}
+  \end{center}
 \end{frame}
 
 \begin{frame}
   \frametitle{Target and developing survival model}
+  \begin{center}
+    \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/brac_surv_mod_update}
+  \end{center}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Point/counting process of fossils in the record}
+  \frametitle{Point/counting process of fossils occurrence}
 
-  (overdispersed) Poisson model of occurrence
+  A fossil is a count; number of fossils in temporal window.
 
-  Hierarchical genera in groups from Foote and Miller
-
-  Count of fossil occurrences per bin per genus for duration of observed geneus
-
-  How to model?
+  Hierarchical Poisson model of absolute sighting rate.
 
 \end{frame}
 
@@ -257,17 +266,16 @@
 
 \begin{frame}
   \frametitle{Biogeographic network}
-
-  Define a bipartite network between species and their occurrences on a equal area grid.
-
+  \begin{center}
+    \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/bipartite_graph}
+  \end{center}
 \end{frame}
 
 \begin{frame}
   \frametitle{Species adjacency}
-
-  One mode. Species now connected to species they co-occurred with.
-
-  For every species, count degree.
+  \begin{center}
+    \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/one_mode}
+  \end{center}
 \end{frame}
 
 \begin{frame}
