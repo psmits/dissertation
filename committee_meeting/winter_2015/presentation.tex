@@ -62,7 +62,7 @@
     \begin{column}{0.5\textwidth}
       \begin{itemize}
         \item species duration as measure of survival
-        \item traits
+        \item traits of interest
           \begin{itemize}
             \item organismal: diet, locomotor categories
             \item species: body size, bioprovince occupancy
@@ -177,7 +177,7 @@
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{itemize}
-        \item Because GLMM, VPC approximated via simulation modified from Goldstein \textit{et al.} '02 \textit{Understanding Statistics}
+        \item VPC approximated via simulation modified from Goldstein \textit{et al.} '02 \textit{Understanding Statistics}
         \item phylogenetic heritability, \textit{sensu} Lynch '91 \textit{Am. Nat.}, is a special case of VPC.
       \end{itemize}
     \end{column}
@@ -197,7 +197,7 @@
     \begin{column}{0.5\textwidth}
       Results
       \begin{itemize}
-        \item model generally fits; no systematic biases in residuals
+        \item model adequate
         \item comparable probabilistic statements of trait, temporal, and historical effects
           \begin{itemize}
             \item individual level is major source of variance
@@ -241,13 +241,15 @@
   \end{center}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Autoregressive model}
-
-  Adjacency is also a symmetric n by n matrix, A, with ones on the off-diagonals if the species co-occur.
-
-  CAR prior. Estimate spatial correlation (p) and hierarchical variance variance (sigmasq) as a multivariate normal effect with mean vector all 0 and covariance matrix = sigmasq * (I - p * A)
-\end{frame}
+%\begin{frame}
+%  \frametitle{Spatial autoregressive model}
+%
+%  Given adjacency matrix \(\mathbf{A}\), define a Multivariate Normally distributed variable \(s\).
+%
+%  \(s \sim \text{MultiNormal}(0, \sigma_{s}^{2} (\mathbf{D} - p \cdot \mathbf{A})\).
+%
+%  Where \(\mathbf{D}\) is a diagonal matrix with variable definition. \(p\) is the strength of spatial ``correlation'', though it is not a true correlation measure. \(\sigma_{s}\) is the hierarchical variance of the spatial effect.
+%\end{frame}
 
 \begin{frame}
   \frametitle{Erdos-Renyi graph \(G(n, p)\)}
