@@ -19,41 +19,13 @@
 \setbeamercolor{block title alerted}{fg=white,bg=darkgray}
 \setbeamercolor{block body alerted}{fg=black,bg=lightgray}
 
-%\AtBeginSection[]
-%{
-%  \begin{frame}
-%    \tableofcontents[currentsection]
-%  \end{frame}
-%}
 
 
 \begin{document}
 
-\section{Talks, travel, grants}
-\begin{frame}
-  \frametitle{Talks}
-
-  \begin{itemize}
-    \item Evolution 2014: basic comparison between NA and European mammal survival 
-    \item GSA 2014: current fully Bayesian model of brachiopod survival
-      \begin{itemize}
-        \item lots of positive feedback, ideas
-      \end{itemize}
-  \end{itemize}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Travel and grants}
-
-  \begin{itemize}
-    \item AMNH: tooth measures for all notoungulate specimens identified to species level
-    \item DDIG: applied; travel to Argentina; collaboration with Rick Madden
-  \end{itemize}
-\end{frame}
-
 \section{Mammals}
 \begin{frame}
-  Death and taxa: time invariant differences in species duration
+  Death and taxa: time invariant differences in mammal species duration
 \end{frame}
 
 \begin{frame}
@@ -287,37 +259,36 @@
 % Do I want to try and show some results?
 
 
+\begin{frame}
+  Gambling with Australian brachiopods
+\end{frame}
 
-%\section{Brachiopods}
-%\begin{frame}
-%  \frametitle{Current brachipod survival model}
-%  \begin{center}
-%    \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/brac_surv_mod}
-%  \end{center}
-%\end{frame}
-%
-%\begin{frame}
-%  \frametitle{Current results\dots}
-%  \begin{center}
-%    \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/brac_dur_post}
-%  \end{center}
-%\end{frame}
-%
-%\begin{frame}
-%  \frametitle{Target and developing survival model}
-%  \begin{center}
-%    \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/brac_surv_mod_update}
-%  \end{center}
-%\end{frame}
-%
-%\begin{frame}
-%  \frametitle{Point/counting process of fossils occurrence}
-%
-%  A fossil is a count; number of fossils in temporal window.
-%
-%  Hierarchical Poisson model of absolute sighting rate.
-%
-%\end{frame}
+\begin{frame}
+  \frametitle{Current brachipod survival model}
+  \begin{center}
+    \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/brac_surv_mod}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Current results\dots}
+  \begin{center}
+    \includegraphics[height = 0.8\textheight, width = \textwidth,  keepaspectratio = true]{figure/brac_dur_post}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  New direction
+\end{frame}
+
+\begin{frame}
+  \frametitle{Counting process of fossil occurrence}
+  
+  Hierarchical Poisson model of absolute sighting rate.
+
+  \# fossils (i) of genus (j) in order (k) in a stage \(\sim\) Poisson(\(\lambda_{k\left[j\left[i\right]\right]}\))
+
+\end{frame}
 
 
 \end{document}
