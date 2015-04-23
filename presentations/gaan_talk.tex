@@ -49,12 +49,9 @@
   \end{alertblock}
 \end{frame}
 
-
-
-% example studies
-%   time-invariant differences in mammal species durations
 \begin{frame}
   \frametitle{Two studies}
+
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \begin{center}
@@ -62,7 +59,7 @@
 
         \vspace{0.5cm}
 
-        \includegraphics[height = 0.4\textheight, keepaspectratio = true]{figure/tattoo}
+        \includegraphics[height = 0.5\textheight, keepaspectratio = true]{figure/tattoo}
       \end{center}
     \end{column}
     \begin{column}{0.5\textwidth}
@@ -71,17 +68,20 @@
 
         \vspace{0.5cm}
 
-        \includegraphics[height = 0.4\textheight, keepaspectratio = true]{figure/annyong}
+        \includegraphics[height = 0.5\textheight, keepaspectratio = true]{figure/annyong}
       \end{center}
     \end{column}
   \end{columns}
 \end{frame}
 
-% my approach
-%   survival analysis
-%     S(t)
-%     exponential vs weibull
-%   hierarchical Bayesian modelling
+\begin{frame}
+  \frametitle{Hierarchical Bayesian modeling}
+
+  \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/han_bayes}
+
+  \tiny{\attrib{www.countbayesie.com}}
+\end{frame}
+
 \begin{frame}
   \frametitle{First things first\dots}
 
@@ -90,7 +90,7 @@
       \item \(y_{i}\): duration of taxon \(i\)
       \item \(\mathbf{X}\): \(n \times k\) matrix of covariates
       \item \(\sim\): rhs stochastically distributed as lhs
-      \item \(\beta\): regression coefficient
+      \item \(\beta\): regression coefficient (covariate effect)
       \item \(j[i]\): taxon \(i\) belongs to group \(j\)
     \end{itemize}
   \end{block}
@@ -98,59 +98,73 @@
 
 \begin{frame}
   \frametitle{Study: mammal species duration}
+
   \begin{alertblock}{Questions}
     \begin{itemize}
       \item How do the covariates of interest affect extinction risk?
+        \begin{itemize}
+          \item dietary and locomotor category, \\bioprovince occupancy, body size
+        \end{itemize}
       \item What is the relative contribution of temporal and phylogenetic structure on extinction risk?
       \item How do the identified time-invariant effects compare to modern determinates of extinction risk?
     \end{itemize}
   \end{alertblock}
 \end{frame}
-  % data
-  %   North America
-  %   Cenozoic
-  %   PBDB
-  % covariates of interest
-  %   dietary category
-  %   locomotor category
-  %   body size
-  %   bioprovince occupancy
-  % structure
-  %   non-nested varying intercepts
-  %   origination cohort \(j\)
-  %   phylogenetic position of \(i\)
 
 \begin{frame}
   \frametitle{Model of mammal species survival}
-  \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/mammal_survival_model}
+
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      % need to cut the white space from this image
+      \includegraphics[width=\textwidth,keepaspectratio=true]{figure/mammal_model}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      non-nested varying intercept
+      \begin{itemize}
+        \item origination cohort (\(\eta_{j[i]} \text{ for } j = 1,\dots,J\))
+          \begin{itemize}
+            \item exchangable; \(\mathcal{N}(0, \sigma_{\eta})\)
+          \end{itemize}
+        \item phylogenetic position (\(h_{i} \text{ for } i = 1,\dots,N\))
+          \begin{itemize}
+            \item supertree \\(mostly taxonomy)
+            \item mbl scaling; \\resolved based on FAD
+            \item Brownian motion
+          \end{itemize}
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Results}
+  % covariate effects
+  %   pairwise differences in indicator variables
+  %   continuous covariates
+  % VPC
 \end{frame}
 
 
-%   *brachiopods*
+% *brachiopods*
 \begin{frame}
   \frametitle{Study: brachiopod genus duration}
+
   \begin{alertblock}{Questions}
     \begin{itemize}
       \item How do the covariates of interest affect extinction risk?
+        \begin{itemize}
+          \item geographic range, environmental affinity, body size 
+        \end{itemize}
       \item How do these trait-based effects vary between origination cohorts?
       \item How do these trait-based changes relate to changes in baseline extinction risk?
     \end{itemize}
   \end{alertblock}
 \end{frame}
-  % data
-  %   Global
-  %   Paleozoic
-  %   PBDB (Foote/Miller)
-  % covariates of interest
-  %   geographic range size
-  %   environmental affinity
-  %   body size
-  % structure
-  %   varying intercepts, varying slopes
-  %   origination cohort \(j\)
 
 \begin{frame}
   \frametitle{Model of brachiopod genus survival}
+ 
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \begin{align*}
@@ -171,15 +185,32 @@
     \begin{column}{0.5\textwidth}
       Key details
       \begin{itemize}
+        \item varying slopes, \\varying intercepts
         \item \(\vec{\mu}\): hierarchical means of \(\beta\)-s
         \item \(\Sigma\): covariance matrix of (hierarchical) \(\beta\)-s
-        \item \(\vec{\tau}\): vector of hierarchical scales
+        \item \(\vec{\tau}\): vector of hierarchical scales \\(partial pooling)
         \item \(\Omega\): correlation matrix of (hierarchical) \(\beta\)-s
       \end{itemize}
-      
+
     \end{column}
   \end{columns}
 \end{frame}
+
+\begin{frame}
+  \frametitle{Results}
+ 
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=\textwidth,keepaspectratio=true]{figure/coef_means}
+
+      \includegraphics[width=\textwidth,keepaspectratio=true]{figure/coef_var}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=\textwidth,keepaspectratio=true]{figure/wei_cor_heatmap}
+    \end{column}
+  \end{columns}
+\end{frame}
+
 
 
 % summary
@@ -198,6 +229,33 @@
 %   discussion
 \begin{frame}
   \frametitle{Acknowledgements}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Advising
+          \begin{itemize}
+            \item Kenneth D. Angielczyk, Michael J. Foote, \\P. David Polly, \\Richard H. Ree
+          \end{itemize}
+        \item Angielczyk Lab
+          \begin{itemize}
+            \item David Grossnickle, \\Dallas Krentzel
+          \end{itemize}
+        \item Foote lab
+          \begin{itemize}
+            \item Marites Villarosa Garcia, \\Nadia Pierrehumbert, \\Kathleen Ritterbush
+          \end{itemize}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Other discussion
+          \begin{itemize}
+            \item Stewart Edie, \\Colin Kyle, \\Darcy Ross, \\Courtney Stepien
+            \item John Alroy, \\David Bapst, \\Graeme Lloyd, \\Carl Simpson, \\Graham Slater, \\Peter Wagner
+          \end{itemize}
+      \end{itemize}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 
