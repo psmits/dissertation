@@ -168,9 +168,9 @@
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \begin{align*}
-        y_{i} &\sim \mathrm{Weibull}(\alpha, \sigma) \\
+        y_{i} &\sim \mathrm{Weibull}(\alpha, \sigma_{i}) \\
         \sigma_{i} &= \exp\left(\frac{-(\mathbf{X}_{i} \mathbf{B}_{j[i]})}{\alpha}\right) \\
-        \mathbf{B} &\sim \mathrm{MVN}(\vec{\mu}, \mathbf{\Sigma}) \\
+        \mathbf{B}_{j} &\sim \mathrm{MVN}(\vec{\mu}, \mathbf{\Sigma}) \\
         \mathbf{\Sigma} &= \text{Diag}(\vec{\tau}) \mathbf{\Omega} \text{Diag}(\vec{\tau}) \\
         \alpha &\sim \mathrm{C^{+}}(2) \\
         \mu_{\kappa} &\sim \mathcal{N}(0, 5) \text{ for } \kappa \in 1:k \\
@@ -186,9 +186,10 @@
       Key details
       \begin{itemize}
         \item varying slopes, \\varying intercepts
+        \item \(\mathbf{B}\): \(k \times J\) matrix of \(\beta\)-s
         \item \(\vec{\mu}\): hierarchical means of \(\beta\)-s
         \item \(\Sigma\): covariance matrix of (hierarchical) \(\beta\)-s
-        \item \(\vec{\tau}\): vector of hierarchical scales \\(partial pooling)
+        \item \(\vec{\tau}\): vector of hierarchical scales (partial pooling)
         \item \(\Omega\): correlation matrix of (hierarchical) \(\beta\)-s
       \end{itemize}
 
@@ -251,7 +252,7 @@
         \item Other discussion
           \begin{itemize}
             \item Stewart Edie, \\Colin Kyle, \\Darcy Ross, \\Courtney Stepien
-            \item John Alroy, \\David Bapst, \\Graeme Lloyd, \\Carl Simpson, \\Graham Slater, \\Peter Wagner
+            \item John Alroy, \\David Bapst, \\Ben Frable, \\Graeme Lloyd, \\Carl Simpson, \\Graham Slater, \\Peter Wagner
           \end{itemize}
       \end{itemize}
     \end{column}
