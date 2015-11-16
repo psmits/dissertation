@@ -8,6 +8,13 @@ proto agenda
   - submitted chapter 2/brachiopod survival
   - ken and i submitted a side project; rejected but we're working on that
   - side project with stuart on regional species naming rates in bivalves
+- current projects
+  - regional patterns in the diversification of Paleozoic brachiopods
+    - hierarchical Bayesian hidden Markov model
+    - four latitudinal bands
+      - 
+  - changes in Cenozoic mammal ecotype composition 
+    - hierarchical Bayesian multi-logit model
 - time till completion
   - i'm out of fellowship in 2017
   - advice: finish only once i've got a post-doc set up
