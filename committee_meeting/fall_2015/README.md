@@ -6,22 +6,48 @@ proto agenda
   - GSA
   - chapter 1/PNAS paper
   - submitted chapter 2/brachiopod survival
+    - still in review (~2 months!?)
   - ken and i submitted a side project; rejected but we're working on that
   - side project with stuart on regional species naming rates in bivalves
 - current projects
   - regional patterns in the diversification of Paleozoic brachiopods
     - hierarchical Bayesian hidden Markov model
     - four latitudinal bands
-      - 
+      - change to 8 if split along meridian?
+      - no biological meaning; lack of other options (e.g. plates)
+    - slow JAGS code; geomips isn't enough
+      - i've had a lot of trouble connecting to the FMNH server (can't)
+    - major assumptions are that genera can occur in any geographic bin and
+      occur completely independently
+      - can lead to some taxa existing longer than in actuality
+      - possibly controlled for by sampling rate through time?
+      - which further assumes all times and places are similar (to a degree) in
+        terms of all generating parameters (phi, gamma, p)
+    - relaxing this assumption is extremely parameter intensive
   - changes in Cenozoic mammal ecotype composition 
     - hierarchical Bayesian multi-logit model
+      - by time bin (order not explicitly modeled...yet...?)
+    - follow up to PNAS paper
+      - key is arboreality, but i want to see interaction with diet
+      - wasn't dealt with at all in my PNAS paper
+    - includes phylogenetic effect
+      - three independent effects (assume BM)
+        - k = 1, ..., K - 1 vs k = K
+      - see softmax parameterization
+    - is body size worth including as a predictor?
+      - idea would be to help further control for similarity among taxa
 - time till completion
   - i'm out of fellowship in 2017
+  - i have to TA this year (expecting spring, but i've got nothing lined up?)
+  - i have to TA next year
+    - assuming no fellowship (FMNH? but i'm never there)
+    - am i am allowed to teach the teaching class again?
   - advice: finish only once i've got a post-doc set up
 - post-doc opportunities
   - what do i want out of a postdoc?
-    - new methods?
-    - new topic?
-    - other gap in knowledge?
+    - new methods? diff eqs, networks, phylogenetic inference
+    - new topic? levels of selection, phylogenetic inference
+    - other gaps in knowledge? phylogenetic inference
   - people?
-    - charles marshall / miller fellowship
+    - berkeley: charles marshall / john huelsenbeck / miller fellowship
+  - for personal reasons, any options in chicago?

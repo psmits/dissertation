@@ -1,0 +1,207 @@
+\documentclass{beamer} 
+\usepackage{amsmath,amsthm}
+\usepackage{graphicx,microtype,parskip}
+\usepackage{caption,subcaption,multirow}
+\usepackage{attrib}
+
+\frenchspacing
+
+\usetheme{default}
+\usecolortheme{whale}
+
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamercolor{title}{fg=blue,bg=white}
+
+\setbeamercolor{block title}{fg=white,bg=gray}
+\setbeamercolor{block body}{fg=black,bg=lightgray}
+
+\setbeamercolor{block title alerted}{fg=white,bg=darkgray}
+\setbeamercolor{block body alerted}{fg=black,bg=lightgray}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\title{}
+\author{Peter D Smits}
+\institute{Committee on Evolutionary Biology, University of Chicago}
+\date{}
+
+\begin{document}
+
+\begin{frame}
+  \tableofcontents
+\end{frame}
+
+\section{Since last meeting}
+\begin{frame}
+  \begin{block}{Since last meeting}
+    \begin{itemize}
+      \item Evolution 2015 talk
+      \item GSA 2015 talk
+      \item Chapter 1 published (PNAS)
+        \begin{itemize}
+          \item Effects of biotic traits on mammal species duration
+        \end{itemize}
+      \item Chapter 2 submitted (Evolution)
+        \begin{itemize}
+          \item Interplay between extinction intensity and selectivity in brachiopod extinction
+        \end{itemize}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\section{Current projects}
+\subsection{Brachiopods}
+\begin{frame}
+  \frametitle{Regional patterns in the diversification of Paleozoic brachiopods}
+
+  \begin{alertblock}{Question}
+    How does differential taxonomic entrance and loss contribute to regional (e.g. latitudinal) diversity?
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Motivation}
+    \begin{itemize}
+      \item latitudinal diversity gradients
+        \begin{itemize}
+          \item specifically as product of diversification process
+        \end{itemize}
+      \item regional as opposed to global
+        \begin{itemize}
+          \item variation within regions may not match global pattern \\(more biologically relevant?)
+          \item partial follow up to brachiopod survival work
+        \end{itemize}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Background}
+  % work on brachiopod latitudinal patterning
+  %   Powell 2007 Global Ecol Biogeogr
+  %     10 degree lat bands between 60N and 60S
+  %   Powell et al 2015: orig, ext, inv, extir and brac lat div
+  %     non-model based
+  %     uses 10 degree lat bands, 10 my intervals
+  %     whole Phanerozoic
+  %     two-phase decrease ext/orig: pre and post P/T
+  %     two-phase increase extir/inv: pre and post P/T
+  %   none of this takes sampling probability into account
+\end{frame}
+
+\begin{frame}
+  \frametitle{Model structure}
+  % HMM diagram
+  %   three major parameters: phi, gamma, p
+  %   time varying parameters, ``shrunk'' by hierarchical estimation
+  %   hierarchical by region
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Major assumptions}
+    \begin{itemize}
+      \item any taxon can occur in any geographic unit 
+      \item occurrence in a geographic unit is independent of all other units
+        \begin{itemize}
+          \item can lead to some taxa existing longer than in actuality
+        \end{itemize}
+      \item possibly controlled for by sampling rate through time
+        \begin{itemize}
+          \item further assumes all times and places can be considered similar
+        \end{itemize}
+      \item relaxing this assumption is extremely parameter intensive
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\subsection{Mammal}
+\begin{frame}
+  \frametitle{Changes in Cenozoic mammal ecotype composition}
+
+  \begin{alertblock}{Question}
+    How do the occurrence ratios of mammalian ecotypes change over time?
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Background}
+  % what do we already know; how create priors (if informed)
+  % increasing aridity over cenozoic
+  %   closed/forested --> open/grasslands
+  %   sudden or slow?
+  %     see Stromberg work
+  % Janis reviews (annual reviews 1993)
+  %   Eocene decrease in arboreal (and frugivorous)
+  %   Eocene --> tropical forest
+  %   Oligocene --> no analogy with modern
+  %     greater proportion carnivores
+  %     taxa are not typical of their clades (e.g. smaller)
+  %       reason to use body size as predictor?
+  %   Miocene --> savanna woodlands
+  %     decrease in carnivores
+  % Smits2015 implies that increases in ``specialists'' would be due to speciation
+\end{frame}
+
+\begin{frame}
+  \frametitle{Multi-logit regression}
+  \begin{equation*}
+    \begin{aligned}
+      y_{i} &\sim \mathrm{Categorical}(K, \pi) \\
+      \pi_{k} &= \frac{\exp(\beta_{k, j[i]} X_{i} + \lambda_{k})}{\sum_{k = 1}^{K} \exp(\beta_{k, j[i]} X_{i} + \lambda_{k})} \\ 
+      &\text{ where } \beta_{k = K, j[i]} X_{i} + \lambda_{k = K} = 0 \\
+      \lambda_{k} &\sim \mathrm{MVN}(0, \tau_{k}^{2}\Sigma) \\
+      \beta_{k, j} &\sim \mathcal{N}(\beta_{k}^{\prime}, \sigma_{k}) \\
+    \end{aligned}
+  \end{equation*}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Further developments}
+    \begin{itemize}
+      \item \uppercase{\alert{note}} technically no phylogenetic effect for \(k = K\)
+      \item covariates (e.g. body size)?
+      \item time order is not currently modeled; all times exchangable
+      \item assumption that observed taxa is a (unbiased) proportional sample of reality
+        \begin{itemize}
+          \item how can this be overcome in a \alert{model based} framework?
+        \end{itemize}
+    \end{itemize}
+  \end{block}
+\end{frame}
+  % coarseness of categories (no browse/graze difference)
+  % no co-occurrence information
+  %   lots of discussion on changes in beta diversity over Cenozoic
+  %   makes things even more complicated
+  %   a different study? was originally an idea, but needed better methods
+  % slow; already slow with only 10% of the data
+  %   three(!) phylogenetic effects
+  % model improvement
+  %   change point detection
+
+\section{Time till completion}
+\begin{frame}
+  \begin{block}{Things to consider}
+    \begin{itemize}
+      \item TAing
+        \begin{itemize}
+          \item Spring quarter (expected)
+          \item next year?
+        \end{itemize}
+      \item Funding?
+        \begin{itemize}
+          \item FMNH fellow, but I don't spend time at the museum.
+        \end{itemize}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\section{Post-doc opportunities}
+
+
+\end{document}
