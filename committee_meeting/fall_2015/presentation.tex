@@ -50,7 +50,9 @@
       \item Chapter 2 submitted (Evolution)
         \begin{itemize}
           \item Interplay between extinction intensity and selectivity in brachiopod extinction
+          \item Submitted early October, still in review?
         \end{itemize}
+      \item Did not submit DDIG
     \end{itemize}
   \end{block}
 \end{frame}
@@ -59,7 +61,6 @@
 \subsection{Brachiopods}
 \begin{frame}
   \frametitle{Regional patterns in the diversification of Paleozoic brachiopods}
-
   \begin{alertblock}{Question}
     How does differential taxonomic entrance and loss contribute to regional (e.g. latitudinal) diversity?
   \end{alertblock}
@@ -70,7 +71,7 @@
     \begin{itemize}
       \item latitudinal diversity gradients
         \begin{itemize}
-          \item specifically as product of diversification process
+          \item through lense of a diversification process
         \end{itemize}
       \item regional as opposed to global
         \begin{itemize}
@@ -98,7 +99,9 @@
 \begin{frame}
   \frametitle{Model structure}
   % HMM diagram
+  %   two-state: presence -- absence
   %   three major parameters: phi, gamma, p
+  %     auxiliary psi (probability present)
   %   time varying parameters, ``shrunk'' by hierarchical estimation
   %   hierarchical by region
 \end{frame}
@@ -120,22 +123,29 @@
   \end{block}
 \end{frame}
 
-\subsection{Mammal}
+\subsection{Mammals}
 \begin{frame}
   \frametitle{Changes in Cenozoic mammal ecotype composition}
 
   \begin{alertblock}{Question}
-    How do the occurrence ratios of mammalian ecotypes change over time?
+    How do occurrence ratios of mammalian ecotypes change over time?
   \end{alertblock}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Background}
-  % what do we already know; how create priors (if informed)
+  \frametitle{Environmental shift}
   % increasing aridity over cenozoic
   %   closed/forested --> open/grasslands
   %   sudden or slow?
   %     see Stromberg work
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/stromberg_na}
+  \end{center}
+
+  \attrib{\small{Stromberg 2005 \emph{PNAS}}}
+  % Smits2015 implies that increases in ``specialists'' would be due to speciation
+\end{frame}
+
   % Janis reviews (annual reviews 1993)
   %   Eocene decrease in arboreal (and frugivorous)
   %   Eocene --> tropical forest
@@ -145,7 +155,19 @@
   %       reason to use body size as predictor?
   %   Miocene --> savanna woodlands
   %     decrease in carnivores
-  % Smits2015 implies that increases in ``specialists'' would be due to speciation
+
+\begin{frame}
+  \frametitle{Possible link?}
+  \begin{columns}
+    \begin{column}{0.55\textwidth}
+      \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/loco_diff_est}
+    \end{column}
+    \begin{column}{0.55\textwidth}
+      \includegraphics[width=\textwidth,height=\textheight,keepaspectratio=true]{figure/cohort_est}
+    \end{column}
+  \end{columns}
+  
+  \attrib{\small{Smits 2015 \emph{PNAS}}}
 \end{frame}
 
 \begin{frame}
@@ -165,12 +187,14 @@
   \begin{block}{Further developments}
     \begin{itemize}
       \item \uppercase{\alert{note}} technically no phylogenetic effect for \(k = K\)
+      \item increased categorization (e.g. frugivory)?
       \item covariates (e.g. body size)?
       \item time order is not currently modeled; all times exchangable
       \item assumption that observed taxa is a (unbiased) proportional sample of reality
         \begin{itemize}
           \item how can this be overcome in a \alert{model based} framework?
         \end{itemize}
+      \item improve ``phylogeny''; I should do better than Smits 2015.
     \end{itemize}
   \end{block}
 \end{frame}
