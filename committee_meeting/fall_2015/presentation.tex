@@ -83,37 +83,75 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Background}
-  % work on brachiopod latitudinal patterning
-  %   Powell 2007 Global Ecol Biogeogr
-  %     10 degree lat bands between 60N and 60S
-  %   Powell et al 2015: orig, ext, inv, extir and brac lat div
-  %     non-model based
-  %     uses 10 degree lat bands, 10 my intervals
-  %     whole Phanerozoic
-  %     two-phase decrease ext/orig: pre and post P/T
-  %     two-phase increase extir/inv: pre and post P/T
-  %   none of this takes sampling probability into account
+  \frametitle{Brachiopod latitudinal diversity}
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/powell_2007}
+  \end{center}
+
+  \attrib{\small{Powell 2007 \emph{G. Eco. Biogeo.}}}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Model structure}
-  % HMM diagram
-  %   two-state: presence -- absence
-  %   three major parameters: phi, gamma, p
-  %     auxiliary psi (probability present)
-  %   time varying parameters, ``shrunk'' by hierarchical estimation
-  %   hierarchical by region
+  \frametitle{Variation in biversity gradient}
+  \begin{columns}
+    \begin{column}{0.4\textwidth}
+      \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/powell_2015_b}
+    \end{column}
+    \begin{column}{0.6\textwidth}
+      \includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio=true]{figure/powell_2015_a}
+    \end{column}
+  \end{columns}
+
+  \attrib{\small{Powell \textit{et al} 2015 \emph{Paleobio.}}}
 \end{frame}
+
+\begin{frame}
+  \frametitle{``Modes'' of latitudinal diversity}
+  \begin{columns}
+    \begin{column}{0.55\textwidth}
+      \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/powell_2007_a}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/powell_2007_b}
+    \end{column}
+  \end{columns}
+
+  \attrib{\small{Powell 2007 \emph{G. Eco. Biogeo.}}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Purported changes in diversity}
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/powell_2015}
+  \end{center}
+
+  \attrib{\small{Powell \textit{et al} 2015 \emph{Paleobio.}}}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Model structure: Markov model}
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/mm_diagram}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Model structure: Markov model}
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/hidden_state}
+  \end{center}
+\end{frame}
+
 
 \begin{frame}
   \begin{block}{Major assumptions}
     \begin{itemize}
-      \item any taxon can occur in any geographic unit 
-      \item occurrence in a geographic unit is independent of all other units
+      \item model is only a first-order Markov process
         \begin{itemize}
           \item can lead to some taxa existing longer than in actuality
         \end{itemize}
+      \item any taxon can occur in any geographic unit \\independent of other units
       \item possibly controlled for by sampling rate through time
         \begin{itemize}
           \item further assumes all times and places can be considered similar
@@ -166,7 +204,7 @@
       \includegraphics[width=\textwidth,height=\textheight,keepaspectratio=true]{figure/cohort_est}
     \end{column}
   \end{columns}
-  
+
   \attrib{\small{Smits 2015 \emph{PNAS}}}
 \end{frame}
 
@@ -175,8 +213,8 @@
   \begin{equation*}
     \begin{aligned}
       y_{i} &\sim \mathrm{Categorical}(K, \pi) \\
-      \pi_{k} &= \frac{\exp(\beta_{k, j[i]} X_{i} + \lambda_{k})}{\sum_{k = 1}^{K} \exp(\beta_{k, j[i]} X_{i} + \lambda_{k})} \\ 
-      &\text{ where } \beta_{k = K, j[i]} X_{i} + \lambda_{k = K} = 0 \\
+      \pi_{k} &= \frac{\exp(\beta_{k, j[i]} X_{i} + \lambda_{k})}{\sum_{k = 1}^{K} \exp(\beta_{k, j[i]} X_{i} + \lambda_{k, i})} \\ 
+      &\text{ where } \beta_{K, j[i]} X_{i} + \lambda_{K, i} = 0 \\
       \lambda_{k} &\sim \mathrm{MVN}(0, \tau_{k}^{2}\Sigma) \\
       \beta_{k, j} &\sim \mathcal{N}(\beta_{k}^{\prime}, \sigma_{k}) \\
     \end{aligned}
@@ -190,7 +228,7 @@
       \item increased categorization (e.g. frugivory)?
       \item covariates (e.g. body size)?
       \item time order is not currently modeled; all times exchangable
-      \item assumption that observed taxa is a (unbiased) proportional sample of reality
+      \item observed taxa represent a proportional sample of reality
         \begin{itemize}
           \item how can this be overcome in a \alert{model based} framework?
         \end{itemize}
