@@ -39,7 +39,7 @@
 
 \section{Since last meeting}
 \begin{frame}
-  \begin{block}{Since last meeting}
+  \begin{alertblock}{Since last meeting}
     \begin{itemize}
       \item Evolution 2015 talk
       \item GSA 2015 talk
@@ -54,7 +54,7 @@
         \end{itemize}
       \item Did not submit DDIG
     \end{itemize}
-  \end{block}
+  \end{alertblock}
 \end{frame}
 
 
@@ -178,42 +178,48 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Preliminary results}
+  \frametitle{Observed diversity}
   \begin{center}
     \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/obs_div}
   \end{center}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Preliminary results}
+  \frametitle{Estimated latent results}
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/true_div}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Turnover probability}
   \begin{center}
     \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/turnover}
   \end{center}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Preliminary results}
+  \frametitle{Observation probability}
   \begin{center}
     \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/observation}
   \end{center}
 \end{frame}
 \begin{frame}
-  \frametitle{Preliminary results}
+  \frametitle{Gain probability}
   \begin{center}
     \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/entrance}
   \end{center}
 \end{frame}
 
-
 \begin{frame}
-  \frametitle{Preliminary results}
+  \frametitle{Loss probability}
   \begin{center}
     \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/extinction}
   \end{center}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Preliminary results}
+  \frametitle{Change in diversity}
   \begin{center}
     \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/est_diff}
   \end{center}
@@ -227,14 +233,11 @@
           \item can lead to some taxa existing longer than in actuality
         \end{itemize}
       \item any taxon can occur in any geographic unit \\independent of other units
-      \item both possibly controlled for by sampling rate through time
+      \item both possibly controlled for by sampling parameter
         \begin{itemize}
           \item further assumes all times and places can be considered similar
         \end{itemize}
-      \item relaxing all of these assumption increases complexity
-        \begin{itemize}
-          \item expand to whole Phanerozoic and/or other taxonomic groups?
-        \end{itemize}
+      \item Worth expanding time analyzed and/or to other taxonomic groups?
     \end{itemize}
   \end{block}
 \end{frame}
@@ -286,11 +289,11 @@
   \frametitle{Multi-logit regression}
   \begin{equation*}
     \begin{aligned}
-      y_{i} &\sim \mathrm{Categorical}(K, \pi) \\
-      \pi_{k} &= \frac{\exp(\beta_{k, j[i]} X_{i} + \lambda_{k})}{\sum_{k = 1}^{K} \exp(\beta_{k, j[i]} X_{i} + \lambda_{k, i})} \\ 
-      &\text{ where } \beta_{K, j[i]} X_{i} + \lambda_{K, i} = 0 \\
-      \lambda_{k} &\sim \mathrm{MVN}(0, \tau_{k}^{2}\Sigma) \\
+      y_{i} &\sim \mathrm{Categorical}(K, \pi) \\  % k = response, j = cohort, d = predictor
+      \pi_{k} &= \frac{\exp(\beta_{k, j[i]} X_{i}}{\sum_{k = 1}^{K} \exp(\beta_{k, j[i]} X_{i})} \\ 
+      &\text{ where } \beta_{K, j[i]} X_{i} = 0 \\
       \beta_{k, j} &\sim \mathcal{N}(\beta_{k}^{\prime}, \sigma_{k}) \\
+      \beta_{k, j}[1] &\sim \mathcal{N}(\beta_{k}^{\prime}[1] + \alpha_{k} U_{k}, \sigma_{k}) \\
     \end{aligned}
   \end{equation*}
 \end{frame}
