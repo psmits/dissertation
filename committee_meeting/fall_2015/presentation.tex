@@ -59,7 +59,7 @@
 
 
 \begin{frame}
-  \begin{block}{Review possible chapter 1}
+  \begin{block}{Review of possible chapter 1}
     \begin{itemize}
       \item Published in PNAS
       \item I took all of your comments very seriously and they really improved the paper.
@@ -68,13 +68,13 @@
           \item Ken and David for pushing about modern extinction risk.
           \item Michael and Ken for helping me write it in english.
         \end{itemize}
-      \item Sorry i didn't send it to anyone except Michael and Ken.
+      \item Sorry I didn't send it to anyone except Michael and Ken.
     \end{itemize}
   \end{block}
 \end{frame}
 
 \begin{frame}
-  \begin{block}{Review possible chapter 2}
+  \begin{block}{Review of possible chapter 2}
     \begin{itemize}
       \item Submitted to Evolution
       \item What my patterns of extinction in Australia project eventually turned into.
@@ -96,7 +96,7 @@
 \begin{frame}
   \frametitle{Regional patterns in the diversification of Paleozoic brachiopods}
   \begin{alertblock}{Question}
-    How does differential taxonomic entrance and loss contribute to regional (e.g. latitudinal) diversity?
+    How does differential taxonomic gain and loss contribute to regional (e.g. latitudinal) diversity?
   \end{alertblock}
 \end{frame}
 
@@ -185,7 +185,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Estimated latent results}
+  \frametitle{Estimated latent diversity}
   \begin{center}
     \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/true_div}
   \end{center}
@@ -228,16 +228,20 @@
 \begin{frame}
   \begin{block}{Major assumptions}
     \begin{itemize}
-      \item model is only a first-order Markov process
+      \item first-order Markov process
         \begin{itemize}
           \item can lead to some taxa existing longer than in actuality
         \end{itemize}
       \item any taxon can occur in any geographic unit \\independent of other units
-      \item both possibly controlled for by sampling parameter
+      \item all of the above possibly controlled for by sampling parameter
         \begin{itemize}
           \item further assumes all times and places can be considered similar
         \end{itemize}
-      \item Worth expanding time analyzed and/or to other taxonomic groups?
+      \item possible direction 
+        \begin{itemize}
+          \item increase taxonomic and/or temporal scope
+          \item more lattitudinal bands
+        \end{itemize}
     \end{itemize}
   \end{block}
 \end{frame}
@@ -261,16 +265,6 @@
   % Smits2015 implies that increases in ``specialists'' would be due to speciation
 \end{frame}
 
-  % Janis reviews (annual reviews 1993)
-  %   Eocene decrease in arboreal (and frugivorous)
-  %   Eocene --> tropical forest
-  %   Oligocene --> no analogy with modern
-  %     greater proportion carnivores
-  %     taxa are not typical of their clades (e.g. smaller)
-  %       reason to use body size as predictor?
-  %   Miocene --> savanna woodlands
-  %     decrease in carnivores
-
 \begin{frame}
   \frametitle{Possible link?}
   \begin{columns}
@@ -286,11 +280,35 @@
 \end{frame}
 
 \begin{frame}
+  \begin{block}{Details and covariates}
+    \begin{itemize}
+      \item Interest is specifically change in \alert{composition}, \\and not taxonomic turnover.
+      \item Covariates
+        \begin{itemize}
+          \item body size of taxon i
+          \item dietary category of taxon i
+          \item climate (dO18) of time bin j
+        \end{itemize}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+% approach
+%   multi-logit regression
+%   K-1 regressions, softmax link function to categorical distribution
+%     interpret like K-1 logistic regressions
+%     K-1 because identifiability, only k = 1, \dots, K -1 because 
+%     Kth regression parameter constrained to be 0
+
+
+% foote will want me to figure out how to represent this without math
+%   i have some drafts
+\begin{frame}
   \frametitle{Multi-logit regression}
   \begin{equation*}
     \begin{aligned}
       y_{i} &\sim \mathrm{Categorical}(K, \pi) \\  % k = response, j = cohort, d = predictor
-      \pi_{k} &= \frac{\exp(\beta_{k, j[i]} X_{i}}{\sum_{k = 1}^{K} \exp(\beta_{k, j[i]} X_{i})} \\ 
+      \pi_{k} &= \frac{\exp(\beta_{k, j[i]} X_{i})}{\sum_{k = 1}^{K} \exp(\beta_{k, j[i]} X_{i})} \\ 
       &\text{ where } \beta_{K, j[i]} X_{i} = 0 \\
       \beta_{k, j} &\sim \mathcal{N}(\beta_{k}^{\prime}, \sigma_{k}) \\
       \beta_{k, j}[1] &\sim \mathcal{N}(\beta_{k}^{\prime}[1] + \alpha_{k} U_{k}, \sigma_{k}) \\
@@ -299,7 +317,24 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Preliminary results}
+  \frametitle{Change in occurrence ratio over time}
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/occurrence_prob}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Effect of body size on occurrence probability}
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/trait_eff}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Effect of dietary category on occurrence probability}
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/diet_eff}
+  \end{center}
 \end{frame}
 
 \begin{frame}
@@ -309,10 +344,7 @@
         \begin{itemize}
           \item time order is not currently modeled
         \end{itemize}
-      \item \uppercase{\alert{note}} no phylogenetic effect for \(k = K\)
-        \begin{itemize}
-          \item every thing is relative \alert{to} it
-        \end{itemize}
+      \item phylogenetic effect to be included (except k = K)
       \item climate as cohort-level predictor, integrating over uncertainty?
       \item observed taxa represent a proportional sample of reality
         \begin{itemize}
@@ -322,15 +354,6 @@
     \end{itemize}
   \end{block}
 \end{frame}
-  % coarseness of categories (no browse/graze difference)
-  % no co-occurrence information
-  %   lots of discussion on changes in beta diversity over Cenozoic
-  %   makes things even more complicated
-  %   a different study? was originally an idea, but needed better methods
-  % slow; already slow with only 10% of the data
-  %   three(!) phylogenetic effects
-  % model improvement
-  %   change point detection
 
 
 \section{Timeline}
