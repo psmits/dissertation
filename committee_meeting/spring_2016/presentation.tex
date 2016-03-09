@@ -27,9 +27,10 @@
 }
 
 \title{}
-\author{Peter D Smits}
-\institute{Committee on Evolutionary Biology, University of Chicago}
+\author{}
+\institute{}
 \date{}
+
 
 \begin{document}
 
@@ -38,32 +39,200 @@
 \end{frame}
 
 
-\section{Since last meeting}
+\section{How macroecology affects macroevolution: the interplay between extinction intensity and trait-dependent extinction in brachiopods.}
+
+\begin{frame}
+  \begin{block}{History}
+    \begin{itemize}
+      \item presented at GSA 2015
+      \item rejected from \textit{Evolution}
+        \begin{itemize}
+          \item encouraged resubmit
+          \item audience issues
+          \item difficult and transformative reviews
+        \end{itemize}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+% biggest criticism was that i completely ignored effect of sampling
+%   i measure sampling as the simple gap statistic
+%   use it as a covariate of duration
+%   this is the estimate the biasing effect of sampling
+%     NOT correct duration for sampling
+%     record is too coarse for a lot of methods
+%     just a different way of doing it
+%       i would use the new Wang approach for sampling instead of simple CLS type model
+% effect of sampling probability on duration
+%   (imupted) gap statistic
+%   some limit pushing, but use beta regression to help estimate
+
+% results
+%   table and over-all probabilities 
+%   environmental preference
+%   change over time
+%   covariance matrix
 
 
-\section{Brachiopod survival}
-% rejected first round with encouraged resubmit
-%   i sent around a recent version
-% lots of changes following reviews
-%   effect of sampling probability on duration
-%   this has created a lot of complications; currently 4 models
-%     edit
-%     edit + relative abundance as sampling
-%     edit + (imupted) gap statistic
-%     truncated model
+\section{Taxon occurrence as a function of both emergent biological traits and its environmental context}
+
+% Theoretical underpinning
+%   change in regional species pool over time
+%   
+%   connection to macroecology
+%   connection to macroevolution
+
+% modified fourth-corner type problem
+%   presence_{i,t} | individual-level_{i,t}, group-level_{t}
+%   assumes effect of covariates constant for all t
+% no individual X group covariates
+%   instead of group-level covariates included as part of multi-level model
+%   keeping in mind group-level covariates depend on t
+
+% after \citep{Smits2015}
+%   decrease in extinction risk over time
+%     notice the pattern at the paleogene-neogene boundary
+%   higher extinction risk in arboreal taxa
+%     strong effect
+%     what is variation in effect? paleogene vs neogene
+%       is the transition/neogene effect so strong to appear constant?
+%     driven by the environmental change?
+
+% Vallesian crisis in Europe
+%   faunal shift at Paleogene-Neogene boundary
+%   do we see this in NA in terms of ecotypes?
+
+\begin{frame}
+  \frametitle{Analysis of Cenozoic mammal fossil record for NA}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      individual-level (genus)
+      \begin{itemize}
+        \item intercept term, \\varying by time
+        \item locomotor type/category
+          \begin{itemize}
+            \item arboreal, digitigrade, plantigrade, unguligrade, fossorial, scansorial
+          \end{itemize}
+        \item dietary type/category
+          \begin{itemize}
+            \item carnivore, herbivore, insectivore, omnivore
+          \end{itemize}
+        \item body size \\(rescaled log body mass)
+        \item phylogenetic effect
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      group-level (2 My time unit)
+      \begin{itemize}
+        \item intercept
+        \item isotope record
+          \begin{itemize}
+            \item mean and interquartile range of rescaled value
+          \end{itemize}
+        \item temperature record
+          \begin{itemize}
+            \item mean and interquartile range of rescaled value
+          \end{itemize}
+        \item plant community phase following Graham
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
 
 
+\begin{frame}
+  \begin{block}{Model of taxon occurrence}
+    \begin{itemize}
+      \item response is p/a of genus in NA at time \(t\)
+        \begin{itemize}
+          \item Bernoulli variable 
+          \item probability is (observation prob) times (``true'' presence)
+        \end{itemize}
+      \item observation probability is effect of sampling/fossil record
+        %\begin{itemize}
+          %\item preservation as logistic regression with relative abundance as covariate
+        %\end{itemize}
+      \item true presence is multi-level logistic regression
+        \begin{itemize}
+          \item individual- and group-level
+        \end{itemize}
+      \item break-point model is the eventual goal
+    \end{itemize}
+  \end{block}
+\end{frame}
 
-\section{Mammal ecotype occurrence}
-% transcribing Graham book for dominate plant groups
+\begin{frame}
+  \begin{block}{Posterior predictive checks}
+    \begin{itemize}
+      \item simulate fossil record given only \(y_{\_t = 1}\) and \(\theta\)
+        \begin{itemize}
+          \item where \(\theta\) is the set of all parameters
+        \end{itemize}
+      \item equivalent to leave-one-out cross-validation for time series?
+        \begin{itemize}
+          \item Bayesian statement is \(p(\tilde{y}_{t + 1} | y_{t} \theta)\)
+        \end{itemize}
+      \item ROC as measure of performance
+    \end{itemize}
+  \end{block}
+\end{frame}
 
 
 \section{Other projects}
-% turtle morphology w/ ken
+
+\begin{frame}
+  \begin{block}{How cryptic is cryptic diversity? Machine learning approaches to classifying morphological variation in the Pacific Pond Turtle (\textit{Emys marmorata})}
+    \begin{itemize}
+      \item estimate which species classification is best supported by morphology
+        \begin{itemize}
+          \item multiple machine learning approaches
+          \item focus on one turtle species complex
+          \item results compared against results from two other turtle datasets
+          \item comparison of in- and out-of-sample model performance
+        \end{itemize}
+      \item collaboration with Ken, Jim Parham, and Bryan Stuart
+      \item submitted to then rejected from Systematic Biology
+      \item resubmitted soon
+    \end{itemize}
+  \end{block}
+\end{frame}
+
 % bivalve naming rate w/ stewart
+\begin{frame}
+  \begin{block}{Modeling the rate at which new species are named.}
+    \begin{itemize}
+      \item collaboration with Stewart Edie; he's lead
+      \item I developed the statistical model
+        \begin{itemize}
+          \item zero-inflated Poisson model 
+          \item both Bernoulli and Poisson distributions are time series models
+          \item response is the number of species named per publication \\per year for each biogeographic province
+          \item increasing, decreasing, or level?
+        \end{itemize}
+      \item draft phase
+      \item targets seem to be PNAS or Systematic Biology
+    \end{itemize}
+  \end{block}
+\end{frame}
 
 
 \section{Moving forward}
+
+\begin{frame}
+  \begin{block}{Research statement}
+    \begin{itemize}
+      \item Intersection of macroevolution and macroecology.
+      \item Quantitative approaches to understanding global and regional patterns of biodiversity.
+      \item Paleontological data.
+      \item Non-taxon specific; with emphasis on mammals.
+      \item More like an ecologist-modeler than an evolution-modeler
+        \begin{itemize}
+          \item No one-model to fit them all; tailor-made models for question.
+          \item This contrasts with the field.
+        \end{itemize}
+    \end{itemize}
+  \end{block}
+\end{frame}
 
 
 \end{document}
