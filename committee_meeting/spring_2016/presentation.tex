@@ -50,11 +50,22 @@
           \item encouraged resubmit
           \item audience issues
           \item difficult and transformative reviews
+          \item resubmitted 3 March
         \end{itemize}
     \end{itemize}
   \end{block}
 \end{frame}
 
+\begin{frame}
+  \begin{block}{New measure of environmental affinity}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Measure of sampling and imputed values}
+
+  \end{block}
+\end{frame}
 % biggest criticism was that i completely ignored effect of sampling
 %   i measure sampling as the simple gap statistic
 %   use it as a covariate of duration
@@ -78,14 +89,11 @@
 
 % Theoretical underpinning
 %   change in regional species pool over time
-%   
-%   connection to macroecology
-%   connection to macroevolution
+%   intersection of macroecology and macroevolution
 
 % modified fourth-corner type problem
-%   presence_{i,t} | individual-level_{i,t}, group-level_{t}
-%   assumes effect of covariates constant for all t
-% no individual X group covariates
+%   presence_{i,t} | individual-level_{i,t}, group-level_{t} observation_{t}
+%   effects of covariates varies with t
 %   instead of group-level covariates included as part of multi-level model
 %   keeping in mind group-level covariates depend on t
 
@@ -106,30 +114,26 @@
   \frametitle{Analysis of Cenozoic mammal fossil record for NA}
   \begin{columns}
     \begin{column}{0.5\textwidth}
-      individual-level (genus)
+      individual-level \\(genus i at time unit t)
       \begin{itemize}
-        \item intercept term, \\varying by time
-        \item locomotor type/category
+        \item log-odds of occurrence probability at time t
+        \item effect of locomotor type
           \begin{itemize}
             \item arboreal, digitigrade, plantigrade, unguligrade, fossorial, scansorial
           \end{itemize}
-        \item dietary type/category
+        \item effect of dietary type
           \begin{itemize}
             \item carnivore, herbivore, insectivore, omnivore
           \end{itemize}
         \item body size \\(rescaled log body mass)
-        \item phylogenetic effect
+%        \item phylogenetic effect
       \end{itemize}
     \end{column}
     \begin{column}{0.5\textwidth}
-      group-level (2 My time unit)
+      group-level (2 My time unit t)
       \begin{itemize}
-        \item intercept
-        \item isotope record
-          \begin{itemize}
-            \item mean and interquartile range of rescaled value
-          \end{itemize}
-        \item temperature record
+        \item overall mean of log-odds of occurrence probability
+        \item temperature record based on Mg/Ca estimates
           \begin{itemize}
             \item mean and interquartile range of rescaled value
           \end{itemize}
@@ -141,95 +145,126 @@
 
 
 \begin{frame}
-  \begin{block}{Model of taxon occurrence}
-    \begin{itemize}
-      \item response is p/a of genus in NA at time \(t\)
-        \begin{itemize}
-          \item Bernoulli variable 
-          \item probability is (observation prob) times (``true'' presence)
-        \end{itemize}
-      \item observation probability is effect of sampling/fossil record
-        %\begin{itemize}
-          %\item preservation as logistic regression with relative abundance as covariate
-        %\end{itemize}
-      \item true presence is multi-level logistic regression
-        \begin{itemize}
-          \item individual- and group-level
-        \end{itemize}
-      \item break-point model is the eventual goal
-    \end{itemize}
-  \end{block}
+  \frametitle{Model of taxon occurrence}
+  \begin{itemize}
+    \item response is p/a of genus in NA at time \(t\)
+      \begin{itemize}
+        \item Bernoulli variable 
+        \item probability is (observation prob) times (``true'' presence)
+      \end{itemize}
+    \item observation probability is effect of sampling/fossil record
+    \item the latent discrete ``true'' presence modeled as a \\multi-level logistic regression
+      \begin{itemize}
+        \item individual- and group-level
+      \end{itemize}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
-  \begin{block}{Posterior predictive checks}
-    \begin{itemize}
-      \item simulate fossil record given only \(y_{\_t = 1}\) and \(\theta\)
-        \begin{itemize}
-          \item where \(\theta\) is the set of all parameters
-        \end{itemize}
-      \item equivalent to leave-one-out cross-validation for time series?
-        \begin{itemize}
-          \item Bayesian statement is \(p(\tilde{y}_{t + 1} | y_{t} \theta)\)
-        \end{itemize}
-      \item ROC as measure of performance
-    \end{itemize}
-  \end{block}
+  \begin{equation}
+    \begin{aligned}
+      y_{i,t} &\sim \text{Bernoulli}(\rho_{t} z_{i,t}) \\
+      \text{logit}(\rho_{t}) &\sim \mathcal{N}(\rho^{'}, \sigma_{\rho}) \\
+      z_{i,t} &\sim \text{Bernoulli}(\theta_{i, t}) \\
+      \text{logit}(\theta_{i, t}) &= z_{i,t-1} (\alpha_{t} + X_{i} \beta_{t}) + (\prod_{k = 1}^{t-1} 1 - z_{i,k}) (\alpha_{t} + X_{i} \beta_{t}) \\
+      \beta_{d,t} &\sim \mathcal{N}(\mu_{d}, \sigma_{d}) \\
+      \alpha_{t} &\sim \mathcal{N}(\mu + \phi_{p[t]} + U_{t} \gamma, \sigma_{\mu}) \\
+      \phi_{p} &\sim \mathcal{N}(0, \sigma_{\phi}) \\
+    \end{aligned}
+  \end{equation}
+
+  Note: My implementation in Stan marginalizes over all possible values of \(z\) and takes advantage of noncentered parameterizations of the hierarchical effects for better posterior sampling behavior.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Posterior predictive model checking}
+  \begin{itemize}
+    \item simulate fossil record given only \(y_{\_t = 1}\), all its covariates, and \(\theta\)
+      \begin{itemize}
+        \item where \(\theta\) is the set of all parameters
+      \end{itemize}
+    \item leave-one-out cross-validation for time series
+      \begin{itemize}
+        \item Bayesian statement is \(p(\tilde{y}_{\_(t + 1)} | y_{\_t} \theta)\)
+      \end{itemize}
+    \item ROC as measure of performance
+  \end{itemize}
 \end{frame}
 
 
 \section{Other projects}
 
 \begin{frame}
-  \begin{block}{How cryptic is cryptic diversity? Machine learning approaches to classifying morphological variation in the Pacific Pond Turtle (\textit{Emys marmorata})}
-    \begin{itemize}
-      \item estimate which species classification is best supported by morphology
-        \begin{itemize}
-          \item multiple machine learning approaches
-          \item focus on one turtle species complex
-          \item results compared against results from two other turtle datasets
-          \item comparison of in- and out-of-sample model performance
-        \end{itemize}
-      \item collaboration with Ken, Jim Parham, and Bryan Stuart
-      \item submitted to then rejected from Systematic Biology
-      \item resubmitted soon
-    \end{itemize}
-  \end{block}
+  \frametitle{How cryptic is cryptic diversity? Machine learning approaches to classifying morphological variation in the Pacific Pond Turtle (\textit{Emys marmorata})}
+  \begin{itemize}
+    \item estimate which species classification is best supported by morphology
+      \begin{itemize}
+        \item multiple machine learning approaches
+        \item focus on one turtle species complex
+        \item results compared against results from two other turtle datasets
+        \item comparison of in- and out-of-sample model performance
+      \end{itemize}
+    \item collaboration with Ken, Jim Parham, and Bryan Stuart
+    \item submitted to then rejected from Systematic Biology
+    \item resubmitted soon
+  \end{itemize}
 \end{frame}
 
 % bivalve naming rate w/ stewart
 \begin{frame}
-  \begin{block}{Modeling the rate at which new species are named.}
-    \begin{itemize}
-      \item collaboration with Stewart Edie; he's lead
-      \item I developed the statistical model
-        \begin{itemize}
-          \item zero-inflated Poisson model 
-          \item both Bernoulli and Poisson distributions are time series models
-          \item response is the number of species named per publication \\per year for each biogeographic province
-          \item increasing, decreasing, or level?
-        \end{itemize}
-      \item draft phase
-      \item targets seem to be PNAS or Systematic Biology
-    \end{itemize}
-  \end{block}
+  \frametitle{Modeling the rate at which new species are named.}
+  \begin{itemize}
+    \item collaboration with Stewart Edie; he's lead
+    \item I developed the statistical model
+      \begin{itemize}
+        \item zero-inflated Poisson model 
+        \item both Bernoulli and Poisson modeled as time series
+        \item response is the number of species named per publication \\per year for each biogeographic province
+        \item increasing, decreasing, or level?
+      \end{itemize}
+    \item draft phase
+    \item targets seem to be PNAS or Systematic Biology
+  \end{itemize}
 \end{frame}
 
 
 \section{Moving forward}
 
 \begin{frame}
+  \frametitle{Post-doc ideas}
+  \begin{enumerate}
+    \item Miller Fellowship at Berkeley with Charles Marshall
+      % i don't think i'm good enough for this
+      \begin{itemize}
+        \item Charles has met me a couple times.
+      \end{itemize}
+    \item Peter Buck Fellowship at Smithsonian with Gene Hunt \\(and Peter Wagner and Kate Lyons)
+      % i don't think i'm good enough for this
+      \begin{itemize}
+        \item Gene, Pete, and Kate all know who I am.
+      \end{itemize}
+    \item Michigan Fellowship at University of Michigan \\with Matt Friedman
+      % i don't think i'm good enough for this
+      \begin{itemize}
+        \item I don't know if he's actually moving there.
+      \end{itemize}
+    \item NIMBiOS Post-doc with Brian O'Meara
+      \begin{itemize}
+        \item I don't know him.
+      \end{itemize}
+  \end{enumerate}
+\end{frame}
+
+
+\begin{frame}
   \begin{block}{Research statement}
+    Modeling sources of variation in global and regional patterns of biodiversity over time.
+    %Re-modeling the fossil record: new approaches to old questions
     \begin{itemize}
-      \item Intersection of macroevolution and macroecology.
-      \item Quantitative approaches to understanding global and regional patterns of biodiversity.
+      \item Intersection of macroevolution and macroecology. 
+      % interesting research is at intersections
+      \item Species pool demography as focus.
       \item Paleontological data.
-      \item Non-taxon specific; with emphasis on mammals.
-      \item More like an ecologist-modeler than an evolution-modeler
-        \begin{itemize}
-          \item No one-model to fit them all; tailor-made models for question.
-          \item This contrasts with the field.
-        \end{itemize}
     \end{itemize}
   \end{block}
 \end{frame}
