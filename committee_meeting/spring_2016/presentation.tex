@@ -57,14 +57,29 @@
 \end{frame}
 
 \begin{frame}
-  \begin{block}{New measure of environmental affinity}
+  \begin{block}{New measure of taxon's environmental affinity}
+    Probability of observing (\# epicontinental / total \# occurrences) given Beta(\(\alpha\), \(\beta\)).
+    
+    \(\alpha\) is the \# epicontinental background occurrences (+ 1).
+    
+    \(\beta\) is the \# open ocean background (+ 1).
   \end{block}
 \end{frame}
 
 \begin{frame}
   \begin{block}{Measure of sampling and imputed values}
+    Sampling is measured as the gap statistic \(r\): \\(number of bins with an occurrence - 2) / (duration in bins)
 
+    Can only be estimated for taxa with duration of three or more. \\Have to impute (e.g. fill-in) the values for all other taxa \(r^{\ast}\).
+    \begin{align*}
+      r &\sim \text{Beta}(\phi, \lambda) \\
+      \phi &= \text{logit}^{-1}(W\gamma) \\
+      r^{\ast} &\sim \text{Beta}(\phi^{\ast}, \lambda) \\
+      \phi^{\ast} &= \text{logit}^{-1}(W^{\ast}\gamma) \\
+    \end{align*}
   \end{block}
+
+  \footnotesize{Note: Beta distribution parameterized in terms of mean \(\phi\) and total count \(\lambda\). Also, this presentation excludes final (hyper)priors.}
 \end{frame}
 % biggest criticism was that i completely ignored effect of sampling
 %   i measure sampling as the simple gap statistic
@@ -85,19 +100,19 @@
 %   covariance matrix
 
 
-\section{Taxon occurrence as a function of both emergent biological traits and its environmental context}
+\section{Taxon occurrence as a function of both emergent biological traits and environmental context}
 
-% Theoretical underpinning
-%   change in regional species pool over time
-%   intersection of macroecology and macroevolution
+\begin{frame}
+  \frametitle{Empirical questions}
 
-% modified fourth-corner type problem
-%   presence_{i,t} | individual-level_{i,t}, group-level_{t} observation_{t}
-%   effects of covariates varies with t
-%   instead of group-level covariates included as part of multi-level model
-%   keeping in mind group-level covariates depend on t
+  % NA doesn't have sudden faunal transitions like Eurasia
 
-% after \citep{Smits2015}
+  % after \citep{Smits2015}
+  %   do differences in extinction translate into differences in species pool demography?
+  %     e.g. increase/decrease in occurrence over time?
+  %   arboreal taxa have a greater extinction risk
+  %   generalist taxa have a lower extinction risk
+
 %   decrease in extinction risk over time
 %     notice the pattern at the paleogene-neogene boundary
 %   higher extinction risk in arboreal taxa
@@ -105,10 +120,33 @@
 %     what is variation in effect? paleogene vs neogene
 %       is the transition/neogene effect so strong to appear constant?
 %     driven by the environmental change?
+\end{frame}
 
-% Vallesian crisis in Europe
-%   faunal shift at Paleogene-Neogene boundary
-%   do we see this in NA in terms of ecotypes?
+\begin{frame}
+  \begin{block}{Theoretical underpinning}
+    \begin{itemize}
+      \item changes in demographic structure of regional species pool
+      \item intersection of macroecology and macroevolution
+      \item fourth-corner type problem
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Fourth-corner problem}
+% figures from papers
+\end{frame}
+
+\begin{frame}
+  \frametitle{Macroevolutionary phrasing of fourth-corner problem}
+% modified fourth-corner type problem
+%   addition of observation, but gain of range-through
+%   presence_{i,t} | individual-level_{i,t}, group-level_{t} observation_{t}
+%   effects of covariates varies with t
+%   instead of group-level covariates included as part of multi-level model
+%   keeping in mind group-level covariates depend on t
+\end{frame}
+
 
 \begin{frame}
   \frametitle{Analysis of Cenozoic mammal fossil record for NA}
@@ -161,19 +199,17 @@
 \end{frame}
 
 \begin{frame}
-  \begin{equation}
-    \begin{aligned}
-      y_{i,t} &\sim \text{Bernoulli}(\rho_{t} z_{i,t}) \\
-      \text{logit}(\rho_{t}) &\sim \mathcal{N}(\rho^{'}, \sigma_{\rho}) \\
-      z_{i,t} &\sim \text{Bernoulli}(\theta_{i, t}) \\
-      \text{logit}(\theta_{i, t}) &= z_{i,t-1} (\alpha_{t} + X_{i} \beta_{t}) + (\prod_{k = 1}^{t-1} 1 - z_{i,k}) (\alpha_{t} + X_{i} \beta_{t}) \\
-      \beta_{d,t} &\sim \mathcal{N}(\mu_{d}, \sigma_{d}) \\
-      \alpha_{t} &\sim \mathcal{N}(\mu + \phi_{p[t]} + U_{t} \gamma, \sigma_{\mu}) \\
-      \phi_{p} &\sim \mathcal{N}(0, \sigma_{\phi}) \\
-    \end{aligned}
-  \end{equation}
+  \begin{align*}
+    y_{i,t} &\sim \text{Bernoulli}(\rho_{t} z_{i,t}) \\
+    \text{logit}(\rho_{t}) &\sim \mathcal{N}(\rho^{'}, \sigma_{\rho}) \\
+    z_{i,t} &\sim \text{Bernoulli}(\theta_{i, t}) \\
+    \text{logit}(\theta_{i, t}) &= z_{i,t-1} (\alpha_{t} + X_{i} \beta_{t}) + (\prod_{k = 1}^{t-1} 1 - z_{i,k}) (\alpha_{t} + X_{i} \beta_{t}) \\
+    \beta_{d,t} &\sim \mathcal{N}(\mu_{d}, \sigma_{d}) \\
+    \alpha_{t} &\sim \mathcal{N}(\mu + \phi_{p[t]} + U_{t} \gamma, \sigma_{\mu}) \\
+    \phi_{p} &\sim \mathcal{N}(0, \sigma_{\phi}) \\
+  \end{align*}
 
-  Note: My implementation in Stan marginalizes over all possible values of \(z\) and takes advantage of noncentered parameterizations of the hierarchical effects for better posterior sampling behavior.
+  \footnotesize{Note: My implementation in Stan marginalizes over all possible (range-through) values of \(z\) instead of estimating the discrete parameters,and also uses a noncentered parameterizations of the hierarchical effects for better posterior sampling behavior. Also, this presentation excludes final (hyper)priors.}
 \end{frame}
 
 \begin{frame}
@@ -213,18 +249,25 @@
 % bivalve naming rate w/ stewart
 \begin{frame}
   \frametitle{Modeling the rate at which new species are named.}
-  \begin{itemize}
-    \item collaboration with Stewart Edie; he's lead
-    \item I developed the statistical model
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
       \begin{itemize}
-        \item zero-inflated Poisson model 
-        \item both Bernoulli and Poisson modeled as time series
-        \item response is the number of species named per publication \\per year for each biogeographic province
-        \item increasing, decreasing, or level?
+        \item collaboration with Stewart Edie; he's lead
+        \item I developed the statistical model
+          \begin{itemize}
+            \item zero-inflated Poisson model 
+            \item both Bernoulli and Poisson modeled as time series
+            \item response is the number of species named per publication \\per year for each biogeographic province
+          \end{itemize}
+        \item targets seem to be PNAS or Systematic Biology
       \end{itemize}
-    \item draft phase
-    \item targets seem to be PNAS or Systematic Biology
-  \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/prior_pred}
+      \end{center}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 
@@ -255,19 +298,14 @@
   \end{enumerate}
 \end{frame}
 
-
 \begin{frame}
-  \begin{block}{Research statement}
-    Modeling sources of variation in global and regional patterns of biodiversity over time.
-    %Re-modeling the fossil record: new approaches to old questions
-    \begin{itemize}
-      \item Intersection of macroevolution and macroecology. 
-      % interesting research is at intersections
-      \item Species pool demography as focus.
-      \item Paleontological data.
-    \end{itemize}
-  \end{block}
+  \frametitle{Research program}
+  % macroevolutionary macroecology
+  %   macro$^{2}$
+  % modeling (bayesian, hierarchical/GLMM)
+  % empirical tests of macroevolutionary theories
 \end{frame}
+
 
 
 \end{document}
