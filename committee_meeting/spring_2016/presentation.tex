@@ -42,7 +42,7 @@
 \section{How macroecology affects macroevolution: the interplay between extinction intensity and trait-dependent extinction in brachiopods.}
 
 \begin{frame}
-  \begin{block}{History}
+  \begin{block}{Updates}
     \begin{itemize}
       \item presented at GSA 2015
       \item rejected from \textit{Evolution}
@@ -59,9 +59,9 @@
 \begin{frame}
   \begin{block}{New measure of taxon's environmental affinity}
     Probability of observing (\# epicontinental / total \# occurrences) given Beta(\(\alpha\), \(\beta\)).
-    
+
     \(\alpha\) is the \# epicontinental background occurrences (+ 1).
-    
+
     \(\beta\) is the \# open ocean background (+ 1).
   \end{block}
 \end{frame}
@@ -77,49 +77,53 @@
       r^{\ast} &\sim \text{Beta}(\phi^{\ast}, \lambda) \\
       \phi^{\ast} &= \text{logit}^{-1}(W^{\ast}\gamma) \\
     \end{align*}
+    \scriptsize{Note: Beta distribution parameterized in terms of mean \(\phi\) and total count \(\lambda\). Also, this presentation excludes final (hyper)priors.}
   \end{block}
 
-  \footnotesize{Note: Beta distribution parameterized in terms of mean \(\phi\) and total count \(\lambda\). Also, this presentation excludes final (hyper)priors.}
 \end{frame}
-% biggest criticism was that i completely ignored effect of sampling
-%   i measure sampling as the simple gap statistic
-%   use it as a covariate of duration
-%   this is the estimate the biasing effect of sampling
-%     NOT correct duration for sampling
-%     record is too coarse for a lot of methods
-%     just a different way of doing it
-%       i would use the new Wang approach for sampling instead of simple CLS type model
-% effect of sampling probability on duration
-%   (imupted) gap statistic
-%   some limit pushing, but use beta regression to help estimate
 
+\begin{frame}
+  \frametitle{Results}
 % results
 %   table and over-all probabilities 
 %   environmental preference
 %   change over time
 %   covariance matrix
-
+\end{frame}
 
 \section{Taxon occurrence as a function of both emergent biological traits and environmental context}
 
 \begin{frame}
-  \frametitle{Empirical questions}
+  \frametitle{Empirical setup}
+  \begin{itemize}
+    \item arboreal taxa are expected to have greatest extinction risk of the locomotor categories (Smits 2015 PNAS)
+    \item two possible causes
+      \begin{enumerate}
+        \item this effect is constant for all time
+        \item Paleogene-Neogene transition
+          \begin{itemize}
+            \item neutral effect of arboreality during Paleogene
+            \item strong selection against arboreality during Neogene
+            \item Neogene effect is stronger than Paleogene effect
+            \item means that overall mean effect is closer to Neogene
+          \end{itemize}
+      \end{enumerate}
+    \item former implies no appreciable demographic differences \\over Cenozoic
+    \item latter implies a difference in demography between \\Paleogene and Neogene
+  \end{itemize}
+\end{frame}
 
-  % NA doesn't have sudden faunal transitions like Eurasia
-
-  % after \citep{Smits2015}
-  %   do differences in extinction translate into differences in species pool demography?
-  %     e.g. increase/decrease in occurrence over time?
-  %   arboreal taxa have a greater extinction risk
-  %   generalist taxa have a lower extinction risk
-
-%   decrease in extinction risk over time
-%     notice the pattern at the paleogene-neogene boundary
-%   higher extinction risk in arboreal taxa
-%     strong effect
-%     what is variation in effect? paleogene vs neogene
-%       is the transition/neogene effect so strong to appear constant?
-%     driven by the environmental change?
+\begin{frame}
+  \begin{block}{The ground-dwelling problem}
+    \begin{itemize}
+      \item ``ground-dwelling'' too broad a category
+      \item following a suggestion from Graham, split by foot posture
+        \begin{itemize}
+          \item based primarily on Carrano 1997 \textit{ZJLS}
+        \end{itemize}
+      \item allows for estimation of subtler shifts in demography \\within ``ground-dwelling''
+    \end{itemize}
+  \end{block}
 \end{frame}
 
 \begin{frame}
@@ -128,25 +132,29 @@
       \item changes in demographic structure of regional species pool
       \item intersection of macroecology and macroevolution
       \item fourth-corner type problem
+        \begin{itemize}
+          \item trait- \textbf{and} environment-based assembly
+        \end{itemize}
     \end{itemize}
   \end{block}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Fourth-corner problem}
-% figures from papers
+  \frametitle{Conceptual diagram of fourth-corner problem}
+
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.7\textheight,keepaspectratio=true]{figure/warton_4corner}
+  \end{center}
+
+  \attrib{\scriptsize{Warton, Shipley, and Hastie. 2015. \textit{Methods in Ecology and Evolution.}}}
 \end{frame}
 
 \begin{frame}
   \frametitle{Macroevolutionary phrasing of fourth-corner problem}
-% modified fourth-corner type problem
-%   addition of observation, but gain of range-through
-%   presence_{i,t} | individual-level_{i,t}, group-level_{t} observation_{t}
-%   effects of covariates varies with t
-%   instead of group-level covariates included as part of multi-level model
-%   keeping in mind group-level covariates depend on t
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/paleo_fourth_corner}
+  \end{center}
 \end{frame}
-
 
 \begin{frame}
   \frametitle{Analysis of Cenozoic mammal fossil record for NA}
@@ -163,7 +171,7 @@
           \begin{itemize}
             \item carnivore, herbivore, insectivore, omnivore
           \end{itemize}
-        \item body size \\(rescaled log body mass)
+        \item effect body size \\(rescaled log body mass)
 %        \item phylogenetic effect
       \end{itemize}
     \end{column}
@@ -209,7 +217,7 @@
     \phi_{p} &\sim \mathcal{N}(0, \sigma_{\phi}) \\
   \end{align*}
 
-  \footnotesize{Note: My implementation in Stan marginalizes over all possible (range-through) values of \(z\) instead of estimating the discrete parameters,and also uses a noncentered parameterizations of the hierarchical effects for better posterior sampling behavior. Also, this presentation excludes final (hyper)priors.}
+  \scriptsize{Note: My implementation in Stan marginalizes over all possible (range-through) values of \(z\) instead of estimating the discrete parameters. I also uses a noncentered parameterizations of the hierarchical effects for better posterior sampling behavior. Finally, this presentation excludes final (hyper)priors.}
 \end{frame}
 
 \begin{frame}
@@ -252,12 +260,12 @@
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \begin{itemize}
-        \item collaboration with Stewart Edie; he's lead
-        \item I developed the statistical model
+        \item collaboration with Stewart Edie;\\ he's lead
+        \item I developed the model
           \begin{itemize}
             \item zero-inflated Poisson model 
             \item both Bernoulli and Poisson modeled as time series
-            \item response is the number of species named per publication \\per year for each biogeographic province
+            \item response is the number of species named per publication per year by biogeographic province
           \end{itemize}
         \item targets seem to be PNAS or Systematic Biology
       \end{itemize}
@@ -299,7 +307,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Research program}
+  \frametitle{My ``research program''}
   % macroevolutionary macroecology
   %   macro$^{2}$
   % modeling (bayesian, hierarchical/GLMM)
