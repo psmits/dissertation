@@ -26,13 +26,17 @@
   \end{frame}
 }
 
-\title{}
+\title{Spring 2016 committee meeting for Peter Smits}
 \author{}
 \institute{}
 \date{}
 
 
 \begin{document}
+
+\begin{frame}
+  \maketitle
+\end{frame}
 
 \begin{frame}
   \tableofcontents
@@ -68,28 +72,79 @@
 
 \begin{frame}
   \begin{block}{Measure of sampling and imputed values}
-    Sampling is measured as the gap statistic \(r\): \\(number of bins with an occurrence - 2) / (duration in bins)
+    Sampling is measured as the gap statistic \(r\): \\(number of bins with an occurrence - 2) / (duration in bins - 2)
 
     Can only be estimated for taxa with duration of three or more. \\Have to impute (e.g. fill-in) the values for all other taxa \(r^{\ast}\).
     \begin{align*}
-      r &\sim \text{Beta}(\phi, \lambda) \\
+      s &\sim \text{Beta}(\phi, \lambda) \\
       \phi &= \text{logit}^{-1}(W\gamma) \\
-      r^{\ast} &\sim \text{Beta}(\phi^{\ast}, \lambda) \\
+      s^{\ast} &\sim \text{Beta}(\phi^{\ast}, \lambda) \\
       \phi^{\ast} &= \text{logit}^{-1}(W^{\ast}\gamma) \\
     \end{align*}
-    \scriptsize{Note: Beta distribution parameterized in terms of mean \(\phi\) and total count \(\lambda\). Also, this presentation excludes final (hyper)priors.}
+    \scriptsize{Note: Beta distribution parameterized in terms of mean \(\phi\) and total count \(\lambda\). \\Also, this presentation excludes final (hyper)priors.}
   \end{block}
 
 \end{frame}
 
 \begin{frame}
-  \frametitle{Results}
-% results
-%   table and over-all probabilities 
-%   environmental preference
-%   change over time
-%   covariance matrix
+  \frametitle{Sampling statement for the joint posterior probability}
+
+  \small{
+    \begin{align*}
+      y_{i, t} &\sim \text{Weibull}(\sigma_{i, t}, \alpha) \\
+      \log(\sigma_{i, t}) &= \frac{X_{i}B_{j[i], t} + \delta s_{i}}{\alpha} \\
+      B_{j} &\sim \text{MVN}(\mu, \Sigma) \\
+      \Sigma &= \text{diag}(\tau) \Omega \text{diag}(\tau) \\
+      s_{i} &\sim \text{Beta}(\phi_{i}, \lambda) \\
+      \phi_{i} &= \text{logit}^{-1}(W_{i}\gamma) \\
+    \end{align*}
+  }
+  % diagram of model
+  % sampling statement of model
+    \scriptsize{Note: Calculation of log probability of right and left censored observations is modified from the above. Also, presentation excludes final (hyper)priors.}
 \end{frame}
+
+\begin{frame}
+  \frametitle{Model adequacy}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/survival_curves}
+      \end{center}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/shotgun}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Effects of biological traits on survival}
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/cohort_series}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Parabolic effect of environmental preference on survival}
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/env_effect}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Parabolic effect of environmental preference on survival \\by stage}
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/env_cohort}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  % conclusions
+\end{frame}
+
 
 \section{Taxon occurrence as a function of both emergent biological traits and environmental context}
 
@@ -207,17 +262,19 @@
 \end{frame}
 
 \begin{frame}
-  \begin{align*}
-    y_{i,t} &\sim \text{Bernoulli}(\rho_{t} z_{i,t}) \\
-    \text{logit}(\rho_{t}) &\sim \mathcal{N}(\rho^{'}, \sigma_{\rho}) \\
-    z_{i,t} &\sim \text{Bernoulli}(\theta_{i, t}) \\
-    \text{logit}(\theta_{i, t}) &= z_{i,t-1} (\alpha_{t} + X_{i} \beta_{t}) + (\prod_{k = 1}^{t-1} 1 - z_{i,k}) (\alpha_{t} + X_{i} \beta_{t}) \\
-    \beta_{d,t} &\sim \mathcal{N}(\mu_{d}, \sigma_{d}) \\
-    \alpha_{t} &\sim \mathcal{N}(\mu + \phi_{p[t]} + U_{t} \gamma, \sigma_{\mu}) \\
-    \phi_{p} &\sim \mathcal{N}(0, \sigma_{\phi}) \\
-  \end{align*}
-
-  \scriptsize{Note: My implementation in Stan marginalizes over all possible (range-through) values of \(z\) instead of estimating the discrete parameters. I also uses a noncentered parameterizations of the hierarchical effects for better posterior sampling behavior. Finally, this presentation excludes final (hyper)priors.}
+  \frametitle{Sampling statement for the joint posterior probability}
+  \footnotesize{
+    \begin{align*}
+      y_{i,t} &\sim \text{Bernoulli}(\rho_{t} z_{i,t}) \\
+      \text{logit}(\rho_{t}) &\sim \mathcal{N}(\rho^{'}, \sigma_{\rho}) \\
+      z_{i,t} &\sim \text{Bernoulli}(\theta_{i, t}) \\
+      \text{logit}(\theta_{i, t}) &= z_{i,t-1} (\alpha_{t} + X_{i} \beta_{t\_}) + (\prod_{k = 1}^{t-1} 1 - z_{i,k}) (\alpha_{t} + X_{i} \beta_{t\_}) \\
+      \beta_{t,d} &\sim \mathcal{N}(\mu_{d}, \sigma_{d}) \\
+      \alpha_{t} &\sim \mathcal{N}(\mu + \phi_{p[t]} + U_{t} \gamma, \sigma_{\mu}) \\
+      \phi_{p} &\sim \mathcal{N}(0, \sigma_{\phi}) \\
+    \end{align*}
+  }
+  \scriptsize{Note: Product term ensures loss is permenant. Implementation in Stan marginalizes over all possible (range-through) values of \(z\) instead of estimating the discrete parameters. I also use a noncentered parameterization of the hierarchical effects for better posterior sampling behavior. This presentation excludes final (hyper)priors.}
 \end{frame}
 
 \begin{frame}
