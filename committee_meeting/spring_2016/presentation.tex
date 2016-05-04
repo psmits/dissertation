@@ -46,27 +46,27 @@
 \section{How macroecology affects macroevolution: the interplay between extinction intensity and trait-dependent extinction in brachiopods.}
 
 \begin{frame}
-  \begin{block}{Updates}
+  \begin{alertblock}{Updates}
     \begin{itemize}
       \item presented at GSA 2015
       \item rejected from \textit{Evolution}
         \begin{itemize}
           \item encouraged resubmit
           \item audience issues
-          \item difficult and transformative reviews
+          \item difficult but transformational reviews
           \item resubmitted 3 March
         \end{itemize}
     \end{itemize}
-  \end{block}
+  \end{alertblock}
 \end{frame}
 
 \begin{frame}
   \begin{block}{New measure of taxon's environmental affinity}
-    Probability of observing (\# epicontinental / total \# occurrences) given Beta(\(\alpha\), \(\beta\)).
-
-    \(\alpha\) is the \# epicontinental background occurrences (+ 1).
-
-    \(\beta\) is the \# open ocean background (+ 1).
+    (\# epicontinental / total \# occurrences) is what quantile of the distribution of all other background occurrences Beta(\(\alpha\), \(\beta\)).
+    \begin{itemize}
+      \item \(\alpha\) is the \# epicontinental background occurrences (+ 1).
+      \item \(\beta\) is the \# open ocean background (+ 1).
+    \end{itemize}
   \end{block}
 \end{frame}
 
@@ -83,7 +83,6 @@
     \end{align*}
     \scriptsize{Note: Beta distribution parameterized in terms of mean \(\phi\) and total count \(\lambda\). \\Also, this presentation excludes final (hyper)priors.}
   \end{block}
-
 \end{frame}
 
 \begin{frame}
@@ -101,7 +100,7 @@
   }
   % diagram of model
   % sampling statement of model
-    \scriptsize{Note: Calculation of log probability of right and left censored observations is modified from the above. Also, presentation excludes final (hyper)priors.}
+  \scriptsize{Note: Calculation of log probability of right and left censored observations is modified from the above. Also, presentation excludes final (hyper)priors.}
 \end{frame}
 
 \begin{frame}
@@ -135,6 +134,13 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{Correlation between cohort trait effects}
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/wei_cor_heatmap}
+  \end{center}
+\end{frame}
+
+\begin{frame}
   \frametitle{Parabolic effect of environmental preference on survival \\by stage}
   \begin{center}
     \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/env_cohort}
@@ -142,14 +148,28 @@
 \end{frame}
 
 \begin{frame}
-  % conclusions
+  \begin{alertblock}{Conclusions}
+    \begin{itemize}
+      \item model fit is ok, I wish it was better
+      \item strong support for nonlinear relationship between environmental preference and survival
+        \begin{itemize}
+          \item intermediate preference expected to have greater duration than either end members
+        \end{itemize}
+      \item correlation between extinction intensity and selectivity
+        \begin{itemize}
+          \item as average duration increases, effect of geographic range decreases \alert{medium}
+          \item as average duration increases, y-intercept of the nonlinear effect of environmental preferences increases (e.g. from slight epicontinental to complete middle) \alert{strong}
+        \end{itemize}
+      \item increasing extinction risk with taxon age
+    \end{itemize}
+  \end{alertblock}
 \end{frame}
 
 
 \section{Taxon occurrence as a function of both emergent biological traits and environmental context}
 
 \begin{frame}
-  \frametitle{Empirical setup}
+  \frametitle{Initial empirical setup}
   \begin{itemize}
     \item arboreal taxa are expected to have greatest extinction risk of the locomotor categories (Smits 2015 PNAS)
     \item two possible causes
@@ -182,9 +202,33 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{Other covariates of interest}
+  \begin{itemize}
+    \item traits
+      \begin{itemize}
+        \item dietary category; shifts in trophic structure 
+        \item body mass
+      \end{itemize}
+    \item environmental factors
+      \begin{itemize}
+        \item floral phase following Graham 2010 \underline{A Natural History of the New World}
+        \item global temperature, both mean and interquartile range
+      \end{itemize}
+  \end{itemize}
+
+  \begin{block}{traits vary with time; \\environmental factors predict average occurrence probability}
+    can estimate probability of expected enrichment or depletion effect of individual traits for each time bin wrt all other analyzed traits
+  \end{block}
+\end{frame}
+
+\begin{frame}
   \begin{block}{Theoretical underpinning}
     \begin{itemize}
       \item changes in demographic structure of regional species pool
+        \begin{itemize}
+          \item I'm not modeling the diversification process, \alert{only presence}
+          \item no difference between origination, survival, extinction in effect
+        \end{itemize}
       \item intersection of macroecology and macroevolution
       \item fourth-corner type problem
         \begin{itemize}
@@ -205,7 +249,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Macroevolutionary phrasing of fourth-corner problem}
+  \frametitle{Conceptual diagram of my model}
   \begin{center}
     \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/paleo_fourth_corner}
   \end{center}
@@ -227,7 +271,6 @@
             \item carnivore, herbivore, insectivore, omnivore
           \end{itemize}
         \item effect body size \\(rescaled log body mass)
-%        \item phylogenetic effect
       \end{itemize}
     \end{column}
     \begin{column}{0.5\textwidth}
@@ -274,22 +317,44 @@
       \phi_{p} &\sim \mathcal{N}(0, \sigma_{\phi}) \\
     \end{align*}
   }
-  \scriptsize{Note: Product term ensures loss is permenant. Implementation in Stan marginalizes over all possible (range-through) values of \(z\) instead of estimating the discrete parameters. I also use a noncentered parameterization of the hierarchical effects for better posterior sampling behavior. This presentation excludes final (hyper)priors.}
+  \scriptsize{Note: Product term ensures taxon-loss is permenant. Implementation in Stan marginalizes over all possible (range-through) values of \(z\) instead of estimating the discrete parameters. I also use a noncentered parameterization of the hierarchical effects for better posterior sampling behavior. This presentation excludes final (hyper)priors.}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Posterior predictive model checking}
+  \frametitle{Assesing model fit from the posterior predictive distribution}
   \begin{itemize}
     \item simulate fossil record given only \(y_{\_t = 1}\), all its covariates, and \(\theta\)
       \begin{itemize}
         \item where \(\theta\) is the set of all parameters
       \end{itemize}
-    \item leave-one-out cross-validation for time series
+    \item cross-validation for time series
       \begin{itemize}
-        \item Bayesian statement is \(p(\tilde{y}_{\_(t + 1)} | y_{\_t} \theta)\)
+        \item Bayesian statement is \(p(\tilde{y}_{\_(t + 1)} | y_{\_t}, \theta)\)
+        \item issues beacuse of high structured data (e.g. floral phase)
       \end{itemize}
-    \item ROC as measure of performance
   \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \begin{alertblock}{Current project issues}
+    \begin{itemize}
+      \item fit with Stan (NUTS sampling/MCMC of posterior)
+      \item 4 parallel chains. 
+        \begin{itemize}
+          \item 10 000 warm-up, 10 000 sampling, thinned by 10.
+        \end{itemize}
+      \item slow to converge 
+        \begin{itemize}
+          \item simple model with no individual- or group-level effects \\takes a week (same settings)
+        \end{itemize}
+      \item solutions?
+        \begin{itemize}
+          \item decrease model complexity: where and how so?
+          \item other reparameterizations?
+          \item just wait?
+        \end{itemize}
+    \end{itemize}
+  \end{alertblock}
 \end{frame}
 
 
@@ -301,60 +366,111 @@
     \item estimate which species classification is best supported by morphology
       \begin{itemize}
         \item multiple machine learning approaches
-        \item focus on one turtle species complex
-        \item results compared against results from two other turtle datasets
+        \item three datasets; special attention to \textit{Emys}
         \item comparison of in- and out-of-sample model performance
       \end{itemize}
     \item collaboration with Ken, Jim Parham, and Bryan Stuart
     \item submitted to then rejected from Systematic Biology
-    \item resubmitted soon
   \end{itemize}
 \end{frame}
+
+\begin{frame}
+  \frametitle{7 turtle, and \textit{Trachemys} species sets}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/other_model_sel}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/other_oos_sel}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\textit{Emys}: CV of model using training data}
+  \begin{center}
+      \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/emys_model_sel}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\textit{Emys}: Results of prediction of testing data}
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/emys_oos_sel}
+  \end{center}
+\end{frame}
+
 
 % bivalve naming rate w/ stewart
 \begin{frame}
   \frametitle{Modeling the rate at which new species are named.}
+
+  \begin{block}{Goal}
+    Predictive model of number of bivalve species named (per publication) per year by biogeographic province.
+  \end{block}
+
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \begin{itemize}
-        \item collaboration with Stewart Edie;\\ he's lead
-        \item I developed the model
-          \begin{itemize}
-            \item zero-inflated Poisson model 
-            \item both Bernoulli and Poisson modeled as time series
-            \item response is the number of species named per publication per year by biogeographic province
-          \end{itemize}
-        \item targets seem to be PNAS or Systematic Biology
+        \item collaboration with Stewart Edie
+        \item he developed the question, \\I developed the model
       \end{itemize}
     \end{column}
     \begin{column}{0.5\textwidth}
-      \begin{center}
-        \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/prior_pred}
-      \end{center}
+      \begin{itemize}
+        \item hierarchical zero-inflated Poisson time-series model
+        \item forecast rank order of provincial diversity in approx. 15 years
+      \end{itemize}
     \end{column}
   \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Conceptual model}
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/edie_concept}
+  \end{center}
+
+  \attrib{\scriptsize{Edie, Smits, et al. \textit{in. prep.}}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Regional accumulation and prior predictive comparison}
+
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/edie_cumm_regional}
+  \end{center}
+
+  \attrib{\scriptsize{Edie, Smits, et al. \textit{in. prep.}}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Forecasted regional ranks}
+
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/edie_rank}
+  \end{center}
+
+  \attrib{\scriptsize{Edie, Smits, et al. \textit{in. prep.}}}
 \end{frame}
 
 
 \section{Moving forward}
 
 \begin{frame}
-  \frametitle{Post-doc ideas}
+  \frametitle{people to post-doc with and related fellowships}
   \begin{enumerate}
     \item Miller Fellowship at Berkeley with Charles Marshall
-      % i don't think i'm good enough for this
       \begin{itemize}
         \item Charles has met me a couple times.
       \end{itemize}
     \item Peter Buck Fellowship at Smithsonian with Gene Hunt \\(and Peter Wagner and Kate Lyons)
-      % i don't think i'm good enough for this
       \begin{itemize}
         \item Gene, Pete, and Kate all know who I am.
       \end{itemize}
     \item Michigan Fellowship at University of Michigan \\with Matt Friedman
-      % i don't think i'm good enough for this
       \begin{itemize}
-        \item I don't know if he's actually moving there.
+        \item I don't know him
       \end{itemize}
     \item NIMBiOS Post-doc with Brian O'Meara
       \begin{itemize}
@@ -365,10 +481,20 @@
 
 \begin{frame}
   \frametitle{My ``research program''}
-  % macroevolutionary macroecology
-  %   macro$^{2}$
-  % modeling (bayesian, hierarchical/GLMM)
-  % empirical tests of macroevolutionary theories
+  \begin{itemize}
+    \item macroevolutionary macroecology
+      \begin{itemize}
+        \item research at the intersection of disciplines
+      \end{itemize}
+    \item hypothesis driven
+      \begin{itemize}
+        \item empirical tests of macroevolutionary theories
+      \end{itemize}
+    \item modeling (Bayesian, hierarchical/GLMM)
+      \begin{itemize}
+        \item emphasis on model checking and validation
+      \end{itemize}
+  \end{itemize}
 \end{frame}
 
 
