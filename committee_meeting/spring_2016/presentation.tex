@@ -58,18 +58,24 @@
 \end{frame}
 
 \begin{frame}
-  \begin{alertblock}{Updates}
-    \begin{itemize}
-      \item presented at GSA 2015
-      \item rejected from \textit{Evolution}
-        \begin{itemize}
-          \item encouraged resubmit
-          \item audience issues
-          \item difficult but transformational reviews
-          \item resubmitted 3 March
-        \end{itemize}
-    \end{itemize}
-  \end{alertblock}
+  \frametitle{Analysis of post-Cambrian Paleozoic brachiopod genus durations}
+  \begin{itemize}
+    \item stage as time unit; duration measured in stages
+    \item multiple emergent traits analyzed
+      \begin{itemize}
+        \item geographic range
+          \begin{itemize}
+            \item used JADE to handle effect of biased sampling \\(Chao et al. 2015 \textit{Ecology})
+          \end{itemize}
+        \item body size
+          \begin{itemize}
+            \item from Payne et al from the \textit{Treatise}
+          \end{itemize}
+        \item environmental preference (x, x\(^2\))
+        \item gap statistic as measure of sampling (Foote and Raup 1996 \textit{Paleobio})
+      \end{itemize}
+    \item factors vary by cohort (except gap statistic)
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -110,8 +116,6 @@
       \phi_{i} &= \text{logit}^{-1}(W_{i}\gamma) \\
     \end{align*}
   }
-  % diagram of model
-  % sampling statement of model
   \scriptsize{Note: Calculation of log probability of right and left censored observations is modified from the above. Also, presentation excludes final (hyper)priors.}
 \end{frame}
 
@@ -160,7 +164,7 @@
 \end{frame}
 
 \begin{frame}
-  \begin{alertblock}{Conclusions}
+  \begin{block}{Conclusions}
     \begin{itemize}
       \item model fit is ok, I wish it was better
       \item strong support for nonlinear relationship between environmental preference and survival
@@ -174,8 +178,25 @@
         \end{itemize}
       \item increasing extinction risk with taxon age
     \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{alertblock}{Updates}
+    \begin{itemize}
+      \item presented at GSA 2015
+      \item rejected from \textit{Evolution}
+        \begin{itemize}
+          \item encouraged resubmit
+          \item audience issues
+          \item difficult but transformational reviews
+          \item resubmitted 3 March
+          \item still ``under review'' as of this morning (70 days)
+        \end{itemize}
+    \end{itemize}
   \end{alertblock}
 \end{frame}
+
 
 
 \section{Taxon occurrence as a function of both emergent biological traits and environmental context}
@@ -218,7 +239,7 @@
   \begin{itemize}
     \item traits
       \begin{itemize}
-        \item dietary category; shifts in trophic structure 
+        \item dietary category (shifts in trophic structure)
         \item body mass
       \end{itemize}
     \item environmental factors
@@ -329,22 +350,23 @@
       \phi_{p} &\sim \mathcal{N}(0, \sigma_{\phi}) \\
     \end{align*}
   }
-  \scriptsize{Note: Product term ensures taxon-loss is permenant. Implementation in Stan marginalizes over all possible (range-through) values of \(z\) instead of estimating the discrete parameters. I also use a noncentered parameterization of the hierarchical effects for better posterior sampling behavior. This presentation excludes final (hyper)priors.}
+  \scriptsize{Note: Product term ensures taxon-loss is permanent. Implementation in Stan marginalizes over all possible (range-through) values of \(z\) instead of estimating the discrete parameters. I also use a noncentered parameterization of the hierarchical effects for better posterior sampling behavior. This presentation excludes final (hyper)priors.}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Assesing model fit from the posterior predictive distribution}
-  \begin{itemize}
-    \item simulate fossil record given only \(y_{\_t = 1}\), all its covariates, and \(\theta\)
-      \begin{itemize}
-        \item where \(\theta\) is the set of all parameters
-      \end{itemize}
-    \item cross-validation for time series
-      \begin{itemize}
-        \item Bayesian statement is \(p(\tilde{y}_{\_(t + 1)} | y_{\_t}, \theta)\)
-        \item issues beacuse of high structured data (e.g. floral phase)
-      \end{itemize}
-  \end{itemize}
+  \begin{block}{Assessing model fit from the posterior predictive distribution}
+    \begin{itemize}
+      \item simulate fossil record given only \(y_{\_t = 1}\) given all covariates, \(\theta\)
+        \begin{itemize}
+          \item where \(\theta\) is the set of all parameters
+        \end{itemize}
+      \item cross-validation for time series
+        \begin{itemize}
+          \item Bayesian statement is \(p(\tilde{y}_{\_(t + 1)} | y_{\_t}, \theta)\)
+          \item issues because of high structured data (e.g. floral phase)
+        \end{itemize}
+    \end{itemize}
+  \end{block}
 \end{frame}
 
 \begin{frame}
@@ -371,7 +393,7 @@
 \end{frame}
 
 
-\section{Other projects}
+\section{Collaboration projects}
 
 \begin{frame}
   \frametitle{How cryptic is cryptic diversity? Machine learning approaches to classifying morphological variation in the Pacific Pond Turtle (\textit{Emys marmorata})}
@@ -388,6 +410,37 @@
 \end{frame}
 
 \begin{frame}
+  \begin{block}{Statistical learning approach}
+    \begin{itemize}
+      \item split data into training and testing datasets (80/20)
+      \item training dataset
+        \begin{itemize}
+          \item multiple models w/ between 3-28 predictors
+          \item 10 rounds, 5-fold cross-validation
+            \begin{itemize}
+              \item estimate out-of-sample AUC of ROC
+              \item compare for model selection 
+            \end{itemize}
+          \item follows Hastie et al. 2009 ``Elements of Statistical Learning''
+        \end{itemize}
+      \item testing dataset
+        \begin{itemize}
+          \item using selected model, predict classification
+          \item AUC of ROC as measure of success
+          \item compare average from multiple models to compare hypotheses
+        \end{itemize}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{PC-s for the 7 turtle and \textit{Trachemys} species sets}
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/other_pc_graph}
+  \end{center}
+\end{frame}
+
+\begin{frame}
   \frametitle{7 turtle, and \textit{Trachemys} species sets}
   \begin{columns}
     \begin{column}{0.5\textwidth}
@@ -400,9 +453,16 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{PC-s for the \textit{Emys} species sets}
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/emys_pc_graph}
+  \end{center}
+\end{frame}
+
+\begin{frame}
   \frametitle{\textit{Emys}: CV of model using training data}
   \begin{center}
-      \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/emys_model_sel}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/emys_model_sel}
   \end{center}
 \end{frame}
 
@@ -458,6 +518,16 @@
 \end{frame}
 
 \begin{frame}
+  \frametitle{Cross-validation of forecasting error}
+
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/edie_cv_forecast}
+  \end{center}
+
+  \attrib{\scriptsize{Edie, Smits, et al. \textit{in. prep.}}}
+\end{frame}
+
+\begin{frame}
   \frametitle{Forecasted regional ranks}
 
   \begin{center}
@@ -492,22 +562,24 @@
   \end{enumerate}
 \end{frame}
 
+
 \begin{frame}
-  \frametitle{My ``research program''}
-  \begin{itemize}
-    \item macroevolutionary macroecology
-      \begin{itemize}
-        \item research at the intersection of disciplines
-      \end{itemize}
-    \item hypothesis driven
-      \begin{itemize}
-        \item empirical tests of macroevolutionary theories
-      \end{itemize}
-    \item modeling (Bayesian, hierarchical/GLMM)
-      \begin{itemize}
-        \item emphasis on model checking and validation
-      \end{itemize}
-  \end{itemize}
+  \begin{block}{My ``research program''}
+    \begin{itemize}
+      \item macroevolutionary macroecology
+        \begin{itemize}
+          \item research at the intersection of disciplines
+        \end{itemize}
+      \item hypothesis driven
+        \begin{itemize}
+          \item empirical tests of macroevolutionary theories
+        \end{itemize}
+      \item modeling (Bayesian, hierarchical/GLMM)
+        \begin{itemize}
+          \item emphasis on model checking and validation
+        \end{itemize}
+    \end{itemize}
+  \end{block}
 \end{frame}
 
 
