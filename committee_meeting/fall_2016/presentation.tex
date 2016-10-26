@@ -1,0 +1,87 @@
+\documentclass{beamer} 
+\usepackage{amsmath,amsthm}
+\usepackage{graphicx,microtype,parskip}
+\usepackage{caption,subcaption,multirow}
+\usepackage{attrib}
+
+\frenchspacing
+
+\usetheme{default}
+\usecolortheme{whale}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+
+\setbeamercolor{title}{fg=blue,bg=white}
+
+\setbeamercolor{block title}{fg=white,bg=gray}
+\setbeamercolor{block body}{fg=black,bg=lightgray}
+
+\setbeamercolor{block title alerted}{fg=white,bg=darkgray}
+\setbeamercolor{block body alerted}{fg=black,bg=lightgray}
+
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\title{Fall 2016 committee meeting for Peter Smits}
+\author{}
+\institute{}
+\date{}
+
+
+\begin{document}
+
+\begin{frame}
+  \maketitle
+\end{frame}
+
+\begin{frame}
+  \tableofcontents
+\end{frame}
+
+\section{Post-doc applications}
+\begin{frame}
+  \frametitle{What I've applied for}
+  \begin{itemize}
+    \item Miller Fellowship at Berkeley with Charles Marshall
+    \item Killam Fellowship at UBC with Matt Pennell
+  \end{itemize}
+\end{frame}
+
+
+\section{Final chapter}
+\begin{frame}
+  \begin{block}{What I've got done}
+    \begin{itemize}
+      \item model developed
+        \begin{itemize}
+          \item poor fit as is
+          \item species do not persist long enough
+          \item preservation as function of body size
+        \end{itemize}
+      \item approximate Bayesian inference
+        \begin{itemize}
+          \item proof of concept
+          \item fit is very slow
+        \end{itemize}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{What's left?}
+    \begin{itemize}
+      \item full posterior inference
+      \item improve model structure
+      \item write manuscript
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+
+\end{document}
