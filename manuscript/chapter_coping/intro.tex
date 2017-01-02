@@ -1,0 +1,140 @@
+\documentclass[12pt,letterpaper]{article}
+
+\usepackage{amsmath, amsthm}
+\usepackage{microtype, parskip}
+\usepackage[comma,numbers,sort&compress]{natbib}
+\usepackage{lineno}
+\usepackage{docmute}
+\usepackage{caption, subcaption, multirow, morefloats, rotating}
+\usepackage{wrapfig}
+
+\frenchspacing
+
+\begin{document}
+
+\section*{Introduction}
+
+% Taxon occurrence as a function of both emergent biological traits and its environmental context?
+
+% species pool concept
+%   the set of species which can form communities in a region
+%     local diversity is subset of species pool
+%   what affects regional species pool composition?
+%     species traits
+%     environmental characteristics
+%   demography
+% goal 
+%   understand how species traits and environmental factors effect species demography
+% occurrence cube -- the basis hierarchical model
+%   fundamental unit of ecology is the occurrence -- Gotelli
+%   species, site, time
+%   fourth-corner type problem
+%     species, sites
+%     differences between local species pools
+%   this analysis
+%     species, time
+%     time gives info on ``true'' vs observed occurrence
+%     differences in regional species pool through time
+%     not modelling between site differences
+% issues of defining hierarchy
+%   effect of environmental context on occurrence as mediated by traits
+%   effect of traits on occurrence as mediated by environmental context
+%   these are different questions
+%     the former gets asked more --> assembly
+%     i'm working with the later --> demography
+%   species occurrence i at time t --> is the unit of analysis
+%     species is the individual-level
+%     site is the first group-level
+%     time is the second group-level
+%     seems logical to me
+%   (the combination of 4th corner and my model does exist) 
+%     (i think it makes more sense in my framework)
+%     (species occurrence i at sight j at time t)
+%   does this relate to the row to column ratio of the datasets?
+%     i have lots of species, few time points
+%       occurrence matrix is sparse
+%       species have durations
+
+
+% system
+%   Cenozoic mammals of NA
+%   lots of things to think about
+%     what specific hypotheses are of interest? 
+%     why those ones?
+% after \citep{Smits2015}
+%   decrease in extinction risk over time
+%     notice the pattern at the paleogene-neogene boundary
+%   higher extinction risk in arboreal taxa; 2 possible situations
+%     this effect is constant for all time
+%     Paleogene-Neogene transition
+%       neutral effect of arboreality during Paleogene
+%       strong selection against arboreality during Neogene
+%       Neogene effect is stronger than Paleogene effect
+%       means that overall mean effect is closer to Neogene
+%   former implies no appreciable demographic differences over Cenozoic
+%   latter implies a difference in demography between Paleogene and Neogene
+% events of interest
+%   faunal shift at Paleogene-Neogene boundary
+%     Oligo-Miocene boundary (Chattian--Aquitanian)
+%     no known climatic events
+%     from kind of modern to mostly modern species pool
+%     (mulitple european events)
+%   rise of grasses
+%     janis
+%     stromberg
+%     (fortelius and europe)
+%   other climate events? PETM, mid-miocene climatic optimum
+
+
+% analysis of mammal genus fossil record for north america
+%   time is discrete as 2-My bins
+%   starting post-K/Pg boundary
+%   (ignores quarternary)
+
+% individual-level covariates
+%   intercept term, varying by time
+%   locomotor type/category
+%       arboreal, digitigrade, plantigrade, unguligrade, fossorial, scansorial
+%   dietary category
+%     carnivore, herbivore, insectivore, omnivore
+%   body size
+%     rescale of log body mass
+
+% group-level covariates
+%   intercept
+%   mean of temperatue estimate at time t
+%   interquartile range of temperatue estimate at time t
+%   plant community phase following Graham
+
+% compare model assuming perfect sampling to model allowing for imperfect sampling
+% imperfect sampling
+%   two-state, discrete time hidden markov model with absorbing state
+%     observation model for Royle and Dorazio
+%     used a lot in paleobiology
+%       Liow
+%   a continuous-time analogue would be PyRate
+%     strong assumptions about probability of observing over species duration
+% issues surrounding model complexity
+%   including covariates adds a lot of complexity
+%   only doing approximate Bayesian inference (ADVI)
+%   see methods section for longer discussion
+
+% why consider phylogeny?
+%   may or may not be an issue in community ecology/assembly/whatever the fuck
+%     that's whatever
+%   but i'm doing stuff over time
+%     so we actually progress along the tree
+%     much better change of phylogeny actually mattering
+%       clade replacement in NA (carnivores, herbivores, etc)
+%   so i'm just thinking of it as how it affects occurrence
+%     GLMM approach is super effective for this purpose
+%   note that i'm not actually modeling the diversification process
+%     that's what a true J-S model (or PyRate) do
+%     i'm just accounting for phylogenetic autocorrelation in species occurrence
+
+
+% goals of this analysis
+%   questions being addressed
+%   how these questions are answered
+
+\end{document}

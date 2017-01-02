@@ -1,10 +1,26 @@
 % ---- ETD Document Class and Useful Packages ---- %
-\documentclass{ucetd}
-\usepackage{subfigure,epsfig,amsfonts}
+\documentclass{ucetd}  % bib file is coded in this
+\usepackage{graphicx}
+\usepackage{subcaption}
 \usepackage{natbib}
 \usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{multirow}
+\usepackage{microtype}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage{docmute}
+\usepackage{morefloats}
+\usepackage{rotating}
+\usepackage{wrapfig}
+\usepackage{setspace}
+\usepackage{parskip}
+%\usepackage[nottoc,numbib]{tocbibind}
+
+\newenvironment{section_abstract}{\rightskip1in}{}
+
+
 
 %% Use these commands to set biographic information for the title page:
 \title{Thesis Title}
@@ -17,6 +33,7 @@
 %% Use these commands to set a dedication and epigraph text
 \dedication{Dedication Text}
 \epigraph{Epigraph Text}
+
 
 
 \begin{document}
@@ -48,9 +65,16 @@
 \chapter{Introduction}
 % Introductory stuff
 
-\chapter{A Chapter}
-\section{Introduction}
-% Intro to chapter one
+% chapter 1
+\include{chapter_death_taxa/plain_survival}
+
+% chapter 2
+\include{chapter_preserve/plain_brachiopod}
+
+% chapter 3
+\include{chapter_coping/plain_coping}
+
+\chapter{Conclusion}
 
 % Format a LaTeX bibliography
 \makebibliography
@@ -60,5 +84,3 @@
 %\input{table}
 
 \end{document}
-
-
