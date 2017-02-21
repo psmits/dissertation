@@ -1,5 +1,7 @@
 \chapter{Introduction}
 
+\section{Emergent patterns, macroevolution, and macroecology}
+
 % introduction
 % what are the major themes of the work covered by this dissertation?
 %   macroevolution and macroecology
@@ -7,6 +9,49 @@
 %   emergent patterns in paleontological data
 %     extinction: differences in species fitness, species selection
 %     regional species pool composition
+
+
+An emergent pattern is one that is not observable or predictable from its individual constituent parts. Emergence is ubiquitous in biological systems: cells form a tissue with a complex function, species extinction requires all member individuals to die, and a species global geographic range is the product of many individual ranges. This history of a species or set of species over time is inherently an emergent pattern as the temporal history of a species is not knowable from an instantaneous sample. Macroevolution and macroecology are the studies of emergent patterns in evolutionary and ecological data, respectively \citep{Brown1989,Brown1995,Stanley1979,Stanley1975}. Traditionally, macroevolution is the study of patterns over time while macroecology is concerned with patterns over space, but I find this overly reductive.
+
+Both macroevolution and macroecology are disciplines concerned with emergent patterns. Both disciplines implicitly and explicitly accept a hierarchical perspective on biology as emergence is not possible without different levels of organization, however nebulous they may be. Even if an analysis is concerned with only a single species, the concept of a species is itself an emergent property or label for a collection of populations and individuals. And while it may be argued that the species label or identity is a non-biological construct or heuristic for understanding the complexity of populations and reproductive isolation, we are still concerned with patterns and properties of that construct (e.g. extinction, conservation, ecosystem services).
+
+Macroevolution is much more than evolution above the species level; this too is overly reductive and assigns too much meaning to a single level of organization. Macroevolution is the study of any emergent evolutionary pattern; this means patterns of speciation/extinction (diversity) or trait evolution (disparity) which are observable only when considering more than one taxon or when considering the temporal history of one or more taxa.
+
+Macroecology is then the study of emergent ecological patterns, which means patterns in spatial distribution or community composition which are observable only when considering more than one taxon or when considering the temporal history of one or more taxa. Because taxa inherently respond differently and individually to environmental changes, both biotic and abiotic, macroecological patterns are those due to the similarity in response across individuals.
+
+
+Traits are how we bridge evolution and ecology \citep{Mcgill2006,Webber2017}.
+
+
+Species selection is enshrined as one of the most important patterns in macroevolution \citep{Stanley1975,Stanley1979,Vrba1986,Jablonski2008a,Rabosky2010b,Simpson2016a,Pennell2014}. \citet{Rabosky2010b} portray species selection as the resultant pattern caused by the heritability of speciation and extinction rates, but I think this misses the mark. Species inherit more than just speciation and extinction rates; they also inherit traits which themselves may be linked to differences in speciation or extinction rates due to their effect on species fitness. This last concept, species fitness, is a nebulous concept that is rarely discussed yet is vitally important to species selection \citep{Cooper1984,Palmer2012}. Here I adopt phrasing of \citet{Cooper1984} and I require that species fitness is, at a minimum, defined as the expected duration of a species. Differences in expected species duration that are associated with species traits are then the product of selection.
+
+Defining a generative aspect of species fitness (i.e. relating to speciation rate) is more difficult partially because the why and how speciation rate can vary is not fully understood \citep{Rabosky2015c,Rabosky2013e}. At a minimum, given the earlier definition of fitness wrt extinction, species fitness wrt speciation would require the association with differences speciation rate and species traits; this difference in fitness is then the raw material for selection.
+
+Extinction is the ultimate manifestation of selection and is central to macroevolutionary studies as well as the definition of species fitness used here. In his analysis of the geologic duration of higher taxa, \citet{VanValen1973} proposed the ``Law of Constant Extinction'' to explain the perceived pattern of age-independent extinction; stating that a species' risk of extinction does not change with taxon age. \citet{VanValen1973} proposed the ``Red Queen hypothesis'' as a mechanism behind this law.
+
+The functional composition of a community or species pool.
+
+% Simpson1944 % tempo and mode
+% Simpson1953 % major features
+% VanValen1971b % adaptive zones and mammal orders
+% VanValen1973 % red queen hypothesis/law of constant extinction
+% Raup1973 % random trees
+% Raup1974a % random walk evolution
+% Stanley1975 % species selection
+% Stanley1979 % macroevolution book
+% Felsenstein1985b % birth of pcm 
+% Vrba1986 % sorting vs selection
+% Brown1989 % macroecology paper
+% Brown1995 % macroecology book
+% Jablonski2008 % biotic interactions and scale/level
+% Jablonski2008a % species selection review
+% Smith2008a % macroecology expansion
+% Rabosky2010b % biology reclaims species selection
+% Simpson2016a % the case for species selection
+
+
+\section{Studies conducted as parts of this dissertation}
+
 %   analysis of structured data via hierarchical Bayesian models
 %     structured data requires a structured model
 %       this is under-appreciated
@@ -14,18 +59,22 @@
 %       large amounts of covariate information
 %         focus on how species interact with their environment
 %       multi-level model for multiple levels of organization
-% emergent patterns
-%   what is an emergent pattern?
-%     property of complex systems with multiple levels of organization
-%   species selection
-%     differences in species fitness associated with emergent properties of the species
-%     selection causes differences in fitness
-% analysis of structured data
-%   what is structured data and why should we care about it?
-%     structred data is the hallmark of emergent patterns
-%   what is a hierarchical Bayesian model?
 
-% the studies conducted as a part of my dissertation
+Structured data is the hallmark of emergent patterns. Structure occurs naturally in the collection of data. A simple example would be the results of drug trials from multiple hospitals; it is possible to consider these results in aggregate by ignoring the effect of hospital, or these results can be considered individually by hospital. The goal in the analysis of structured, hierarchical, or multi-level data is to integrate this structure into the analysis. For biological data, a simple example would be studying the same species at multiple locations; individuals from the same location may be more similar than individuals from different locations. But incorporating this reality into the analysis, both estimates and predictions are improved.
+
+Complexity is often ignored or mishandled in paleobiological studies, most likely due to both the sophistication underlying analysis and a lack of knowledge. The average paleontologist does not have the appropriate knowledge to analyze their data wrt the macroevolutionary and macroecologial questions that inspire their work. Instead of a unified and shared framework, like that in the phylogenetic comparative methods subdiscipline, palebiological analysis is a complex and idiosyncratic mix of Monte Carlo simulations, linear models, and NHST. And yes, paleobiological questions and analyses are arguably broader in scope than PCMs and thus merit such a large swatch of unconnected methods, I would argue that without a unified, model based approach to analysis progress is stalled. One of the success of the PCM subdiscipline is that whatever the data type (e.g. discrete trait, continuous trait, biogeography) the mathematical framework is the same, which then unites disparate fields and perspectives into a single narrative.
+
+
+Each of the chapters that make up this dissertation feature structured data and a hierarchical model describing this structure. The first two chapters have a decidedly macroevolutionary bent while the third has a macroecological bent. However, all three are informed by both evolution and ecology; after all, the focus is of all studies is the relationship between functional traits to emergent patterns.
+
+The first chapter is an analysis of North American mammal species duration wrt multiple species traits, origination cohort, and shared evolutionary history (i.e. phylogeny). All of these factors are emergent properties of a species, with origination cohort and shared evolutionary history also being data structuring factors. Additionally, the possibility of species age affecting extinction risk is also considered as a possible test of the Law of Constant Extinction \citep{VanValen1973}. This analysis is also concerned with the long standing ``survival of the unspecialized'' hypothesis wrt species duration/extinction risk \citep{Simpson1944}.
+
+The second chapter is an analysis of post-Cambrian brachiopod genus duration wrt multiple species traits and origination cohort. As with the first chapter, all of these factors are emergent properties of species, and origination cohort is used as a structuring factor. Similarly, the possibility of age-dependent extinction is allowed. What distinguishes this study from the first is the additional focus on the relationship between the selective importance of these emergent factors and the higher-level average fitness of an origination cohort.
+
+The third chapter is an analysis of the functional composition of the North American mammal regional species pool over time with the goal of understanding when are specific ecotypes enriched or depleted and how these patterns may be associated with species' environmental context. The structuring factors in this analysis are both the mammal ecotypes and the temporal units of the discrete time-series describing species presence and absence in the regional species pool. This analysis presents a multi-level model where the properties of the structuring factor (e.g. environmental context) are included as covariates affecting the emergent ecotype-specific pattern. 
+
+
+
 %   chapter 1: death and taxa
 %     Cenozoic mammal species survival
 %     model of species duration and relationship with
@@ -69,18 +118,5 @@
 %       all assumptions are obviously stated (and known by author prior to interpretation)
 %     strong translational fidelity between question(s) and model
 %       improves downstream inference, especially in these large model
-
-
-An emergent pattern is one that is not observable or predictable from its individual constituent parts. Emergence is ubiquitous in biological systems: cells form a tissue with a complex function, species extinction requires all member individuals to die, and a species global geographic range is the product of many individual ranges. 
-
-The ubiquity of emergent patterns also speaks to the importance of multiple levels of organization; the reality that processes can be driven by or affect emergent patterns. An example of this type of interaction is species selection, where differences in fitness between species is causes by an emergent property and not the properties of the individuals within that species.
-
-Emergent patterns are the hallmark of complex systems.
-
-Emergent patterns and both macroevolution and macroecology
-
-Emergent patterns in biology
-
-Emergent patterns in paleobiology
 
 
