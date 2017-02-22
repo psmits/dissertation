@@ -1,7 +1,5 @@
 \chapter{Introduction}
 
-\section{Emergent patterns, macroevolution, and macroecology}
-
 % introduction
 % what are the major themes of the work covered by this dissertation?
 %   macroevolution and macroecology
@@ -10,6 +8,11 @@
 %     extinction: differences in species fitness, species selection
 %     regional species pool composition
 
+Species traits are the bridge between evolution and ecology \citep{Mcgill2006,Webber2017}. A trait is an identifiable property of an organism, such as individual body size, while a species trait is some identifiable property of the entire species, such as the average body size of a species \citep{Mcgill2006}. A class of species traits called functional traits are those traits which describe a species means of interacting with their environment \citep{Mcgill2006}. In macroevolutionary studies, analyses are typically focused on a patterns associated with a single single trait or are instead traitless a analysis of diversity and the diversification process. Macroecological studies are frequently concerned with describing the distribution of species and individuals over space or time, such as shifts in community composition along some gradient or axis. My desire has been to synthesize macroevolution and macroecology through the study of the effects of multiple traits on diversity and differential diversification, both in space and time.
+
+
+
+\section{Emergent patterns, macroevolution, and macroecology}
 
 An emergent pattern is one that is not observable or predictable from its individual constituent parts. Emergence is ubiquitous in biological systems: cells form a tissue with a complex function, species extinction requires all member individuals to die, and a species global geographic range is the product of many individual ranges. This history of a species or set of species over time is inherently an emergent pattern as the temporal history of a species is not knowable from an instantaneous sample. Macroevolution and macroecology are the studies of emergent patterns in evolutionary and ecological data, respectively \citep{Brown1989,Brown1995,Stanley1979,Stanley1975}. Traditionally, macroevolution is the study of patterns over time while macroecology is concerned with patterns over space, but I find this overly reductive.
 
@@ -20,7 +23,6 @@ Macroevolution is much more than evolution above the species level; this too is 
 Macroecology is then the study of emergent ecological patterns, which means patterns in spatial distribution or community composition which are observable only when considering more than one taxon or when considering the temporal history of one or more taxa. Because taxa inherently respond differently and individually to environmental changes, both biotic and abiotic, macroecological patterns are those due to the similarity in response across individuals.
 
 
-Traits are how we bridge evolution and ecology \citep{Mcgill2006,Webber2017}.
 
 
 Species selection is enshrined as one of the most important patterns in macroevolution \citep{Stanley1975,Stanley1979,Vrba1986,Jablonski2008a,Rabosky2010b,Simpson2016a,Pennell2014}. \citet{Rabosky2010b} portray species selection as the resultant pattern caused by the heritability of speciation and extinction rates, but I think this misses the mark. Species inherit more than just speciation and extinction rates; they also inherit traits which themselves may be linked to differences in speciation or extinction rates due to their effect on species fitness. This last concept, species fitness, is a nebulous concept that is rarely discussed yet is vitally important to species selection \citep{Cooper1984,Palmer2012}. Here I adopt phrasing of \citet{Cooper1984} and I require that species fitness is, at a minimum, defined as the expected duration of a species. Differences in expected species duration that are associated with species traits are then the product of selection.
@@ -50,7 +52,7 @@ The functional composition of a community or species pool.
 % Simpson2016a % the case for species selection
 
 
-\section{Studies conducted as parts of this dissertation}
+\section{Structured data and modelling emergent patterns}
 
 %   analysis of structured data via hierarchical Bayesian models
 %     structured data requires a structured model
@@ -62,10 +64,24 @@ The functional composition of a community or species pool.
 
 Structured data is the hallmark of emergent patterns. Structure occurs naturally in the collection of data. A simple example would be the results of drug trials from multiple hospitals; it is possible to consider these results in aggregate by ignoring the effect of hospital, or these results can be considered individually by hospital. The goal in the analysis of structured, hierarchical, or multi-level data is to integrate this structure into the analysis. For biological data, a simple example would be studying the same species at multiple locations; individuals from the same location may be more similar than individuals from different locations. But incorporating this reality into the analysis, both estimates and predictions are improved.
 
-Complexity is often ignored or mishandled in paleobiological studies, most likely due to both the sophistication underlying analysis and a lack of knowledge. The average paleontologist does not have the appropriate knowledge to analyze their data wrt the macroevolutionary and macroecologial questions that inspire their work. Instead of a unified and shared framework, like that in the phylogenetic comparative methods subdiscipline, palebiological analysis is a complex and idiosyncratic mix of Monte Carlo simulations, linear models, and NHST. And yes, paleobiological questions and analyses are arguably broader in scope than PCMs and thus merit such a large swatch of unconnected methods, I would argue that without a unified, model based approach to analysis progress is stalled. One of the success of the PCM subdiscipline is that whatever the data type (e.g. discrete trait, continuous trait, biogeography) the mathematical framework is the same, which then unites disparate fields and perspectives into a single narrative.
+I emphasize model-based approaches to analysis because a common language is necessary for clear, coherent, and translatable results. Some of the greatest limits to paleobiological, macroevolutionary, and macroecological study are a lack of strong, mechanistic predictive theories that can be expressed mathematically. Some of the greatest strides in macroevolutionary and macroecological studies wrt to advancing theory disputes have come from translating verbal theory to mathematical and statistical models \citep{Hunt2006a,Hunt2007,Shipley2006}. The reality of the complexity underlying biological process is rarely integrated into paleobiological analyses of macroevolutionary and macroecological patterns and processes. A move to a model-forward approach to paleobiology, heavily steeped in evolutionary and ecological theory, would be beneficial for paleobiology as well as the studies of macroevolution and macroecology. Too often paleobiologists malign their position as ignored by neontologists when discussing macroevolution and macroecology, without a concerted effort to utilize the same language when both phrasing questions and developing analytical tools (i.e. statistical models) then this worry and resentment is all but preordained. The simplest and fastest way to begin an actual dialogue is by translating verbal macroevolutionary and macroecological theories from paleobiology into statistical models that are readable by all researchers.
 
+Two of the most important analytical approaches at the core of macroevolutionary study are the birth-death process for diversification \citep{Raup1973,Raup1985,Nee1992,Nee1994a,Nee2001,Nee2006b,Stadler2013b}, and the random walk heuristic for trait evolution \citep{Raup1974a,Felsenstein1985b,Bookstein1987b,Gingerich1993,Roopnarine2001a,Roopnarine2003b,Roopnarine1999,Sheets2001,Hunt2006a,Hunt2007a}. Discrete-state Markov processes also feature when modeling the evolution of discrete traits and biogeography CITATIONS.
+
+All three of the studies covered by this dissertation make use of some variant to the birth-death process. The first two studies are analyses of extinction, which is a pure-death processes. The third study ultizes a discrete-time birth-death process to model species presence in a species pool.
+
+Similar cores are harder to identify for macroecology as a whole, so here I identify species distribution models as a power framework for understading the distribution of species, both do to environmental factors \citep{Elith2009} and species traits \citep{Shipley2006}. Both of these approaches attempt to operationalize the multitude of processes which result in the distribution of one or more species in both space and time. The maximum entropy theory of community assembly view community assembly as an ecological sorting process where traits mediate the effects of environmental filters \citep{Shipley2006,Warton2015a}; also called ``community assembly via trait selection'' (CATS). Species distribution models or SDMs are a class of models which relate species geographic presence-absence distribution to the environmental factors which characterize those apperances \citep{Elith2009,Austin2006,Phillips2006a}. SDMs are a means of operationalizing a species' ``realized niche'' CITATION. These approaches can be united in a single fourth-corner model \citep{Warton2015a,Brown2014c}. The fourth-corner problem is an old problem in community ecology originating in the multivariate analysis literature: assuming species distribution is the result of functional traits interacting with environmental factors, how do we estimate which interactions are important and their relative strengths \citep{Legendre1997,Dray2008}? Advances in SDMs, along with advances surrounding CATs regression \citep{Renner2013}, have made this very possible and interpretable \citep{Brown2014c,Jamil2013,Pollock2012,Pollock2015}.
+
+The third study in this dissertation makes extensive use of the macroecological framework by casting the fourth-corner problem into an additional dimension: time. The combination of clear macroecological theory and modelling approaches with the birth-death process at core of diversification into a single unified model in order to understand how species pool functional composition changes over time is a powerful bridge between macroecology and macroevolution.
+
+
+
+\section{Study summaries} 
 
 Each of the chapters that make up this dissertation feature structured data and a hierarchical model describing this structure. The first two chapters have a decidedly macroevolutionary bent while the third has a macroecological bent. However, all three are informed by both evolution and ecology; after all, the focus is of all studies is the relationship between functional traits to emergent patterns.
+
+
+
 
 The first chapter is an analysis of North American mammal species duration wrt multiple species traits, origination cohort, and shared evolutionary history (i.e. phylogeny). All of these factors are emergent properties of a species, with origination cohort and shared evolutionary history also being data structuring factors. Additionally, the possibility of species age affecting extinction risk is also considered as a possible test of the Law of Constant Extinction \citep{VanValen1973}. This analysis is also concerned with the long standing ``survival of the unspecialized'' hypothesis wrt species duration/extinction risk \citep{Simpson1944}.
 

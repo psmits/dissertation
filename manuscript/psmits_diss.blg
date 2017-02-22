@@ -1,11 +1,14 @@
 This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: psmits_diss.aux
+A level-1 auxiliary file: intro.aux
 A level-1 auxiliary file: chapter_death_taxa/plain_survival.aux
 A level-1 auxiliary file: chapter_preserve/plain_brachiopod.aux
 A level-1 auxiliary file: chapter_coping/plain_coping.aux
+A level-1 auxiliary file: conclusion.aux
 The style file: plain.bst
 Database file #1: dissertation.bib
+Warning--I didn't find a database entry for "Webber2017"
 Warning--I didn't find a database entry for "McShea1994a"
 Warning--I didn't find a database entry for "raster"
 Warning--I didn't find a database entry for "csardi2006igraph"
@@ -17,45 +20,45 @@ Warning--I didn't find a database entry for "Smits2015"
 Warning--I didn't find a database entry for "stan-manual:2014"
 Warning--I didn't find a database entry for "Hunt2005b"
 Warning--I didn't find a database entry for "Slater2015b"
-You've used 147 entries,
+You've used 175 entries,
             2118 wiz_defined-function locations,
-            1444 strings with 28489 characters,
-and the built_in function-call counts, 51357 in all, are:
-= -- 5196
-> -- 2344
+            1613 strings with 32477 characters,
+and the built_in function-call counts, 60215 in all, are:
+= -- 6118
+> -- 2685
 < -- 8
-+ -- 927
-- -- 780
-* -- 4071
-:= -- 8605
-add.period$ -- 446
-call.type$ -- 147
-change.case$ -- 814
++ -- 1063
+- -- 888
+* -- 4740
+:= -- 10098
+add.period$ -- 530
+call.type$ -- 175
+change.case$ -- 951
 chr.to.int$ -- 0
-cite$ -- 147
-duplicate$ -- 1736
-empty$ -- 3932
-format.name$ -- 780
-if$ -- 10424
+cite$ -- 175
+duplicate$ -- 2043
+empty$ -- 4650
+format.name$ -- 888
+if$ -- 12220
 int.to.chr$ -- 0
-int.to.str$ -- 147
-missing$ -- 157
-newline$ -- 738
-num.names$ -- 304
-pop$ -- 627
+int.to.str$ -- 175
+missing$ -- 186
+newline$ -- 878
+num.names$ -- 360
+pop$ -- 718
 preamble$ -- 1
-purify$ -- 679
+purify$ -- 789
 quote$ -- 0
-skip$ -- 1168
+skip$ -- 1369
 stack$ -- 0
-substring$ -- 4032
-swap$ -- 239
+substring$ -- 4782
+swap$ -- 267
 text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 562
+type$ -- 672
 warning$ -- 0
-while$ -- 558
-width$ -- 150
-write$ -- 1630
-(There were 11 warnings)
+while$ -- 664
+width$ -- 178
+write$ -- 1936
+(There were 12 warnings)
