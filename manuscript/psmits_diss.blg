@@ -9,6 +9,7 @@ A level-1 auxiliary file: conclusion.aux
 The style file: plain.bst
 Database file #1: dissertation.bib
 Warning--I didn't find a database entry for "Webber2017"
+Warning--I didn't find a database entry for "Hunt2007"
 Warning--I didn't find a database entry for "McShea1994a"
 Warning--I didn't find a database entry for "raster"
 Warning--I didn't find a database entry for "csardi2006igraph"
@@ -20,45 +21,45 @@ Warning--I didn't find a database entry for "Smits2015"
 Warning--I didn't find a database entry for "stan-manual:2014"
 Warning--I didn't find a database entry for "Hunt2005b"
 Warning--I didn't find a database entry for "Slater2015b"
-You've used 175 entries,
+You've used 198 entries,
             2118 wiz_defined-function locations,
-            1613 strings with 32477 characters,
-and the built_in function-call counts, 60215 in all, are:
-= -- 6118
-> -- 2685
-< -- 8
-+ -- 1063
-- -- 888
-* -- 4740
-:= -- 10098
-add.period$ -- 530
-call.type$ -- 175
-change.case$ -- 951
+            1744 strings with 36557 characters,
+and the built_in function-call counts, 68542 in all, are:
+= -- 6948
+> -- 3116
+< -- 9
++ -- 1232
+- -- 1034
+* -- 5421
+:= -- 11501
+add.period$ -- 599
+call.type$ -- 198
+change.case$ -- 1091
 chr.to.int$ -- 0
-cite$ -- 175
-duplicate$ -- 2043
-empty$ -- 4650
-format.name$ -- 888
-if$ -- 12220
+cite$ -- 198
+duplicate$ -- 2308
+empty$ -- 5257
+format.name$ -- 1034
+if$ -- 13896
 int.to.chr$ -- 0
-int.to.str$ -- 175
-missing$ -- 186
-newline$ -- 878
-num.names$ -- 360
-pop$ -- 718
+int.to.str$ -- 198
+missing$ -- 212
+newline$ -- 993
+num.names$ -- 406
+pop$ -- 830
 preamble$ -- 1
-purify$ -- 789
+purify$ -- 908
 quote$ -- 0
-skip$ -- 1369
+skip$ -- 1545
 stack$ -- 0
-substring$ -- 4782
-swap$ -- 267
-text.length$ -- 8
+substring$ -- 5400
+swap$ -- 299
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 672
+type$ -- 758
 warning$ -- 0
-while$ -- 664
-width$ -- 178
-write$ -- 1936
-(There were 12 warnings)
+while$ -- 750
+width$ -- 201
+write$ -- 2190
+(There were 13 warnings)
