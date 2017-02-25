@@ -9,6 +9,7 @@ A level-1 auxiliary file: conclusion.aux
 The style file: plain.bst
 Database file #1: dissertation.bib
 Warning--I didn't find a database entry for "Webber2017"
+Warning--I didn't find a database entry for "Smith2008a"
 Warning--I didn't find a database entry for "Hunt2007"
 Warning--I didn't find a database entry for "McShea1994a"
 Warning--I didn't find a database entry for "raster"
@@ -21,45 +22,45 @@ Warning--I didn't find a database entry for "Smits2015"
 Warning--I didn't find a database entry for "stan-manual:2014"
 Warning--I didn't find a database entry for "Hunt2005b"
 Warning--I didn't find a database entry for "Slater2015b"
-You've used 198 entries,
+You've used 203 entries,
             2118 wiz_defined-function locations,
-            1744 strings with 36557 characters,
-and the built_in function-call counts, 68542 in all, are:
-= -- 6948
-> -- 3116
+            1775 strings with 37794 characters,
+and the built_in function-call counts, 70880 in all, are:
+= -- 7167
+> -- 3278
 < -- 9
-+ -- 1232
-- -- 1034
-* -- 5421
-:= -- 11501
-add.period$ -- 599
-call.type$ -- 198
-change.case$ -- 1091
++ -- 1297
+- -- 1094
+* -- 5643
+:= -- 11903
+add.period$ -- 614
+call.type$ -- 203
+change.case$ -- 1136
 chr.to.int$ -- 0
-cite$ -- 198
-duplicate$ -- 2308
-empty$ -- 5257
-format.name$ -- 1034
-if$ -- 13896
+cite$ -- 203
+duplicate$ -- 2363
+empty$ -- 5400
+format.name$ -- 1094
+if$ -- 14345
 int.to.chr$ -- 0
-int.to.str$ -- 198
-missing$ -- 212
-newline$ -- 993
-num.names$ -- 406
-pop$ -- 830
+int.to.str$ -- 203
+missing$ -- 217
+newline$ -- 1018
+num.names$ -- 416
+pop$ -- 865
 preamble$ -- 1
-purify$ -- 908
+purify$ -- 948
 quote$ -- 0
-skip$ -- 1545
+skip$ -- 1580
 stack$ -- 0
-substring$ -- 5400
-swap$ -- 299
+substring$ -- 5571
+swap$ -- 304
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 758
+type$ -- 778
 warning$ -- 0
-while$ -- 750
-width$ -- 201
-write$ -- 2190
-(There were 13 warnings)
+while$ -- 770
+width$ -- 206
+write$ -- 2245
+(There were 14 warnings)
