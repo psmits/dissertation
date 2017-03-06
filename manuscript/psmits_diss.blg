@@ -7,10 +7,8 @@ A level-1 auxiliary file: chapter_preserve/plain_brachiopod.aux
 A level-1 auxiliary file: chapter_coping/plain_coping.aux
 A level-1 auxiliary file: conclusion.aux
 The style file: plain.bst
+Reallocated field_info (elt_size=4) to 10083 items from 5000.
 Database file #1: dissertation.bib
-Warning--I didn't find a database entry for "Webber2017"
-Warning--I didn't find a database entry for "Smith2008a"
-Warning--I didn't find a database entry for "Hunt2007"
 Warning--I didn't find a database entry for "McShea1994a"
 Warning--I didn't find a database entry for "raster"
 Warning--I didn't find a database entry for "csardi2006igraph"
@@ -22,45 +20,45 @@ Warning--I didn't find a database entry for "Smits2015"
 Warning--I didn't find a database entry for "stan-manual:2014"
 Warning--I didn't find a database entry for "Hunt2005b"
 Warning--I didn't find a database entry for "Slater2015b"
-You've used 203 entries,
+You've used 210 entries,
             2118 wiz_defined-function locations,
-            1775 strings with 37794 characters,
-and the built_in function-call counts, 70880 in all, are:
-= -- 7167
-> -- 3278
+            1808 strings with 40841 characters,
+and the built_in function-call counts, 76714 in all, are:
+= -- 7607
+> -- 3987
 < -- 9
-+ -- 1297
-- -- 1094
-* -- 5643
-:= -- 11903
-add.period$ -- 614
-call.type$ -- 203
-change.case$ -- 1136
++ -- 1580
+- -- 1370
+* -- 6269
+:= -- 12991
+add.period$ -- 635
+call.type$ -- 210
+change.case$ -- 1292
 chr.to.int$ -- 0
-cite$ -- 203
-duplicate$ -- 2363
-empty$ -- 5400
-format.name$ -- 1094
-if$ -- 14345
+cite$ -- 210
+duplicate$ -- 2444
+empty$ -- 5567
+format.name$ -- 1370
+if$ -- 15378
 int.to.chr$ -- 0
-int.to.str$ -- 203
-missing$ -- 217
-newline$ -- 1018
-num.names$ -- 416
-pop$ -- 865
+int.to.str$ -- 210
+missing$ -- 228
+newline$ -- 1053
+num.names$ -- 430
+pop$ -- 1029
 preamble$ -- 1
-purify$ -- 948
+purify$ -- 1100
 quote$ -- 0
-skip$ -- 1580
+skip$ -- 1627
 stack$ -- 0
-substring$ -- 5571
-swap$ -- 304
+substring$ -- 5674
+swap$ -- 311
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 778
+type$ -- 798
 warning$ -- 0
-while$ -- 770
-width$ -- 206
-write$ -- 2245
-(There were 14 warnings)
+while$ -- 789
+width$ -- 213
+write$ -- 2323
+(There were 11 warnings)
