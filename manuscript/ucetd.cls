@@ -69,7 +69,7 @@
 			IN CANDIDACY FOR THE DEGREE OF\\
 			\MakeUppercase{\@degree}\\
 			\ \\
-			DEPARTMENT OF \MakeUppercase{\@department}\\
+			\MakeUppercase{\@department}\\
 			\vspace{0.8in}
 			BY\\
 			\MakeUppercase{\@author}\\
@@ -198,7 +198,7 @@
 	\addcontentsline{toc}{chapter}{References}
 	\begin{singlespace}
 		%\bibliography{ft2,master,refs}
-		\bibliography{dissertation}
+		\bibliography{dissertation,packages}
 		\bibliographystyle{plain}
 	\end{singlespace}
 }
