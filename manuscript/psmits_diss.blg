@@ -7,49 +7,61 @@ A level-1 auxiliary file: chapter_preserve/plain_brachiopod.aux
 A level-1 auxiliary file: chapter_coping/plain_coping.aux
 A level-1 auxiliary file: conclusion.aux
 The style file: plain.bst
-Reallocated field_info (elt_size=4) to 10060 items from 5000.
+Reallocated field_info (elt_size=4) to 11992 items from 5000.
 Database file #1: dissertation.bib
+Repeated entry---line 18867 of file dissertation.bib
+ : @article{Dalquest1978
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 52581 of file dissertation.bib
+ : @article{Macdonald1956
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 81681 of file dissertation.bib
+ : @article{SORKIN2008
+ :                    ,
+I'm skipping whatever remains of this entry
 Database file #2: packages.bib
 Warning--I didn't find a database entry for "stan-manual:2014"
-You've used 219 entries,
+You've used 303 entries,
             2118 wiz_defined-function locations,
-            1840 strings with 39702 characters,
-and the built_in function-call counts, 75803 in all, are:
-= -- 7645
-> -- 3513
+            2344 strings with 53590 characters,
+and the built_in function-call counts, 101973 in all, are:
+= -- 10385
+> -- 4466
 < -- 9
-+ -- 1393
-- -- 1172
-* -- 5986
-:= -- 12750
-add.period$ -- 661
-call.type$ -- 219
-change.case$ -- 1220
++ -- 1777
+- -- 1472
+* -- 7955
+:= -- 17162
+add.period$ -- 913
+call.type$ -- 303
+change.case$ -- 1620
 chr.to.int$ -- 0
-cite$ -- 219
-duplicate$ -- 2534
-empty$ -- 5790
-format.name$ -- 1172
-if$ -- 15346
+cite$ -- 303
+duplicate$ -- 3459
+empty$ -- 7941
+format.name$ -- 1472
+if$ -- 20652
 int.to.chr$ -- 0
-int.to.str$ -- 219
-missing$ -- 235
-newline$ -- 1097
-num.names$ -- 448
-pop$ -- 950
+int.to.str$ -- 303
+missing$ -- 321
+newline$ -- 1517
+num.names$ -- 616
+pop$ -- 1195
 preamble$ -- 1
-purify$ -- 1019
+purify$ -- 1337
 quote$ -- 0
-skip$ -- 1694
+skip$ -- 2301
 stack$ -- 0
-substring$ -- 5893
-swap$ -- 320
+substring$ -- 8125
+swap$ -- 404
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 834
+type$ -- 1166
 warning$ -- 0
-while$ -- 816
-width$ -- 222
-write$ -- 2417
-(There was 1 warning)
+while$ -- 1143
+width$ -- 306
+write$ -- 3340
+(There were 3 error messages)
