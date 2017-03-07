@@ -1,0 +1,47 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: conclusion_review.aux
+A level-1 auxiliary file: conclusion.aux
+The style file: plainnat.bst
+Database file #1: dissertation.bib
+You've used 28 entries,
+            2773 wiz_defined-function locations,
+            840 strings with 10931 characters,
+and the built_in function-call counts, 13405 in all, are:
+= -- 1292
+> -- 678
+< -- 20
++ -- 232
+- -- 204
+* -- 1148
+:= -- 2104
+add.period$ -- 126
+call.type$ -- 28
+change.case$ -- 150
+chr.to.int$ -- 28
+cite$ -- 56
+duplicate$ -- 568
+empty$ -- 1087
+format.name$ -- 254
+if$ -- 2776
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 31
+newline$ -- 190
+num.names$ -- 112
+pop$ -- 227
+preamble$ -- 1
+purify$ -- 124
+quote$ -- 0
+skip$ -- 416
+stack$ -- 0
+substring$ -- 636
+swap$ -- 36
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 293
+warning$ -- 0
+while$ -- 131
+width$ -- 0
+write$ -- 455
