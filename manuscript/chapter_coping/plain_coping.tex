@@ -1,6 +1,6 @@
 \chapter{Species traits and environmental context: the changing functional composition of the North American species pool} \label{ch:coping}
 
-\section*{Introduction}
+\section{Introduction}
 Changes to species diversity are the result of evolutionary and ecological processes acting both in concert and continually. Local communities are shaped by dispersal and local ecological processes such as resource competition and predator-prey relationships. The constituent species of these community are drawn from a regional species pool, or the set of all species that are present in at least one community within a region \citep{Mittelbach2015a,Urban2008,Harrison2008}. Species dispersal from the regional species pool to the local communities is a sorting process shaped by biotic and abiotic environmental filters which are mediated by those species' traits \citep{Shipley2006,Elith2009,Urban2008,Loeuille2008,Cottenie2005,Harrison2008}. Regional species pools are shaped by speciation, extinction, migration, and extirpation. The gain or loss of regional diversity is the result of macroevolutionary dynamics which, in turn, shape the downstream macroecological dynamics of the regional species pool and its constituent local communities \citep{Urban2008,Mittelbach2015a,Harrison2008}. 
 
 Fundamentally, all species respond differently to climate and environmental change \citep{Blois2009}. Similarities in ecological roles of species within a regional species pool can be described as a collection of guilds or functional groups \citep{Valentine1969,Bambach1977,Brown1989,Simberloff1991a,Wilson1999}. Species within the same functional group are expected to have more similar macroecological dynamics to each other than to species of a different functional group. By focusing on the relative diversity of functional groups, changes to diversity are interpretable as changes to the set of ways species within a species pool could interact with the biotic and abiotic environment. 
@@ -11,7 +11,7 @@ The paleontological record of North American mammals for the Cenozoic (\(\sim\) 
 
 The goals of this study are to understand when are unique functional groups, called ecotypes, enriched or depleted in the North American mammal regional species pool and to estimate the relationship between changes to regional ecotypic diversity and changes to their environmental context.
 
-\subsection*{Background}
+\subsection{Background}
 
 The diversity history of North American mammals for the Cenozoic is relatively well understood as it has been the focus of considerable study \citep{Alroy2009,Alroy1996a,Janis1993b,Alroy2000g,Figueirido2012,Pires2015a,Fraser2015a,Smits2015b,Quental2013,Slater2015c,Silvestro2015b,Badgley2013,Blois2009,Janis1993c}. Previous approaches to understanding mammal diversity, both in North America and elsewhere, fall into a number of overlapping categories: total diversity \citep{Alroy2000g,Alroy1996a,Figueirido2012,Liow2008}, with/between guild comparisons \citep{Janis2004,Janis2000,Jernvall2004,Janis1993c,Pires2015a,Janis2008a}, within/between clade comparisons \citep{Quental2013,Slater2015c,Silvestro2015b,Fraser2015a,Cantalapiedra2017}, and estimating the impact of environmental process on diversity \citep{Blois2009,Janis1993c,Janis1993b,Fraser2015a,Eronen2015,Badgley2013,Badgley2017,Alroy2000g}. Each of these individual perspectives provide a limited perspective on the macroevolutionary and macroecological processes shaping diversity and diversification. Integration across perspectives is necessary for producing a holistic and internally consistent picture of how the North American mammal species pool has changed through time. One of the goals of this study is to present a framework for approaching hypotheses about diversity and diversification through multiple lenses simultaneously so that our inferences are better constrained and the relative importance of various functional traits and environmental factors may be better elucidated.
 
@@ -37,7 +37,7 @@ In the case of a fluctuating correlation between diversity and climate it is har
 
 
 
-\subsection*{Foreground}
+\subsection{Foreground}
 
 Fourth-corner modeling is an approach to explaining the patterns of either species abundance or presence/absence in a community as a product of species traits, environmental factors, and the interaction between traits and environment \citep{Brown2014c,Warton2015a,Pollock2012,Jamil2013}; effectively uniting climate-based species distribution modeling (SDMs) with trait-based community assembly models (CATS, MaxEnt). In modern ecological studies, what is being modeled is species occurrences at localities distributed across a region \citep{Pollock2012,Jamil2013}. In this study, what is being modeled is the pattern of species occurrence over time for most of the Cenozoic record for North America (Fig. \ref{fig:concept_fourth_corner}). By analyzing assemblages over time instead of space in fourth-corner framework we can gain better inference of how an instantaneous species pool (i.e. the Recent) is assembled over time. These two approaches, modern and palentologicial, are different views of the same three-dimensional pattern: species at localities over time. The temporal limitations of modern ecological studies and difficulties with uneven spatial occurrences of fossils in paleontological studies means that these approaches are complementary and reveal different patterns of how species are distributed in time and space.
 
@@ -56,9 +56,9 @@ All observations, paleontological or modern, are made with uncertainty. With pre
 
 Ultimately, the goals of this analysis are to understand when are different ecotypes enriched or depleted in the North American mammal regional species pool and how these changes in ecotypic diversity are related to changes in species' environmental context. In the analyses done here, many covariates which describe a species' macroecology and its environmental context are considered. In order to analyze this complex and highly structured data set, I developed a hierarchal Bayesian model combing the fourth-corner modeling approach with a model of an observation-occurrence or observation-origination-extinction process. %The complexity and nuance inherent in questions that are focus of this study, it is possible to consider and test a large number of possible hypotheses. The hierarchical Bayesian modeling approach used here is appropriate for mitigating complications arising from both this complexity and the plethora of testable hypotheses (e.g. multiple comparisons, garden of forking paths) \citep{Gelman2013d,Gelman2012a,Gelman2014}.
 
-\section*{Materials and Methods}
+\section{Materials and Methods}
 
-\subsection*{Taxon occurrences and species-level information}
+\subsection{Taxon occurrences and species-level information}
 All fossil occurrence information used in this analysis was downloaded from the Paleobiology Database (PBDB). The initial download restricted occurrences to Mammalia observed in North America between the Maastrichtian (72-66 Mya) and Gelasian (2.58-1.8 Mya) stages \citep{Cohen2015}. Occurrences were then further limited to those occurring between 64 and 2 million years ago (Mya); this age restriction was to insure that observation time series lines up with the temperature time series \citep{Cramer2011}. Taxonomic, stratigraphic, and ecological metadata for each occurrence and species was also downloaded. A new download for a raw, unfiltered PBDB datafile following the same criterion used here is available at \texttt{http://goo.gl/2slgeU}. The raw datafile used as a part of this study, along with all code for filtering and manipulating this download is available at \texttt{http://github.com/psmits/coping}.
 %https://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Mammalia&taxon_reso=species&interval=Maastrichtian,Gelasian&cc=NOA&show=class,genus,ecospace,loc,strat,stratext,lith,acconly. 
 
@@ -124,7 +124,7 @@ All fossil occurrences from 64 to 2 million years ago (Mya) were binned into 31 
 
 
 
-\subsection*{Environmental and temporal covariates}
+\subsection{Environmental and temporal covariates}
 The environmental covariates used in this study are collectively referred to as group-level covariates because they predict the response of a ``group'' of individual-level observations (i.e. species occurrences of an ecotype). Additionally, these covariates are defined for temporal bins and not the species themselves; as such they predict the parts of each species occurrence history. The group-level covariates in this study are two global temperature estimates and the Cenozoic ``plant phases'' defined by Graham \citep{Graham2011a}. 
 
 Global temperature across most of the Cenozoic was calculated from Mg/Ca isotope record from deep sea carbonates \citep{Cramer2011}. Mg/Ca based temperature estimates are preferable to the frequently used \(\delta^{18}\)O temperature proxy \citep{Zachos2001,Zachos2008,Alroy2000g,Figueirido2012} because Mg/Ca estimates do not conflate temperature with ice sheet volume and depth/stratification changes. The former is particularly important to this analysis as the current polar ice-caps appeared and grew during the second half of the Cenozoic. These properties make Mg/Ca based temperature estimates preferable for macroevolutionary and macroecological studies \citep{Ezard2016a}. Two aspects of the Mg/Ca-based temperature curve were included in this analysis: mean and range. Both were calculated as the mean of all respective estimates for each 2 My temporal bins. The distributions of the temperature mean and range estimates were then rescaled by subtracting their respective means from all values and then dividing by twice their respective standard deviations.
@@ -146,7 +146,7 @@ Global temperature across most of the Cenozoic was calculated from Mg/Ca isotope
 The second set of environmental factors included in this study are the Cenozoic plant phases defined by Graham \citep{Graham2011a}. Graham's plant phases are holistic descriptors of the taxonomic composition of 12 ecosystem types, which plants are present at a given time, and the relative modernity of those plant groups with younger phases representing increasingly modern taxa \citep{Graham2011a}. Graham \citep{Graham2011a} defines four intervals from the Cretaceous to the Pliocene, though only three of these intervals take place during the time frame being analyzed. Graham's plant phases was included as a series of ``dummy variables'' encoding the three phases included in this analysis \citep{Gelman2007}; this means that the first phase is synonymous with the intercept and subsequent phases are defined by their differences from the first phase. The temporal boundaries of these plant phases are defined in Table \ref{tab:plant_def}.
 
 
-\subsection*{Modelling species occurrence}
+\subsection{Modelling species occurrence}
 Two different models were used in this study: a pure-presence model and a birth-death model. Both models at their core are hidden Markov models where the latent process has an absorbing state \citep{Allen2011}. The difference between these two models lies in whether the probabilities of a species originating or surviving are considered equal or different (Table \ref{tab:transition}). While there are only two state ``codes'' in a presence-absence matrix (i.e. 0/1), there are in fact three states in a birth-death model: not having originated yet, extant, and extinct. The last of these is the absorbing state, as once a species has gone extinct it cannot re-originate \citep{Allen2011}. Thus, in the transition matrices the probability of an extinct species changing states is 0 (Table \ref{tab:transition}). See below for parameter explanations (Tables \ref{tab:obs_param}, \ref{tab:pres_param}, and \ref{tab:bd_param}).
 
 \begin{table}
@@ -183,7 +183,7 @@ Two different models were used in this study: a pure-presence model and a birth-
 \end{table}
 
 
-%\subsubsection*{Data augmentation}
+%\subsubsection{Data augmentation}
 %All empirical presence/absence observations are potentially incomplete or observed with error. The hidden Markov model at the core of this analysis allows for observed absences to be used meaningfully to estimate the number of unobserved species. Of concern in this analysis is the unknown ``true'' size of the dataset; how many species could have actually been observed? While many species have been observed, the natural incompleteness of all observations, especially in the case of paleontological data, there are obviously many species which were never sampled \citep{Royle2008,Royle2007a}. The inclusion of these augmented species helps with estimation of the total diversity of the system summed over all bins as well as estimation of preservation parameters. % this needs to be checked
 %
 %Let \(N\) by the total number of observed species, \(M\) be the upper limit of possible species that could have existed in total given some model of species occurrence, and \(N^{\ast}\) is the number of all-zero histories added to the presence absence matrix \(y\) where \(N^{\ast} = M - N\). This approach assumes that \(\hat{N} \sim \text{Binomial}(M, \psi)\) where \(\hat{N}\) is the estimated ``true'' number of species and \(\psi\) is the probability that any augmented species should actually be ``present.'' Because \(M\) is user defined, this approach effectively gives \(\psi\) a uniform prior over \(N\) to \(M\) \citep{Royle2008}. For this study, \(M = \lfloor{1.25 \times N\rfloor}\); this was chosen because experimentation with larger values had little effect on the posterior predictive distributions while dramatically increasing computational time.
@@ -192,7 +192,7 @@ Two different models were used in this study: a pure-presence model and a birth-
 
 
 
-\subsubsection*{Observation process}
+\subsubsection{Observation process}
 The type of hidden Markov model used in this study has three characteristic probabilities: probability \(p\) of observing a species given that it is present, probability \(\phi\) of a species surviving from one time to another, and probability \(\pi\) of a species first appearing \citep{Royle2008}. In this formulation, the probability of a species becoming extinct is \(1 - \phi\). For the pure-presence model \(\phi = \pi\), while for the birth-death model \(\phi \neq \pi\).
 
 \begin{table}
@@ -225,7 +225,7 @@ The probability \(p\) of observing a species that is present is modeled as a log
 The parameters associated with Equation \ref{eq:obs_model} are described in Table \ref{tab:obs_param}.
 
 
-\subsubsection*{Pure-presence process}
+\subsubsection{Pure-presence process}
 For the pure-presence model there is only a single probability dealing with the presence of a species \(\theta\) (Table \ref{tab:pp}). This probability was modeled as multi-level logistic regression with both species-level and group-level covariates \citep{Gelman2007,Gelman2013d}. The parameters associated with the pure-presence model are presented in Table \ref{tab:pres_param}, and the full sampling statement in Equation \ref{eq:pure_presence}.
 
 \begin{table}
@@ -280,7 +280,7 @@ All parameters not modeled elsewhere were given weakly informative priors \citep
 \end{equation}
 
 
-\subsubsection*{Birth-death process}
+\subsubsection{Birth-death process}
 In the birth-death version of the model, \(\phi \neq \pi\) and so each of these probabilities is modeled separately but each is handled in a similar manner to how \(\theta\) is modeled in the pure-presence model (Eq. \ref{eq:pure_presence}, Table \ref{tab:bd}). The parameters associated with the birth-death presence model are presented in Table \ref{tab:bd_param} and the full sampling statement, including observation (Eq. \ref{eq:obs_model}), is described in Equation \ref{eq:birth_death}:
 \begin{equation}
   \begin{split}
@@ -350,7 +350,7 @@ Similar to the pure-presence model, both \(\phi\) and \(\pi\) are modeled as log
 The intercepts of \(\phi\) and \(\pi\) both vary by species ecotype and those values are themselves the product of group-level regression using environmental factors as covariates (Eq. \ref{eq:birth_death}); this is identical to the pure presence model (Eq. \ref{eq:pure_presence}).
 
 
-\subsection*{Posterior inference and model adequacy}
+\subsection{Posterior inference and model adequacy}
 Computer programs that implement joint posterior inference for the above models (Eqs. \ref{eq:pure_presence}, \ref{eq:birth_death}) were written in the probabilistic programming language Stan \citep{StanDevelopmentTeam2016}. Both models feature a large matrix of latent discrete parameters \(z\) (Tables \ref{tab:obs_param}, \ref{tab:pres_param}, \ref{tab:bd_param}; Eqs. \ref{eq:obs_model}, \ref{eq:pure_presence}, \ref{eq:birth_death}). All methods for posterior inference implemented in Stan are derivative-based; this causes complications for actually implementing the above models, because integers do not have derivatives. Instead of implementing a latent discrete parameterization, the log posterior probabilities of all possible states of the latent parameters \(z\) were calculated and summed (i.e. marginalized). 
 
 Species durations at minimum range through from a species first appearance to their last appearance in the fossil record, but the incompleteness of all observations means that the actual times of origination and extinction are unknown. The marginalization approach used here means that the probabilities of all possible histories for a species are calculated, from the end members of the species having existed for the entire study interval and the species having only existed between the directly observed first and last appearances to all possible intermediaries (Fig \ref{fig:margin_concept}) \citep{StanDevelopmentTeam2016}. This process is identical, language-wise, to assuming range-through and then estimating the possibility of all possible range extension due to incomplete sampling. % this probably needs a figure to explain.
@@ -412,11 +412,11 @@ Per-capita growth \(D^{rate}\), origination \(O^{rate}\) and extinction \(E^{rat
 % silly transforms using the poisson distribution aren't necessary if you just do the posterior simulations.
 % discuss this in the discussion and not this section?
 
-\section*{Results}
+\section{Results}
 
 The results of the analyses described above take one of two forms: direct inspection of parameter posterior estimates from both models, and downstream estimates of diversity and diversification rates based on posterior predictive simulations from the birth-death model because this model has a better fit to the observed occurrence information.
 
-\subsection*{Comparing parameter estimates from the pure-presence and birth-death models}
+\subsection{Comparison of estimates from the pure-presence and birth-death models}
 
 % look at the posterior predictive checks
 %   which model has better fit
@@ -777,7 +777,7 @@ In contrast to the visually obvious correlations in ecotype origination probabil
 
 
 
-\subsection*{Analysis of diversity}
+\subsection{Analysis of diversity}
 
 All of the analyses of diversification and macroevolutionary rates has been done using only the birth-death model because of the model's better posterior predictive check performance (Fig. \ref{fig:ppc}).
 
@@ -917,7 +917,7 @@ In contrast to ecotype-specific per capita origination rates which demonstrate d
   \label{fig:ecotype_death}
 \end{figure}
 
-\section*{Discussion}
+\section{Discussion}
 
 Both the composition of a species pool and its environmental context change over time, though not necessarily at the same rate or concurrently. Local communities, whose species are drawn from the regional species pool, have ``roles'' in their communities defined by their interactions with a host of biotic and abiotic interactors (i.e. a species' niche). For higher level ecological characterizations like ecotypes and guilds, these roles are broad and not defined by specific interactions but by the genre of interactions species within that grouping participate in. The diversity of species within an ecotype or guild can be stable over millions of years despite constant species turnover \citep{Jernvall2004,Slater2015c,Valkenburgh1999}. This implies that the size and scope of the role of an ecotype or guild in local communities, and the regional species pool as a whole, is preserved even as the individual interactors change. This also implies that the structure of regional species pools can be constant over time despite a constantly changing set of ``players.'' There is even evidence that functional groups are at least partially self-organizing and truly emergent \citep{Scheffer2006a}.
 
@@ -958,6 +958,6 @@ The only covariate allowed to affect sampling probability was mass and only as a
 %The potential effects of common ancestry (i.e. phylogeny) on origination and extinction are not directly considered in this analysis. While a birth-death process approximates the speciation-extinction process underlying the phylogeny \citep{Silvestro2014a} this is not same as considering how the similarity between closely related species may affect the estimates of the effects of species traits to environmental factors on both origination and extinction \citep{Smits2015b,Harnik2014}. The inclusion of phylogeny can help disentangle if the functional composition of species diversity is shaped either by many closely related species occurring at the same time or if closely related species are more evenly distributed in time; this is analogous to if species within local communities are clumped or dispersed relative to their relatedness \citep{Webb2002,Kraft2007a,Cavender-Bares2009}. One of the principal barriers to the inclusion of the effect of phylogeny in either the pure-presence or birth-death models is computational; with well over 1000 tips, the calculation of the scale parameter defining the phylogenetic effect would be very slow and further increase the already slow computation time necessary for the marginalization of all possible discrete occurrence histories for \(z\).
 
 
-\subsection*{Conclusions}
+\subsection{Conclusions}
 
 These results add a considerable degree of nuance to the narrative of changes to North American diversity being gradual. My results support the conclusions that ecotypic diversity is shaped more by changes to origination than extinction and that major changes to total diversification rate can be attributed to increases in origination of only some ecotypes. There are a number of interesting estimated ecotype diversity patterns. While arboreal ecotypes are diverse in the Paleogene, by the Neogene all arboreal ecotypes dramatically decreased in diversity and became either rare or absent from the regional species pool. The other ecotypes that decrease in diversity over the Cenozoic are plantigrade and scansorial insectivores and scansorial omnivores. The only ecotypes that demonstrate a sustained pattern of increasing diversity are digitigrade and unguligrade herbivores. When the environmental covariates analyzed here are inferred to affect the diversification of an ecotype, this effect is virtually always on origination and not survival. This analysis provides a much more complete picture of North American mammal diversity and diversification, specifically the dynamics of the ecotypic composition of that diversity. By increasing the complexity of analysis while precisely translating research questions into a statistical model, the context of the results is much better understood. Future studies of diversity and diversification should incorporate as much information as possible into their analyses in order to better understand or at least contextualize the complex processes underlying that diversity.
