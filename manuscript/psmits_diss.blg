@@ -1,13 +1,14 @@
 This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: psmits_diss.aux
+A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: intro.aux
 A level-1 auxiliary file: chapter_death_taxa/plain_survival.aux
 A level-1 auxiliary file: chapter_preserve/plain_brachiopod.aux
 A level-1 auxiliary file: chapter_coping/plain_coping.aux
 A level-1 auxiliary file: conclusion.aux
 The style file: plain.bst
-Reallocated field_info (elt_size=4) to 13487 items from 5000.
+Reallocated field_info (elt_size=4) to 13510 items from 5000.
 Database file #1: dissertation.bib
 Repeated entry---line 3736 of file dissertation.bib
  : @article{Dalquest1978
@@ -18,11 +19,12 @@ Repeated entry---line 11448 of file dissertation.bib
  :                       ,
 I'm skipping whatever remains of this entry
 Database file #2: packages.bib
+Warning--I didn't find a database entry for "Murnberg2013a"
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--empty year in Weber2017
 You've used 369 entries,
             2118 wiz_defined-function locations,
-            2686 strings with 64744 characters,
+            2689 strings with 64782 characters,
 and the built_in function-call counts, 125593 in all, are:
 = -- 12770
 > -- 5631
