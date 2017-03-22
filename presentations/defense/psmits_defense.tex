@@ -19,6 +19,13 @@
 \setbeamercolor{block title alerted}{fg=white,bg=darkgray}
 \setbeamercolor{block body alerted}{fg=black,bg=lightgray}
 
+\setbeamertemplate{footline} {
+  \hbox{\begin{beamercolorbox}[wd=1\paperwidth,ht=2.25ex,dp=1ex,right]{framenumber}%
+    \usebeamerfont{framenumber}\insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
 \AtBeginSection[]
 {
   \begin{frame}
@@ -59,8 +66,9 @@
 \begin{frame}
   \begin{definition}
     \begin{itemize}
-      \item Macroevolution
-      \item Macroecology
+      \item Macroevolution: study of patterns which emerge when considering the evolutionary history of multiple species.
+      \item Macroecology: study of patterns which emerge when considering the ecology of multiple species.
+      \item both in time and space
     \end{itemize}
   \end{definition}
 \end{frame}
@@ -74,27 +82,53 @@
 \end{frame}
 
 \begin{frame}
-  species selection
+  \frametitle{Species selection}
 
-  Rabosky and McCune: due to heritability of speciation/extinction rates
-
-  operationalize through traits while paying attention to definition of fitness
-\end{frame}
-
-\begin{frame}
-  species fitness
-  
-  logic: if more fit, more likely to be present
-
-  Cooper 84 fundamental defintion: expected time till extinction
-
-  derived definitions depend on definition of extinction (lines-of-descent)
-\end{frame}
-
-\begin{frame}
-  \begin{block}{Extinction}
-    fundamentally emergent phenomenon; all members must die for collective to die.
+  \begin{block}{Rabosky and McCune 2010 \em{TREE}}
+    \begin{quote}
+      Species selection is the outcome of heritable variation in speciation and extinction rates among taxa.
+    \end{quote}
   \end{block}
+
+  \begin{itemize}
+    \item avoids selection versus sorting
+    \item avoids strict species selection vs effect macroevolution
+    \item no operational structure
+      \begin{itemize}
+        \item species inherit traits
+        \item traits affect fitness
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Species fitness}
+
+  \begin{definition}
+    Expected time till extinction.
+  \end{definition}
+  
+  \footnotesize{\attrib{Cooper 1984 \textit{J. Theoretical Biology}}} 
+
+  \begin{itemize}
+    \item \alert{logic:} if more fit, more likely to be present
+    \item distribution based definition (population)
+    \item other definitions can be derived, just expand definition of extinction
+      \begin{itemize}
+        \item lines-of-descent 
+      \end{itemize}
+  \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+%  \begin{block}{Extinction}
+%    \begin{quote}
+%      Population decline maybe a common cause of \dots extinction, but organisms never die from population decline, and population decline is never caused by organismal death alone \dots It's the relative balance between birth, death, and lifespan of organisms that determines \dots extinction. 
+%    \end{quote}
+%  \end{block}
+%  
+%  \small{\attrib{Simpson 2016 \em{bioRxiv}}}
 \end{frame}
 
 \begin{frame}
@@ -106,12 +140,13 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Survival of the unspecialized}
-  \begin{quote}
-    When related phyla die out \dots more specialized phyla tend to become extinct before less specialized. This phenomenon is also far from universal, but it is so common that it does deserve recognition as a rule or principle in evolutionary studies: \textbf{the rule of the survival of the relatively unspecialized.}
+  \begin{block}{Survival of the unspecialized}
+    \begin{quote}
+      When related phyla die out \dots more specialized phyla tend to become extinct before less specialized. This phenomenon is also far from universal, but it is so common that it does deserve recognition as a rule or principle in evolutionary studies: \textbf{the rule of the survival of the relatively unspecialized.}
+    \end{quote}
+  \end{block}
 
-    \small{\attrib{Simpson, 1944, \em{Tempo and Mode of Evolution}, p. 143}}
-  \end{quote}
+  \small{\attrib{Simpson, 1944, \em{Tempo and Mode of Evolution}, p. 143}}
 \end{frame}
 
 
@@ -119,7 +154,7 @@
   \frametitle{Species pool concept}
 
   \begin{center}
-    %\includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/schemske_pool}
+    \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/schemske_pool}
   \end{center}
 
   \attrib{\footnotesize{Mittelbach and Schemske, 2015, \em{TREE}}}
@@ -136,61 +171,93 @@
 \begin{frame}
   \frametitle{Inference}
 
+  Probability theory 
+
   Learning from incomplete information.
+
 \end{frame}
 
 \begin{frame}
+  \frametitle{Inference devices and statistical models}
+
   statistical model as inference device
 
   engineering approach to analysis: building blocks used to create the device
 \end{frame}
 
 \begin{frame}
-  structure in biological and paleontological data
-  % figure from recent review that shows all the data types
+  \frametitle{Structured data in biology and paleontology}
+
+  \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/ovaskainen_data}
+
+  \footnotesize{\attrib{Ovaskainen \textit{et al.} 2017 \textit{Ecology Letters}}}
 \end{frame}
 
 \begin{frame}
+  \frametitle{Models of structured data}
+
+  \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/ovaskainen_dag}
+
+  \footnotesize{\attrib{Ovaskainen \textit{et al.} 2017 \textit{Ecology Letters}}}
+\end{frame}
+
+
+\begin{frame}
   \frametitle{Models of macroevolution}
-  
+
   birth-death for diversity
 
   Brownian motion for trait
 \end{frame}
 
+
 \begin{frame}
   \frametitle{Species distribution models}
 
-  aboitic associations -- traditional, maxent
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{block}{Goal}
+        Understand relationship between species distribution in space (and time) as function of that species' environmental context or species trait values.
+      \end{block}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/warton_corner_models}
 
-  biotic associations -- cats/maxent assembly
-
-  fourth-corner -- where we are
+      \footnotesize{\attrib{Warton \textit{et al.} 2015 \textit{Methods in Ecology and Evolution}}}
+    \end{column}
+  \end{columns}
 \end{frame}
 
-
-
-
-\section{Patterns in extinction}
-\subsection{Background extinction and expected differences in species survival}
 
 \begin{frame}
-  \begin{alertblock}{Question}
-    Why do taxa go extinct at different rates?
-  \end{alertblock}
+  \frametitle{Bayesian statistics}
+
+  framework used throughout this dissertation
+
+  flexible, expressive, intuitive
+
+  using HMC and ADVI as implemented in Stan 
 \end{frame}
+
+
+\section{Patterns in survival}
+\subsection{Background extinction and expected differences in species survival}
 
 \begin{frame}
   \begin{block}{Motivating questions}
     \begin{itemize}
       \item \alert{How do mammal species traits affect extinction risk?}
         \begin{itemize}
-          \item \alert{How do shared time of origination or evolutionary history relate to extinction risk?}
+          \item How do shared time of origination or evolutionary history relate to extinction risk?
         \end{itemize}
       \item How do my findings compare to current risk factors?
       \item Is species extinction risk age-independent?
     \end{itemize}
   \end{block}
+\end{frame}
+
+\begin{frame}
+  Cenozoic mammals of North America
 \end{frame}
 
 \begin{frame}
@@ -310,7 +377,7 @@
   %\includegraphics[width = 0.45\textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/Brachiopod_fossil}
   %\includegraphics[width = 0.45\textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/Burmirhynchionella_decorata_brachial_CRF}
 
-  \tiny{\attrib{ComputerHotline, wikimedia CC BY 2.5; Dwergenpaartje, wikimedia CC BY-SA 3.0}}
+  \footnotesize{\attrib{ComputerHotline, wikimedia CC BY 2.5; Dwergenpaartje, wikimedia CC BY-SA 3.0}}
 \end{frame}
 
 \begin{frame}
@@ -328,32 +395,13 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \begin{block}{New measure of taxon's environmental affinity}
-    (\# epicontinental / total \# occurrences) is what quantile of the distribution of all other background occurrences Beta(\(\alpha\), \(\beta\)).
-    \begin{itemize}
-      \item \(\alpha\) is the \# epicontinental background occurrences (+ 1).
-      \item \(\beta\) is the \# open ocean background (+ 1).
-    \end{itemize}
-  \end{block}
-\end{frame}
-
 
 \begin{frame}
-  \begin{block}{Measure of sampling and imputed values}
-    Sampling is measured as the gap statistic \(r\): \\(number of bins with an occurrence - 2) / (duration in bins - 2)
-
-    Can only be estimated for taxa with duration of three or more. \\Have to impute (e.g. fill-in) the values for all other taxa \(r^{\ast}\).
-    \begin{align*}
-      s &\sim \text{Beta}(\phi, \lambda) \\
-      \phi &= \text{logit}^{-1}(W\gamma) \\
-      s^{\ast} &\sim \text{Beta}(\phi^{\ast}, \lambda) \\
-      \phi^{\ast} &= \text{logit}^{-1}(W^{\ast}\gamma) \\
-    \end{align*}
-    \scriptsize{Note: Beta distribution parameterized in terms of mean \(\phi\) and total count \(\lambda\). \\Also, this presentation excludes final (hyper)priors.}
-  \end{block}
+  \frametitle{Hierarchical survival model}
+  \begin{center}
+    %\includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/simple_model}
+  \end{center}
 \end{frame}
-
 
 \begin{frame}
   \frametitle{Sampling statement for the joint posterior probability}
@@ -387,14 +435,6 @@
   \scriptsize{Note: Calculation of log probability of right and left censored observations is modified from the above}
 \end{frame}
 
-
-
-\begin{frame}
-  \frametitle{Hierarchical survival model}
-  \begin{center}
-    %\includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/simple_model}
-  \end{center}
-\end{frame}
 
 
 \begin{frame}
@@ -507,14 +547,6 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Paleontological fourth-corner model}
-  \begin{center}
-    %\includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/paleo_fourth_corner}
-  \end{center}
-
-\end{frame}
-
-\begin{frame}
   \frametitle{Covariates of interest}
   \begin{columns}
     \begin{column}{0.5\textwidth}
@@ -547,21 +579,21 @@
 \end{frame}
 
 
-\begin{frame}
-  \frametitle{Model of taxon occurrence}
-  \begin{itemize}
-    \item response is p/a of genus in NA at time \(t\)
-      \begin{itemize}
-        \item Bernoulli variable 
-        \item probability is (observation prob) times (``true'' presence)
-      \end{itemize}
-    \item observation probability is effect of sampling/fossil record
-    \item the latent discrete ``true'' presence modeled as a \\multi-level logistic regression
-      \begin{itemize}
-        \item individual- and group-level covariates
-      \end{itemize}
-  \end{itemize}
-\end{frame}
+%\begin{frame}
+%  \frametitle{Model of taxon occurrence}
+%  \begin{itemize}
+%    \item response is p/a of genus in NA at time \(t\)
+%      \begin{itemize}
+%        \item Bernoulli variable 
+%        \item probability is (observation prob) times (``true'' presence)
+%      \end{itemize}
+%    \item observation probability is effect of sampling/fossil record
+%    \item the latent discrete ``true'' presence modeled as a \\multi-level logistic regression
+%      \begin{itemize}
+%        \item individual- and group-level covariates
+%      \end{itemize}
+%  \end{itemize}
+%\end{frame}
 
 \begin{frame}
   \frametitle{Paleontological fourth-corner model}
@@ -612,43 +644,22 @@
   \end{footnotesize} 
 
 
-  \scriptsize{Note: Product term ensures taxon-loss is permanent. Implementation in Stan marginalizes over all possible (range-through) values of \(z\) instead of estimating the discrete parameters. I also use a noncentered parameterization of the hierarchical effects for better posterior sampling behavior. This presentation excludes final (hyper)priors.}
+%  \scriptsize{Note: Product term ensures taxon-loss is permanent. Implementation in Stan marginalizes over all possible (range-through) values of \(z\) instead of estimating the discrete parameters. I also use a noncentered parameterization of the hierarchical effects for better posterior sampling behavior.} 
 \end{frame}
 
-
-\begin{frame}
-  \frametitle{Parameter estimation and inference}
-
-  \begin{columns}
-    \begin{column}{0.45\textwidth}
-      \begin{itemize}
-        \item full HMC/MCMC slow
-        \item Automatic Differentiation Variational Inference (ADVI) 
-          \begin{itemize}
-            \item approximate Bayesian inference
-            \item assumes posterior is Gaussian
-            \item true but approximate Bayesian posterior
-          \end{itemize}
-      \end{itemize}
-    \end{column}
-    \begin{column}{0.55\textwidth}
-      %\includegraphics[height=0.9\textheight,width=\textwidth,keepaspectratio=true]{figure/stan_logo}
-    \end{column}
-  \end{columns}
-\end{frame}
 
 
 \begin{frame}
   \frametitle{Posterior predictive performance}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Effect of mass on log-odds of observation}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Effect of mass on log-odds of occurrence}
-\end{frame}
+%\begin{frame}
+%  \frametitle{Effect of mass on log-odds of observation}
+%\end{frame}
+%
+%\begin{frame}
+%  \frametitle{Effect of mass on log-odds of occurrence}
+%\end{frame}
 
 \begin{frame}
   \frametitle{Probability of ecotype origination}
@@ -700,33 +711,67 @@
 
 
 \section{Conclusions and commentary}
+\begin{frame}
+  \frametitle{Summary}
 
-% 5 sections
-%   45 minutes
-% introduction
-%   base this on the actual introduction from my dissertation
-%   big ideas
-%     macroevolution and macroecology
-%     linked through traits
-%     species fitness and selection
-%   smaller parts of those big ideas
-%     survival of the unspecialized
-%     law of constant extinction
-%     enrichment/depletion of ecotypes
-%   how my studies fit?
-%     survival models
-%     species pool model
-%   what are my overall goals?
-%     demonstrate the interconnectedness of these two fields
-% studies of survival
-%   mammals
-%   brachiopods
-% functional diversity
-%   mammals
-% conclusion
-%   what have we learned?
-%   what does this mean?
-%   where do we go from here?
+  three studies on emergent patterns and their relation to functional traits
 
+  many questions and hypotheses, both domain specific and general
+\end{frame}
+
+\begin{frame}
+  \frametitle{Advances}
+
+  law of constant extinction
+
+  survival of the unspecialized
+
+  functional diversity
+\end{frame}
+
+\begin{frame}
+  \frametitle{Future}
+
+  spatial data
+
+  better models of preservation
+
+  better hypotheses of relation between trait and target (ezard example)
+\end{frame}
+
+\begin{frame}
+  \frametitle{Final thoughts}
+\end{frame}
+
+
+
+
+
+\appendix
+%\begin{frame}
+%  \begin{block}{New measure of taxon's environmental affinity}
+%    (\# epicontinental / total \# occurrences) is what quantile of the distribution of all other background occurrences Beta(\(\alpha\), \(\beta\)).
+%    \begin{itemize}
+%      \item \(\alpha\) is the \# epicontinental background occurrences (+ 1).
+%      \item \(\beta\) is the \# open ocean background (+ 1).
+%    \end{itemize}
+%  \end{block}
+%\end{frame}
+%
+%
+%\begin{frame}
+%  \begin{block}{Measure of sampling and imputed values}
+%    Sampling is measured as the gap statistic \(r\): \\(number of bins with an occurrence - 2) / (duration in bins - 2)
+%
+%    Can only be estimated for taxa with duration of three or more. \\Have to impute (e.g. fill-in) the values for all other taxa \(r^{\ast}\).
+%    \begin{align*}
+%      s &\sim \text{Beta}(\phi, \lambda) \\
+%      \phi &= \text{logit}^{-1}(W\gamma) \\
+%      s^{\ast} &\sim \text{Beta}(\phi^{\ast}, \lambda) \\
+%      \phi^{\ast} &= \text{logit}^{-1}(W^{\ast}\gamma) \\
+%    \end{align*}
+%    \scriptsize{Note: Beta distribution parameterized in terms of mean \(\phi\) and total count \(\lambda\). \\Also, this presentation excludes final (hyper)priors.}
+%  \end{block}
+%\end{frame}
 
 \end{document}
