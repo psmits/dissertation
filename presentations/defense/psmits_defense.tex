@@ -1,5 +1,5 @@
 \documentclass{beamer} 
-\usepackage{amsmath,amsthm}
+\usepackage{amsmath,amsthm,amsfonts}
 \usepackage{graphicx,microtype,parskip}
 \usepackage{caption,subcaption,multirow}
 \usepackage{attrib}
@@ -38,11 +38,11 @@
 \subtitle{analysis of emergent evolutionary and ecological patterns}
 \author{Peter D Smits}
 \institute{Committee on Evolutionary Biology, University of Chicago}
-%\titlegraphic{
-  %\includegraphics[width=2.75cm,height=2.75cm,keepaspectratio=true]{figure/paleodb}
-  %\hspace*{0.35\paperwidth}
-  %\includegraphics[width=2cm,height=2cm,keepaspectratio=true]{figure/chicago}
-%}
+\titlegraphic{
+  \includegraphics[width=2.75cm,height=2.75cm,keepaspectratio=true]{figure/paleodb}
+  \hspace*{0.35\paperwidth}
+  \includegraphics[width=2cm,height=2cm,keepaspectratio=true]{figure/chicago}
+}
 \date{}
 
 \begin{document}
@@ -58,27 +58,40 @@
 \section{Macroevolution and macroecology}
 
 \begin{frame}
-  levels of organisation and emergence
-  % i'm sure there is a compelling image that could be used here
-  %   cells in tissue, tissue in organs, organs in organism, organism in population, etc.
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/stanley_macro}
+      \end{center}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/brown_macro}
+      \end{center}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
   \begin{definition}
     \begin{itemize}
-      \item Macroevolution: study of patterns which emerge when considering the evolutionary history of multiple species.
-      \item Macroecology: study of patterns which emerge when considering the ecology of multiple species.
+      \item \alert{macroevolution}: study of patterns which emerge when considering the evolutionary history of multiple species.
+      \item \alert{macroecology}: study of patterns which emerge when considering the ecology of multiple species.
       \item both in time and space
     \end{itemize}
   \end{definition}
 \end{frame}
 
 \begin{frame}
-  trait: identifiable property of an organism
+  \frametitle{Traits as conceptual and operational link}
 
-  species trait: idetifiable property of the entire species
-
-  functional trait: class of traits describing interaction with environment
+  \begin{definition}
+    \begin{itemize}
+      \item \alert{trait}: identifiable property of an organism \\e.g. pelage color, body mass, beak depth, tooth shape
+      \item \alert{functional trait}: trait that strongly influences performance/means of interacting with environment
+      \item \alert{species trait}: identifiable property assignable to a species
+    \end{itemize}
+  \end{definition}
 \end{frame}
 
 \begin{frame}
@@ -91,8 +104,7 @@
   \end{block}
 
   \begin{itemize}
-    \item avoids selection versus sorting
-    \item avoids strict species selection vs effect macroevolution
+    \item avoids selection versus sorting, ``strict'' species selection versus effect macroevolution
     \item no operational structure
       \begin{itemize}
         \item species inherit traits
@@ -107,8 +119,8 @@
   \begin{definition}
     Expected time till extinction.
   \end{definition}
-  
-  \footnotesize{\attrib{Cooper 1984 \textit{J. Theoretical Biology}}} 
+
+  \footnotesize{\attrib{Cooper 1984 \em{J. Theoretical Biology}}} 
 
   \begin{itemize}
     \item \alert{logic:} if more fit, more likely to be present
@@ -122,13 +134,13 @@
 \end{frame}
 
 \begin{frame}
-%  \begin{block}{Extinction}
-%    \begin{quote}
-%      Population decline maybe a common cause of \dots extinction, but organisms never die from population decline, and population decline is never caused by organismal death alone \dots It's the relative balance between birth, death, and lifespan of organisms that determines \dots extinction. 
-%    \end{quote}
-%  \end{block}
-%  
-%  \small{\attrib{Simpson 2016 \em{bioRxiv}}}
+  \begin{block}{Extinction}
+    \begin{quote}
+      Population decline maybe a common cause of \dots extinction, but organisms never die from population decline, and population decline is never caused by organismal death alone \dots It's the relative balance between birth, death, and lifespan of organisms that determines \dots extinction. 
+    \end{quote}
+  \end{block}
+  
+  \small{\attrib{Simpson 2016 \em{bioRxiv}}}
 \end{frame}
 
 \begin{frame}
@@ -146,7 +158,7 @@
     \end{quote}
   \end{block}
 
-  \small{\attrib{Simpson, 1944, \em{Tempo and Mode of Evolution}, p. 143}}
+  \small{\attrib{Simpson 1944 \em{Tempo and Mode in Evolution} p. 143}}
 \end{frame}
 
 
@@ -157,11 +169,27 @@
     \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/schemske_pool}
   \end{center}
 
-  \attrib{\footnotesize{Mittelbach and Schemske, 2015, \em{TREE}}}
+  \attrib{\footnotesize{Mittelbach and Schemske 2015 \em{TREE}}}
 \end{frame}
 
 \begin{frame}
-  functional composition of species pool
+  \frametitle{Functional groups}
+    
+  \begin{center}
+    \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/ecocube}
+  \end{center}
+  
+  \attrib{\footnotesize{Bambach \em{et al.} 2007 \em{Palaeontology}}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Functional groups over time}
+  
+  \begin{center}
+    \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/bush_cube_time}
+  \end{center}
+  
+  \attrib{\footnotesize{Bush and Bambach 2011 \em{Annu. Rev. Earth Planet Sci.}}}
 \end{frame}
 
 
@@ -170,11 +198,19 @@
 
 \begin{frame}
   \frametitle{Inference}
-
-  Probability theory 
-
-  Learning from incomplete information.
-
+  \begin{columns}
+    \begin{column}{0.45\textwidth}
+      \begin{center}
+        \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/jaynes_theory}
+      \end{center}
+    \end{column}
+    \begin{column}{0.55\textwidth}
+      \begin{quote}
+        The theory of probability is the only mathematical tool avaliable to help map the unknown and the uncontrollable.
+      \end{quote}
+      \footnotesize{\attrib{B. Mandelbrot}}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
@@ -190,7 +226,7 @@
 
   \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/ovaskainen_data}
 
-  \footnotesize{\attrib{Ovaskainen \textit{et al.} 2017 \textit{Ecology Letters}}}
+  \footnotesize{\attrib{Ovaskainen \textit{et al.} 2017 \em{Ecology Letters}}}
 \end{frame}
 
 \begin{frame}
@@ -198,16 +234,19 @@
 
   \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/ovaskainen_dag}
 
-  \footnotesize{\attrib{Ovaskainen \textit{et al.} 2017 \textit{Ecology Letters}}}
+  \footnotesize{\attrib{Ovaskainen \textit{et al.} 2017 \em{Ecology Letters}}}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Models of macroevolution: birth-death}
+\end{frame}
 
 \begin{frame}
-  \frametitle{Models of macroevolution}
+  \frametitle{Models of macroevolution: Brownian motion}
 
-  birth-death for diversity
-
-  Brownian motion for trait
+  \(x_{t} - x_{s} \sim \mathcal{N}(\mu, \sigma)\)
+  %\(x_{t} = x_{t - 1} + \epsilon\)
+  %\(\epsilon \sim \mathcal{N}(\mu, \sigma)\)
 \end{frame}
 
 
@@ -221,9 +260,9 @@
       \end{block}
     \end{column}
     \begin{column}{0.5\textwidth}
-      \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/warton_corner_models}
+      \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/brown_fourth_corner}
 
-      \footnotesize{\attrib{Warton \textit{et al.} 2015 \textit{Methods in Ecology and Evolution}}}
+      \footnotesize{\attrib{Brown \textit{et al.} 2014 \em{Methods Ecol. Evol.}}}
     \end{column}
   \end{columns}
 \end{frame}
@@ -266,7 +305,7 @@
     %\includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/harnik_rarity}
   \end{center}
 
-  \tiny{\attrib{Harnik and Simpson 2013 \textit{Proc B}}}
+  \tiny{\attrib{Harnik and Simpson 2013 \em{Proc B}}}
 \end{frame}
 
 
@@ -351,9 +390,9 @@
 \begin{frame}
   \begin{alertblock}{Observation}
     At K/Pg mass extinction, biological traits (except geographic range) have no effect on \alert{bivalve} taxonomic survival.
-
-    \attrib{\footnotesize{Jablonski, 1986, \em{Science}}}
   \end{alertblock}
+
+  \attrib{\footnotesize{Jablonski 1986 \em{Science}}}
 \end{frame}
 
 \begin{frame}
@@ -377,7 +416,7 @@
   %\includegraphics[width = 0.45\textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/Brachiopod_fossil}
   %\includegraphics[width = 0.45\textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/Burmirhynchionella_decorata_brachial_CRF}
 
-  \footnotesize{\attrib{ComputerHotline, wikimedia CC BY 2.5; Dwergenpaartje, wikimedia CC BY-SA 3.0}}
+  \footnotesize{\attrib{ComputerHotline wikimedia CC BY 2.5; Dwergenpaartje wikimedia CC BY-SA 3.0}}
 \end{frame}
 
 \begin{frame}
@@ -391,7 +430,7 @@
         \item body size
         \item environmental preference (v, v\(^2\))
       \end{itemize}
-    \item gap statistic as measure of sampling {\footnotesize{(Foote and Raup 1996 \textit{Paleobio})}} \\imputed for taxa with short durations
+    \item gap statistic as measure of sampling {\footnotesize{(Foote and Raup 1996 \em{Paleobio})}}, imputed for taxa with short durations
   \end{itemize}
 \end{frame}
 
@@ -524,26 +563,26 @@
     %\includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/smits_2015_results}
   \end{center}
 
-  \attrib{\footnotesize{Smits, 2015, \em{PNAS}}}
+  \attrib{\footnotesize{Smits 2015 \em{PNAS}}}
 \end{frame}
 
 \begin{frame}
   \frametitle{Eco-cube and ecotypes}
 
   \begin{center}
-    %\includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/ecocube}
+    \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/ecocube}
   \end{center}
 
-  \attrib{\footnotesize{Bambach \em{et al.}, 2007, \em{Palaeontology}}}
+  \attrib{\footnotesize{Bambach \em{et al.} 2007 \em{Palaeontology}}}
 \end{frame}
 
 \begin{frame}
   \frametitle{Fourth-corner modelling problem}
   \begin{center}
-    %\includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/warton_fourth_corner}
+    \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/brown_fourth_corner}
   \end{center}
 
-  \attrib{\footnotesize{Brown \em{et al.}, 2014, \em{Methods Ecol. Evol.}}}
+  \attrib{\footnotesize{Brown \em{et al.} 2014 \em{Methods Ecol. Evol.}}}
 \end{frame}
 
 \begin{frame}
