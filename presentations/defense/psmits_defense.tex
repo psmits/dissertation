@@ -208,23 +208,33 @@
       \begin{quote}
         The theory of probability is the only mathematical tool avaliable to help map the unknown and the uncontrollable.
       \end{quote}
-      \footnotesize{\attrib{B. Mandelbrot}}
+      \footnotesize{\attrib{Mandelbrot}}
     \end{column}
   \end{columns}
 \end{frame}
 
-\begin{frame}
-  \frametitle{Inference devices and statistical models}
-
-  statistical model as inference device
-
-  engineering approach to analysis: building blocks used to create the device
-\end{frame}
+%\begin{frame}
+%  \frametitle{Inference devices and statistical tests}
+%
+%  \begin{center}
+%    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/mcelreath_tests}
+%  \end{center}
+%
+%  \footnotesize{\attrib{McElreath 2015}}
+%\end{frame}
+%
+%\begin{frame}
+%  \frametitle{Building your own}
+%
+%  % why and how to develop models
+%\end{frame}
 
 \begin{frame}
   \frametitle{Structured data in biology and paleontology}
 
-  \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/ovaskainen_data}
+  \begin{center}
+    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/ovaskainen_data}
+  \end{center}
 
   \footnotesize{\attrib{Ovaskainen \textit{et al.} 2017 \em{Ecology Letters}}}
 \end{frame}
@@ -232,50 +242,71 @@
 \begin{frame}
   \frametitle{Models of structured data}
 
-  \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/ovaskainen_dag}
+  \begin{center}
+    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/ovaskainen_dag}
+  \end{center}
 
   \footnotesize{\attrib{Ovaskainen \textit{et al.} 2017 \em{Ecology Letters}}}
 \end{frame}
 
 \begin{frame}
   \frametitle{Models of macroevolution: birth-death}
+  
+  \begin{center}
+    \(m_{t} = a e^{(\lambda - \mu) t}\)
+
+    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/bd_sim}
+  \end{center}
+
 \end{frame}
 
 \begin{frame}
   \frametitle{Models of macroevolution: Brownian motion}
 
-  \(x_{t} - x_{s} \sim \mathcal{N}(\mu, \sigma)\)
-  %\(x_{t} = x_{t - 1} + \epsilon\)
-  %\(\epsilon \sim \mathcal{N}(\mu, \sigma)\)
+  \begin{center}
+    \(x_{t} - x_{s} \sim \mathcal{N}(\mu, \sigma)\)
+
+    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/brown_sim}
+  \end{center}
+
 \end{frame}
 
 
 \begin{frame}
   \frametitle{Species distribution models}
 
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \begin{block}{Goal}
-        Understand relationship between species distribution in space (and time) as function of that species' environmental context or species trait values.
-      \end{block}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/brown_fourth_corner}
+  \begin{block}{Goal}
+    Understand relationship between species distribution in space (and time) as function of that species' environmental context or species trait values.
+  \end{block}
 
-      \footnotesize{\attrib{Brown \textit{et al.} 2014 \em{Methods Ecol. Evol.}}}
-    \end{column}
-  \end{columns}
+  \begin{center}
+    \includegraphics[width = \textwidth,height = 0.5\textheight,keepaspectratio = true]{figure/brown_fourth_corner}
+  \end{center}
+
+  \footnotesize{\attrib{Brown \textit{et al.} 2014 \em{Methods Ecol. Evol.}}}
 \end{frame}
 
 
 \begin{frame}
   \frametitle{Bayesian statistics}
 
-  framework used throughout this dissertation
-
-  flexible, expressive, intuitive
-
-  using HMC and ADVI as implemented in Stan 
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item flexible, expressive, intuitive
+        \item Stan probablistic programming language
+          \begin{itemize}
+            \item Hamiltonian Monte Carlo
+            \item Automatic Differentiation Variational Inference
+          \end{itemize}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/bda_cover}
+      \end{center}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 
