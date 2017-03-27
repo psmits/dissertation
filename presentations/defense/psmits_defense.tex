@@ -105,11 +105,6 @@
 
   \begin{itemize}
     \item avoids selection versus sorting, ``strict'' species selection versus effect macroevolution
-    \item no operational structure
-      \begin{itemize}
-        \item species inherit traits
-        \item traits affect fitness
-      \end{itemize}
   \end{itemize}
 \end{frame}
 
@@ -126,9 +121,6 @@
     \item \alert{logic:} if more fit, more likely to be present
     \item distribution based definition (population)
     \item other definitions can be derived, just expand definition of extinction
-      \begin{itemize}
-        \item lines-of-descent 
-      \end{itemize}
   \end{itemize}
 
 \end{frame}
@@ -139,8 +131,8 @@
       Population decline maybe a common cause of \dots extinction, but organisms never die from population decline, and population decline is never caused by organismal death alone \dots It's the relative balance between birth, death, and lifespan of organisms that determines \dots extinction. 
     \end{quote}
   \end{block}
-  
-  \small{\attrib{Simpson 2016 \em{bioRxiv}}}
+
+  \footnotesize{\attrib{Simpson 2016 \em{bioRxiv}}}
 \end{frame}
 
 \begin{frame}
@@ -148,7 +140,7 @@
     Extinction risk, in a given adaptive zone, is taxon--age independent.
   \end{alertblock}
 
-  \small{\attrib{Van Valen 1973 \em{Evol. Theory}}}
+  \footnotesize{\attrib{Van Valen 1973 \em{Evol. Theory}}}
 \end{frame}
 
 \begin{frame}
@@ -158,7 +150,7 @@
     \end{quote}
   \end{block}
 
-  \small{\attrib{Simpson 1944 \em{Tempo and Mode in Evolution} p. 143}}
+  \footnotesize{\attrib{Simpson 1944 \em{Tempo and Mode in Evolution} p. 143}}
 \end{frame}
 
 
@@ -174,21 +166,21 @@
 
 \begin{frame}
   \frametitle{Functional groups}
-    
+
   \begin{center}
     \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/ecocube}
   \end{center}
-  
+
   \attrib{\footnotesize{Bambach \em{et al.} 2007 \em{Palaeontology}}}
 \end{frame}
 
 \begin{frame}
   \frametitle{Functional groups over time}
-  
+
   \begin{center}
     \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/bush_cube_time}
   \end{center}
-  
+
   \attrib{\footnotesize{Bush and Bambach 2011 \em{Annu. Rev. Earth Planet Sci.}}}
 \end{frame}
 
@@ -213,22 +205,6 @@
   \end{columns}
 \end{frame}
 
-%\begin{frame}
-%  \frametitle{Inference devices and statistical tests}
-%
-%  \begin{center}
-%    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/mcelreath_tests}
-%  \end{center}
-%
-%  \footnotesize{\attrib{McElreath 2015}}
-%\end{frame}
-%
-%\begin{frame}
-%  \frametitle{Building your own}
-%
-%  % why and how to develop models
-%\end{frame}
-
 \begin{frame}
   \frametitle{Structured data in biology and paleontology}
 
@@ -251,11 +227,11 @@
 
 \begin{frame}
   \frametitle{Models of macroevolution: birth-death}
-  
-  \begin{center}
-    \(m_{t} = a e^{(\lambda - \mu) t}\)
 
-    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/bd_sim}
+  \begin{center}
+    \includegraphics[width = \textwidth,height = 0.7\textheight,keepaspectratio = true]{figure/bd_sim}
+
+    \(m_{t} = a e^{(\lambda - \mu) t}\)
   \end{center}
 
 \end{frame}
@@ -264,9 +240,9 @@
   \frametitle{Models of macroevolution: Brownian motion}
 
   \begin{center}
-    \(x_{t} - x_{s} \sim \mathcal{N}(\mu, \sigma)\)
+    \includegraphics[width = \textwidth,height = 0.7\textheight,keepaspectratio = true]{figure/brown_sim}
 
-    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/brown_sim}
+    \(x_{t} - x_{s} \sim \mathcal{N}(\mu, \sigma)\)
   \end{center}
 
 \end{frame}
@@ -275,17 +251,31 @@
 \begin{frame}
   \frametitle{Species distribution models}
 
-  \begin{block}{Goal}
-    Understand relationship between species distribution in space (and time) as function of that species' environmental context or species trait values.
-  \end{block}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{block}{Goal}
+        Understand species distribution in space (and time) as function of that species' environmental context or species trait values.
+      \end{block}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \includegraphics[width = \textwidth,height = 0.5\textheight,keepaspectratio = true]{figure/warton_corner_models}
+      \end{center}
+    \end{column}
+  \end{columns}
 
-  \begin{center}
-    \includegraphics[width = \textwidth,height = 0.5\textheight,keepaspectratio = true]{figure/brown_fourth_corner}
-  \end{center}
 
-  \footnotesize{\attrib{Brown \textit{et al.} 2014 \em{Methods Ecol. Evol.}}}
+  \footnotesize{\attrib{Warton \textit{et al.} 2015 \em{Methods Ecol. Evol.}}}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Reading a probability}
+  \begin{center}
+    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/probability}
+  \end{center}
+
+  \footnotesize{\attrib{mathwithbaddrawings.com}}
+\end{frame} % opportunity for jokes
 
 \begin{frame}
   \frametitle{Bayesian statistics}
@@ -293,6 +283,7 @@
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \begin{itemize}
+        \item logic on a continuous scale is Bayesian inference
         \item flexible, expressive, intuitive
         \item Stan probablistic programming language
           \begin{itemize}
@@ -310,8 +301,22 @@
 \end{frame}
 
 
+\begin{frame}
+  \frametitle{Mammals and brachiopods}
+  % picture showing these two groups like in my proposal
+\end{frame}
+
+
+
 \section{Patterns in survival}
 \subsection{Background extinction and expected differences in species survival}
+
+\begin{frame}
+  \frametitle{Age of Mammals}
+  \begin{center}
+    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/aom}
+  \end{center}
+\end{frame}
 
 \begin{frame}
   \begin{block}{Motivating questions}
@@ -327,79 +332,99 @@
 \end{frame}
 
 \begin{frame}
-  Cenozoic mammals of North America
+  \frametitle{Relationship between range size and extinction risk}
+  \begin{center}
+    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/geo_range_1}
+  \end{center}
 \end{frame}
 
 \begin{frame}
   \frametitle{Relationship between range size and extinction risk}
   \begin{center}
-    %\includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/harnik_rarity}
+    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/geo_range_2}
   \end{center}
-
-  \tiny{\attrib{Harnik and Simpson 2013 \em{Proc B}}}
 \end{frame}
-
 
 \begin{frame}
   \frametitle{Hypotheses of effects of dietary category}
   \begin{center}
-    %\includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/diet_survival}
+    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/diet_survival}
   \end{center}
 \end{frame}
 
 \begin{frame}
   \frametitle{Hypotheses of effects of locomotor category}
   \begin{center}
-    %\includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/loco_initial}
+    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/loco_initial}
   \end{center}
 \end{frame}
 
 \begin{frame}
   \frametitle{Hypotheses of effects of locomotor category}
   \begin{center}
-    %\includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/loco_later}
+    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/loco_later}
   \end{center}
 \end{frame}
 
 \begin{frame}
   \frametitle{Survival model diagram}
   \begin{center}
-    %\includegraphics[height=0.8\textheight,keepaspectratio=true]{figure/mammal_model}
+    \includegraphics[height=0.8\textheight,keepaspectratio=true]{figure/mammal_survival_model}
   \end{center}
 \end{frame}
 
 \begin{frame}
   \frametitle{Pattern of species survival under two models}
 
-  %\includegraphics[height=0.8\textheight,keepaspectratio=true]{figure/survival_function_pres}
-\end{frame}
+  \begin{center}
+    \includegraphics[height=0.75\textheight,keepaspectratio=true]{figure/survival_function_pres}
+  \end{center}
 
-\begin{frame}
-  \frametitle{Effect of dietary category on extinction risk}
-
-  %\includegraphics[height=0.8\textheight,keepaspectratio=true]{figure/diet_diff_est_pres}
+  \footnotesize{\attrib{Smits 2015 \em{PNAS}}}
 \end{frame}
 
 \begin{frame}
   \frametitle{Effect of locomotor category on extinction risk}
 
-  %\includegraphics[height=0.8\textheight,keepaspectratio=true]{figure/loco_diff_est_pres}
+  \begin{center}
+    \includegraphics[height=0.75\textheight,keepaspectratio=true]{figure/loco_diff_est}
+  \end{center}
+
+  \footnotesize{\attrib{Smits 2015 \em{PNAS}}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Effect of dietary category on extinction risk}
+
+  \begin{center}
+    \includegraphics[height=0.8\textheight,keepaspectratio=true]{figure/diet_diff_est}
+  \end{center}
+
+  \footnotesize{\attrib{Smits 2015 \em{PNAS}}}
 \end{frame}
 
 \begin{frame}
   \frametitle{Difference in risk between origination cohorts}
 
-  %\includegraphics[height=0.8\textheight,keepaspectratio=true]{figure/cohort_est_pres}
+  \begin{center}
+    \includegraphics[height=0.8\textheight,keepaspectratio=true]{figure/cohort_est_pres}
+  \end{center}
+
+  \footnotesize{\attrib{Smits 2015 \em{PNAS}}}
 \end{frame}
 
 \begin{frame}
   \frametitle{Three sources of variance}
 
-  %\includegraphics[height=0.8\textheight,keepaspectratio=true]{figure/variance_est_pres}
+  \begin{center}
+    \includegraphics[height=0.8\textheight,keepaspectratio=true]{figure/variance_est}
+  \end{center}
+
+  \footnotesize{\attrib{Smits 2015 \em{PNAS}}}
 \end{frame}
 
 \begin{frame}
-  \begin{block}{Conclusions}
+  \begin{block}{Summary of results}
     \begin{itemize}
       \item Survival of the unspecialized as time-invariant generalization.
       \item Decrease in extinction risk with time.
@@ -419,6 +444,15 @@
 \subsection{Interplay between extinction intensity and extinction selectivity}
 
 \begin{frame}
+  \frametitle{Brachiopods}
+  \includegraphics[width = 0.45\textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/Brachiopod_fossil}
+  \includegraphics[width = 0.45\textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/Burmirhynchionella_decorata_brachial_CRF}
+
+  \footnotesize{\attrib{ComputerHotline wikimedia CC BY 2.5; Dwergenpaartje wikimedia CC BY-SA 3.0}}
+\end{frame}
+
+
+\begin{frame}
   \begin{alertblock}{Observation}
     At K/Pg mass extinction, biological traits (except geographic range) have no effect on \alert{bivalve} taxonomic survival.
   \end{alertblock}
@@ -427,27 +461,28 @@
 \end{frame}
 
 \begin{frame}
-  \begin{alertblock}{Questions and analysis}
-    \begin{itemize}
-      \item How do the effect of emergent traits on duration (\alert{extinction selectivity}) vary with expected duration (\alert{extinction intensity})?
-      \item \textbf{Approach:} hierarchical Bayesian survival model; \\effect estimates vary with origination cohort; \\correlation btw effects modeled.
-    \end{itemize}
-  \end{alertblock}
+  \frametitle{Variation in extinction rate}
+  \begin{center}
+    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/wang_extinction}
+  \end{center}
+
+  \footnotesize{\attrib{Wang 2003 \em{Paleobio.}}}
 \end{frame}
 
 \begin{frame}
   \frametitle{Intensity and selectivity}
   \begin{center}
-    %\includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/intensity_selectivity_base}
+    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/intensity_selectivity_base}
   \end{center}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Brachiopods}
-  %\includegraphics[width = 0.45\textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/Brachiopod_fossil}
-  %\includegraphics[width = 0.45\textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/Burmirhynchionella_decorata_brachial_CRF}
-
-  \footnotesize{\attrib{ComputerHotline wikimedia CC BY 2.5; Dwergenpaartje wikimedia CC BY-SA 3.0}}
+  \begin{alertblock}{Questions and analysis}
+    \begin{itemize}
+      \item How do the effect of traits on duration (\alert{extinction selectivity}) vary with expected duration (\alert{extinction intensity})?
+      \item \textbf{Approach:} hierarchical Bayesian survival model; \\effect estimates vary with origination cohort; \\correlation btw effects modeled.
+    \end{itemize}
+  \end{alertblock}
 \end{frame}
 
 \begin{frame}
@@ -455,7 +490,7 @@
   \begin{itemize}
     \item time range approx. 488-252 Mya.
     \item stage as time unit; duration measured in stages (2-5 My each)
-    \item multiple emergent traits analyzed; estimates vary by origination cohort
+    \item effect of traits varies by origination cohort
       \begin{itemize}
         \item geographic range
         \item body size
@@ -465,11 +500,10 @@
   \end{itemize}
 \end{frame}
 
-
 \begin{frame}
   \frametitle{Hierarchical survival model}
   \begin{center}
-    %\includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/simple_model}
+    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/simple_model}
   \end{center}
 \end{frame}
 
@@ -512,12 +546,12 @@
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \begin{center}
-        %\includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/survival_curves}
+        \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/survival_curves}
       \end{center}
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{center}
-        %\includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/shotgun}
+        \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/shotgun}
       \end{center}
     \end{column}
   \end{columns}
@@ -527,7 +561,7 @@
   \frametitle{Variation in trait effects between cohorts}
 
   \begin{center}
-    %\includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/cohort_series}
+    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/cohort_series_wide}
   \end{center}
 \end{frame}
 
@@ -535,7 +569,7 @@
   \frametitle{Overall effect of environmental preference}
 
   \begin{center}
-    %\includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/env_effect}
+    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/env_effect}
   \end{center}
 \end{frame}
 
@@ -543,7 +577,7 @@
   \frametitle{Change in effect of environment between cohorts}
 
   \begin{center}
-    %\includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/env_cohort_short}
+    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/env_cohort_short}
   \end{center}
 \end{frame}
 
@@ -551,7 +585,7 @@
   \frametitle{Change in effect of environment between cohorts}
 
   \begin{center}
-    %\includegraphics[width = 0.8\textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/env_cohort}
+    \includegraphics[width = 0.8\textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/env_cohort_wide}
   \end{center}
 \end{frame}
 
@@ -559,12 +593,12 @@
   \frametitle{Correlation of effects between cohorts}
 
   \begin{center}
-    %\includegraphics[width = \textwidth,height = 0.9\textheight,keepaspectratio = true]{figure/wei_cor_heatmap}
+    \includegraphics[width = \textwidth,height = 0.9\textheight,keepaspectratio = true]{figure/wei_cor_heatmap}
   \end{center}
 \end{frame}
 
 \begin{frame}
-  \begin{block}{Effect summary}
+  \begin{block}{Summary of results}
     \begin{itemize}
       \item Effect of geographic range consistent with prior expectations; low variance.
       \item No effect of body size; low variance.
@@ -579,6 +613,7 @@
     \begin{itemize}
       \item Magnitude of effect of geographic range and environmental preference increase with extinction intensity.
       \item As extinction risk decreases, the differences between taxa matter less.
+      \item Evidence for qualitative difference between mass and background extinction.
     \end{itemize}
   \end{alertblock}
 \end{frame}
@@ -588,23 +623,19 @@
 \section{Patterns in functional diversity}
 \subsection{Mammal species pool functional composition}
 
-
 \begin{frame}
+  \frametitle{Age of Mammals}
   \begin{center}
-    %\includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/smits_2015_results}
+    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/aom}
   \end{center}
-
-  \attrib{\footnotesize{Smits 2015 \em{PNAS}}}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Eco-cube and ecotypes}
-
   \begin{center}
-    \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/ecocube}
+    \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/smits_2015_results}
   \end{center}
 
-  \attrib{\footnotesize{Bambach \em{et al.} 2007 \em{Palaeontology}}}
+  \attrib{\footnotesize{Smits 2015 \em{PNAS}}}
 \end{frame}
 
 \begin{frame}
@@ -648,33 +679,17 @@
   \end{columns}
 \end{frame}
 
-
-%\begin{frame}
-%  \frametitle{Model of taxon occurrence}
-%  \begin{itemize}
-%    \item response is p/a of genus in NA at time \(t\)
-%      \begin{itemize}
-%        \item Bernoulli variable 
-%        \item probability is (observation prob) times (``true'' presence)
-%      \end{itemize}
-%    \item observation probability is effect of sampling/fossil record
-%    \item the latent discrete ``true'' presence modeled as a \\multi-level logistic regression
-%      \begin{itemize}
-%        \item individual- and group-level covariates
-%      \end{itemize}
-%  \end{itemize}
-%\end{frame}
-
 \begin{frame}
   \frametitle{Paleontological fourth-corner model}
   \begin{center}
-    %\includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/paleo_fourth_corner}
+    \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/paleo_fourth_corner}
   \end{center}
 
 \end{frame}
 
 \begin{frame}
   \frametitle{Model and sampling statement definition}
+
   \begin{footnotesize}
     \begin{columns}
       \begin{column}{0.5\textwidth}
@@ -712,71 +727,114 @@
       \end{column}
     \end{columns}
   \end{footnotesize} 
-
-
-%  \scriptsize{Note: Product term ensures taxon-loss is permanent. Implementation in Stan marginalizes over all possible (range-through) values of \(z\) instead of estimating the discrete parameters. I also use a noncentered parameterization of the hierarchical effects for better posterior sampling behavior.} 
 \end{frame}
 
 
 
 \begin{frame}
   \frametitle{Posterior predictive performance}
-\end{frame}
 
-%\begin{frame}
-%  \frametitle{Effect of mass on log-odds of observation}
-%\end{frame}
-%
-%\begin{frame}
-%  \frametitle{Effect of mass on log-odds of occurrence}
-%\end{frame}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        Pure-presence
+
+        \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/pred_occ}
+      \end{center}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        Birth-death 
+
+        \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/pred_occ_bd}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
 
 \begin{frame}
   \frametitle{Probability of ecotype origination}
+  \begin{center}
+    \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/ecotype_origin_bd}
+  \end{center}
 \end{frame}
 
 \begin{frame}
   \frametitle{Probability of ecotype survival}
+  \begin{center}
+    \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/ecotype_survival_bd}
+  \end{center}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Group-level effects (plant phase, climate)}
+  \frametitle{Group-level effects (plant phase, climate) on origination}
+  \begin{center}
+    \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/group_on_origin_bd}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Group-level effects (plant phase, climate) on survival}
+  \begin{center}
+    \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/group_on_survival_bd}
+  \end{center}
 \end{frame}
 
 \begin{frame}
   \frametitle{Total species pool diversity and diversification}
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \includegraphics[height=0.4\textheight,width=\textwidth,keepaspectratio=true]{figure/log_diversity}
+
+        \includegraphics[height=0.4\textheight,width=\textwidth,keepaspectratio=true]{figure/orig_rate}
+      \end{center}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \includegraphics[height=0.4\textheight,width=\textwidth,keepaspectratio=true]{figure/div_rate}
+
+        \includegraphics[height=0.4\textheight,width=\textwidth,keepaspectratio=true]{figure/death_rate}
+      \end{center}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
   \frametitle{Ecotype-specific diversity}
+  \begin{center}
+    \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/ecotype_diversity}
+  \end{center}
+\end{frame}
+
+%\begin{frame}
+%  \frametitle{Ecotype-specific origination}
+%  \begin{center}
+%    \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/birth_eco}
+%  \end{center}
+%\end{frame}
+%
+%\begin{frame}
+%  \frametitle{Ecotype-specific extinction}
+%  \begin{center}
+%    \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/death_eco}
+%  \end{center}
+%\end{frame}
+
+\begin{frame}
+  \frametitle{Relative ecotype diversity}
+  \begin{center}
+    \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/relative_diversity}
+  \end{center}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Ecotype-specific origination}
-\end{frame}
-
-\begin{frame}
-  \frametitle{Ecotype-specific extinction}
-\end{frame}
-
-\begin{frame}
-  \begin{block}{Concerns and conclusions}
+  \begin{alertblock}{Summary of results}
     \begin{itemize}
-      \item basic and full models have similar results until Neogene
-      \item posterior predictive simulations disimilar to observed; poor model adequacy
-        \begin{itemize}
-          \item previous work has \emph{never} evaluated model adequacy
-          \item second-order Markov process?
-          \item full posterior inference?
-        \end{itemize}
-      \item decreasing ability to discern arboreal taxa over time (absence/increased rarity)
-      \item increase in scansorial taxa over time
-      \item increase in herbivorous taxa over time
-      \item plant phase has small, idiosyncratic effects
+      \item 
     \end{itemize}
-  \end{block}
+  \end{alertblock}
 \end{frame}
-
 
 
 
@@ -814,6 +872,11 @@
 \end{frame}
 
 
+% acknowledgements
+% committee
+% advisor labs
+% cohort+ceb+paleo
+% friends+family
 
 
 
