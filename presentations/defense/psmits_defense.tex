@@ -77,7 +77,7 @@
     \begin{itemize}
       \item \alert{macroevolution}: study of patterns which emerge when considering the evolutionary history of multiple species.
       \item \alert{macroecology}: study of patterns which emerge when considering the ecology of multiple species.
-      \item both in time and space
+      \item \em{both in time and space}
     \end{itemize}
   \end{definition}
 \end{frame}
@@ -120,7 +120,7 @@
   \begin{itemize}
     \item \alert{logic:} if more fit, more likely to be present
     \item distribution based definition (population)
-    \item other definitions can be derived, just expand definition of extinction
+    \item other definitions can be derived based on definition of extinction
   \end{itemize}
 
 \end{frame}
@@ -269,15 +269,6 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Reading a probability}
-  \begin{center}
-    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/probability}
-  \end{center}
-
-  \footnotesize{\attrib{mathwithbaddrawings.com}}
-\end{frame} % opportunity for jokes
-
-\begin{frame}
   \frametitle{Bayesian statistics}
 
   \begin{columns}
@@ -285,6 +276,7 @@
       \begin{itemize}
         \item logic on a continuous scale is Bayesian inference
         \item flexible, expressive, intuitive
+        \item regularize, partial pooling, external information
         \item Stan probablistic programming language
           \begin{itemize}
             \item Hamiltonian Monte Carlo
@@ -300,12 +292,42 @@
   \end{columns}
 \end{frame}
 
+\begin{frame}
+  \frametitle{Reading probability as plausibility}
+  \begin{center}
+    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/probability}
+  \end{center}
+
+  \footnotesize{\attrib{mathwithbaddrawings.com}}
+\end{frame} % opportunity for jokes
+
+
+
 
 \begin{frame}
   \frametitle{Mammals and brachiopods}
-  % picture showing these two groups like in my proposal
-\end{frame}
 
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \textbf{Mammals}
+
+        \vspace{0.5cm}
+
+        \includegraphics[height = 0.6\textheight, keepaspectratio = true]{figure/monty}
+      \end{center}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{center}
+        \textbf{Brachiopods}
+
+        \vspace{0.5cm}
+
+        \includegraphics[height = 0.6\textheight, keepaspectratio = true]{figure/tattoo}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
 
 
 \section{Patterns in survival}
@@ -829,54 +851,89 @@
 \end{frame}
 
 \begin{frame}
-  \begin{alertblock}{Summary of results}
+  \begin{block}{Summary of results}
     \begin{itemize}
-      \item 
+      \item changes to ecotype composition driven by origination, not extinction
+        \begin{itemize}
+          \item specific ecotypes source of most variation in overall origination
+        \end{itemize}
+      \item arboreal taxa decrease through Paleogene, all but absent by Neogene
+      \item digitigrade and unguligrade herbivores only groups with sustained increase
+      \item environmental covariates virtually always affect origination, not survival
     \end{itemize}
-  \end{alertblock}
+  \end{block}
 \end{frame}
 
 
 
 \section{Conclusions and commentary}
 \begin{frame}
-  \frametitle{Summary}
-
-  three studies on emergent patterns and their relation to functional traits
-
-  many questions and hypotheses, both domain specific and general
+  \frametitle{High level overview}
+  \begin{itemize}
+    \item macroevolution and macroecology devoted to explaining emergent patterns in evolution and ecology
+    \item emphasis on functional traits because of obvious selective importance
+    \item big data are messy. to clean up messy data, we need large (Bayesian) models.
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Advances}
+  \frametitle{Synthesis}
 
-  law of constant extinction
+  \begin{itemize}
+    \item \alert{law of constant extinction}
+      \begin{itemize}
+        \item neither study of survival supports this
+        \item evidence instead for increasing risk with duration
+      \end{itemize}
+    \item \alert{survival of the unspecialized}
+      \begin{itemize}
+        \item strong support as generatlity; should be our ``null''
+        \item for brachiopods, when extinction intensity high this pattern breaks
+          \begin{itemize}
+            \item qualitative difference between mass and background extinction
+          \end{itemize}
+      \end{itemize}
+    \item \alert{functional diversity}
+      \begin{itemize}
+        \item hypotheses from macroevolution can inspire macroecological study
+        \item model unifies macroevolutionary and macroecological frameworks
+      \end{itemize}
+  \end{itemize}
+\end{frame}
 
-  survival of the unspecialized
 
-  functional diversity
+\begin{frame}
+  \begin{center}
+    \huge{\uppercase{final thoughts}}
+  \end{center}
+\end{frame}
+
+
+
+\begin{frame}
+  \frametitle{Acknowledgements}
+  % committee
+  %   5 pictures
+  %   michael + ken
+  %   polly + ree + slater
 \end{frame}
 
 \begin{frame}
-  \frametitle{Future}
-
-  spatial data
-
-  better models of preservation
-
-  better hypotheses of relation between trait and target (ezard example)
+  \frametitle{Acknowledgements}
+  % columns
+  %   labs
+  %   cohort + office mates + ceb + paleo
+  %   pbdb
 \end{frame}
 
 \begin{frame}
-  \frametitle{Final thoughts}
+  \frametitle{Acknowldgements}
+  % friends and family
+  %   friends
+  %   parents + brother
+  %   pets
+  %   megan
 \end{frame}
-
-
-% acknowledgements
-% committee
-% advisor labs
-% cohort+ceb+paleo
-% friends+family
 
 
 
