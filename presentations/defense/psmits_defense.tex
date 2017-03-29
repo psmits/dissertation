@@ -19,6 +19,8 @@
 \setbeamercolor{block title alerted}{fg=white,bg=darkgray}
 \setbeamercolor{block body alerted}{fg=black,bg=lightgray}
 
+\let\Tiny\tiny% http://tex.stackexchange.com/q/58087/5764
+
 \setbeamertemplate{footline} {
   \hbox{\begin{beamercolorbox}[wd=1\paperwidth,ht=2.25ex,dp=1ex,right]{framenumber}%
     \usebeamerfont{framenumber}\insertframenumber{} / \inserttotalframenumber\hspace*{2ex}
@@ -912,56 +914,59 @@
 
 \begin{frame}
   \frametitle{Acknowledgements}
-  % committee
-  %   5 pictures
-  %   michael + ken
-  %   polly + ree + slater
+  \begin{center}
+    \includegraphics[width=0.45\textwidth,height=0.4\textheight,keepaspectratio=true]{figure/committee/ken}
+    \includegraphics[width=0.45\textwidth,height=0.4\textheight,keepaspectratio=true]{figure/committee/foote}
+
+    \includegraphics[width=0.33\textwidth,height=0.4\textheight,keepaspectratio=true]{figure/committee/david_2}
+    \includegraphics[width=0.33\textwidth,height=0.4\textheight,keepaspectratio=true]{figure/committee/rick}
+    \includegraphics[width=0.33\textwidth,height=0.4\textheight,keepaspectratio=true]{figure/committee/graham}
+  \end{center}
 \end{frame}
 
 \begin{frame}
   \frametitle{Acknowledgements}
-  % columns
-  %   labs
-  %   cohort + office mates + ceb + paleo
-  %   pbdb
+  \begin{center}
+    \includegraphics[width=\textwidth,height=0.1\textheight,keepaspectratio=true]{figure/ceb}
+  \end{center}
+
+  \begin{columns}
+    \begin{column}{0.35\textwidth}
+      \begin{itemize}
+        \item \tiny{Angielczyk lab}
+          \begin{itemize}
+            \item \tiny{David Grossnickle, Dallas Krentzel, Jackie Lungmus, Jonathan Mitchell}
+          \end{itemize}
+        \item \tiny{Foote lab}
+          \begin{itemize}
+            \item \tiny{Marites Villarosa Garcia, Samuel Miller, Nadia Pierrehumbert, Kathleen Ritterbush}
+          \end{itemize}
+        \item \tiny{Gregory Wilson}
+        \item \tiny{Alistair Evans}
+        \item \tiny{Jeff Bradley, Donald Grayson, Jim Kenagy, Nancy Simmons}
+        \item \tiny{Sandy Carlson, Christine Janis}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.35\textwidth}
+      \begin{itemize}
+        \item \tiny{Caroline Johnson, \\Elizabeth Eakin}
+        \item \tiny{2012 cohort}
+        \item \tiny{Max Winston, \\Katherine Silliman}
+        \item \tiny{Brian Goodrich, Colin Kyle, Darcy Ross, Elizabeth Sander, Laura Southcott, \\Julie Symaszek, \\Brian Waligorski}
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.25\textwidth}
+      \includegraphics[width=\textwidth,height=\textheight,keepaspectratio=true]{figure/paleodb}
+    \end{column}
+  \end{columns}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Acknowldgements}
-  % friends and family
-  %   friends
-  %   parents + brother
-  %   pets
-  %   megan
+  \frametitle{Acknowledgements}
+  % family
+  % lex, timmy, james, megan
+  % papa
 \end{frame}
 
-
-
-\appendix
-%\begin{frame}
-%  \begin{block}{New measure of taxon's environmental affinity}
-%    (\# epicontinental / total \# occurrences) is what quantile of the distribution of all other background occurrences Beta(\(\alpha\), \(\beta\)).
-%    \begin{itemize}
-%      \item \(\alpha\) is the \# epicontinental background occurrences (+ 1).
-%      \item \(\beta\) is the \# open ocean background (+ 1).
-%    \end{itemize}
-%  \end{block}
-%\end{frame}
-%
-%
-%\begin{frame}
-%  \begin{block}{Measure of sampling and imputed values}
-%    Sampling is measured as the gap statistic \(r\): \\(number of bins with an occurrence - 2) / (duration in bins - 2)
-%
-%    Can only be estimated for taxa with duration of three or more. \\Have to impute (e.g. fill-in) the values for all other taxa \(r^{\ast}\).
-%    \begin{align*}
-%      s &\sim \text{Beta}(\phi, \lambda) \\
-%      \phi &= \text{logit}^{-1}(W\gamma) \\
-%      s^{\ast} &\sim \text{Beta}(\phi^{\ast}, \lambda) \\
-%      \phi^{\ast} &= \text{logit}^{-1}(W^{\ast}\gamma) \\
-%    \end{align*}
-%    \scriptsize{Note: Beta distribution parameterized in terms of mean \(\phi\) and total count \(\lambda\). \\Also, this presentation excludes final (hyper)priors.}
-%  \end{block}
-%\end{frame}
 
 \end{document}
