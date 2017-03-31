@@ -34,6 +34,12 @@
     \tableofcontents[currentsection]
   \end{frame}
 }
+\AtBeginSubsection[]
+{
+  \begin{frame}
+    \tableofcontents[currentsection,currentsubsection]
+  \end{frame}
+}
 
 
 \title{Remodeling the fossil record}
@@ -113,11 +119,10 @@
 \begin{frame}
   \frametitle{Species fitness}
 
-  \begin{definition}
+  \begin{block}{Cooper 1984 \em{J. Theoretical Biology}}
     Expected time till extinction.
-  \end{definition}
+  \end{block}
 
-  \footnotesize{\attrib{Cooper 1984 \em{J. Theoretical Biology}}} 
 
   \begin{itemize}
     \item \alert{logic:} if more fit, more likely to be present
@@ -128,31 +133,34 @@
 \end{frame}
 
 \begin{frame}
-  \begin{block}{Extinction}
+  \frametitle{Extinction}
+
+
+  \begin{block}{Simpson 2016 \em{bioRxiv}}
     \begin{quote}
       Population decline maybe a common cause of \dots extinction, but organisms never die from population decline, and population decline is never caused by organismal death alone \dots It's the relative balance between birth, death, and lifespan of organisms that determines \dots extinction. 
     \end{quote}
   \end{block}
 
-  \footnotesize{\attrib{Simpson 2016 \em{bioRxiv}}}
 \end{frame}
 
 \begin{frame}
-  \begin{alertblock}{Law of Constant Extinction}
+  \frametitle{Law of Constant Extinction}
+
+  \begin{alertblock}{Van Valen 1973 \em{Evol. Theory}}
     Extinction risk, in a given adaptive zone, is taxon--age independent.
   \end{alertblock}
 
-  \footnotesize{\attrib{Van Valen 1973 \em{Evol. Theory}}}
 \end{frame}
 
 \begin{frame}
-  \begin{block}{Survival of the unspecialized}
+  \frametitle{Survival of the unspecialized}
+  \begin{block}{Simpson 1944 \em{Tempo and Mode in Evolution} p. 143}
     \begin{quote}
       When related phyla die out \dots more specialized phyla tend to become extinct before less specialized. This phenomenon is also far from universal, but it is so common that it does deserve recognition as a rule or principle in evolutionary studies: \textbf{the rule of the survival of the relatively unspecialized.}
     \end{quote}
   \end{block}
 
-  \footnotesize{\attrib{Simpson 1944 \em{Tempo and Mode in Evolution} p. 143}}
 \end{frame}
 
 
@@ -163,7 +171,7 @@
     \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/schemske_pool}
   \end{center}
 
-  \attrib{\footnotesize{Mittelbach and Schemske 2015 \em{TREE}}}
+  \attrib{\tiny{Mittelbach and Schemske 2015 \em{TREE}}}
 \end{frame}
 
 \begin{frame}
@@ -173,7 +181,7 @@
     \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/ecocube}
   \end{center}
 
-  \attrib{\footnotesize{Bambach \em{et al.} 2007 \em{Palaeontology}}}
+  \attrib{\tiny{Bambach \em{et al.} 2007 \em{Palaeontology}}}
 \end{frame}
 
 \begin{frame}
@@ -183,7 +191,7 @@
     \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/bush_cube_time}
   \end{center}
 
-  \attrib{\footnotesize{Bush and Bambach 2011 \em{Annu. Rev. Earth Planet Sci.}}}
+  \attrib{\tiny{Bush and Bambach 2011 \em{Annu. Rev. Earth Planet Sci.}}}
 \end{frame}
 
 
@@ -202,7 +210,7 @@
       \begin{quote}
         The theory of probability is the only mathematical tool avaliable to help map the unknown and the uncontrollable.
       \end{quote}
-      \footnotesize{\attrib{Mandelbrot}}
+      \tiny{\attrib{Mandelbrot}}
     \end{column}
   \end{columns}
 \end{frame}
@@ -214,7 +222,7 @@
     \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/ovaskainen_data}
   \end{center}
 
-  \footnotesize{\attrib{Ovaskainen \textit{et al.} 2017 \em{Ecology Letters}}}
+  \tiny{\attrib{Ovaskainen \textit{et al.} 2017 \em{Ecology Letters}}}
 \end{frame}
 
 \begin{frame}
@@ -224,7 +232,7 @@
     \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/ovaskainen_dag}
   \end{center}
 
-  \footnotesize{\attrib{Ovaskainen \textit{et al.} 2017 \em{Ecology Letters}}}
+  \tiny{\attrib{Ovaskainen \textit{et al.} 2017 \em{Ecology Letters}}}
 \end{frame}
 
 \begin{frame}
@@ -267,7 +275,7 @@
   \end{columns}
 
 
-  \footnotesize{\attrib{Warton \textit{et al.} 2015 \em{Methods Ecol. Evol.}}}
+  \tiny{\attrib{Warton \textit{et al.} 2015 \em{Methods Ecol. Evol.}}}
 \end{frame}
 
 \begin{frame}
@@ -300,7 +308,7 @@
     \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/probability}
   \end{center}
 
-  \footnotesize{\attrib{mathwithbaddrawings.com}}
+  \tiny{\attrib{mathwithbaddrawings.com}}
 \end{frame} % opportunity for jokes
 
 
@@ -370,13 +378,6 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Hypotheses of effects of dietary category}
-  \begin{center}
-    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/diet_survival}
-  \end{center}
-\end{frame}
-
-\begin{frame}
   \frametitle{Hypotheses of effects of locomotor category}
   \begin{center}
     \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/loco_initial}
@@ -387,6 +388,13 @@
   \frametitle{Hypotheses of effects of locomotor category}
   \begin{center}
     \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/loco_later}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Hypotheses of effects of dietary category}
+  \begin{center}
+    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/diet_survival}
   \end{center}
 \end{frame}
 
@@ -404,7 +412,7 @@
     \includegraphics[height=0.75\textheight,keepaspectratio=true]{figure/survival_function_pres}
   \end{center}
 
-  \footnotesize{\attrib{Smits 2015 \em{PNAS}}}
+  \tiny{\attrib{Smits 2015 \em{PNAS}}}
 \end{frame}
 
 \begin{frame}
@@ -414,7 +422,7 @@
     \includegraphics[height=0.75\textheight,keepaspectratio=true]{figure/loco_diff_est}
   \end{center}
 
-  \footnotesize{\attrib{Smits 2015 \em{PNAS}}}
+  \tiny{\attrib{Smits 2015 \em{PNAS}}}
 \end{frame}
 
 \begin{frame}
@@ -424,7 +432,7 @@
     \includegraphics[height=0.8\textheight,keepaspectratio=true]{figure/diet_diff_est}
   \end{center}
 
-  \footnotesize{\attrib{Smits 2015 \em{PNAS}}}
+  \tiny{\attrib{Smits 2015 \em{PNAS}}}
 \end{frame}
 
 \begin{frame}
@@ -434,7 +442,7 @@
     \includegraphics[height=0.8\textheight,keepaspectratio=true]{figure/cohort_est_pres}
   \end{center}
 
-  \footnotesize{\attrib{Smits 2015 \em{PNAS}}}
+  \tiny{\attrib{Smits 2015 \em{PNAS}}}
 \end{frame}
 
 \begin{frame}
@@ -444,7 +452,7 @@
     \includegraphics[height=0.8\textheight,keepaspectratio=true]{figure/variance_est}
   \end{center}
 
-  \footnotesize{\attrib{Smits 2015 \em{PNAS}}}
+  \tiny{\attrib{Smits 2015 \em{PNAS}}}
 \end{frame}
 
 \begin{frame}
@@ -468,21 +476,12 @@
 \subsection{Interplay between extinction intensity and extinction selectivity}
 
 \begin{frame}
-  \frametitle{Brachiopods}
-  \includegraphics[width = 0.45\textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/Brachiopod_fossil}
-  \includegraphics[width = 0.45\textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/Burmirhynchionella_decorata_brachial_CRF}
-
-  \footnotesize{\attrib{ComputerHotline wikimedia CC BY 2.5; Dwergenpaartje wikimedia CC BY-SA 3.0}}
-\end{frame}
-
-
-\begin{frame}
-  \begin{alertblock}{Observation}
+  \begin{alertblock}{Jablonski 1986 \em{Science}}
     At K/Pg mass extinction, biological traits (except geographic range) have no effect on \alert{bivalve} taxonomic survival.
   \end{alertblock}
 
-  \attrib{\footnotesize{Jablonski 1986 \em{Science}}}
 \end{frame}
+
 
 \begin{frame}
   \frametitle{Variation in extinction rate}
@@ -490,7 +489,7 @@
     \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/wang_extinction}
   \end{center}
 
-  \footnotesize{\attrib{Wang 2003 \em{Paleobio.}}}
+  \tiny{\attrib{Wang 2003 \em{Paleobio.}}}
 \end{frame}
 
 \begin{frame}
@@ -502,11 +501,16 @@
 
 \begin{frame}
   \begin{alertblock}{Questions and analysis}
-    \begin{itemize}
-      \item How do the effect of traits on duration (\alert{extinction selectivity}) vary with expected duration (\alert{extinction intensity})?
-      \item \textbf{Approach:} hierarchical Bayesian survival model; \\effect estimates vary with origination cohort; \\correlation btw effects modeled.
-    \end{itemize}
+    How do the effect of traits on duration (\alert{extinction selectivity}) vary with expected duration (\alert{extinction intensity})?
   \end{alertblock}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Brachiopods}
+  \includegraphics[width = 0.45\textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/Brachiopod_fossil}
+  \includegraphics[width = 0.45\textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/Burmirhynchionella_decorata_brachial_CRF}
+
+  \tiny{\attrib{ComputerHotline wikimedia CC BY 2.5; Dwergenpaartje wikimedia CC BY-SA 3.0}}
 \end{frame}
 
 \begin{frame}
@@ -520,7 +524,7 @@
         \item body size
         \item environmental preference (v, v\(^2\))
       \end{itemize}
-    \item gap statistic as measure of sampling {\footnotesize{(Foote and Raup 1996 \em{Paleobio})}}, imputed for taxa with short durations
+    \item gap statistic as measure of sampling (Foote and Raup 1996 \em{Paleobio}), imputed for taxa with short durations
   \end{itemize}
 \end{frame}
 
@@ -563,23 +567,21 @@
   \scriptsize{Note: Calculation of log probability of right and left censored observations is modified from the above}
 \end{frame}
 
-
-
-\begin{frame}
-  \frametitle{Model adequacy}
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \begin{center}
-        \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/survival_curves}
-      \end{center}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \begin{center}
-        \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/shotgun}
-      \end{center}
-    \end{column}
-  \end{columns}
-\end{frame}
+%\begin{frame}
+%  \frametitle{Model adequacy}
+%  \begin{columns}
+%    \begin{column}{0.5\textwidth}
+%      \begin{center}
+%        \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/survival_curves}
+%      \end{center}
+%    \end{column}
+%    \begin{column}{0.5\textwidth}
+%      \begin{center}
+%        \includegraphics[width=\textwidth,height=0.8\textheight,keepaspectratio=true]{figure/shotgun}
+%      \end{center}
+%    \end{column}
+%  \end{columns}
+%\end{frame}
 
 \begin{frame}
   \frametitle{Variation in trait effects between cohorts}
@@ -645,7 +647,17 @@
 
 
 \section{Patterns in functional diversity}
+
+\begingroup
+\AtBeginSubsection{}
+
 \subsection{Mammal species pool functional composition}
+
+\begin{frame}
+  \begin{alertblock}{Question}
+    When are certain ecologies, ecotypes, or functional groups enriched or depleted in a species pool?
+  \end{alertblock}
+\end{frame}
 
 \begin{frame}
   \frametitle{Age of Mammals}
@@ -659,7 +671,7 @@
     \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/smits_2015_results}
   \end{center}
 
-  \attrib{\footnotesize{Smits 2015 \em{PNAS}}}
+  \attrib{\tiny{Smits 2015 \em{PNAS}}}
 \end{frame}
 
 \begin{frame}
@@ -668,7 +680,7 @@
     \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/brown_fourth_corner}
   \end{center}
 
-  \attrib{\footnotesize{Brown \em{et al.} 2014 \em{Methods Ecol. Evol.}}}
+  \attrib{\tiny{Brown \em{et al.} 2014 \em{Methods Ecol. Evol.}}}
 \end{frame}
 
 \begin{frame}
@@ -713,68 +725,69 @@
 
 \begin{frame}
   \frametitle{Model and sampling statement definition}
-
-  \begin{footnotesize}
-    \begin{columns}
-      \begin{column}{0.5\textwidth}
-        \begin{align*}
-          y_{i, t} &\sim \text{Bernoulli}(p_{i, t} z_{i, t}) \\
-          p_{i, t} &= \text{logit}^{-1}(\alpha_{0} + \alpha_{1} m_{i} + r_{t}) \\ 
-          r_{t} &\sim \mathcal{N}(0, \sigma) \\
-          \alpha_{0} &\sim \mathcal{N}(0, 1) \\
-          \alpha_{1} &\sim \mathcal{N}(1, 1) \\
-          \sigma &\sim \mathcal{N}^{+}(1) \\
-          z_{i, 1} &\sim \text{Bernoulli}(\phi_{i, 1}) \\
-          z_{i, t} &\sim \text{Bernoulli}\left(z_{i, t - 1} \pi_{i,t} + \sum_{x = 1}^{t}(1 - z_{i, x}) \phi_{i,t}\right) \\
-          \phi_{i, t} &= \text{logit}^{-1}(a^{\phi}_{t, j[i]} + b^{\phi}_{1} m_{i} + b^{\phi}_{2} m_{i}^{2}) \\
-          \pi_{i, t} &= \text{logit}^{-1}(a^{\pi}_{t, j[i]} + b^{\pi}_{1} m_{i} + b^{\pi}_{2} m_{i}^{2}) \\
-          a^{\phi} &\sim \text{MVN}(U \gamma^{\phi}, \Sigma^{\phi}) \\
-          a^{\pi} &\sim \text{MVN}(U \gamma^{\pi}, \Sigma^{\pi}) \\
-        \end{align*}
-      \end{column}
-      \begin{column}{0.5\textwidth}
-        \begin{align*}
-          \Sigma^{\phi} &= \text{diag}(\tau^{\phi}) \Omega^{\phi} \text{diag}(\tau^{\phi}) \\
-          \Sigma^{\pi} &= \text{diag}(\tau^{\pi}) \Omega^{\pi} \text{diag}(\tau^{\pi}) \\
-          \rho &\sim \text{U}(0, 1) \\
-          b^{\phi}_{1} &\sim \mathcal{N}(0, 1) \\
-          b^{\pi}_{1} &\sim \mathcal{N}(0, 1) \\
-          b^{\phi}_{2} &\sim \mathcal{N}(-1, 1) \\
-          b^{\pi}_{2} &\sim \mathcal{N}(-1, 1) \\
-          \gamma^{\phi} &\sim \mathcal{N}(0, 1) \\
-          \gamma^{\pi} &\sim \mathcal{N}(0, 1) \\
-          \tau^{\phi} &\sim \mathcal{N}^{+}(1) \\
-          \tau^{\pi} &\sim \mathcal{N}^{+}(1) \\
-          \Omega^{\phi} &\sim \text{LKJ}(2) \\
-          \Omega^{\pi} &\sim \text{LKJ}(2). \\
-        \end{align*}
-      \end{column}
-    \end{columns}
-  \end{footnotesize} 
+  \begin{center}
+    \begin{scriptsize}
+      \begin{columns}
+        \begin{column}{0.5\textwidth}
+          \begin{align*}
+            y_{i, t} &\sim \text{Bernoulli}(p_{i, t} z_{i, t}) \\
+            p_{i, t} &= \text{logit}^{-1}(\alpha_{0} + \alpha_{1} m_{i} + r_{t}) \\ 
+            r_{t} &\sim \mathcal{N}(0, \sigma) \\
+            \alpha_{0} &\sim \mathcal{N}(0, 1) \\
+            \alpha_{1} &\sim \mathcal{N}(1, 1) \\
+            \sigma &\sim \mathcal{N}^{+}(1) \\
+            z_{i, 1} &\sim \text{Bernoulli}(\phi_{i, 1}) \\
+            z_{i, t} &\sim \text{Bernoulli}\left(z_{i, t - 1} \pi_{i,t} + \sum_{x = 1}^{t}(1 - z_{i, x}) \phi_{i,t}\right) \\
+            \phi_{i, t} &= \text{logit}^{-1}(a^{\phi}_{t, j[i]} + b^{\phi}_{1} m_{i} + b^{\phi}_{2} m_{i}^{2}) \\
+            \pi_{i, t} &= \text{logit}^{-1}(a^{\pi}_{t, j[i]} + b^{\pi}_{1} m_{i} + b^{\pi}_{2} m_{i}^{2}) \\
+            a^{\phi} &\sim \text{MVN}(U \gamma^{\phi}, \Sigma^{\phi}) \\
+            a^{\pi} &\sim \text{MVN}(U \gamma^{\pi}, \Sigma^{\pi}) \\
+          \end{align*}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+          \begin{align*}
+            \Sigma^{\phi} &= \text{diag}(\tau^{\phi}) \Omega^{\phi} \text{diag}(\tau^{\phi}) \\
+            \Sigma^{\pi} &= \text{diag}(\tau^{\pi}) \Omega^{\pi} \text{diag}(\tau^{\pi}) \\
+            \rho &\sim \text{U}(0, 1) \\
+            b^{\phi}_{1} &\sim \mathcal{N}(0, 1) \\
+            b^{\pi}_{1} &\sim \mathcal{N}(0, 1) \\
+            b^{\phi}_{2} &\sim \mathcal{N}(-1, 1) \\
+            b^{\pi}_{2} &\sim \mathcal{N}(-1, 1) \\
+            \gamma^{\phi} &\sim \mathcal{N}(0, 1) \\
+            \gamma^{\pi} &\sim \mathcal{N}(0, 1) \\
+            \tau^{\phi} &\sim \mathcal{N}^{+}(1) \\
+            \tau^{\pi} &\sim \mathcal{N}^{+}(1) \\
+            \Omega^{\phi} &\sim \text{LKJ}(2) \\
+            \Omega^{\pi} &\sim \text{LKJ}(2). \\
+          \end{align*}
+        \end{column}
+      \end{columns}
+    \end{scriptsize} 
+  \end{center}
 \end{frame}
 
 
 
-\begin{frame}
-  \frametitle{Posterior predictive performance}
-
-  \begin{columns}
-    \begin{column}{0.5\textwidth}
-      \begin{center}
-        Pure-presence
-
-        \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/pred_occ}
-      \end{center}
-    \end{column}
-    \begin{column}{0.5\textwidth}
-      \begin{center}
-        Birth-death 
-
-        \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/pred_occ_bd}
-      \end{center}
-    \end{column}
-  \end{columns}
-\end{frame}
+%\begin{frame}
+%  \frametitle{Posterior predictive performance}
+%
+%  \begin{columns}
+%    \begin{column}{0.5\textwidth}
+%      \begin{center}
+%        Pure-presence
+%
+%        \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/pred_occ}
+%      \end{center}
+%    \end{column}
+%    \begin{column}{0.5\textwidth}
+%      \begin{center}
+%        Birth-death 
+%
+%        \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/pred_occ_bd}
+%      \end{center}
+%    \end{column}
+%  \end{columns}
+%\end{frame}
 
 \begin{frame}
   \frametitle{Probability of ecotype origination}
@@ -867,6 +880,8 @@
 \end{frame}
 
 
+\endgroup
+
 
 \section{Conclusions and commentary}
 \begin{frame}
@@ -949,10 +964,11 @@
     \end{column}
     \begin{column}{0.35\textwidth}
       \begin{itemize}
-        \item \tiny{Caroline Johnson, \\Elizabeth Eakin}
-        \item \tiny{2012 cohort}
-        \item \tiny{Max Winston, \\Katherine Silliman}
-        \item \tiny{Brian Goodrich, Colin Kyle, Darcy Ross, Elizabeth Sander, Laura Southcott, \\Julie Symaszek, \\Brian Waligorski}
+        \item \tiny{Carolyn Johnson, \\Elizabeth Eakin}
+        \item \tiny{2012 CEB cohort, 2012 Paleo cohort}
+        \item \tiny{\alert{Stewart Edie}, Katherine Silliman, Sarah Tulga, Max Winston}
+        \item \tiny{Brian Goodrich, Colin Kyle, \alert{Darcy Ross}, Elizabeth Sander, Laura Southcott, \alert{Julie Symaszek}, Brian Waligorski}
+        \item \tiny{Jean Leahy}
       \end{itemize}
     \end{column}
     \begin{column}{0.25\textwidth}
@@ -963,9 +979,10 @@
 
 \begin{frame}
   \frametitle{Acknowledgements}
-  % family
-  % lex, timmy, james, megan
-  % papa
+  \centering
+  \includegraphics[width=0.33\textwidth,height=\textheight,keepaspectratio=true]{figure/family/lex_timmy_anniversary_edit}
+  \includegraphics[width=0.33\textwidth,height=\textheight,keepaspectratio=true]{figure/family/james_edit}
+  \includegraphics[width=0.33\textwidth,height=\textheight,keepaspectratio=true]{figure/family/megan_1_edit}
 \end{frame}
 
 
