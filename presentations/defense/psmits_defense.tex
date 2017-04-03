@@ -105,11 +105,11 @@
 \begin{frame}
   \frametitle{Species selection}
 
-  \begin{block}{Rabosky and McCune 2010 \em{TREE}}
+  \begin{alertblock}{Rabosky and McCune 2010 \em{TREE}}
     \begin{quote}
       Species selection is the outcome of heritable variation in speciation and extinction rates among taxa.
     \end{quote}
-  \end{block}
+  \end{alertblock}
 
   \begin{itemize}
     \item avoids selection versus sorting, ``strict'' species selection versus effect macroevolution
@@ -119,9 +119,9 @@
 \begin{frame}
   \frametitle{Species fitness}
 
-  \begin{block}{Cooper 1984 \em{J. Theoretical Biology}}
+  \begin{alertblock}{Cooper 1984 \em{J. Theoretical Biology}}
     Expected time till extinction.
-  \end{block}
+  \end{alertblock}
 
 
   \begin{itemize}
@@ -155,11 +155,11 @@
 
 \begin{frame}
   \frametitle{Survival of the unspecialized}
-  \begin{block}{Simpson 1944 \em{Tempo and Mode in Evolution} p. 143}
+  \begin{alertblock}{Simpson 1944 \em{Tempo and Mode in Evolution} p. 143}
     \begin{quote}
       When related phyla die out \dots more specialized phyla tend to become extinct before less specialized. This phenomenon is also far from universal, but it is so common that it does deserve recognition as a rule or principle in evolutionary studies: \textbf{the rule of the survival of the relatively unspecialized.}
     \end{quote}
-  \end{block}
+  \end{alertblock}
 
 \end{frame}
 
@@ -171,7 +171,7 @@
     \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/schemske_pool}
   \end{center}
 
-  \attrib{\tiny{Mittelbach and Schemske 2015 \em{TREE}}}
+  \tiny{\attrib{Mittelbach and Schemske 2015 \em{TREE}}}
 \end{frame}
 
 \begin{frame}
@@ -181,7 +181,7 @@
     \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/ecocube}
   \end{center}
 
-  \attrib{\tiny{Bambach \em{et al.} 2007 \em{Palaeontology}}}
+  \tiny{\attrib{Bambach \em{et al.} 2007 \em{Palaeontology}}}
 \end{frame}
 
 \begin{frame}
@@ -191,7 +191,7 @@
     \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/bush_cube_time}
   \end{center}
 
-  \attrib{\tiny{Bush and Bambach 2011 \em{Annu. Rev. Earth Planet Sci.}}}
+  \tiny{\attrib{Bush and Bambach 2011 \em{Annu. Rev. Earth Planet Sci.}}}
 \end{frame}
 
 
@@ -208,7 +208,7 @@
     \end{column}
     \begin{column}{0.55\textwidth}
       \begin{quote}
-        The theory of probability is the only mathematical tool avaliable to help map the unknown and the uncontrollable.
+        The theory of probability is the only mathematical tool available to help map the unknown and the uncontrollable.
       \end{quote}
       \tiny{\attrib{Mandelbrot}}
     \end{column}
@@ -259,7 +259,7 @@
 
 
 \begin{frame}
-  \frametitle{Species distribution models}
+  \frametitle{Models of macroecology: species distribution models}
 
   \begin{columns}
     \begin{column}{0.5\textwidth}
@@ -274,7 +274,6 @@
     \end{column}
   \end{columns}
 
-
   \tiny{\attrib{Warton \textit{et al.} 2015 \em{Methods Ecol. Evol.}}}
 \end{frame}
 
@@ -284,10 +283,10 @@
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \begin{itemize}
-        \item logic on a continuous scale is Bayesian inference
+        \item Bayesian inference: logic on a continuous scale
         \item flexible, expressive, intuitive
         \item regularize, partial pooling, external information
-        \item Stan probablistic programming language
+        \item Stan probabilistic programming language
           \begin{itemize}
             \item Hamiltonian Monte Carlo
             \item Automatic Differentiation Variational Inference
@@ -673,7 +672,7 @@
     \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/smits_2015_results}
   \end{center}
 
-  \attrib{\tiny{Smits 2015 \em{PNAS}}}
+  \tiny{\attrib{Smits 2015 \em{PNAS}}}
 \end{frame}
 
 \begin{frame}
@@ -682,7 +681,7 @@
     \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/brown_fourth_corner}
   \end{center}
 
-  \attrib{\tiny{Brown \em{et al.} 2014 \em{Methods Ecol. Evol.}}}
+  \tiny{\attrib{Brown \em{et al.} 2014 \em{Methods Ecol. Evol.}}}
 \end{frame}
 
 \begin{frame}
@@ -691,25 +690,19 @@
     \begin{column}{0.5\textwidth}
       individual-level \\(species i at time unit t)
       \begin{itemize}
-        \item log-odds of occurrence probability at time t
-        \item effect of locomotor type
+        \item ecotype: combination diet and locomotor categories
           \begin{itemize}
-            \item arboreal, digitigrade, plantigrade, unguligrade, fossorial, scansorial
+            \item effect is function of group-level covariates
           \end{itemize}
-        \item effect of dietary type
-          \begin{itemize}
-            \item carnivore, herbivore, insectivore, omnivore
-          \end{itemize}
-        \item effect body size \\(rescaled log body mass)
+        \item body size \\(rescaled log body mass)
       \end{itemize}
     \end{column}
     \begin{column}{0.5\textwidth}
       group-level (2 My time unit t)
       \begin{itemize}
-        \item overall mean of log-odds of occurrence probability
         \item temperature record based on Mg/Ca estimates
           \begin{itemize}
-            \item mean and interquartile range of rescaled value
+            \item mean and range \\(rescaled log degrees)
           \end{itemize}
         \item plant community phase following Graham 2011
       \end{itemize}
@@ -889,9 +882,9 @@
 \begin{frame}
   \frametitle{High level overview}
   \begin{itemize}
-    \item macroevolution and macroecology devoted to explaining emergent patterns in evolution and ecology
-    \item emphasis on functional traits because of obvious selective importance
-    \item Gelman: ``big data are messy. messy data need large models. large models need Bayesian inference.''
+    \item<1-> macroevolution and macroecology devoted to explaining emergent patterns in evolution and ecology
+    \item<2-> emphasis on functional traits yields strong and intuitive results because of obvious selective importance
+    \item<3-> Gelman: ``big data are messy. messy data need large models. large models need Bayesian inference.''
   \end{itemize}
 \end{frame}
 
@@ -906,7 +899,7 @@
       \end{itemize}
     \item<2-> \alert{survival of the unspecialized}
       \begin{itemize}
-        \item strong support as generatlity; should be our ``null''
+        \item strong support as generality; should be our ``null''
         \item brachiopods: when extinction intensity high this pattern breaks
           \begin{itemize}
             \item qualitative difference between mass and background extinction
@@ -921,11 +914,11 @@
 \end{frame}
 
 
-\begin{frame}
-  \begin{center}
-    \huge{\uppercase{final thoughts}}
-  \end{center}
-\end{frame}
+%\begin{frame}
+%  \begin{center}
+%    \huge{\uppercase{final thoughts}}
+%  \end{center}
+%\end{frame}
 
 
 
