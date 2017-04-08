@@ -112,7 +112,7 @@
   \end{alertblock}
 
   \begin{itemize}
-    \item avoids selection versus sorting, ``strict'' species selection versus effect macroevolution
+    \item avoids selection versus sorting, \\``strict'' species selection versus effect macroevolution
   \end{itemize}
 \end{frame}
 
@@ -132,23 +132,20 @@
 
 \end{frame}
 
-\begin{frame}
-  \frametitle{Extinction}
-
-
-  \begin{block}{Simpson 2016 \em{bioRxiv}}
-    \begin{quote}
-      Population decline maybe a common cause of \dots extinction, but organisms never die from population decline, and population decline is never caused by organismal death alone \dots It's the relative balance between birth, death, and lifespan of organisms that determines \dots extinction. 
-    \end{quote}
-  \end{block}
-
-\end{frame}
+%\begin{frame}
+%  \frametitle{Extinction}
+%  \begin{block}{Simpson 2016 \em{bioRxiv}}
+%    \begin{quote}
+%      Population decline maybe a common cause of \dots extinction, but organisms never die from population decline, and population decline is never caused by organismal death alone \dots It's the relative balance between birth, death, and lifespan of organisms that determines \dots extinction. 
+%    \end{quote}
+%  \end{block}
+%\end{frame}
 
 \begin{frame}
   \frametitle{Law of Constant Extinction}
 
   \begin{alertblock}{Van Valen 1973 \em{Evol. Theory}}
-    Extinction risk, in a given adaptive zone, is taxon--age independent.
+    Extinction risk (species fitness), in a given adaptive zone, is taxon--age independent.
   \end{alertblock}
 
 \end{frame}
@@ -199,6 +196,16 @@
 \section{Structured data and modelling emergent patterns}
 
 \begin{frame}
+  \frametitle{Structured data in biology and paleontology}
+
+  \begin{center}
+    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/ovaskainen_data}
+  \end{center}
+
+  \tiny{\attrib{Ovaskainen \textit{et al.} 2017 \em{Ecology Letters}}}
+\end{frame}
+
+\begin{frame}
   \frametitle{Inference}
   \begin{columns}
     \begin{column}{0.45\textwidth}
@@ -236,7 +243,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Models of macroevolution: birth-death}
+  \frametitle{Models in macroevolution: birth-death}
 
   \begin{center}
     \includegraphics[width = \textwidth,height = 0.7\textheight,keepaspectratio = true]{figure/bd_sim}
@@ -247,7 +254,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Models of macroevolution: Brownian motion}
+  \frametitle{Models in macroevolution: Brownian motion}
 
   \begin{center}
     \includegraphics[width = \textwidth,height = 0.7\textheight,keepaspectratio = true]{figure/brown_sim}
@@ -259,7 +266,7 @@
 
 
 \begin{frame}
-  \frametitle{Models of macroecology: species distribution models}
+  \frametitle{Models in macroecology: species distribution models}
 
   \begin{columns}
     \begin{column}{0.5\textwidth}
@@ -278,12 +285,11 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Bayesian statistics}
+  \frametitle{Bayesian inference and statistics}
 
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \begin{itemize}
-        \item Bayesian inference: \\logic on a continuous scale
         \item flexible, expressive, intuitive
         \item regularize, partial pooling, external information
         \item Stan probabilistic programming language
@@ -301,16 +307,6 @@
   \end{columns}
 \end{frame}
 
-%\begin{frame}
-%  \frametitle{Reading probability as plausibility}
-%  \begin{center}
-%    \includegraphics[width = \textwidth,height = 0.8\textheight,keepaspectratio = true]{figure/probability}
-%  \end{center}
-%
-%  \tiny{\attrib{mathwithbaddrawings.com}}
-%\end{frame} % opportunity for jokes
-
-
 
 
 \begin{frame}
@@ -319,19 +315,11 @@
   \begin{columns}
     \begin{column}{0.5\textwidth}
       \begin{center}
-        \textbf{Mammals}
-
-        \vspace{0.5cm}
-
         \includegraphics[height = 0.6\textheight, keepaspectratio = true]{figure/monty}
       \end{center}
     \end{column}
     \begin{column}{0.5\textwidth}
       \begin{center}
-        \textbf{Brachiopods}
-
-        \vspace{0.5cm}
-
         \includegraphics[height = 0.6\textheight, keepaspectratio = true]{figure/tattoo}
       \end{center}
     \end{column}
@@ -480,9 +468,7 @@
   \begin{alertblock}{Jablonski 1986 \em{Science}}
     At K/Pg mass extinction, biological traits (except geographic range) have no effect on \alert{bivalve} taxonomic survival.
   \end{alertblock}
-
 \end{frame}
-
 
 \begin{frame}
   \frametitle{Variation in extinction rate}
@@ -629,7 +615,7 @@
     \begin{itemize}
       \item Effect of geographic range consistent with prior expectations; low variance.
       \item No effect of body size; low variance.
-      \item Epicontinental environmental preference slightly favored on averaged; high variance. 
+      \item Epicontinental environmental preference slightly favored on average; high variance. 
       \item Strong support for survival of unspecialized as generalization wrt environmental preference; medium variance.
     \end{itemize}
   \end{block}
@@ -682,6 +668,14 @@
   \end{center}
 
   \tiny{\attrib{Brown \em{et al.} 2014 \em{Methods Ecol. Evol.}}}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Paleontological fourth-corner model}
+  \begin{center}
+    \includegraphics[height=0.8\textheight,width=\textwidth,keepaspectratio=true]{figure/paleo_fourth_corner}
+  \end{center}
+
 \end{frame}
 
 \begin{frame}
@@ -962,7 +956,7 @@
         \item \tiny{Carolyn Johnson, \\Elizabeth Eakin}
         \item \tiny{2012 CEB cohort, \\2012 Paleo cohort}
         \item \tiny{\alert{Stewart Edie}, Amy Henry, Katherine Silliman, Sarah Tulga, Max Winston}
-        \item \tiny{\alert{Ben Frable}, Brian Goodrich, Colin Kyle, \alert{Darcy Ross}, Elizabeth Sander, Laura Southcott, \alert{Julie Symaszek}, Brian Waligorski}
+        \item \tiny{Jessica Escott, \alert{Ben Frable}, Brian Goodrich, Colin Kyle, \alert{Darcy Ross}, Elizabeth Sander, Laura Southcott, \alert{Julie Symaszek}, Brian Waligorski}
         \item \tiny{Jean Leahy}
       \end{itemize}
     \end{column}
