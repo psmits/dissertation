@@ -8,7 +8,7 @@ A level-1 auxiliary file: chapter_preserve/plain_brachiopod.aux
 A level-1 auxiliary file: chapter_coping/plain_coping.aux
 A level-1 auxiliary file: conclusion.aux
 The style file: plain.bst
-Reallocated field_info (elt_size=4) to 13510 items from 5000.
+Reallocated field_info (elt_size=4) to 13533 items from 5000.
 Database file #1: dissertation.bib
 Repeated entry---line 3736 of file dissertation.bib
  : @article{Dalquest1978
@@ -19,48 +19,47 @@ Repeated entry---line 11448 of file dissertation.bib
  :                       ,
 I'm skipping whatever remains of this entry
 Database file #2: packages.bib
-Warning--I didn't find a database entry for "Murnberg2013a"
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--empty year in Weber2017
-You've used 369 entries,
+You've used 371 entries,
             2118 wiz_defined-function locations,
-            2689 strings with 64782 characters,
-and the built_in function-call counts, 125593 in all, are:
-= -- 12770
-> -- 5631
+            2697 strings with 65150 characters,
+and the built_in function-call counts, 126324 in all, are:
+= -- 12843
+> -- 5671
 < -- 15
-+ -- 2233
-- -- 1862
-* -- 9690
-:= -- 21143
-add.period$ -- 1112
-call.type$ -- 369
-change.case$ -- 2005
++ -- 2249
+- -- 1876
+* -- 9750
+:= -- 21269
+add.period$ -- 1118
+call.type$ -- 371
+change.case$ -- 2018
 chr.to.int$ -- 0
-cite$ -- 370
-duplicate$ -- 4231
-empty$ -- 9735
-format.name$ -- 1862
-if$ -- 25472
+cite$ -- 372
+duplicate$ -- 4253
+empty$ -- 9786
+format.name$ -- 1876
+if$ -- 25616
 int.to.chr$ -- 0
-int.to.str$ -- 369
-missing$ -- 388
-newline$ -- 1845
-num.names$ -- 754
-pop$ -- 1498
+int.to.str$ -- 371
+missing$ -- 390
+newline$ -- 1855
+num.names$ -- 758
+pop$ -- 1507
 preamble$ -- 1
-purify$ -- 1659
+purify$ -- 1670
 quote$ -- 0
-skip$ -- 2829
+skip$ -- 2843
 stack$ -- 0
-substring$ -- 9963
-swap$ -- 508
+substring$ -- 10017
+swap$ -- 510
 text.length$ -- 15
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1424
+type$ -- 1432
 warning$ -- 1
-while$ -- 1402
-width$ -- 372
-write$ -- 4065
+while$ -- 1410
+width$ -- 374
+write$ -- 4087
 (There were 2 error messages)
